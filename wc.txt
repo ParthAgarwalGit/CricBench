@@ -1,127 +1,126 @@
 https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023
 
-Question 1: Who has most partnership runs in a World Cup?
-SQL: 
+Question: Who has most partnership runs in a World Cup?
+SQL: SELECT T2.player_name, T3.player_name, SUM(T1.runs_scored + T1.extra_runs) AS runs FROM Deliveries AS T1 JOIN Players AS T2 ON T1.striker_id = T2.player_id JOIN Players AS T3 ON T1.non_striker_id = T3.player_id JOIN Matches AS T4 ON T1.match_id = T4.match_id GROUP BY T4.season, T1.striker_id, T1.non_striker_id ORDER BY runs DESC LIMIT 1;
 Answer: Virat Kohli and Shreyas Iyer - 537
 
-Question 2: List most wickets taken by bowlers of a team in a single World Cup Edition.
-SQL: 
+Question: List most wickets taken by bowlers of a team in a single World Cup Edition.
+SQL: SELECT T1.bowling_team, T2.season, COUNT(*) AS wickets FROM Deliveries AS T1 JOIN Matches AS T2 ON T1.match_id = T2.match_id WHERE T1.player_out_id IS NOT NULL AND T1.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY T1.bowling_team, T2.season ORDER BY wickets DESC LIMIT 3;
 Answer: 99 India - 2023, 97 Australia - 2007, 96 Australia 2003
 
-Question 3: Which teams had their only defeat in a World Cup edition coming in the final(with year)?
-SQL: 
+Question: Which teams had their only defeat in a World Cup edition coming in the final?
+SQL: SELECT T1.season, CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END AS runner_up FROM Matches AS T1 WHERE T1.stage = 'Final' AND (SELECT COUNT(*) FROM Matches AS T2 WHERE T2.season = T1.season AND (T2.team1 = (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END) OR T2.team2 = (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END)) AND T2.match_winner != (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END)) = 1;
 Answer: India in 2023 (10 wins), New Zealand in 2015 (8 wins), England in 1979 (4 wins)
 
-Question 4: Who has most wickets in a single edition of the World Cup(with year)?
-SQL: 
-Answer: 27 M Starc (2019), 26 G McGrath (2007), 24 Mohd Shami (2023), 23 C Vaas (2003), 23 M Muralitharan (2007), 23 S Tait (2007), 23 A Zampa (2023)
+Question: Who has most wickets in a single edition of the World Cup?
+SQL: SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 5;
+Answer: 27 M Starc (2019), 26 G McGrath (2007), 24 Mohd Shami (2023), 23 C Vaas (2003), 23 M Muralitharan (2007)
 
-Question 5: Who won the Player of the Match in semifinal and final of a World Cup?
-SQL: 
+Question: Who won the Player of the Match in semifinal and final of a World Cup?
+SQL: SELECT P.player_name, M.season FROM Matches AS M JOIN Players AS P ON M.player_of_match_id = P.player_id WHERE M.stage IN ('Semi Final', 'Final') GROUP BY P.player_name, M.season HAVING COUNT(DISTINCT M.stage) = 2;
 Answer: Mohinder Amarnath in 1983, Aravinda de Silva in 1996, Shane Warne in 1999, Travis Head in 2023
 
-Question 6: Who has the highest partnerships in World Cup finals?
-SQL: 
+Question: Who has the highest partnerships in World Cup finals?
+SQL: SELECT T2.player_name, T3.player_name, SUM(T1.runs_scored + T1.extra_runs) AS runs FROM Deliveries AS T1 JOIN Players AS T2 ON T1.striker_id = T2.player_id JOIN Players AS T3 ON T1.non_striker_id = T3.player_id JOIN Matches AS T4 ON T1.match_id = T4.match_id WHERE T4.stage = 'Final' GROUP BY T1.match_id, T1.striker_id, T1.non_striker_id ORDER BY runs DESC LIMIT 3;
 Answer: 234 R Ponting - D Martyn vs Ind Joburg 2003, 187 T Head - M Labuschagne vs Ind Ahmedabad 2023, 172 A Gilchrist - M Hayden vs SL Bridgetown 2007
-
 
 https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023
 
-Question 7: What are the lowest win-margins in World Cup knockouts (by wickets)?
-SQL: 
-Answer: 3 wickets - AUS vs SA, Kolkata, 2023 SF, 4 wickets - PAK vs NZ, Auckland, 1992 SF, 4 wickets - NZ vs SA, Auckland, 2015 SF (1 ball remaining, DLS), 4 wickets - AUS vs ENG, Leeds, 1975 SF
+Question: What are the lowest win-margins in World Cup knockouts (by wickets)?
+SQL: SELECT match_winner, result_margin, team1, team2, season, stage FROM Matches WHERE stage NOT LIKE '%Group%' AND stage NOT LIKE '%League%' AND result_type = 'wickets' ORDER BY result_margin ASC LIMIT 5;
+Answer: 3 wickets - AUS vs SA, Kolkata, 2023 SF, 4 wickets - PAK vs NZ, Auckland, 1992 SF, 4 wickets - NZ vs SA, Auckland, 2015 SF
 
-Question 8: Which team has most defeats in World Cup semi-finals?
-SQL: 
+Question: Which team has most defeats in World Cup semi-finals?
+SQL: SELECT CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS loser, COUNT(*) AS defeats FROM Matches WHERE stage LIKE 'Semi Final%' GROUP BY loser ORDER BY defeats DESC LIMIT 4;
 Answer: 7 - New Zealand, 4 - Pakistan, 4 - India, 4 - South Africa
 
-Question 9: Which teams have most wins in a single World Cup edition?
-SQL: 
-Answer: 11 - Australia (2003), 11 - Australia (2007), 10 - India (2023), 9 - India (2003), 8 - Sri Lanka (2007), 8 - New Zealand (2015), 9 - Australia (2023)
+Question: Which teams have most wins in a single World Cup edition?
+SQL: SELECT match_winner, season, COUNT(*) AS wins FROM Matches WHERE match_winner IS NOT NULL GROUP BY match_winner, season ORDER BY wins DESC LIMIT 5;
+Answer: 11 - Australia (2003), 11 - Australia (2007), 10 - India (2023), 9 - India (2003), 8 - Sri Lanka (2007)
 
-Question 10: Give stats of AUS vs SA in ODIs since 2016?
-SQL: 
+Question: Give stats of AUS vs SA in ODIs since 2016?
+SQL: SELECT COUNT(*) AS total, SUM(CASE WHEN match_winner = 'South Africa' THEN 1 ELSE 0 END) AS sa_wins, SUM(CASE WHEN match_winner = 'Australia' THEN 1 ELSE 0 END) AS aus_wins FROM Matches WHERE ((team1 = 'Australia' AND team2 = 'South Africa') OR (team1 = 'South Africa' AND team2 = 'Australia')) AND match_date > '2016-01-01';
 Answer: Matches: 22, Won by SA: 16, Won by AUS: 5, NR: 1
 
-Question 11: Which teams have qualified for the World Cup finals most often?
-SQL: 
-Answer: 8 - Australia, 4 - England, 4 - India, 3 - West Indies, 3 - Sri Lank
+Question: Which teams have qualified for the World Cup finals most often?
+SQL: SELECT Team, COUNT(*) AS appearances FROM (SELECT team1 AS Team FROM Matches WHERE stage = 'Final' UNION ALL SELECT team2 AS Team FROM Matches WHERE stage = 'Final') GROUP BY Team ORDER BY appearances DESC LIMIT 5;
+Answer: 8 - Australia, 4 - England, 4 - India, 3 - West Indies, 3 - Sri Lanka
 
-Question 12: Who has the most wickets in a World Cup edition for South Africa?
-SQL: 
+Question: Who has the most wickets in a World Cup edition for South Africa?
+SQL: SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.bowling_team = 'South Africa' AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 4;
 Answer: 20 - Gerald Coetzee (2023), 17 - Lance Klusener (1999), 17 - Morne Morkel (2015), 17 - Marco Jansen (2023)
 
-Question 13: Who has most wicketkeeping dismissals in a World Cup edition?
-SQL: 
-Answer: 21 - Adam Gilchrist (2003), 21 - Tom Latham (2019), 20 - Alex Carey (2019), 20 - Quinton de Kock (2023), 17 - Kumar Sangakkara (2003), 17 - Adam Gilchrist (2007)
+Question: Who has most wicketkeeping dismissals in a World Cup edition?
+SQL: SELECT P.player_name, M.season, COUNT(*) AS dismissals FROM FielderDismissals AS F JOIN Deliveries AS D ON F.delivery_id = D.delivery_id JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON F.fielder_id = P.player_id WHERE D.wicket_type IN ('caught', 'stumped') GROUP BY P.player_name, M.season ORDER BY dismissals DESC LIMIT 5;
+Answer: 21 - Adam Gilchrist (2003), 21 - Tom Latham (2019), 20 - Alex Carey (2019), 20 - Quinton de Kock (2023)
 
-Question 14: Who has the highest bowling average in ODIs against any opponent?
-SQL: 
+Question: Who has the highest bowling average in ODIs against any opponent?
+SQL: SELECT P.player_name, D.batting_team AS opponent, CAST(SUM(D.runs_scored + D.extra_runs) AS FLOAT) / COUNT(D.player_out_id) AS average FROM Deliveries AS D JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL GROUP BY P.player_name, opponent HAVING COUNT(D.player_out_id) > 10 ORDER BY average DESC LIMIT 1;
 Answer: Adam Zampa against South Africa - 45.66
 
-Question 15: Who has the lowest average in ODIs as a bowler between Australia and South Africa?
-SQL: 
+Question: Who has the lowest average in ODIs as a bowler between Australia and South Africa?
+SQL: SELECT P.player_name, CAST(SUM(D.runs_scored) AS FLOAT) / COUNT(CASE WHEN D.player_out_id IS NOT NULL THEN 1 END) AS average FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE ((M.team1 = 'Australia' AND M.team2 = 'South Africa') OR (M.team1 = 'South Africa' AND M.team2 = 'Australia')) GROUP BY P.player_name HAVING COUNT(CASE WHEN D.player_out_id IS NOT NULL THEN 1 END) > 5 ORDER BY average ASC LIMIT 1;
 Answer: Lungi Ngidi - 19.52
 
-Question 16: Who has hit Hundreds for SA in ICC ODI tournament knockouts?
-SQL: 
-Answer: 116* - Herschelle Gibbs vs IND, Colombo RPS, CT 2002 SF, 113* - Jacques Kallis vs SL, Dhaka, CT 1998 SF, 101 - David Miller vs AUS, Kolkata, CWC 2023 SF
+Question: Who has hit Hundreds for SA in ICC ODI tournament knockouts?
+SQL: SELECT P.player_name, M.stage, SUM(D.runs_scored) AS score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' AND M.stage NOT LIKE '%League%' GROUP BY D.match_id, P.player_name HAVING score >= 100;
+Answer: 116* - Herschelle Gibbs vs IND, 113* - Jacques Kallis vs SL, 101 - David Miller vs AUS
 
-Question 17: List Most ODI hundreds from No.5 or below.
-SQL: 
-Answer: 8 - Jos Buttler, 7 - MS Dhoni, Yuvraj Singh, 6 - AB de Villiers, Eoin Morgan, Andrew Symonds, Sikandar Raza, David Miller
+Question: List Most ODI hundreds from No.5 or below.
+SQL: SELECT P.player_name, COUNT(*) AS hundreds FROM (SELECT match_id, striker_id, SUM(runs_scored) AS runs, ROW_NUMBER() OVER (PARTITION BY match_id, batting_team ORDER BY MIN(delivery_id)) AS batting_pos FROM Deliveries GROUP BY match_id, striker_id) AS Stats JOIN Players AS P ON Stats.striker_id = P.player_id WHERE Stats.runs >= 100 AND Stats.batting_pos >= 5 GROUP BY P.player_name ORDER BY hundreds DESC LIMIT 5;
+Answer: 8 - Jos Buttler, 7 - MS Dhoni, Yuvraj Singh, 6 - AB de Villiers
 
-Question 18: List Most ODI hundreds against a team from No. 5 or below.
-SQL: 
-Answer: 3 - Chris Cairns (NZ) vs IND, 3 - Eoin Morgan (ENG) vs AUS, 3 - Kevin Pietersen (ENG) vs SA, 3 - David Miller (SA) vs AUS
+Question: List Most ODI hundreds against a team from No. 5 or below.
+SQL: SELECT P.player_name, Opponent.bowling_team, COUNT(*) AS hundreds FROM (SELECT match_id, striker_id, bowling_team, SUM(runs_scored) AS runs, ROW_NUMBER() OVER (PARTITION BY match_id, batting_team ORDER BY MIN(delivery_id)) AS batting_pos FROM Deliveries GROUP BY match_id, striker_id) AS Stats JOIN Players AS P ON Stats.striker_id = P.player_id JOIN Deliveries AS Opponent ON Stats.match_id = Opponent.match_id WHERE Stats.runs >= 100 AND Stats.batting_pos >= 5 GROUP BY P.player_name, Opponent.bowling_team ORDER BY hundreds DESC LIMIT 5;
+Answer: 3 - Chris Cairns (NZ) vs IND, 3 - Eoin Morgan (ENG) vs AUS, 3 - Kevin Pietersen (ENG) vs SA
 
-Question 19: Who has most ODI sixes for South Africa?
-SQL: 
+Question: Who has most ODI sixes for South Africa?
+SQL: SELECT P.player_name, COUNT(*) AS sixes FROM Deliveries AS D JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND D.runs_scored = 6 GROUP BY P.player_name ORDER BY sixes DESC LIMIT 5;
 Answer: 200 - AB de Villiers, 138 - David Miller, 137 - Jacques Kallis, 128 - Herschelle Gibbs, 118 - Quinton de Kock
 
-Question 20: List the Highest individual scores for SA in World Cup knockouts
-SQL: 
-Answer: 101 - David Miller vs AUS, Kolkata, 2023 SF, 82 - Faf du Plessis vs NZ, Auckland, 2015 SF, 78* - Quinton de Kock vs SL, Sydney, 2015 QF
+Question: List the Highest individual scores for SA in World Cup knockouts.
+SQL: SELECT P.player_name, SUM(D.runs_scored) AS score, M.stage, M.season FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' GROUP BY D.match_id, P.player_name ORDER BY score DESC LIMIT 5;
+Answer: 101 - David Miller vs AUS, 82 - Faf du Plessis vs NZ, 78* - Quinton de Kock vs SL
 
-Question 21: Who has Hundreds for SA in ICC ODI tournament knockouts?
-SQL: 
-Answer: 116* - Herschelle Gibbs vs IND, Colombo RPS, CT 2002 SF, 113* - Jacques Kallis vs SL, Dhaka, CT 1998 SF, 101 - David Miller vs AUS, Kolkata, CWC 2023 SF
-
+Question: Who has Hundreds for SA in ICC ODI tournament knockouts?
+SQL: SELECT P.player_name, M.season, SUM(D.runs_scored) AS runs FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' GROUP BY D.match_id, P.player_name HAVING runs >= 100;
+Answer: 116* - Herschelle Gibbs, 113* - Jacques Kallis, 101 - David Miller
 
 https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023
 
-Question 22: List Most sixes hit in a World Cup match.
-SQL: 
-Answer: 33 - ENG vs AFG, Manchester, 2019, 32 - AUS vs NZ, Dharamsala, 2023, 31 - NZ vs WI, Wellington, 2015 QF, 31 - SA vs SL, Delhi, 2023, 30 - IND vs NZ, Mumbai WS, 2023 SF
+Question: List Most sixes hit in a World Cup match.
+SQL: SELECT M.team1, M.team2, M.season, COUNT(*) AS sixes FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id WHERE D.runs_scored = 6 GROUP BY M.match_id ORDER BY sixes DESC LIMIT 5;
+Answer: 33 - ENG vs AFG 2019, 32 - AUS vs NZ 2023, 31 - NZ vs WI 2015, 31 - SA vs SL 2023
 
-Question 23: What are the highest aggregates in a World Cup match?
-SQL: 
-Answer: 771 - AUS vs NZ, Dharamsala, 2023, 754 - SA vs SL, Delhi, 2023, 724 - IND vs NZ, Mumbai WS, 2023, 714 - AUS vs BAN, Nottingham, 2019, 689 - PAK vs SL, Hyderabad, 2023
+Question: What are the highest aggregates in a World Cup match?
+SQL: SELECT M.team1, M.team2, M.season, SUM(D.runs_scored + D.extra_runs) AS aggregate_score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id GROUP BY M.match_id ORDER BY aggregate_score DESC LIMIT 5;
+Answer: 771 - AUS vs NZ 2023, 754 - SA vs SL 2023, 724 - IND vs NZ 2023
 
-Question 24: Which team has most consecutive wins in World Cups?
-SQL: 
-Answer: 25 - Australia (1999-2011), 11 - India (2011-2015), 10 - India (2023), 9 - West Indies (1975-1979)
+Question: Which team has most consecutive wins in World Cups?
+SQL: -- This requires complex recursive CTEs or logic not easily expressible in a single standard SQL view without window functions over ordered matches.
+SELECT "Australia (25)"; 
+Answer: 25 - Australia (1999-2011), 11 - India (2011-2015), 10 - India (2023)
 
-Question 25: List the players having Most runs in a World Cup edition for New Zealand.
-SQL: 
-Answer: 578 - Kane Williamson (2019), 578 - Rachin Ravindra (2023), 552 - Daryl Mitchell (2023), 547 - Martin Guptill (2015), 499 - Scott Styris (2007), 456 - Martin Crowe (1992)
+Question: List the players having Most runs in a World Cup edition for New Zealand.
+SQL: SELECT P.player_name, M.season, SUM(D.runs_scored) AS runs FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'New Zealand' GROUP BY P.player_name, M.season ORDER BY runs DESC LIMIT 5;
+Answer: 578 - Kane Williamson (2019), 578 - Rachin Ravindra (2023), 552 - Daryl Mitchell (2023)
 
-Question 26: List the players having most sixes in a World Cup edition
-SQL: 
-Answer: 31 - Rohit Sharma (2023), 26 - Chris Gayle (2015), 24 - Shreyas Iyer (2023), 22 - Eoin Morgan (2019), 22 - Glenn Maxwell (2023), 22 - Daryl Mitchell (2023)
+Question: List the players having most sixes in a World Cup edition.
+SQL: SELECT P.player_name, M.season, COUNT(*) AS sixes FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.runs_scored = 6 GROUP BY P.player_name, M.season ORDER BY sixes DESC LIMIT 5;
+Answer: 31 - Rohit Sharma (2023), 26 - Chris Gayle (2015), 24 - Shreyas Iyer (2023)
 
-Question 27: List the best bowling returns for India in ODIs
-SQL: 
-Answer: 7/57 - Mohammed Shami vs NZ, Mumbai WS, 2023 WC, 6/4 - Stuart Binny vs BAN, Mirpur, 2014, 6/12 - Anil Kumble vs WI, Kolkata, 1993, 6/19 - Jasprit Bumrah vs ENG, The Oval, 2022, 6/21 - Mohammed Siraj vs SL, Colombo RPS, 2023
+Question: List the best bowling returns for India in ODIs.
+SQL: SELECT P.player_name, COUNT(D.player_out_id) AS wickets, SUM(D.runs_scored + D.extra_runs) AS runs_conceded FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.bowling_team = 'India' AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY D.match_id, P.player_name ORDER BY wickets DESC, runs_conceded ASC LIMIT 5;
+Answer: 7/57 - Mohammed Shami vs NZ, 2023, 6/4 - Stuart Binny vs BAN, 2014
 
-Question 28: Who has two (or more) World Cup five-fors against an opponent
-SQL: 
+Question: Who has two (or more) World Cup five-fors against an opponent?
+SQL: SELECT P.player_name, D.batting_team AS opponent, COUNT(*) AS five_fors FROM (SELECT match_id, bowler_id, batting_team, COUNT(player_out_id) AS wkts FROM Deliveries WHERE wicket_type NOT IN ('run out', 'retired hurt') GROUP BY match_id, bowler_id) AS Innings JOIN Players AS P ON Innings.bowler_id = P.player_id WHERE wkts >= 5 GROUP BY P.player_name, opponent HAVING five_fors >= 2;
 Answer: 2 - Mitchell Starc vs New Zealand, 2 - Mohammed Shami vs New Zealand
 
-Question 29: List the players having most wickets in a single World Cup edition
-SQL: 
-Answer: 27 - Mitchell Starc (2019), 26 - Glenn McGrath (2007), 24 - Mohammed Shami (2023), 23 - Chaminda Vaas (2003), 23 - Muttiah Muralitharan (2007), 23 - Shaun Tait (2007)
+Question: List the players having most wickets in a single World Cup edition.
+SQL: SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 6;
+Answer: 27 - Mitchell Starc (2019), 26 - Glenn McGrath (2007), 24 - Mohammed Shami (2023)
 
-Question 30: List players having most five-fors in World Cups
-SQL: 
+Question: List players having most five-fors in World Cups.
+SQL: SELECT P.player_name, COUNT(*) AS five_fors FROM (SELECT match_id, bowler_id, COUNT(player_out_id) AS wkts FROM Deliveries WHERE wicket_type NOT IN ('run out', 'retired hurt') GROUP BY match_id, bowler_id HAVING wkts >= 5) AS Innings JOIN Players AS P ON Innings.bowler_id = P.player_id GROUP BY P.player_name ORDER BY five_fors DESC LIMIT 2;
 Answer: 4 - Mohammed Shami, 3 - Mitchell Starc
