@@ -1,0 +1,127 @@
+https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023
+
+Question 1: Who has most partnership runs in a World Cup?
+SQL: 
+Answer: Virat Kohli and Shreyas Iyer - 537
+
+Question 2: List most wickets taken by bowlers of a team in a single World Cup Edition.
+SQL: 
+Answer: 99 India - 2023, 97 Australia - 2007, 96 Australia 2003
+
+Question 3: Which teams had their only defeat in a World Cup edition coming in the final(with year)?
+SQL: 
+Answer: India in 2023 (10 wins), New Zealand in 2015 (8 wins), England in 1979 (4 wins)
+
+Question 4: Who has most wickets in a single edition of the World Cup(with year)?
+SQL: 
+Answer: 27 M Starc (2019), 26 G McGrath (2007), 24 Mohd Shami (2023), 23 C Vaas (2003), 23 M Muralitharan (2007), 23 S Tait (2007), 23 A Zampa (2023)
+
+Question 5: Who won the Player of the Match in semifinal and final of a World Cup?
+SQL: 
+Answer: Mohinder Amarnath in 1983, Aravinda de Silva in 1996, Shane Warne in 1999, Travis Head in 2023
+
+Question 6: Who has the highest partnerships in World Cup finals?
+SQL: 
+Answer: 234 R Ponting - D Martyn vs Ind Joburg 2003, 187 T Head - M Labuschagne vs Ind Ahmedabad 2023, 172 A Gilchrist - M Hayden vs SL Bridgetown 2007
+
+
+https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023
+
+Question 7: What are the lowest win-margins in World Cup knockouts (by wickets)?
+SQL: 
+Answer: 3 wickets - AUS vs SA, Kolkata, 2023 SF, 4 wickets - PAK vs NZ, Auckland, 1992 SF, 4 wickets - NZ vs SA, Auckland, 2015 SF (1 ball remaining, DLS), 4 wickets - AUS vs ENG, Leeds, 1975 SF
+
+Question 8: Which team has most defeats in World Cup semi-finals?
+SQL: 
+Answer: 7 - New Zealand, 4 - Pakistan, 4 - India, 4 - South Africa
+
+Question 9: Which teams have most wins in a single World Cup edition?
+SQL: 
+Answer: 11 - Australia (2003), 11 - Australia (2007), 10 - India (2023), 9 - India (2003), 8 - Sri Lanka (2007), 8 - New Zealand (2015), 9 - Australia (2023)
+
+Question 10: Give stats of AUS vs SA in ODIs since 2016?
+SQL: 
+Answer: Matches: 22, Won by SA: 16, Won by AUS: 5, NR: 1
+
+Question 11: Which teams have qualified for the World Cup finals most often?
+SQL: 
+Answer: 8 - Australia, 4 - England, 4 - India, 3 - West Indies, 3 - Sri Lank
+
+Question 12: Who has the most wickets in a World Cup edition for South Africa?
+SQL: 
+Answer: 20 - Gerald Coetzee (2023), 17 - Lance Klusener (1999), 17 - Morne Morkel (2015), 17 - Marco Jansen (2023)
+
+Question 13: Who has most wicketkeeping dismissals in a World Cup edition?
+SQL: 
+Answer: 21 - Adam Gilchrist (2003), 21 - Tom Latham (2019), 20 - Alex Carey (2019), 20 - Quinton de Kock (2023), 17 - Kumar Sangakkara (2003), 17 - Adam Gilchrist (2007)
+
+Question 14: Who has the highest bowling average in ODIs against any opponent?
+SQL: 
+Answer: Adam Zampa against South Africa - 45.66
+
+Question 15: Who has the lowest average in ODIs as a bowler between Australia and South Africa?
+SQL: 
+Answer: Lungi Ngidi - 19.52
+
+Question 16: Who has hit Hundreds for SA in ICC ODI tournament knockouts?
+SQL: 
+Answer: 116* - Herschelle Gibbs vs IND, Colombo RPS, CT 2002 SF, 113* - Jacques Kallis vs SL, Dhaka, CT 1998 SF, 101 - David Miller vs AUS, Kolkata, CWC 2023 SF
+
+Question 17: List Most ODI hundreds from No.5 or below.
+SQL: 
+Answer: 8 - Jos Buttler, 7 - MS Dhoni, Yuvraj Singh, 6 - AB de Villiers, Eoin Morgan, Andrew Symonds, Sikandar Raza, David Miller
+
+Question 18: List Most ODI hundreds against a team from No. 5 or below.
+SQL: 
+Answer: 3 - Chris Cairns (NZ) vs IND, 3 - Eoin Morgan (ENG) vs AUS, 3 - Kevin Pietersen (ENG) vs SA, 3 - David Miller (SA) vs AUS
+
+Question 19: Who has most ODI sixes for South Africa?
+SQL: 
+Answer: 200 - AB de Villiers, 138 - David Miller, 137 - Jacques Kallis, 128 - Herschelle Gibbs, 118 - Quinton de Kock
+
+Question 20: List the Highest individual scores for SA in World Cup knockouts
+SQL: 
+Answer: 101 - David Miller vs AUS, Kolkata, 2023 SF, 82 - Faf du Plessis vs NZ, Auckland, 2015 SF, 78* - Quinton de Kock vs SL, Sydney, 2015 QF
+
+Question 21: Who has Hundreds for SA in ICC ODI tournament knockouts?
+SQL: 
+Answer: 116* - Herschelle Gibbs vs IND, Colombo RPS, CT 2002 SF, 113* - Jacques Kallis vs SL, Dhaka, CT 1998 SF, 101 - David Miller vs AUS, Kolkata, CWC 2023 SF
+
+
+https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023
+
+Question 22: List Most sixes hit in a World Cup match.
+SQL: 
+Answer: 33 - ENG vs AFG, Manchester, 2019, 32 - AUS vs NZ, Dharamsala, 2023, 31 - NZ vs WI, Wellington, 2015 QF, 31 - SA vs SL, Delhi, 2023, 30 - IND vs NZ, Mumbai WS, 2023 SF
+
+Question 23: What are the highest aggregates in a World Cup match?
+SQL: 
+Answer: 771 - AUS vs NZ, Dharamsala, 2023, 754 - SA vs SL, Delhi, 2023, 724 - IND vs NZ, Mumbai WS, 2023, 714 - AUS vs BAN, Nottingham, 2019, 689 - PAK vs SL, Hyderabad, 2023
+
+Question 24: Which team has most consecutive wins in World Cups?
+SQL: 
+Answer: 25 - Australia (1999-2011), 11 - India (2011-2015), 10 - India (2023), 9 - West Indies (1975-1979)
+
+Question 25: List the players having Most runs in a World Cup edition for New Zealand.
+SQL: 
+Answer: 578 - Kane Williamson (2019), 578 - Rachin Ravindra (2023), 552 - Daryl Mitchell (2023), 547 - Martin Guptill (2015), 499 - Scott Styris (2007), 456 - Martin Crowe (1992)
+
+Question 26: List the players having most sixes in a World Cup edition
+SQL: 
+Answer: 31 - Rohit Sharma (2023), 26 - Chris Gayle (2015), 24 - Shreyas Iyer (2023), 22 - Eoin Morgan (2019), 22 - Glenn Maxwell (2023), 22 - Daryl Mitchell (2023)
+
+Question 27: List the best bowling returns for India in ODIs
+SQL: 
+Answer: 7/57 - Mohammed Shami vs NZ, Mumbai WS, 2023 WC, 6/4 - Stuart Binny vs BAN, Mirpur, 2014, 6/12 - Anil Kumble vs WI, Kolkata, 1993, 6/19 - Jasprit Bumrah vs ENG, The Oval, 2022, 6/21 - Mohammed Siraj vs SL, Colombo RPS, 2023
+
+Question 28: Who has two (or more) World Cup five-fors against an opponent
+SQL: 
+Answer: 2 - Mitchell Starc vs New Zealand, 2 - Mohammed Shami vs New Zealand
+
+Question 29: List the players having most wickets in a single World Cup edition
+SQL: 
+Answer: 27 - Mitchell Starc (2019), 26 - Glenn McGrath (2007), 24 - Mohammed Shami (2023), 23 - Chaminda Vaas (2003), 23 - Muttiah Muralitharan (2007), 23 - Shaun Tait (2007)
+
+Question 30: List players having most five-fors in World Cups
+SQL: 
+Answer: 4 - Mohammed Shami, 3 - Mitchell Starc
