@@ -1,0 +1,179 @@
+
+[
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "At Brabourne Stadium in WPL, how many matches were won by the toss-winning team, and how many of those wins belonged to Delhi Capitals and against which team?",
+        "query": "SELECT   COUNT(*) AS toss_winner_wins,   SUM(CASE WHEN match_winner = 'Delhi Capitals' THEN 1 ELSE 0 END) AS dc_toss_wins,   GROUP_CONCAT(     CASE       WHEN match_winner = 'Delhi Capitals'       THEN CASE         WHEN team1 = 'Delhi Capitals' THEN team2         ELSE team1       END     END   ) AS dc_opponents FROM Matches WHERE venue LIKE '%Brabourne%'   AND toss_winner = match_winner. AND match_date < (     SELECT match_date     FROM Matches     WHERE season = '2025'       AND stage = 'Final'     LIMIT 1 );",
+        "answer": [
+            "(2, 1, 'UP Warriorz')"
+        ],
+        "question_english": "At Brabourne Stadium in WPL, how many matches were won by the toss-winning team, and how many of those wins belonged to Delhi Capitals and against which team?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Toss Winner Wins",
+            "DC Toss Winner Wins",
+            "DC Opponent"
+        ]
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "What is the average first innings score at the CCI in the WPL 2025 season?",
+        "query": "SELECT   ROUND(AVG(first_innings_runs), 0) AS avg_first_innings_score FROM (   SELECT     M.match_id,     SUM(D.runs_scored + D.extra_runs) AS first_innings_runs   FROM Matches AS M   INNER JOIN Deliveries AS D     ON M.match_id = D.match_id   WHERE     M.season = '2025'     AND D.inning = 1     AND M.venue LIKE '%Brabourne%'   GROUP BY     M.match_id );",
+        "answer": [
+            "(197)"
+        ],
+        "question_english": "What is the average first innings score at the CCI in the WPL 2025 season?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Average First Innings Score"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "Among batters with at least 100 runs at the CCI in the WPL, who has the highest batting average?",
+        "query": "SELECT   P.player_name,   SUM(D.runs_scored) AS total_runs,   COUNT(DISTINCT D.match_id || '-' || D.inning) AS innings,   SUM(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field','retired out') THEN 1 ELSE 0 END) AS dismissals,   ROUND(CAST(SUM(D.runs_scored) AS REAL) / NULLIF(SUM(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field','retired out') THEN 1 ELSE 0 END),0),2) AS average FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE M.venue LIKE '%Brabourne%' GROUP BY D.striker_id HAVING SUM(D.runs_scored) >= 100 ORDER BY average DESC;",
+        "answer": [
+            "('Meg Lanning', 339, 4, 4, 84.75)"
+        ],
+        "question_english": "Among batters with at least 100 runs at the CCI in the WPL, who has the highest batting average?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Player Name",
+            "Total Runs",
+            "Innings",
+            "Dismissals",
+            "Average"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "What is Nat Sciver-Brunt’s batting record at the CCI in the WPL?",
+        "query": "SELECT   P.player_name,   SUM(D.runs_scored) AS runs,   COUNT(DISTINCT D.match_id || '-' || D.inning) AS innings,   SUM(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field','retired out') THEN 1 ELSE 0 END) AS dismissals,   ROUND(CAST(SUM(D.runs_scored) AS REAL) / NULLIF(SUM(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field','retired out') THEN 1 ELSE 0 END),0),2) AS average FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE M.venue LIKE '%Brabourne%' AND P.player_name = 'NR Sciver-Brunt' GROUP BY D.striker_id;",
+        "answer": [
+            "('NR Sciver-Brunt', 535, 12, 7, 76.42)"
+        ],
+        "question_english": "What is Nat Sciver-Brunt’s batting record at the CCI in the WPL?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Player Name",
+            "Total Runs",
+            "Innings",
+            "Dismissals",
+            "Average"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "Have Delhi Capitals ever lost two consecutive matches in the WPL, and if so, against whom and when did it happen?",
+        "query": "WITH DC_Matches AS (   SELECT     match_id,     match_date,     season,     stage,     venue,     CASE       WHEN team1 = 'Delhi Capitals' THEN team2       ELSE team1     END AS opponent,     CASE       WHEN match_winner = 'Delhi Capitals' THEN 'Win'       ELSE 'Loss'     END AS result   FROM Matches   WHERE     team1 = 'Delhi Capitals'     OR team2 = 'Delhi Capitals' ), DC_With_Prev AS (   SELECT     *,     LAG(result) OVER (ORDER BY match_date) AS prev_result,     LAG(opponent) OVER (ORDER BY match_date) AS prev_opponent,     LAG(season) OVER (ORDER BY match_date) AS prev_season,     LAG(stage) OVER (ORDER BY match_date) AS prev_stage,     LAG(venue) OVER (ORDER BY match_date) AS prev_venue   FROM DC_Matches ) SELECT   prev_season AS first_match_season,   prev_stage AS first_match_stage,   prev_venue AS first_match_venue,   season AS second_match_season,   stage AS second_match_stage,   venue AS second_match_venue,   opponent FROM DC_With_Prev WHERE   result = 'Loss'   AND prev_result = 'Loss';",
+        "answer": [
+            "('2023', 'Final', 'Brabourne Stadium, Mumbai', '2024', 'League', 'M.Chinnaswamy Stadium, Bengaluru', 'Mumbai Indians')"
+        ],
+        "question_english": "Have Delhi Capitals ever lost two consecutive matches in the WPL, and if so, against whom and when did it happen?",
+        "question_hindi_1":"",
+        "column_names": [
+            "First Match Season",
+            "First Match Stage",
+            "First Match Venue",
+            "Second Match Season",
+            "Second Match Stage",
+            "Second Match Venue",
+            "Opponent"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "What are Mumbai Indians' opening partnership statistics in the 2025 WPL season?",
+        "query": "WITH MI_Innings AS (   SELECT DISTINCT     M.match_id,     D.inning   FROM Matches AS M   INNER JOIN Deliveries AS D     ON M.match_id = D.match_id   WHERE     M.season = '2025'     AND D.batting_team = 'Mumbai Indians' ), First_Wicket AS (   SELECT     match_id,     inning,     MIN(delivery_id) AS first_wicket_delivery   FROM Deliveries   WHERE     player_out_id IS NOT NULL   GROUP BY     match_id,     inning ), Opening_Partnership AS (   SELECT     I.match_id,     I.inning,     SUM(D.runs_scored + D.extra_runs) AS runs,     COUNT(D.delivery_id) AS balls   FROM MI_Innings AS I   LEFT JOIN First_Wicket AS F     ON I.match_id = F.match_id     AND I.inning = F.inning   INNER JOIN Deliveries AS D     ON I.match_id = D.match_id     AND I.inning = D.inning   WHERE     D.delivery_id < F.first_wicket_delivery     OR F.first_wicket_delivery IS NULL   GROUP BY     I.match_id,     I.inning )  SELECT   COUNT(*) AS inns,   SUM(runs) AS runs,   ROUND(AVG(runs), 2) AS avg,   ROUND(SUM(runs) * 6.0 / SUM(balls), 2) AS run_rate FROM Opening_Partnership;",        
+        "answer": [
+           "(10, 172, 17.20, 5.51)"
+        ],
+        "question_english": "What are Mumbai Indians' opening partnership statistics in the 2025 WPL season?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Innings",
+            "Runs",
+            "Average",
+            "Run Rate"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "What are the lowest batting averages by top-order batters in a WPL edition, with a minimum of five innings played in the top three?",
+        "query": "WITH TopOrderInnings AS (   SELECT     D.striker_id,     D.match_id,     M.season,     D.batting_team,     SUM(D.runs_scored) AS runs,     MAX(CASE WHEN D.player_out_id = D.striker_id THEN 1 ELSE 0 END) AS dismissed   FROM Deliveries AS D   INNER JOIN Matches AS M     ON D.match_id = M.match_id   WHERE     D.batting_position <= 3   GROUP BY     D.striker_id,     D.match_id,     M.season,     D.batting_team ),  SeasonStats AS (   SELECT     striker_id,     season,     batting_team,     SUM(runs) AS total_runs,     SUM(dismissed) AS dismissals,     COUNT(*) AS innings   FROM TopOrderInnings   GROUP BY     striker_id,     season,     batting_team )  SELECT   P.player_name,   batting_team,   season,   ROUND(CAST(total_runs AS REAL) / dismissals, 2) AS average FROM SeasonStats AS S INNER JOIN Players AS P   ON S.striker_id = P.player_id WHERE   innings >= 5   AND dismissals > 0 ORDER BY   average ASC LIMIT 5;",
+        "answer": [
+            "('Dayalan Hemalatha', 'Gujarat Giants', '2025', 4.50)",
+            "('Yastika Bhatia', 'Mumbai Indians', '2025', 8.71)",
+            "('Devika Vaidya', 'UP Warriorz', '2023', 12.50)",
+            "('Sabbhineni Meghana', 'Gujarat Giants', '2023', 13.50)",
+            "('Sophie Devine', 'Royal Challengers Bangalore', '2024', 13.50)"
+        ],
+        "question_english": "What are the lowest batting averages by top-order batters in a WPL edition, with a minimum of five innings played in the top three?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Player",
+            "Team",
+            "Season",
+            "Batting Average"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/112815/dcw-vs-miw-final-womens-premier-league-2025",
+        "question": "Who finished WPL 2025 with the best batting strike rate?",
+        "query": "SELECT     p.player_name,     ROUND(         CAST(SUM(d.runs_scored) AS REAL) * 100         / COUNT(d.delivery_id),         2     ) AS strike_rate FROM Deliveries AS d INNER JOIN Matches AS m     ON d.match_id = m.match_id INNER JOIN Players AS p     ON d.striker_id = p.player_id WHERE     m.season = '2025'     AND d.extra_runs = 0 GROUP BY     p.player_name ORDER BY     strike_rate DESC LIMIT 1;",
+        "answer": [
+            "('Chinelle Henry', 196.39)"
+        ],
+        "question_english": "Who finished WPL 2025 with the best batting strike rate?",
+        "question_hindi_1":"",
+        "column_names": [
+            "Player Name",
+            "Strike Rate"
+        ]   
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/118928/rcb-vs-pbks-final-indian-premier-league-2025",
+        "question": "What are the lowest powerplay scores in WPL history?",
+        "query": "SELECT m.season, d.batting_team, d.bowling_team, SUM(d.runs_scored + d.extra_runs) AS powerplay_runs, COUNT(d.player_out_id) AS wickets FROM Matches AS m INNER JOIN Deliveries AS d ON m.match_id = d.match_id WHERE d.over_number BETWEEN 0 AND 5 GROUP BY m.match_id, d.batting_team ORDER BY powerplay_runs ASC, wickets DESC LIMIT 5;",
+        "answer": [
+            "('2023', 'Gujarat Giants', 'Mumbai Indians', 17, 4)",
+            "('2024', 'UP Warriorz', 'Mumbai Indians', 17, 3)",
+            "('2023', 'Mumbai Indians', 'Delhi Capitals', 19, 3)",
+            "('2025', 'Mumbai Indians', 'Delhi Capitals', 20, 2)",
+            "('2024', 'UP Warriorz', 'Delhi Capitals', 21, 3)"
+        ],
+        "question_english": "What are the lowest powerplay scores in WPL history?",
+        "question_hindi_1": "",
+        "column_names": [
+            "Season",
+            "Batting Team",
+            "Bowling Team",
+            "Powerplay Runs",
+            "Powerplay Wickets"
+        ]
+    },
+    {
+        "db_id": "wpl_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/118928/rcb-vs-pbks-final-indian-premier-league-2025",
+        "question": "Which bowler bowled the most dot balls in the WPL 2025 season?",
+        "query": "SELECT p.player_name, COUNT(d.delivery_id) AS dot_balls FROM Deliveries AS d INNER JOIN Matches AS m ON d.match_id = m.match_id INNER JOIN Players AS p ON d.bowler_id = p.player_id WHERE m.season = '2025' AND d.runs_scored = 0 AND d.extra_runs = 0 GROUP BY p.player_name ORDER BY dot_balls DESC LIMIT 1;",
+        "answer": [
+            "('Shabnim Ismail', 131)"
+        ],
+        "question_english": "Which bowler bowled the most dot balls in the WPL 2025 season?",
+        "question_hindi_1": "",
+        "column_names": [
+            "Bowler",
+            "Dot Balls"
+        ]
+    }
+]
