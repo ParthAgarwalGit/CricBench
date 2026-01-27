@@ -10,6 +10,7 @@
         ],
         "question_english": "At Brabourne Stadium in WPL, how many matches were won by the toss-winning team, and how many of those wins belonged to Delhi Capitals and against which team?",
         "question_hindi_1":"",
+        "question_punjabi": "WPL ਵਿੱਚ Brabourne ਸਟੇਡੀਅਮ ਵਿਖੇ ਟਾਸ ਜਿੱਤਣ ਵਾਲੀ ਟੀਮ ਨੇ ਕਿੰਨੇ ਮੈਚ ਜਿੱਤੇ, ਅਤੇ ਉਹਨਾਂ ਵਿੱਚੋਂ ਕਿੰਨੀਆਂ ਜਿੱਤਾਂ Delhi Capitals ਦੀਆਂ ਸਨ ਅਤੇ ਕਿਸ ਟੀਮ ਦੇ ਖਿਲਾਫ ਸਨ?"
         "column_names": [
             "Toss Winner Wins",
             "DC Toss Winner Wins",
@@ -26,6 +27,7 @@
         ],
         "question_english": "What is the average first innings score at the CCI in the WPL 2025 season?",
         "question_hindi_1":"",
+        "question_punjabi": "WPL 2025 ਸੀਜ਼ਨ ਵਿੱਚ CCI ਵਿਖੇ ਪਹਿਲੀ ਪਾਰੀ ਦਾ ਔਸਤ ਸਕੋਰ ਕੀ ਹੈ?"
         "column_names": [
             "Average First Innings Score"
         ]   
@@ -40,6 +42,7 @@
         ],
         "question_english": "Among batters with at least 100 runs at the CCI in the WPL, who has the highest batting average?",
         "question_hindi_1":"",
+        "question_punjabi": "WPL ਵਿੱਚ CCI ਵਿਖੇ ਘੱਟੋ-ਘੱਟ 100 ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ਾਂ ਵਿੱਚੋਂ ਸਭ ਤੋਂ ਵੱਧ ਬੱਲੇਬਾਜ਼ੀ ਔਸਤ ਕਿਸਦੀ ਹੈ?"
         "column_names": [
             "Player Name",
             "Total Runs",
@@ -58,6 +61,7 @@
         ],
         "question_english": "What is Nat Sciver-Brunt’s batting record at the CCI in the WPL?",
         "question_hindi_1":"",
+        "question_punjabi": "WPL ਵਿੱਚ CCI ਵਿਖੇ Nat Sciver-Brunt ਦਾ ਬੱਲੇਬਾਜ਼ੀ ਰਿਕਾਰਡ ਕੀ ਹੈ?"
         "column_names": [
             "Player Name",
             "Total Runs",
@@ -76,6 +80,8 @@
         ],
         "question_english": "Have Delhi Capitals ever lost two consecutive matches in the WPL, and if so, against whom and when did it happen?",
         "question_hindi_1":"",
+        "question_punjabi": "ਕੀ Delhi Capitals ਨੇ ਕਦੇ WPL ਵਿੱਚ ਲਗਾਤਾਰ ਦੋ ਮੈਚ ਹਾਰੇ ਹਨ, ਜੇਕਰ ਹਾਂ, ਤਾਂ ਕਿਸ ਦੇ ਖਿਲਾਫ ਅਤੇ ਇਹ ਕਦੋਂ ਹੋਇਆ ਸੀ?"
+},
         "column_names": [
             "First Match Season",
             "First Match Stage",
@@ -96,6 +102,7 @@
         ],
         "question_english": "What are Mumbai Indians' opening partnership statistics in the 2025 WPL season?",
         "question_hindi_1":"",
+        "question_punjabi": "2025 WPL ਸੀਜ਼ਨ ਵਿੱਚ Mumbai Indians ਦੀ ਓਪਨਿੰਗ ਸਾਂਝੇਦਾਰੀ ਦੇ ਅੰਕੜੇ ਕੀ ਹਨ?"
         "column_names": [
             "Innings",
             "Runs",
@@ -117,6 +124,7 @@
         ],
         "question_english": "What are the lowest batting averages by top-order batters in a WPL edition, with a minimum of five innings played in the top three?",
         "question_hindi_1":"",
+        "question_punjabi": "ਕਿਸੇ WPL ਸੀਜ਼ਨ ਵਿੱਚ ਪਹਿਲੇ ਤਿੰਨ ਨੰਬਰਾਂ 'ਤੇ ਘੱਟੋ-ਘੱਟ ਪੰਜ ਪਾਰੀਆਂ ਖੇਡਣ ਵਾਲੇ ਉਪਰਲੇ ਕ੍ਰਮ ਦੇ ਬੱਲੇਬਾਜ਼ਾਂ ਦੀ ਸਭ ਤੋਂ ਘੱਟ ਬੱਲੇਬਾਜ਼ੀ ਔਸਤ ਕੀ ਹੈ?"
         "column_names": [
             "Player",
             "Team",
@@ -134,6 +142,7 @@
         ],
         "question_english": "Who finished WPL 2025 with the best batting strike rate?",
         "question_hindi_1":"",
+        "question_punjabi": "WPL 2025 ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਬੱਲੇਬਾਜ਼ੀ ਸਟ੍ਰਾਈਕ ਰੇਟ ਕਿਸਦਾ ਰਿਹਾ?"
         "column_names": [
             "Player Name",
             "Strike Rate"
@@ -153,6 +162,7 @@
         ],
         "question_english": "What are the lowest powerplay scores in WPL history?",
         "question_hindi_1": "",
+        "question_punjabi": "WPL ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਘੱਟ ਪਾਵਰਪਲੇ ਸਕੋਰ ਕਿਹੜੇ ਹਨ?"
         "column_names": [
             "Season",
             "Batting Team",
@@ -171,6 +181,7 @@
         ],
         "question_english": "Which bowler bowled the most dot balls in the WPL 2025 season?",
         "question_hindi_1": "",
+        "question_punjabi": "WPL 2025 ਸੀਜ਼ਨ ਵਿੱਚ ਕਿਸ ਗੇਂਦਬਾਜ਼ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਡਾਟ ਗੇਂਦਾਂ ਸੁੱਟੀਆਂ? "
         "column_names": [
             "Bowler",
             "Dot Balls"
