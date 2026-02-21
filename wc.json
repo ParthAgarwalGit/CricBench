@@ -4,6 +4,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
         "question": "Who has most partnership runs in a World Cup?",
         "query": "SELECT T2.player_name, T3.player_name, SUM(T1.runs_scored + T1.extra_runs) AS runs FROM Deliveries AS T1 JOIN Players AS T2 ON T1.striker_id = T2.player_id JOIN Players AS T3 ON T1.non_striker_id = T3.player_id JOIN Matches AS T4 ON T1.match_id = T4.match_id GROUP BY T4.season, T1.striker_id, T1.non_striker_id ORDER BY runs DESC LIMIT 1;",
+        "difficulty": "Easy",
         "answer": [
             "('Virat Kohli', 'Shreyas Iyer', 537)"
         ],
@@ -22,6 +23,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
         "question": "List most wickets taken by bowlers of a team in a single World Cup Edition.",
         "query": "SELECT T1.bowling_team, T2.season, COUNT(*) AS wickets FROM Deliveries AS T1 JOIN Matches AS T2 ON T1.match_id = T2.match_id WHERE T1.player_out_id IS NOT NULL AND T1.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY T1.bowling_team, T2.season ORDER BY wickets DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('India', 2023, 99)",
             "('Australia', 2007, 97)",
@@ -42,6 +44,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
         "question": "Which teams had their only defeat in a World Cup edition coming in the final?",
         "query": "SELECT T1.season, CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END AS runner_up FROM Matches AS T1 WHERE T1.stage = 'Final' AND (SELECT COUNT(*) FROM Matches AS T2 WHERE T2.season = T1.season AND (T2.team1 = (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END) OR T2.team2 = (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END)) AND T2.match_winner != (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END)) = 1;",
+        "difficulty": "hard",
         "answer": [
             "(2023, 'India', 10)",
             "(2015, 'New Zealand', 8)",
@@ -62,6 +65,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
         "question": "Who has most wickets in a single edition of the World Cup?",
         "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 5;",
+        "difficulty": "Easy",
         "answer": [
             "('M Starc', 2019, 27)",
             "('G McGrath', 2007, 26)",
@@ -84,6 +88,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
         "question": "Who won the Player of the Match in semifinal and final of a World Cup?",
         "query": "SELECT P.player_name, M.season FROM Matches AS M JOIN Players AS P ON M.player_of_match_id = P.player_id WHERE M.stage IN ('Semi Final', 'Final') GROUP BY P.player_name, M.season HAVING COUNT(DISTINCT M.stage) = 2;",
+        "difficulty": "Easy",
         "answer": [
             "('Mohinder Amarnath', 1983)",
             "('Aravinda de Silva', 1996)",
@@ -104,6 +109,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
         "question": "Who has the highest partnerships in World Cup finals?",
         "query": "SELECT T2.player_name, T3.player_name, SUM(T1.runs_scored + T1.extra_runs) AS runs FROM Deliveries AS T1 JOIN Players AS T2 ON T1.striker_id = T2.player_id JOIN Players AS T3 ON T1.non_striker_id = T3.player_id JOIN Matches AS T4 ON T1.match_id = T4.match_id WHERE T4.stage = 'Final' GROUP BY T1.match_id, T1.striker_id, T1.non_striker_id ORDER BY runs DESC LIMIT 3;",
+        "difficulty": "Medium",
         "answer": [
             "('R Ponting', 'D Martyn', 234)",
             "('T Head', 'M Labuschagne', 187)",
@@ -124,6 +130,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "What are the lowest win-margins in World Cup knockouts (by wickets)?",
         "query": "SELECT match_winner, result_margin, team1, team2, season, stage FROM Matches WHERE stage NOT LIKE '%Group%' AND stage NOT LIKE '%League%' AND result_type = 'wickets' ORDER BY result_margin ASC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('Australia', '3 wickets', 'Australia', 'South Africa', 2023, 'Semifinal')",
             "('Pakistan', '4 wickets', 'Pakistan', 'New Zealand', 1992, 'Semifinal')",
@@ -147,6 +154,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Which team has most defeats in World Cup semi-finals?",
         "query": "SELECT CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS loser, COUNT(*) AS defeats FROM Matches WHERE stage LIKE 'Semi Final%' GROUP BY loser ORDER BY defeats DESC LIMIT 4;",
+        "difficulty": "Easy",
         "answer": [
             "('New Zealand', 7)",
             "('Pakistan', 4)",
@@ -167,6 +175,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Which teams have most wins in a single World Cup edition?",
         "query": "SELECT match_winner, season, COUNT(*) AS wins FROM Matches WHERE match_winner IS NOT NULL GROUP BY match_winner, season ORDER BY wins DESC LIMIT 5;",
+        "difficulty": "Easy",
         "answer": [
             "('Australia', 2003, 11)",
             "('Australia', 2007, 11)",
@@ -189,6 +198,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Give stats of AUS vs SA in ODIs since 2016?",
         "query": "SELECT COUNT(*) AS total, SUM(CASE WHEN match_winner = 'South Africa' THEN 1 ELSE 0 END) AS sa_wins, SUM(CASE WHEN match_winner = 'Australia' THEN 1 ELSE 0 END) AS aus_wins FROM Matches WHERE ((team1 = 'Australia' AND team2 = 'South Africa') OR (team1 = 'South Africa' AND team2 = 'Australia')) AND match_date > '2016-01-01';",
+        "difficulty": "Easy",
         "answer": [
             "(22, 16, 5, 1)"
         ],
@@ -208,6 +218,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Which teams have qualified for the World Cup finals most often?",
         "query": "SELECT Team, COUNT(*) AS appearances FROM (SELECT team1 AS Team FROM Matches WHERE stage = 'Final' UNION ALL SELECT team2 AS Team FROM Matches WHERE stage = 'Final') GROUP BY Team ORDER BY appearances DESC LIMIT 5;",
+        "difficulty": "Easy",
         "answer": [
             "('Australia', 8)",
             "('England', 4)",
@@ -229,6 +240,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Who has the most wickets in a World Cup edition for South Africa?",
         "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.bowling_team = 'South Africa' AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 4;",
+        "difficulty": "Easy",
         "answer": [
             "('Gerald Coetzee', 2023, 20)",
             "('Lance Klusener', 1999, 17)",
@@ -250,6 +262,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Who has most wicketkeeping dismissals in a World Cup edition?",
         "query": "SELECT P.player_name, M.season, COUNT(*) AS dismissals FROM FielderDismissals AS F JOIN Deliveries AS D ON F.delivery_id = D.delivery_id JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON F.fielder_id = P.player_id WHERE D.wicket_type IN ('caught', 'stumped') GROUP BY P.player_name, M.season ORDER BY dismissals DESC LIMIT 4;",
+        "difficulty": "Medium",
         "answer": [
             "('Adam Gilchrist', 2003, 21)",
             "('Tom Latham', 2019, 21)",
@@ -271,6 +284,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Who has the highest bowling average in ODIs against any opponent?",
         "query": "SELECT P.player_name, D.batting_team AS opponent, CAST(SUM(D.runs_scored + D.extra_runs) AS FLOAT) / COUNT(D.player_out_id) AS average FROM Deliveries AS D JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL GROUP BY P.player_name, opponent HAVING COUNT(D.player_out_id) > 10 ORDER BY average DESC LIMIT 1;",
+        "difficulty": "Easy",
         "answer": [
             "('Adam Zampa', 'South Africa', 45.66)"
         ],
@@ -289,6 +303,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Who has the lowest average in ODIs as a bowler between Australia and South Africa?",
         "query": "SELECT P.player_name, CAST(SUM(D.runs_scored) AS FLOAT) / COUNT(CASE WHEN D.player_out_id IS NOT NULL THEN 1 END) AS average FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE ((M.team1 = 'Australia' AND M.team2 = 'South Africa') OR (M.team1 = 'South Africa' AND M.team2 = 'Australia')) GROUP BY P.player_name HAVING COUNT(CASE WHEN D.player_out_id IS NOT NULL THEN 1 END) > 5 ORDER BY average ASC LIMIT 1;",
+        "difficulty": "Medium",
         "answer": [
             "('Lungi Ngidi', 19.52)"
         ],
@@ -306,6 +321,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Who has hit Hundreds for SA in ICC ODI tournament knockouts?",
         "query": "SELECT P.player_name, M.stage, SUM(D.runs_scored) AS score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' AND M.stage NOT LIKE '%League%' GROUP BY D.match_id, P.player_name HAVING score >= 100;",
+        "difficulty": "Easy",
         "answer": [
             "('Jacques Kallis', 'Quarter Final', 113)",
             "('David Miller', 'Semifinal', 101)"
@@ -325,6 +341,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "List Most ODI hundreds from No.5 or below.",
         "query": "SELECT P.player_name, COUNT(*) AS hundreds FROM (SELECT match_id, striker_id, SUM(runs_scored) AS runs, ROW_NUMBER() OVER (PARTITION BY match_id, batting_team ORDER BY MIN(delivery_id)) AS batting_pos FROM Deliveries GROUP BY match_id, striker_id) AS Stats JOIN Players AS P ON Stats.striker_id = P.player_id WHERE Stats.runs >= 100 AND Stats.batting_pos >= 5 GROUP BY P.player_name ORDER BY hundreds DESC LIMIT 5;",
+        "difficulty": "Easy",
         "answer": [
             "('Jos Buttler', 8)",
             "('MS Dhoni', 7)",
@@ -345,6 +362,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "List Most ODI hundreds against a team from No. 5 or below.",
         "query": "SELECT P.player_name, Opponent.bowling_team, COUNT(*) AS hundreds FROM (SELECT match_id, striker_id, bowling_team, SUM(runs_scored) AS runs, ROW_NUMBER() OVER (PARTITION BY match_id, batting_team ORDER BY MIN(delivery_id)) AS batting_pos FROM Deliveries GROUP BY match_id, striker_id) AS Stats JOIN Players AS P ON Stats.striker_id = P.player_id JOIN Deliveries AS Opponent ON Stats.match_id = Opponent.match_id WHERE Stats.runs >= 100 AND Stats.batting_pos >= 5 GROUP BY P.player_name, Opponent.bowling_team ORDER BY hundreds DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('Chris Cairns', 'India', 3)",
             "('Eoin Morgan', 'Australia', 3)",
@@ -365,6 +383,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "Who has most ODI sixes for South Africa?",
         "query": "SELECT P.player_name, COUNT(*) AS sixes FROM Deliveries AS D JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND D.runs_scored = 6 GROUP BY P.player_name ORDER BY sixes DESC LIMIT 5;",
+        "difficulty": "Easy",
         "answer": [
             "('AB de Villiers', 200)",
             "('David Miller', 138)",
@@ -386,6 +405,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
         "question": "List the Highest individual scores for SA in World Cup knockouts.",
         "query": "SELECT P.player_name, SUM(D.runs_scored) AS score, M.stage, M.season FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' GROUP BY D.match_id, P.player_name ORDER BY score DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('David Miller', 101, 'Semifinal', 2015)",
             "('Faf du Plessis', 82, 'Semifinal', 2015)",
@@ -408,6 +428,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "List Most sixes hit in a World Cup match.",
         "query": "SELECT M.team1, M.team2, M.season, COUNT(*) AS sixes FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id WHERE D.runs_scored = 6 GROUP BY M.match_id ORDER BY sixes DESC LIMIT 4;",
+        "difficulty": "Easy",
         "answer": [
             "('England', 'Afghanistan', 2019, 33)",
             "('Australia', 'New Zealand', 2023, 32)",
@@ -430,6 +451,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "What are the highest aggregates in a World Cup match?",
         "query": "SELECT M.team1, M.team2, M.season, SUM(D.runs_scored + D.extra_runs) AS aggregate_score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id GROUP BY M.match_id ORDER BY aggregate_score DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('Australia', 'New Zealand', 2023, 771)",
             "('South Africa', 'Sri Lanka', 2023, 754)",
@@ -451,6 +473,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "List the players having Most runs in a World Cup edition for New Zealand.",
         "query": "SELECT P.player_name, M.season, SUM(D.runs_scored) AS runs FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'New Zealand' GROUP BY P.player_name, M.season ORDER BY runs DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('Kane Williamson', 2019, 578)",
             "('Rachin Ravindra', 2023, 578)",
@@ -471,6 +494,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "List the players having most sixes in a World Cup edition.",
         "query": "SELECT P.player_name, M.season, COUNT(*) AS sixes FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.runs_scored = 6 GROUP BY P.player_name, M.season ORDER BY sixes DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('Rohit Sharma', 2023, 31)",
             "('Chris Gayle', 2015, 26)",
@@ -491,6 +515,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "List the best bowling returns for India in ODIs.",
         "query": "SELECT P.player_name, COUNT(D.player_out_id) AS wickets, SUM(D.runs_scored + D.extra_runs) AS runs_conceded FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.bowling_team = 'India' AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY D.match_id, P.player_name ORDER BY wickets DESC, runs_conceded ASC LIMIT 2;",
+        "difficulty": "Medium",
         "answer": [
             "('Mohammed Shami', 7, 57)",
             "('Stuart Binny', 6, 4)"
@@ -510,6 +535,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "Who has two (or more) World Cup five-fors against an opponent?",
         "query": "SELECT P.player_name, D.batting_team AS opponent, COUNT(*) AS five_fors FROM (SELECT match_id, bowler_id, batting_team, COUNT(player_out_id) AS wkts FROM Deliveries WHERE wicket_type NOT IN ('run out', 'retired hurt') GROUP BY match_id, bowler_id) AS Innings JOIN Players AS P ON Innings.bowler_id = P.player_id WHERE wkts >= 5 GROUP BY P.player_name, opponent HAVING five_fors >= 2;",
+        "difficulty": "Easy",
         "answer": [
             "('Mitchell Starc', 'New Zealand', 2)",
             "('Mohammed Shami', 'New Zealand', 2)"
@@ -529,6 +555,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "List the players having most wickets in a single World Cup edition.",
         "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 3;",
+        "difficulty": "Easy",
         "answer": [
             "('Mitchell Starc', 2019, 27)",
             "('Glenn McGrath', 2007, 26)",
@@ -549,6 +576,7 @@
         "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
         "question": "List players having most five-fors in World Cups.",
         "query": "SELECT P.player_name, COUNT(*) AS five_fors FROM (SELECT match_id, bowler_id, COUNT(player_out_id) AS wkts FROM Deliveries WHERE wicket_type NOT IN ('run out', 'retired hurt') GROUP BY match_id, bowler_id HAVING wkts >= 5) AS Innings JOIN Players AS P ON Innings.bowler_id = P.player_id GROUP BY P.player_name ORDER BY five_fors DESC LIMIT 2;",
+        "difficulty": "Easy",
         "answer": [
             "('Mohammed Shami', 4)",
             "('Mitchell Starc', 3)"
