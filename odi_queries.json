@@ -1,0 +1,673 @@
+[
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "From 2003, which teams lost successive World Cup finals? Mention the team name and the years of these matches.", 
+        "query": "WITH finals AS (SELECT match_id, match_date, CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS losing_team, CAST(strftime('%Y', match_date) AS INTEGER) AS year FROM Matches WHERE stage = 'Final') SELECT f1.losing_team AS team_name, f1.year AS year1, f2.year AS year2 FROM finals f1 JOIN finals f2 ON f1.losing_team = f2.losing_team AND f2.year = f1.year + 4 ORDER BY team_name;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('Sri Lanka', 2007, 2019)",
+        "('New Zealand', 2015, 2019)"], 
+        "question_english": "From 2003, which teams lost successive World Cup finals? Mention the team name and the years of these matches.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Team Name, Year 1, Year 2" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "When did ties in ODI World Cup matches take place? Mention the year, the two teams playing and the location of the match.", 
+        "query": "SELECT CAST(strftime('%Y', match_date) AS INTEGER) AS year, team1, team2, city FROM Matches WHERE LOWER(result_type) LIKE '%tie%' ORDER BY year;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "(2003, 'Sri Lanka', 'South Africa', 'Durban')",
+        "(2007, 'Ireland', 'Zimbabwe', 'Kingston)",
+        "(2011, 'India', 'England', 'Bengaluru)",
+        "(2019, 'England', 'New Zealand', 'London')",
+        "('KS Williamson')" ], 
+        "question_english": "When did ties in ODI World Cup matches take place? Mention the year, the two teams playing and the location of the match.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Year, Team 1, Team 2, Match Location" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "List the top 5 players that took the most wickets for New Zealand in a World Cup season. Mention the player, the season and the number of wickets.", 
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') AND D.bowling_team = 'New Zealand' GROUP BY P.player_name, M.season ORDER BY wickets DESC;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('TA Boult', '2014/15', 22)",
+        "('LH Ferguson', 2019, 21)",
+        "('TG Southee', 2010/11, 18)",
+        "('SE Bond', 2002/03, 17)",
+        "('TA Boult', 2019, 17)" ], 
+        "question_english": "List the top 5 players that took the most wickets for New Zealand in a World Cup season? Mention the player, the season and the number of wickets.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name, Season, Wickets" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players made the most dismissals as wicketkeeper in a World Cup? Mention the player, the season and the number of dismissals.", 
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS dismissals FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.fielder_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type IN ('caught', 'stumped') GROUP BY P.player_name, M.season ORDER BY dismissals DESC;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('AC Gilchrist', '2002/03', 21)",
+        "('TWM Latham', '2019', 21)",
+        "('AT Carey', '2019', 20)",
+        "('KC Sangakkara', '2002/03', 17)",
+        "('AC Gilchrist', '2006/07', 21)" ], 
+        "question_english": "Which players made the most dismissals as wicketkeeper in a World Cup? Mention the player, the season and the number of dismissals.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name, Season, Number of dismissals" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players have the most 50+ scores in a World Cup while batting at No 5 or below? Mention the number of scores, the player and the season.", 
+        "query": "SELECT P.player_name, COUNT(*) AS fifties FROM (SELECT match_id, striker_id, SUM(runs_scored) AS runs, ROW_NUMBER() OVER (PARTITION BY match_id, batting_team ORDER BY MIN(delivery_id)) AS batting_pos FROM Deliveries GROUP BY match_id, striker_id) AS Stats JOIN Players AS P ON Stats.striker_id = P.player_id WHERE Stats.runs >= 50 AND Stats.batting_pos >= 5 GROUP BY P.player_name ORDER BY fifties DESC LIMIT 3;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('BA Stokes', '2019', 5)",
+        "('LPC Silva', '2006/07', 4)",
+        "('Sean Williams', '2014/15', 4)" ], 
+        "question_english": "Which players have the most 50+ scores in a World Cup while batting at No 5 or below? Mention the number of scores, the player and the season.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name, Season, Number of 50+ scores" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players made the most fielding dismissals in the 2019 World Cup? Mention the player name and the number of dismissals.", 
+        "query": "SELECT P.player_name, COUNT(*) AS dismissals FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.fielder_id = P.player_id WHERE M.season = '2019' AND D.wicket_type = 'caught' AND D.player_out_id IS NOT NULL AND D.fielder_id IS NOT NULL GROUP BY P.player_name ORDER BY dismissals DESC LIMIT 6;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('AT Carey', 20)",
+        "('TWM Latham', 20)",
+        "('SD Hope', 16)",
+        "('JC Buttler', 14)",
+        "('Sarfraz Ahmed', 14)",
+        "('JE Root', 13)" ], 
+        "question_english": "Which players made the most fielding dismissals in the 2019 World Cup? Mention the player name and the number of dismissals.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name, Number of dismissals" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players have the most wickets in powerplay 1 in the 2019 World Cup? Mention the player name and the number of wickets.", 
+        "query": "SELECT P.player_name, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2019' AND D.over_number < 10 AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') GROUP BY P.player_name ORDER BY wickets DESC LIMIT 4;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('MJ Henry', 8)",
+        "('SS Cottrell', 7)",
+        "('JC Archer', 7)",
+        "('CR Woakes', 7)" ], 
+        "question_english": "Which players have the most wickets in powerplay 1 in the 2019 World Cup? Mention the player name and the number of wickets.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name, Number of wickets" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "In how many instances has a batsman scored 500+ runs in a World Cup edition? Mention the season and the number of instances.", 
+        "query": "WITH season_runs AS (SELECT D.striker_id AS player_id, M.season, SUM(D.runs_scored) AS total_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.striker_id, M.season) SELECT season, COUNT(*) AS instances_over_500 FROM season_runs WHERE total_runs >= 500 GROUP BY season ORDER BY instances_over_500 DESC LIMIT 4;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('2019', 7)",
+        "('2023', 4)",
+        "('2014/15', 4)",
+        "('2002/03', 3)"], 
+        "question_english": "In how many instances has a batsman scored 500+ runs in a World Cup edition? Mention the season and the number of instances.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Season, Number of Instances" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players made the most wickets for England in World Cups from 2003? Mention the player name, season and the number of wickets.", 
+        "query": "WITH england_wickets AS (SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') AND D.bowling_team = 'England' GROUP BY P.player_name, M.season) SELECT player_name, season, wickets FROM england_wickets ORDER BY wickets DESC;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('JC Archer', '2019', 20)",
+        "('MA Wood', '2019', 18)",
+        "('CR Woakes', '2019', 16)",
+        "('A Flintoff', '2006/07', 14)"], 
+        "question_english": "Which players made the most wickets for England in World Cups from 2003? Mention the player name, season and the number of wickets.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name, Season, Number of wickets" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "What are the average balls to individual 50s for each team in the 2019 World Cup?", 
+        "query": "WITH cumulative AS (SELECT D.match_id, D.striker_id, D.batting_team, D.over_number, D.ball_number, SUM(D.runs_scored) OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS running_runs, ROW_NUMBER() OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS ball_number_in_inning FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2018/19'), milestone AS (SELECT match_id, striker_id, batting_team, MIN(ball_number_in_inning) AS balls_to_50 FROM cumulative WHERE running_runs >= 50 GROUP BY match_id, striker_id) SELECT batting_team, ROUND(AVG(balls_to_50), 0) AS avg_balls_to_50, COUNT(*) AS number_of_50s FROM milestone GROUP BY batting_team ORDER BY avg_balls_to_50 DESC;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('New Zealand', 62)",
+        "('Afghanistan', 61)",
+        "('South Africa', 59)",
+        "('Sri Lanka', 57)",
+        "('Australia', 56)",
+        "('India', 56)", 
+        "('Pakistan', 55)",
+        "('Bangladesh', 53)",
+        "('West Indies', 51)",
+        "('England', 50)"], 
+        "question_english": "What are the average balls to individual 50s for each team in the 2019 World Cup?", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Team Name, Average balls" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "What were New Zealand's Powerplay 1 scores in the last 4 matches it played in the 2019 World Cup?", 
+        "query": "WITH nz_matches AS ( SELECT match_id, match_date, stage FROM Matches WHERE season = '2019' AND (team1 = 'New Zealand' OR team2 = 'New Zealand') ORDER BY match_date DESC LIMIT 4 ), pp1_scores AS ( SELECT D.match_id, SUM(D.runs_scored + D.extra_runs) AS runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN nz_matches M ON D.match_id = M.match_id WHERE D.batting_team = 'New Zealand' AND D.over_number < 10 GROUP BY D.match_id ) SELECT M.stage, P.runs || '/' || P.wickets AS powerplay_score FROM pp1_scores P JOIN nz_matches M ON P.match_id = M.match_id ORDER BY M.match_date;", 
+        "difficulty": "Medium", 
+        "answer": 
+        [ 
+            "('Group', '31/1')",
+            "('Group', '37/2')",
+            "('Semi-final', '27/1')",
+            "('Final', '33/1')"
+        ], 
+        "question_english": "What were New Zealand's Powerplay 1 scores in the last 4 matches it played in the 2019 World Cup?", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Match Stage", "Powerplay 1 Score" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players took the most wickets in Powerplay 1 in the 2019 World Cup?", 
+        "query": "SELECT P.player_name, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2018/19' AND D.over_number <= 10 AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') AND D.inning <= 2 GROUP BY P.player_name ORDER BY wickets DESC LIMIT 4;", 
+        "difficulty": "Medium", 
+        "answer": 
+        [ 
+            "('SS Cottrell', 7)",
+            "('MJ Henry', 7)",
+            "('JC Archer', 7)",
+            "('CR Woakes', 7)"
+        ], 
+        "question_english": "Which players took the most wickets in Powerplay 1 in the 2019 World Cup?", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Player Name", "Wickets" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "What are the stats of Martin Guptill in World Cups? Mention the season, total runs he scored, average runs he scored, strike rate and high score.", 
+        "query": "WITH guptill_inning AS ( SELECT M.season, D.match_id, SUM(D.runs_scored) AS runs, COUNT(*) AS balls, MAX(CASE WHEN D.player_out_id = D.striker_id THEN 1 ELSE 0 END) AS dismissed FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'MJ Guptill' GROUP BY M.season, D.match_id ), season_stats AS ( SELECT season, SUM(runs) AS total_runs, SUM(balls) AS total_balls, SUM(dismissed) AS dismissals, MAX(runs) AS high_score FROM guptill_inning GROUP BY season ) SELECT season, total_runs, ROUND(total_runs * 1.0 / NULLIF(dismissals, 0), 2) AS average, ROUND(total_runs * 100.0 / NULLIF(total_balls, 0), 2) AS strike_rate, high_score FROM season_stats ORDER BY season;", 
+        "difficulty": "Medium", 
+        "answer": 
+        [ 
+            "('2014/15', 547, 68.37, 104.58, 237)",
+            "('2019', 186, 20.66, 84.16, 73)"
+        ], 
+        "question_english": "What are the stats of Martin Guptill in World Cups? Mention the season, total runs he scored, average runs he scored, strike rate and high score.", 
+        "question_hindi": "", 
+        "question_punjabi": "", 
+        "question_telugu": "", 
+        "column_names": [ "Season", "Total Runs", "Average", "Strike Rate", "High Score" ] 
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2023",
+        "question": "Which teams have suffered semifinal defeats in ODI World Cups from the 2002/03 edition onwards? Mention the team name and the number of semifinal defeats.",
+        "query": "SELECT CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS team_name, COUNT(*) AS semifinal_defeats FROM Matches WHERE stage = 'Semi-final' AND CAST(SUBSTR(season,1,4) AS INTEGER) >= 2002 GROUP BY team_name ORDER BY semifinal_defeats DESC;",
+        "difficulty": "Medium",
+        "answer": [
+            "('New Zealand', 3)",
+            "('South Africa', 3)",
+            "('India', 2)",
+            "('Kenya', 1)",
+            "('Sri Lanka', 1)",
+            "('Pakistan', 1)",
+            "('Australia', 1)"
+        ],
+        "question_english": "Which teams have suffered semifinal defeats in ODI World Cups from the 2002/03 edition onwards? Mention the team name and the number of semifinal defeats.",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Team Name", "Semifinal Defeats" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20282/ind-vs-nz-1st-semi-final-1-v-4-icc-cricket-world-cup-2019",
+        "question": "In how many instances have the last five wickets scored 169 or more runs in a World Cup run chase? Mention the season, teams, venue and runs scored by the last five wickets.",
+        "query": "WITH second_inning AS ( SELECT D.match_id, M.season, M.team1, M.team2, M.city, D.inning, SUM(D.runs_scored + D.extra_runs) OVER (PARTITION BY D.match_id ORDER BY D.over_number, D.ball_number) AS running_total, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('retired hurt') THEN 1 ELSE 0 END) OVER (PARTITION BY D.match_id ORDER BY D.over_number, D.ball_number) AS wickets_fallen FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE D.inning = 2 ), fifth_wicket_score AS ( SELECT match_id, season, team1, team2, venue, MAX(running_total) FILTER (WHERE wickets_fallen = 5) AS score_at_5, MAX(running_total) AS final_score FROM second_inning GROUP BY match_id ) SELECT season, team1, team2, city, (final_score - score_at_5) AS last_five_wickets_runs FROM fifth_wicket_score WHERE (final_score - score_at_5) >= 169 ORDER BY last_five_wickets_runs DESC;",
+        "difficulty": "Hard",
+        "answer": [
+            "('2010/11', 'Ireland', 'England', 'Bengaluru', 218)"
+        ],
+        "question_english": "In how many instances have the last five wickets scored 169 or more runs in a World Cup run chase? Mention the season, teams, venue and runs scored by the last five wickets.",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Season", "Team 1", "Team 2", "Venue", "Last Five Wickets Runs" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/profiles/1413/virat-kohli",
+        "question": "What are Virat Kohli's batting performances in ODI World Cup knockout matches from the 2002/03 edition onwards? Mention the season, stage, runs and balls faced.",
+        "query": "SELECT M.season, M.stage, SUM(D.runs_scored) AS runs, COUNT(*) AS balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'V Kohli' AND M.stage IN ('Quarter-final','Semi-final','Final') AND CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 GROUP BY M.season, M.stage, D.match_id ORDER BY CAST(SUBSTR(M.season,1,4) AS INTEGER), CASE M.stage WHEN 'Quarter-final' THEN 1 WHEN 'Semi-final' THEN 2 WHEN 'Final' THEN 3 END;",
+        "difficulty": "Medium",
+        "answer": [
+            "('2010/11','Semi-final',9,21)",
+            "('2010/11','Final',35,49)",
+            "('2014/15','Quarter-final',3,8)",
+            "('2014/15','Semi-final',1,13)",
+            "('2019','Semi-final',1,6)",
+            "('2023/24','Semi-final',117,113)",
+            "('2023/24','Final',54,63)"
+        ],
+        "question_english": "What are Virat Kohli's batting performances in ODI World Cup knockout matches from the 2002/03 edition onwards? Mention the season, stage, runs and balls faced.",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Season", "Stage", "Runs", "Balls Faced" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2023/stats",
+        "question": "Who scored the most runs for New Zealand in a single ODI World Cup edition (excluding editions before 2002/03)? Mention the player name, season and total runs.",
+        "query": "SELECT P.player_name, M.season, SUM(D.runs_scored) AS total_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE (M.team1 = 'New Zealand' OR M.team2 = 'New Zealand') AND D.batting_team = 'New Zealand' AND CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 GROUP BY P.player_name, M.season ORDER BY total_runs DESC;",
+        "difficulty": "Medium",
+        "answer": [
+            "('R Ravindra','2023/24',578)",
+            "('KS Williamson','2019',548)",
+            "('MJ Guptill','2014/15',547)",
+            "('SB Styris','2006/07',499)",
+            "('SP Fleming','2006/07',353)"
+        ],
+        "question_english": "Who scored the most runs for New Zealand in a single ODI World Cup edition (excluding editions before 2002/03)? Mention the player name, season and total runs.",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Player Name", "Season", "Total Runs" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20282/ind-vs-nz-1st-semi-final-1-v-4-icc-cricket-world-cup-2019",
+        "question": "How many balls did Kane Williamson take to reach his half-centuries in the 2019 ODI World Cup? Mention the opponent, venue and balls taken.",
+        "query": "WITH cumulative AS ( SELECT D.match_id, M.season, M.team1, M.team2, M.venue, D.striker_id, D.over_number, D.ball_number, SUM(D.runs_scored) OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS running_runs, ROW_NUMBER() OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS ball_count FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'KS Williamson' AND M.season = '2019' ), milestone AS ( SELECT match_id, venue, CASE WHEN team1 = 'New Zealand' THEN team2 ELSE team1 END AS opponent, MIN(ball_count) AS balls_to_50 FROM cumulative WHERE running_runs >= 50 GROUP BY match_id ) SELECT opponent, venue, balls_to_50 FROM milestone ORDER BY balls_to_50;",
+        "difficulty": "Medium",
+        "answer": [
+            "('South Africa','Birmingham',72)",
+            "('West Indies','Manchester',75)",
+            "('Afghanistan','Taunton',77)",
+            "('India','Manchester',79)"
+        ],
+        "question_english": "How many balls did Kane Williamson take to reach his half-centuries in the 2019 ODI World Cup? Mention the opponent, venue and balls taken.",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Opponent", "Venue", "Balls to 50" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20282/ind-vs-nz-1st-semi-final-1-v-4-icc-cricket-world-cup-2019",
+        "question": "What were the lowest Powerplay 1 scores in the 2019 ODI World Cup? Mention the batting team, opponent, venue and score.",
+        "query": "WITH pp1_scores AS ( SELECT D.match_id, M.season, M.city, D.batting_team, CASE WHEN D.batting_team = M.team1 THEN M.team2 ELSE M.team1 END AS opponent, SUM(D.runs_scored + D.extra_runs) AS runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' AND D.over_number <= 10 GROUP BY D.match_id, D.batting_team ) SELECT batting_team, opponent, city, runs || '/' || wickets AS powerplay_score FROM pp1_scores ORDER BY runs ASC, wickets DESC LIMIT 6;",
+        "difficulty": "Medium",
+        "answer": [
+            "('India','New Zealand','Manchester','24/4')",
+            "('New Zealand','India','Manchester','27/1')",
+            "('Australia','England','Birmingham','27/3')",
+            "('India','England','Birmingham','28/1')",
+            "('West Indies','India','Manchester','29/2')",
+            "('New Zealand','West Indies','Manchester','30/2')"
+        ],
+        "question_english": "What were the lowest Powerplay 1 scores in the 2019 ODI World Cup? Mention the batting team, opponent, venue and score.",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Batting Team", "Opponent", "Venue", "Powerplay 1 Score" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2023",
+        "question": "What are Australia's results in ODI World Cup semifinals from the 2002/03 edition onwards?",
+        "query": "SELECT M.season, CASE WHEN M.match_winner = 'Australia' THEN 'Win' ELSE 'Loss' END AS result, CASE WHEN M.match_winner = 'Australia' THEN CASE WHEN M.team1 = 'Australia' THEN M.team2 ELSE M.team1 END ELSE M.match_winner END AS opponent, M.result_margin, M.result_type FROM Matches M WHERE M.stage = 'Semi-final' AND (M.team1 = 'Australia' OR M.team2 = 'Australia') AND CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 ORDER BY CAST(SUBSTR(M.season,1,4) AS INTEGER);",
+        "difficulty": "Medium",
+        "answer": [
+            "('2002/03','Win','Sri Lanka',48,'runs')",
+            "('2006/07','Win','South Africa',7,'wickets')",
+            "('2014/15','Win','India',95,'runs')",
+            "('2019','Loss','England',8,'wickets')",
+            "('2023/24','Win','South Africa',3,'wickets')"
+        ],
+        "question_english": "What are Australia's results in ODI World Cup semifinals from the 2002/03 edition onwards?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Season", "Result", "Opponent", "Margin", "Margin Type" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20283/aus-vs-eng-2nd-semi-final-2-v-3-icc-cricket-world-cup-2019",
+        "question": "Who took the most wickets in a single ODI World Cup edition? Mention the player name, season and total wickets.",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') GROUP BY P.player_name, M.season ORDER BY wickets DESC, P.player_name ASC LIMIT 7;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Mitchell Starc','2019',27)",
+            "('Glenn McGrath','2006/07',26)",
+            "('Mohammed Shami','2023/24',24)",
+            "('Adam Zampa','2023/24',23)",
+            "('Chaminda Vaas','2002/03',23)",
+            "('Shaun Tait','2006/07',23)",
+            "('Muttiah Muralitharan','2006/07',23)"
+        ],
+        "question_english": "Who took the most wickets in a single ODI World Cup edition?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": [ "Player Name", "Season", "Wickets" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "What were the opening partnership stands between Jason Roy and Jonny Bairstow in the 2019 ODI World Cup, ordered chronologically with match stage specified?",
+        "query": "WITH opening_stands AS ( SELECT M.match_date, M.stage, CASE WHEN M.team1 = 'England' THEN M.team2 ELSE M.team1 END AS opponent, SUM(D.runs_scored + D.extra_runs) AS opening_stand FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P1 ON D.striker_id = P1.player_id JOIN Players P2 ON D.non_striker_id = P2.player_id WHERE M.season = '2019' AND D.batting_team = 'England' AND ((P1.player_name = 'JJ Roy' AND P2.player_name = 'JM Bairstow') OR (P1.player_name = 'JM Bairstow' AND P2.player_name = 'JJ Roy')) AND NOT EXISTS ( SELECT 1 FROM Deliveries D2 WHERE D2.match_id = D.match_id AND D2.batting_team = D.batting_team AND D2.player_out_id IS NOT NULL AND D2.wicket_type NOT IN ('retired hurt') AND (D2.over_number < D.over_number OR (D2.over_number = D.over_number AND D2.ball_number <= D.ball_number)) ) GROUP BY D.match_id ) SELECT stage, opponent, opening_stand FROM opening_stands ORDER BY match_date;",
+        "difficulty": "Hard",
+        "answer": [
+            "('Group','South Africa',115)",
+            "('Group','Bangladesh',159)",
+            "('Group','Pakistan',1)",
+            "('Group','West Indies',12)",
+            "('Group','India',128)",
+            "('Group','New Zealand',160)",
+            "('Group','Australia',123)",
+            "('Semi-final','Australia',124)",
+            "('Final','New Zealand',116)"
+        ],
+        "question_english": "What were the opening partnership stands between Jason Roy and Jonny Bairstow in the 2019 ODI World Cup, ordered chronologically with match stage specified?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Stage", "Opponent", "Opening Stand"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "What were Jason Roy's individual scores in the 2019 ODI World Cup, ordered chronologically and specifying the match stage?",
+        "query": "SELECT M.match_date, M.stage, CASE WHEN M.team1 = 'England' THEN M.team2 ELSE M.team1 END AS opponent, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'JJ Roy' AND M.season = '2019' GROUP BY D.match_id ORDER BY M.match_date;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Group','South Africa',87)",
+            "('Group','Bangladesh',76)",
+            "('Group','Pakistan',8)",
+            "('Group','West Indies',153)",
+            "('Group','Australia',66)",
+            "('Group','India',66)",
+            "('Group','New Zealand',60)",
+            "('Semi-final','Australia',85)",
+            "('Final','New Zealand',17)"
+        ],
+        "question_english": "What were the opening partnership stands between Jason Roy and Jonny Bairstow in the 2019 ODI World Cup, ordered chronologically with match stage specified?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Stage", "Opponent", "Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "What were Australia's death overs (41-50) scores when batting first in the 2019 ODI World Cup?",
+        "query": "SELECT M.stage, CASE WHEN M.team1 = 'Australia' THEN M.team2 ELSE M.team1 END AS opponent, M.city, SUM(D.runs_scored + D.extra_runs) AS runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('retired hurt') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' AND D.batting_team = 'Australia' AND D.inning = 1 AND D.over_number BETWEEN 41 AND 50 GROUP BY D.match_id ORDER BY M.match_date;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Group','West Indies','Nottingham',82,4)",
+            "('Group','Pakistan','Taunton',51,6)",
+            "('Group','Sri Lanka','The Oval',97,5)",
+            "('Group','Bangladesh','Nottingham',131,4)",
+            "('Group','England','London',70,3)",
+            "('Group','New Zealand','London',55,4)",
+            "('Semi-final','England','Edgbaston',46,6)"
+        ],
+        "question_english": "What were Australia's death overs (41-50) scores when batting first in the 2019 ODI World Cup?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Stage", "Opponent", "Venue", "Runs", "Wickets"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which team lost the most wickets in death overs (41-50) while batting first in the 2019 ODI World Cup including knockout matches?",
+        "query": "SELECT D.batting_team AS team, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') THEN 1 ELSE 0 END) AS wickets_lost FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' AND D.inning = 1 AND D.over_number BETWEEN 41 AND 50 GROUP BY D.batting_team ORDER BY wickets_lost DESC LIMIT 1;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Australia', 32)"
+        ],
+        "question_english": "Which team lost the most wickets in death overs (41-50) while batting first in the 2019 ODI World Cup including knockout matches?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Team", "Wickets Lost in Death Overs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20283/aus-vs-eng-2nd-semi-final-2-v-3-icc-cricket-world-cup-2019",
+        "question": "Who took the most outfield catches in a single ODI World Cup edition?",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS catches FROM FielderDismissals F JOIN Deliveries D ON F.delivery_id = D.delivery_id JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON F.fielder_id = P.player_id WHERE D.wicket_type = 'caught' AND D.wicket_type NOT IN ('caught and bowled') GROUP BY P.player_name, M.season ORDER BY catches DESC, CAST(SUBSTR(M.season,1,4) AS INTEGER) DESC, P.player_name ASC LIMIT 4;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Joe Root','2019',12)",
+            "('Ricky Ponting','2002/03',11)",
+            "('Faf du Plessis','2019',10)",
+            "('Rilee Rossouw','2014/15',9)"
+        ],
+        "question_english": "Who took the most outfield catches in a single ODI World Cup edition?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "Season", "Catches"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20283/aus-vs-eng-2nd-semi-final-2-v-3-icc-cricket-world-cup-2019",
+        "question": "What were Steve Smith's scores in the knockout matches of the 2015 ODI World Cup?",
+        "query": "SELECT M.stage, CASE WHEN M.team1 = 'Australia' THEN M.team2 ELSE M.team1 END AS opponent, M.city, SUM(D.runs_scored) AS runs, COUNT(*) AS balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'SPD Smith' AND M.season = '2014/15' AND M.stage IN ('Quarter-final','Semi-final','Final') GROUP BY D.match_id ORDER BY CASE M.stage WHEN 'Quarter-final' THEN 1 WHEN 'Semi-final' THEN 2 WHEN 'Final' THEN 3 END;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Quarter-final','Pakistan','Adelaide',65,69)",
+            "('Semi-final','India','Sydney',105,93)",
+            "('Final','New Zealand','Melbourne',56,71)"
+        ],
+        "question_english": "What were Steve Smith's scores in the knockout matches of the 2015 ODI World Cup?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Stage", "Opponent", "Venue", "Runs", "Balls"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20283/aus-vs-eng-2nd-semi-final-2-v-3-icc-cricket-world-cup-2019",
+        "question": "What were Aaron Finch's scores against England in ODI World Cups?",
+        "query": "SELECT M.season, M.city, SUM(D.runs_scored) AS runs, COUNT(*) AS balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'AJ Finch' AND (M.team1 = 'England' OR M.team2 = 'England') GROUP BY D.match_id ORDER BY CAST(SUBSTR(M.season,1,4) AS INTEGER);",
+        "difficulty": "Easy",
+        "answer": [
+            "('2014/15','Melbourne',135,128)",
+            "('2019','London',100,116)"
+        ],
+        "question_english": "What were Aaron Finch's scores against England in ODI World Cups?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Season", "Venue", "Runs", "Balls"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "Which players took the most wickets in the middle overs (11-40) in an ODI World Cup edition?",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.over_number BETWEEN 11 AND 40 AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') GROUP BY P.player_name, M.season ORDER BY wickets DESC, CAST(SUBSTR(M.season,1,4) AS INTEGER) DESC, P.player_name ASC LIMIT 4;",
+        "difficulty": "Medium",
+        "answer": [
+            "('M Muralitharan', '2006/07', 22)",
+            "('GB Hogg', '2006/07', 19)",
+            "('A Zampa', '2023/24', 18)",
+            "('Shahid Afridi', '2010/11', 18)"
+        ],
+        "question_english": "Which players took the most wickets in the middle overs (11-40) in an ODI World Cup edition?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "Season", "Middle Overs Wickets"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which players scored the most runs in knockout matches of the 2019 ODI World Cup?",
+        "query": "SELECT P.player_name, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.season = '2019' AND M.stage IN ('Semi-final','Final') GROUP BY P.player_name ORDER BY runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('BA Stokes', 92)",
+            "('JC Buttler', 66)",
+            "('HM Nicholls', 55)",
+            "('TWM Latham', 47)",
+            "('JM Bairstow', 36)"
+        ],
+        "question_english": "Which players scored the most runs in knockout matches of the 2019 ODI World Cup?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "Knockout Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "What are the highest individual scores in ODI World Cup knockout matches?",
+        "query": "SELECT P.player_name, M.season, M.stage, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.stage IN ('Quarter-final','Semi-final','Final') GROUP BY D.match_id, P.player_name ORDER BY runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('AC Gilchrist', '2006/07', 'Final', 149)",
+            "('RT Ponting', '2002/03', 'Final', 140)",
+            "('TM Head', '2023/24', 'Final', 137)",
+            "('DPMD Jayawardene', '2010/11', 'Final', 103)",
+            "('G Gambhir', '2010/11', 'Final', 97)"
+        ],
+        "question_english": "What are the highest individual scores in ODI World Cup knockout matches?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "Season", "Stage", "Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which bowlers bowled the most dot balls in the 2019 ODI World Cup?",
+        "query": "SELECT P.player_name, COUNT(*) AS dot_balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2019' AND D.runs_scored = 0 AND D.extra_runs = 0 GROUP BY P.player_name ORDER BY dot_balls DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('JC Archer', 321)",
+            "('TA Boult', 307)",
+            "('PJ Cummins', 280)",
+            "('MA Starc', 278)",
+            "('MJ Henry', 265)"
+        ],
+        "question_english": "Which bowlers bowled the most dot balls in the 2019 ODI World Cup?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "Dot Balls"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "Which bowlers had the best economy rate in death overs (41-50) in an ODI World Cup edition (minimum 100 balls bowled)?",
+        "query": "SELECT P.player_name, M.season, (SUM(D.runs_scored + D.extra_runs) * 6.0 / COUNT(*)) AS economy FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.over_number BETWEEN 41 AND 50 GROUP BY P.player_name, M.season HAVING COUNT(*) >= 100 ORDER BY economy ASC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('AJ Hall', '2006/07', 5.0)",
+            "('MA Starc', '2019', 5.16)",
+            "('Abdur Razzak', '2006/07', 5.46902654867257)",
+            "('JC Archer', '2019', 5.55223880597015)",
+            "('JJ Bumrah', '2019', 5.85123966942149)"
+        ],
+        "question_english": "Which bowlers had the best economy rate in death overs (41-50) in an ODI World Cup edition (minimum 100 balls bowled)?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "Season", "Economy"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which players scored the most 50+ scores in the 2019 ODI World Cup?",
+        "query": "SELECT P.player_name, COUNT(*) AS fifty_plus FROM (SELECT D.match_id, D.striker_id, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' GROUP BY D.match_id, D.striker_id HAVING runs >= 50) T JOIN Players P ON T.striker_id = P.player_id GROUP BY P.player_name ORDER BY fifty_plus DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Shakib Hasan', 6)",
+            "('RG Sharma', 6)",
+            "('JJ Roy', 5)",
+            "('DA Warner', 5)",
+            "('BA Stokes', 5)"
+        ],
+        "question_english": "Which players scored the most 50+ scores in the 2019 ODI World Cup?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Player Name", "50+ Scores"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "Which teams have won the most matches while chasing in ODI World Cup history?",
+        "query": "SELECT match_winner, COUNT(*) AS chase_wins FROM Matches WHERE result_type = 'wickets' GROUP BY match_winner ORDER BY chase_wins DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('New Zealand', 21)",
+            "('Australia', 18)",
+            "('India', 17)",
+            "('South Africa', 11)",
+            "('Sri Lanka', 9)"
+        ],
+        "question_english": "Which teams have won the most matches while chasing in ODI World Cup history?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Team", "Chase Wins"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "What are the largest lower-order recoveries in successful run chases in ODI World Cup history (runs added after the fall of the fifth wicket)?",
+        "query": "WITH chase_wins AS ( SELECT match_id, match_winner FROM Matches WHERE result_type = 'wickets' ), fifth_wicket AS ( SELECT D.match_id, MAX((D.over_number*6)+D.ball_number) AS ball_at_5w, SUM(D.runs_scored + D.extra_runs) AS score_at_5w FROM Deliveries D JOIN chase_wins C ON D.match_id = C.match_id WHERE D.inning = 2 AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') GROUP BY D.match_id HAVING COUNT(*) >= 5 ), final_scores AS ( SELECT D.match_id, SUM(D.runs_scored + D.extra_runs) AS final_score FROM Deliveries D JOIN chase_wins C ON D.match_id = C.match_id WHERE D.inning = 2 GROUP BY D.match_id ) SELECT M.season, C.match_winner, (F.final_score - W.score_at_5w) AS recovery_runs FROM fifth_wicket W JOIN final_scores F ON W.match_id = F.match_id JOIN chase_wins C ON C.match_id = W.match_id JOIN Matches M ON M.match_id = W.match_id ORDER BY recovery_runs DESC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('2010/11', 'Ireland', 329)",
+            "('2014/15', 'Ireland', 307)",
+            "('2006/07', 'England', 301)",
+            "('2010/11', 'South Africa', 299)",
+            "('2014/15', 'New Zealand', 299)"
+        ],
+        "question_english": "What are the largest lower-order recoveries in successful run chases in ODI World Cup history (runs added after the fall of the fifth wicket)?",
+        "question_hindi": "",
+        "question_punjabi": "",
+        "question_telugu": "",
+        "column_names": ["Season", "Team", "Runs Added After 5th Wicket"]
+    }
+]
