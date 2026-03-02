@@ -1,6 +1,6 @@
 [
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which Batsmen has the highest batting average against Australia in T20 history?",
         "query": "SELECT p.player_name FROM Players p JOIN Deliveries d ON p.player_id = d.striker_id WHERE d.bowling_team = 'Australia' GROUP BY p.player_id, p.player_name ORDER BY (SUM(d.runs_scored) * 1.0 / NULLIF((SELECT COUNT(player_out_id) FROM Deliveries d2 WHERE d2.player_out_id = p.player_id AND d2.bowling_team = 'Australia'), 0)) DESC LIMIT 1;",
@@ -13,7 +13,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Across all T20 World Cup editions, which team has used the most bowlers in a single innings and did that strategy result in a win or loss?",
         "query": "SELECT d.bowling_team, COUNT(DISTINCT d.bowler_id) AS total_bowlers_used, CASE WHEN d.bowling_team = m.match_winner THEN 'Win' WHEN m.match_winner IS NULL AND m.result_type IN ('tie', 'no result') THEN 'Tie/No Result' ELSE 'Loss' END AS match_result FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.inning, d.bowling_team, m.match_winner, m.result_type ORDER BY total_bowlers_used DESC LIMIT 1;",
@@ -28,7 +28,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which bowler has the best economy rate in overs 17-20 across all T20 World Cups, with a minimum of 100 balls bowled in that phase?",
         "query": "SELECT p.player_name FROM Players p JOIN Deliveries d ON p.player_id = d.bowler_id WHERE d.over_number BETWEEN 17 AND 20 GROUP BY p.player_id, p.player_name HAVING SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) >= 100 ORDER BY (SUM(d.runs_scored + d.wides + d.noballs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) ASC LIMIT 1;",
@@ -41,7 +41,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Who has the best average among bowlers with 10+ wickets, and what is their economy and strike rate?",
         "query": "SELECT p.player_name, (SUM(d.runs_scored + d.wides + d.noballs) * 1.0 / SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END)) AS bowling_average, (SUM(d.runs_scored + d.wides + d.noballs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS economy_rate, (SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) * 1.0 / SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END)) AS strike_rate FROM Players p JOIN Deliveries d ON p.player_id = d.bowler_id GROUP BY p.player_id, p.player_name HAVING SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) >= 10 ORDER BY bowling_average ASC LIMIT 1;",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which fielder has the most dismissals in knockout stage matches, and give dismissals per innings as well? ?",
         "query": "SELECT p.player_name, COUNT(fd.fielder_dismissal_id) AS total_dismissals, (COUNT(fd.fielder_dismissal_id) * 1.0 / (SELECT COUNT(DISTINCT pim.match_id) FROM PlayerInMatch pim JOIN Matches m2 ON pim.match_id = m2.match_id WHERE pim.player_id = p.player_id AND m2.stage <> 'Group')) AS dismissals_per_innings FROM Players p JOIN FielderDismissals fd ON p.player_id = fd.fielder_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE m.stage <> 'Group' GROUP BY p.player_id, p.player_name ORDER BY total_dismissals DESC LIMIT 1;",
@@ -72,7 +72,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In T20 history list the top two teams in terms of percentage of matches won ,also give the percentages.",
         "query": "WITH TeamMatches AS (SELECT team1 AS team, match_id, match_winner FROM Matches UNION ALL SELECT team2 AS team, match_id, match_winner FROM Matches) SELECT team, (SUM(CASE WHEN match_winner = team THEN 1 ELSE 0 END) * 100.0 / COUNT(match_id)) AS win_percentage FROM TeamMatches GROUP BY team ORDER BY win_percentage DESC LIMIT 2;",
@@ -87,7 +87,7 @@
         "Win Percentage"
         ]
     },{
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "For Hetmyer, Farhan, and Kishan — what percentage of their total runs came from boundaries in T-20 season 2026?",
         "query": "SELECT p.player_name, (SUM(CASE WHEN d.runs_scored IN (4, 6) THEN d.runs_scored ELSE 0 END) * 100.0 / NULLIF(SUM(d.runs_scored), 0)) AS boundary_percentage FROM Players p JOIN Deliveries d ON p.player_id = d.striker_id WHERE p.player_name LIKE '%Hetmyer%' OR p.player_name LIKE '%Farhan%' OR p.player_name LIKE '%Kishan%' GROUP BY p.player_id, p.player_name;",
@@ -103,7 +103,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Calculate non-boundary runs for Kusal Mendis, Pathum Nissanka, and Aiden Markram. Who scored most between the wickets in T-20 season 2026?",
         "query": "SELECT p.player_name, SUM(CASE WHEN d.runs_scored NOT IN (4, 6) THEN d.runs_scored ELSE 0 END) AS runs_between_wickets FROM Players p JOIN Deliveries d ON p.player_id = d.striker_id WHERE p.player_name IN ('Kusal Mendis', 'Pathum Nissanka', 'Aiden Markram') GROUP BY p.player_id, p.player_name ORDER BY runs_between_wickets DESC;",
@@ -121,7 +121,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Who are the top 3 batsmen with highest batting average in T20 season 2026",
         "query": "SELECT p.player_name FROM Players p JOIN Deliveries d ON p.player_id = d.striker_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '20226' GROUP BY p.player_id, p.player_name ORDER BY (SUM(d.runs_scored) * 1.0 / NULLIF((SELECT COUNT(d2.player_out_id) FROM Deliveries d2 JOIN Matches m2 ON d2.match_id = m2.match_id WHERE d2.player_out_id = p.player_id AND m2.season = '2026'), 0)) DESC LIMIT 3;",
@@ -136,7 +136,7 @@
         "Batting average"
         ]
     },{
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Name the two players who have exactly 4 ducks (0s), played for the same country.",
         "query": "WITH PlayerScores AS (SELECT d.match_id, d.striker_id, d.batting_team, SUM(d.runs_scored) AS runs, MAX(CASE WHEN d.player_out_id = d.striker_id THEN 1 ELSE 0 END) AS is_out FROM Deliveries d GROUP BY d.match_id, d.striker_id, d.batting_team), DuckCounts AS (SELECT striker_id, batting_team, COUNT(match_id) AS ducks FROM PlayerScores WHERE runs = 0 AND is_out = 1 GROUP BY striker_id, batting_team HAVING ducks = 4) SELECT p1.player_name, p2.player_name FROM DuckCounts d1 JOIN DuckCounts d2 ON d1.batting_team = d2.batting_team AND d1.striker_id < d2.striker_id JOIN Players p1 ON d1.striker_id = p1.player_id JOIN Players p2 ON d2.striker_id = p2.player_id LIMIT 1;",
@@ -149,7 +149,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which player has the highest strike rate (SR) among all those with exactly 3 ducks, and what is that SR?",
         "query": "WITH PlayerInnings AS (SELECT match_id, striker_id, SUM(runs_scored) AS runs, MAX(CASE WHEN player_out_id = striker_id THEN 1 ELSE 0 END) AS is_out, SUM(runs_scored) AS total_runs, SUM(CASE WHEN wides = 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries GROUP BY match_id, striker_id), PlayerStats AS (SELECT striker_id, SUM(CASE WHEN runs = 0 AND is_out = 1 THEN 1 ELSE 0 END) AS duck_count, SUM(total_runs) AS career_runs, SUM(balls_faced) AS career_balls FROM PlayerInnings GROUP BY striker_id) SELECT p.player_name, (ps.career_runs * 100.0 / ps.career_balls) AS strike_rate FROM PlayerStats ps JOIN Players p ON ps.striker_id = p.player_id WHERE ps.duck_count = 3 AND ps.career_balls > 0 ORDER BY strike_rate DESC LIMIT 1;",
@@ -164,7 +164,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Name the team that conceded the most extras, state the ground, opposition, and how many were wides.",
         "query": "SELECT d.bowling_team, m.venue, d.batting_team AS opposition, SUM(d.wides) AS total_wides FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.bowling_team, m.venue, d.batting_team ORDER BY SUM(d.extra_runs) DESC LIMIT 1;",
@@ -180,7 +180,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Among all entries with exactly 19 extras, which team had the highest run rate, and what was their score?",
         "query": "SELECT d.batting_team, ((SUM(d.runs_scored) + SUM(d.extra_runs)) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS run_rate, (SUM(d.runs_scored) + SUM(d.extra_runs)) AS total_score FROM Deliveries d GROUP BY d.match_id, d.batting_team HAVING SUM(d.extra_runs) = 19 ORDER BY run_rate DESC LIMIT 1;",
@@ -194,7 +194,7 @@
             "Total Score"
         ]
     },{
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Among players with over 800 runs and exactly 3 ducks, who has the lower strike rate — and by how much?",
         "query": "WITH InningsStats AS (SELECT striker_id, match_id, SUM(runs_scored) AS runs_in_innings, SUM(CASE WHEN wides = 0 THEN 1 ELSE 0 END) AS balls_in_innings, MAX(CASE WHEN player_out_id = striker_id THEN 1 ELSE 0 END) AS is_out FROM Deliveries GROUP BY striker_id, match_id), PlayerStats AS (SELECT striker_id, SUM(runs_in_innings) AS total_runs, SUM(balls_in_innings) AS total_balls, SUM(CASE WHEN runs_in_innings = 0 AND is_out = 1 THEN 1 ELSE 0 END) AS ducks FROM InningsStats GROUP BY striker_id) SELECT p.player_name, (ps.total_runs * 100.0 / ps.total_balls) AS lowest_strike_rate FROM PlayerStats ps JOIN Players p ON ps.striker_id = p.player_id WHERE ps.total_runs > 800 AND ps.ducks = 3 ORDER BY lowest_strike_rate ASC LIMIT 2;",
@@ -208,7 +208,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In the ICC Men's T20 World Cup , which team gave away 19 extras while bowling out the opposition for just 68 runs, and who was the opposition?",
         "query": "SELECT d.bowling_team, d.batting_team AS opposition FROM Deliveries d GROUP BY d.match_id, d.bowling_team, d.batting_team HAVING (SUM(d.runs_scored) + SUM(d.extra_runs)) = 68 AND SUM(d.extra_runs) = 19;",
@@ -222,7 +222,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In the ICC Men's T20 World Cup 2026, which bowler took 4 wickets while conceding just 7 runs, against which opposition, and what was his economy rate?",
         "query": "SELECT p.player_name, d.batting_team AS opposition, (SUM(d.runs_scored + d.wides + d.noballs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS economy_rate FROM Players p JOIN Deliveries d ON p.player_id = d.bowler_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2026' GROUP BY p.player_id, p.player_name, d.match_id, d.batting_team HAVING SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) = 4 AND SUM(d.runs_scored + d.wides + d.noballs) = 7;",
@@ -237,7 +237,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which Australian bowler appeared in the T20 World Cup 2026 best bowling figures list twice, name his two opponents and combined wickets across both performances",
         "query": "WITH BowlerStats AS (SELECT p.player_name, d.bowler_id, d.batting_team AS opposition, SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id JOIN Players p ON d.bowler_id = p.player_id WHERE d.bowling_team = 'Australia' AND m.season = '2026' GROUP BY p.player_name, d.bowler_id, d.match_id, d.batting_team HAVING SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) >= 4) SELECT player_name, GROUP_CONCAT(opposition, ' and ') AS opponents, SUM(wickets) AS combined_wickets FROM BowlerStats GROUP BY player_name, bowler_id HAVING COUNT(*) = 2;",
@@ -252,7 +252,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In T20 World Cup 2026, which bowler claimed a five-wicket haul in only 3 overs, name his country, opposition, and his Economy",
         "query": "SELECT p.player_name, d.bowling_team AS country, d.batting_team AS opposition, (SUM(d.runs_scored + d.wides + d.noballs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS economy_rate FROM Players p JOIN Deliveries d ON p.player_id = d.bowler_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2026' GROUP BY p.player_id, p.player_name, d.match_id, d.bowling_team, d.batting_team HAVING SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) >= 5 AND SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) <= 18;",
@@ -268,7 +268,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which two bowlers took 4 wickets each against India in T20 World Cup 2026 — name both, their countries, and which was more economical and by how much.",
         "query": "WITH BowlerStats AS (SELECT p.player_name, d.bowling_team AS country, (SUM(d.runs_scored + d.wides + d.noballs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS economy_rate FROM Players p JOIN Deliveries d ON p.player_id = d.bowler_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2026' AND d.batting_team = 'India' GROUP BY p.player_id, p.player_name, d.match_id, d.bowling_team HAVING SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) = 4) SELECT b1.player_name AS bowler1, b1.country AS country1, b2.player_name AS bowler2, b2.country AS country2, CASE WHEN b1.economy_rate < b2.economy_rate THEN b1.player_name ELSE b2.player_name END AS more_economical, ABS(b1.economy_rate - b2.economy_rate) AS economy_diff FROM BowlerStats b1 JOIN BowlerStats b2 ON b1.player_name < b2.player_name LIMIT 1;",
@@ -286,7 +286,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In T20 World Cup history, which South African fielder has the highest Ct/Inn ratio among all players with 16+ catches,  total catches, and Maximum catches in a single innings? ",
         "query": "",
@@ -302,7 +302,7 @@
         ]
     },"SPD Smith (AUS) — 0.736 K Rabada (SA) — 0.518 LRPL Taylor (NZ) — 0.500 RA Jadeja (IND) — 0.466",
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Among all players with exactly 14 catches, which has the best Ct/Inn ratio, name all four players with 14 catches, their countries, and rank them by Ct/Inn best to worst.",
         "query": "WITH CatchCounts AS (SELECT fd.fielder_id, COUNT(fd.fielder_dismissal_id) AS total_catches FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id WHERE d.wicket_type IN ('caught', 'caught and bowled') GROUP BY fd.fielder_id HAVING COUNT(fd.fielder_dismissal_id) = 14), PlayerStats AS (SELECT player_id, MAX(team_name) AS country, COUNT(DISTINCT match_id) AS innings_played FROM PlayerInMatch GROUP BY player_id) SELECT p.player_name, ps.country, cc.total_catches, (cc.total_catches * 1.0 / ps.innings_played) AS ct_inn_ratio FROM CatchCounts cc JOIN PlayerStats ps ON cc.fielder_id = ps.player_id JOIN Players p ON cc.fielder_id = p.player_id ORDER BY ct_inn_ratio DESC;",
@@ -321,7 +321,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": " Name the only West Indian fielder who played fewer than 30 matches yet took 15+ catches, his Ct/Inn ratio, and Maximum wickets in an innings .",
         "query": "WITH MatchCatches AS (SELECT fd.fielder_id, d.match_id, COUNT(fd.fielder_dismissal_id) AS match_catches FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id WHERE d.wicket_type = 'caught' GROUP BY fd.fielder_id, d.match_id) SELECT p.player_name, (SUM(mc.match_catches) * 1.0 / (SELECT COUNT(DISTINCT match_id) FROM PlayerInMatch WHERE player_id = mc.fielder_id)) AS ct_inn_ratio, MAX(mc.match_catches) AS max_catches_in_innings FROM MatchCatches mc JOIN Players p ON mc.fielder_id = p.player_id WHERE EXISTS (SELECT 1 FROM PlayerInMatch pim WHERE pim.player_id = mc.fielder_id AND pim.team_name = 'West Indies') GROUP BY mc.fielder_id, p.player_name HAVING (SELECT COUNT(DISTINCT match_id) FROM PlayerInMatch WHERE player_id = mc.fielder_id) < 30 AND SUM(mc.match_catches) >= 15;",
@@ -336,7 +336,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In T20 history name all the teams which won a match with a margin of 1 run , give the opposing team as well as the target score. ",
         "query": "SELECT m.match_winner AS winning_team, CASE WHEN m.team1 = m.match_winner THEN m.team2 ELSE m.team1 END AS opposing_team, (SELECT SUM(runs_scored + extra_runs) + 1 FROM Deliveries d WHERE d.match_id = m.match_id AND d.inning = 1) AS target_score FROM Matches m WHERE m.result_margin = 1 AND m.result_type = 'runs';",
@@ -356,7 +356,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In T20 history, excluding the teams with No Results (NR), which team has the worst win-loss record in a single series, and what is their exact record?",
         "query": "WITH TeamSeasonStats AS (SELECT m.season, t.team_name, SUM(CASE WHEN m.match_winner = t.team_name THEN 1 ELSE 0 END) AS wins, SUM(CASE WHEN m.match_winner != t.team_name AND m.match_winner IS NOT NULL AND m.result_type != 'no result' THEN 1 ELSE 0 END) AS losses, SUM(CASE WHEN m.match_winner IS NULL OR m.result_type = 'no result' THEN 1 ELSE 0 END) AS nr_count FROM Matches m JOIN (SELECT match_id, team1 AS team_name FROM Matches UNION ALL SELECT match_id, team2 AS team_name FROM Matches) t ON m.match_id = t.match_id GROUP BY m.season, t.team_name) SELECT team_name, season, wins, losses FROM TeamSeasonStats WHERE nr_count = 0 ORDER BY (wins * 1.0 / (wins + losses)) ASC, losses DESC LIMIT 1;",
@@ -372,7 +372,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Name the players who have scored multiple fastest hundreds in T20 World Cups and also tell the number of hundreds?",
         "query": "WITH CenturyInnings AS (SELECT match_id, striker_id, SUM(CASE WHEN wides = 0 AND noballs = 0 THEN 1 ELSE 0 END) AS balls FROM Deliveries GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100) SELECT p.player_name, COUNT(c.match_id) AS number_of_hundreds FROM CenturyInnings c JOIN Players p ON c.striker_id = p.player_id GROUP BY c.striker_id, p.player_name HAVING COUNT(c.match_id) > 1;",
@@ -387,7 +387,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Name the batsmen who scored fastest hundreds against Bangladesh and also report the balls faced by them",
         "query": "WITH CenturyInnings AS (SELECT match_id, striker_id, SUM(CASE WHEN wides = 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries WHERE bowling_team = 'Bangladesh' GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100) SELECT p.player_name, c.balls_faced FROM CenturyInnings c JOIN Players p ON c.striker_id = p.player_id ORDER BY c.balls_faced ASC;",
@@ -404,7 +404,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which match holds the record for the highest run rate, and what is that run rate?",
         "query": "SELECT m.match_id, m.team1, m.team2, (SUM(d.runs_scored + d.extra_runs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS run_rate FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id GROUP BY m.match_id, m.team1, m.team2 ORDER BY run_rate DESC LIMIT 1;",
@@ -420,7 +420,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "What is the average number of balls bowled across the 15 shortest matches (by the balls bowled) ?",
         "query": "SELECT AVG(balls_bowled) FROM (SELECT match_id, SUM(CASE WHEN wides = 0 AND noballs = 0 THEN 1 ELSE 0 END) AS balls_bowled FROM Deliveries GROUP BY match_id ORDER BY balls_bowled ASC LIMIT 15);",
@@ -433,7 +433,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which team has the highest aggregate losses in the shortest matches (by the balls bowled) without ever winning?",
         "query": "WITH ShortestMatches AS (SELECT match_id FROM Deliveries GROUP BY match_id ORDER BY SUM(CASE WHEN wides = 0 AND noballs = 0 THEN 1 ELSE 0 END) ASC LIMIT 15), MatchTeams AS (SELECT m.match_id, m.team1 AS team, m.match_winner FROM Matches m JOIN ShortestMatches sm ON m.match_id = sm.match_id UNION ALL SELECT m.match_id, m.team2 AS team, m.match_winner FROM Matches m JOIN ShortestMatches sm ON m.match_id = sm.match_id) SELECT team, SUM(CASE WHEN match_winner != team AND match_winner IS NOT NULL THEN 1 ELSE 0 END) AS aggregate_losses FROM MatchTeams GROUP BY team HAVING SUM(CASE WHEN match_winner = team THEN 1 ELSE 0 END) = 0 ORDER BY aggregate_losses DESC LIMIT 1;",
@@ -447,7 +447,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "In T20 world cup history, which match has the highest ratio of wides to total balls bowled, and what is that ratio?",
         "query": "SELECT match_id, batting_team, bowling_team, (SUM(CASE WHEN wides > 0 THEN 1 ELSE 0 END) * 1.0 / COUNT(*)) AS wide_ratio FROM Deliveries GROUP BY match_id, batting_team, bowling_team ORDER BY wide_ratio DESC LIMIT 1;",
@@ -462,7 +462,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which team had the most no balls while conceding the fewest wides? Also report the opposing team and the No balls to wides ratio",
         "query": "SELECT bowling_team, batting_team AS opposing_team, (SUM(noballs) * 1.0 / NULLIF(SUM(wides), 0)) AS nb_to_wide_ratio FROM Deliveries GROUP BY match_id, bowling_team, batting_team ORDER BY SUM(noballs) DESC, SUM(wides) ASC LIMIT 1;",
@@ -477,14 +477,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which team recorded the most leg byes in an innings, how many , against whom, at what venue, and what were their total extras and score?",
         "query": "SELECT d.batting_team, SUM(d.legbyes) AS total_legbyes, d.bowling_team AS against_whom, m.venue, SUM(d.extra_runs) AS total_extras, SUM(d.runs_scored + d.extra_runs) AS total_score FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team, m.venue ORDER BY total_legbyes DESC LIMIT 1;",
         "answer": [
             "('New Zealand', 17, England, Auckland, 23, 152 )"
         ],
-        "question_english": "Which team recorded the most leg byes in a t20_i.db innings, how many , against whom, at what venue, and what were their total extras and score?",
+        "question_english": "Which team recorded the most leg byes in a T20I innings, how many , against whom, at what venue, and what were their total extras and score?",
         "column_names": [
         "Batting Team",
         "Total legbyes",
@@ -495,7 +495,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which team recorded 10 leg byes while scoring just 92 runs in 20 overs against Oman — name the team, venue, and their run rate?",
         "query": "SELECT d.batting_team, m.venue, (SUM(d.runs_scored + d.extra_runs) * 6.0 / SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END)) AS run_rate FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.bowling_team = 'Oman' GROUP BY d.match_id, d.batting_team, m.venue HAVING SUM(d.legbyes) = 10 AND SUM(d.runs_scored + d.extra_runs) = 92;",
@@ -510,14 +510,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db career batting history, which Indian batter has the highest strike rate among all Indian players with 3000+ runs. Report the Strike rate, average, and total sixes?",
+        "question": "In T20I career batting history, which Indian batter has the highest strike rate among all Indian players with 3000+ runs. Report the Strike rate, average, and total sixes?",
         "query": "SELECT p.player_name, (SUM(d.runs_scored) * 100.0 / SUM(CASE WHEN d.wides = 0 THEN 1 ELSE 0 END)) AS strike_rate, (SUM(d.runs_scored) * 1.0 / NULLIF(SUM(CASE WHEN d.player_out_id = d.striker_id THEN 1 ELSE 0 END), 0)) AS average, SUM(CASE WHEN d.runs_scored = 6 THEN 1 ELSE 0 END) AS total_sixes FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE d.batting_team = 'India' GROUP BY d.striker_id, p.player_name HAVING SUM(d.runs_scored) >= 3000 ORDER BY strike_rate DESC LIMIT 1;",
         "answer": [
             "('SA Yadav', 162.77, 37.32, 175)"
         ],
-        "question_english": "In t20_i.db career batting history, which Indian batter has the highest strike rate among all Indian players with 3000+ runs. Report the Strike rate, average, and total sixes?",
+        "question_english": "In T20I career batting history, which Indian batter has the highest strike rate among all Indian players with 3000+ runs. Report the Strike rate, average, and total sixes?",
         "column_names": [
         "Player Name",
         "Strike Rate",
@@ -526,17 +526,17 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Among all players with 29 fifty-plus scores, which has the highest SR, name all four players, their countries, and rank them by SR highest to lowest?",
-        "query": "",
+        "question": "Among all players with 29 (50+ scores), which has the highest SR, name all four players, their countries, and also give their SR",
+        "query": "WITH BattingStats AS (SELECT striker_id, SUM(runs_scored) AS total_runs, COUNT(delivery_id) - SUM(CASE WHEN wides > 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries GROUP BY striker_id), InningsScores AS (SELECT striker_id, match_id, inning, SUM(runs_scored) AS innings_runs FROM Deliveries GROUP BY striker_id, match_id, inning), FiftyPlusCounts AS (SELECT striker_id, COUNT(*) AS fifty_plus_scores FROM InningsScores WHERE innings_runs >= 50 GROUP BY striker_id HAVING COUNT(*) >= 29) SELECT p.player_name AS Player, (SELECT team_name FROM PlayerInMatch WHERE player_id = p.player_id LIMIT 1) AS Country, fpc.fifty_plus_scores, ROUND(CAST(bs.total_runs AS FLOAT) / bs.balls_faced * 100, 2) AS SR FROM FiftyPlusCounts fpc JOIN Players p ON fpc.striker_id = p.player_id JOIN BattingStats bs ON fpc.striker_id = bs.striker_id ORDER BY SR DESC;",
         "answer": [
             "('SA Yadav','India',162.77)",
             "('Muhammad Waseem','United Arab Emirates',150.56)",
             "('JC Buttler','England',147.88)",
             "('DA Warner','Australia',142.47)"
         ],
-        "question_english": "Among all players with 29 fifty-plus scores, which has the highest SR, name all four players, their countries, and rank them by SR highest to lowest?",
+        "question_english": "Among all players with 29 (50+ scores), which has the highest SR, name all four players, their countries, and also give their SR",
         "column_names": [
         "Player Name",
         "Country",
@@ -544,14 +544,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db history, which player has the most sixes among all players with 30+ fifty-plus scores , average, and ducks?",
+        "question": "In T20I history, which player has the most sixes among all players with 30+ fifty-plus scores , average, and ducks?",
         "query": "WITH PlayerMatchStats AS (SELECT striker_id, match_id, SUM(runs_scored) AS match_runs, SUM(CASE WHEN runs_scored = 6 THEN 1 ELSE 0 END) AS match_sixes, MAX(CASE WHEN player_out_id = striker_id THEN 1 ELSE 0 END) AS is_out FROM Deliveries GROUP BY striker_id, match_id) SELECT p.player_name, SUM(pms.match_sixes) AS total_sixes, (SUM(pms.match_runs) * 1.0 / NULLIF(SUM(pms.is_out), 0)) AS average, SUM(CASE WHEN pms.match_runs = 0 AND pms.is_out = 1 THEN 1 ELSE 0 END) AS total_ducks FROM PlayerMatchStats pms JOIN Players p ON pms.striker_id = p.player_id GROUP BY pms.striker_id, p.player_name HAVING SUM(CASE WHEN pms.match_runs >= 50 THEN 1 ELSE 0 END) >= 30 ORDER BY total_sixes DESC LIMIT 1;",
         "answer": [
             "('RG Sharma', 205, 32.05, 12)"
         ],
-        "question_english": "In t20_i.db history, which player has the most sixes among all players with 30+ fifty-plus scores , average, and ducks?",
+        "question_english": "In T20I history, which player has the most sixes among all players with 30+ fifty-plus scores , average, and ducks?",
         "column_names": [
         "Player Name",
         "Total Sixes",
@@ -560,7 +560,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which bowler took consecutive four wicket hauls where both spells came in the first innings against the same opposition on consecutive days .Report his country, ratio of wickets to runs conceded, and opponents?",
         "query": "WITH BowlerStats AS (SELECT d.match_id, m.match_date, d.bowler_id, d.bowling_team, d.batting_team, SUM(CASE WHEN d.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field', 'retired out') AND d.wicket_type IS NOT NULL THEN 1 ELSE 0 END) AS wickets, SUM(d.runs_scored + d.wides + d.noballs) AS runs_conceded FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.inning = 1 GROUP BY d.match_id, m.match_date, d.bowler_id, d.bowling_team, d.batting_team HAVING SUM(CASE WHEN d.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field', 'retired out') AND d.wicket_type IS NOT NULL THEN 1 ELSE 0 END) >= 4) SELECT p.player_name, b1.bowling_team AS country, ((b1.wickets + b2.wickets) * 1.0 / NULLIF((b1.runs_conceded + b2.runs_conceded), 0)) AS wicket_to_runs_ratio, b1.batting_team AS opponents FROM BowlerStats b1 JOIN BowlerStats b2 ON b1.bowler_id = b2.bowler_id AND b1.batting_team = b2.batting_team AND date(b2.match_date) = date(b1.match_date, '+1 day') JOIN Players p ON b1.bowler_id = p.player_id;",
@@ -576,14 +576,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db career bowling history, which spinner has bowled the most balls despite never taking a five-wicket haul, name his country, wickets, economy?",
+        "question": "In T20I career bowling history, which spinner has bowled the most balls despite never taking a five-wicket haul, name his country, wickets, economy?",
         "query": "WITH MatchWickets AS (SELECT match_id, bowler_id, bowling_team, SUM(CASE WHEN wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field', 'retired out') AND wicket_type IS NOT NULL THEN 1 ELSE 0 END) AS match_wkts, SUM(CASE WHEN wides = 0 AND noballs = 0 THEN 1 ELSE 0 END) AS match_balls, SUM(runs_scored + wides + noballs) AS match_runs FROM Deliveries GROUP BY match_id, bowler_id, bowling_team) SELECT p.player_name, MAX(mw.bowling_team) AS country, SUM(mw.match_wkts) AS wickets, (SUM(mw.match_runs) * 6.0 / NULLIF(SUM(mw.match_balls), 0)) AS economy FROM MatchWickets mw JOIN Players p ON mw.bowler_id = p.player_id GROUP BY mw.bowler_id, p.player_name HAVING MAX(mw.match_wkts) < 5 ORDER BY SUM(mw.match_balls) DESC LIMIT 1;",
         "answer": [
             "('AU Rashid','England', 159, 7.46)"
         ],
-        "question_english": "In t20_i.db career bowling history, which spinner has bowled the most balls despite never taking a five-wicket haul, name his country, wickets, economy?",
+        "question_english": "In T20I career bowling history, which spinner has bowled the most balls despite never taking a five-wicket haul, name his country, wickets, economy?",
         "column_names": [
         "Player Name",
         "Country",
@@ -592,7 +592,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which Bangladeshi bowler has taken the most five-wicket hauls with 2700+ balls. Report his economy, wickets, and how many five-wicket hauls does he have",
         "query": "WITH BowlerMatchStats AS (SELECT bowler_id, match_id, SUM(CASE WHEN wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field', 'retired out') AND wicket_type IS NOT NULL THEN 1 ELSE 0 END) AS match_wkts, SUM(CASE WHEN wides = 0 AND noballs = 0 THEN 1 ELSE 0 END) AS match_balls, SUM(runs_scored + wides + noballs) AS match_runs FROM Deliveries WHERE bowling_team = 'Bangladesh' GROUP BY bowler_id, match_id) SELECT p.player_name, (SUM(bms.match_runs) * 6.0 / NULLIF(SUM(bms.match_balls), 0)) AS economy, SUM(bms.match_wkts) AS wickets, SUM(CASE WHEN bms.match_wkts >= 5 THEN 1 ELSE 0 END) AS five_wicket_hauls FROM BowlerMatchStats bms JOIN Players p ON bms.bowler_id = p.player_id GROUP BY bms.bowler_id, p.player_name HAVING SUM(bms.match_balls) >= 2700 ORDER BY five_wicket_hauls DESC LIMIT 1;",
@@ -608,28 +608,28 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "New Zealand and India tied in t20_i.dbs on consecutive days. Give the dates and venues of the matches.",
+        "question": "New Zealand and India tied in T20Is on consecutive days. Give the dates and venues of the matches.",
         "query": "WITH NZ_IND_Ties AS (SELECT match_date, venue FROM Matches WHERE ((team1 = 'New Zealand' AND team2 = 'India') OR (team1 = 'India' AND team2 = 'New Zealand')) AND result_type = 'tie') SELECT t1.match_date AS date1, t1.venue AS venue1, t2.match_date AS date2, t2.venue AS venue2 FROM NZ_IND_Ties t1 JOIN NZ_IND_Ties t2 ON date(t2.match_date) = date(t1.match_date, '+1 day');",
         "answer": [
             "('2020-01-29','Seddon Park','2020-01-31','McLean Park')"
         ],
-        "question_english": "New Zealand and India tied in t20_i.dbs on consecutive days. Give the dates and venues of the matches.",
+        "question_english": "New Zealand and India tied in T20Is on consecutive days. Give the dates and venues of the matches.",
         "column_names": [
         "Date",
         "Venue"
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db history, which team chased the highest ever target on the last ball.Give their name their target, opponents, margin of victory, and date?",
+        "question": "In T20I history, which team chased the highest ever target on the last ball.Give their name their target, opponents, margin of victory, and date?",
         "query": "WITH InningStats AS (SELECT match_id, inning, batting_team, bowling_team, SUM(runs_scored + extra_runs) AS total_runs, SUM(CASE WHEN wides = 0 AND noballs = 0 THEN 1 ELSE 0 END) AS legal_balls FROM Deliveries GROUP BY match_id, inning, batting_team, bowling_team) SELECT i2.batting_team AS team_name, (i1.total_runs + 1) AS target, i2.bowling_team AS opponents, m.result_margin, m.match_date FROM InningStats i1 JOIN InningStats i2 ON i1.match_id = i2.match_id AND i1.inning = 1 AND i2.inning = 2 JOIN Matches m ON i1.match_id = m.match_id WHERE m.match_winner = i2.batting_team AND i2.legal_balls = 120 ORDER BY target DESC LIMIT 1;",
         "answer": [
             "('Australia', 223, 'India', 5,'2023-11-28')"
         ],
-        "question_english": "In t20_i.db history, which team chased the highest ever target on the last ball.Give their name their target, opponents, margin of victory, and date?",
+        "question_english": "In T20I history, which team chased the highest ever target on the last ball.Give their name their target, opponents, margin of victory, and date?",
         "column_names": [
         "Team Name",
         "Target Score",
@@ -639,14 +639,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Name the only last-ball t20_i.db win completed in just 5 overs. State the winner, opposition, target and margin?",
+        "question": "Name the only last-ball T20I win completed in just 5 overs. State the winner, opposition, target and margin?",
         "query": "",
         "answer": [
             "('Bangladesh','Pakistan', 65, 6)"
         ],
-        "question_english": "Name the only last-ball t20_i.db win completed in just 5 overs. State the winner, opposition, target and margin?",
+        "question_english": "Name the only last-ball T20I win completed in just 5 overs. State the winner, opposition, target and margin?",
         "column_names": [
         "Winning Team",
         "Opposing Team",
@@ -655,14 +655,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which team holds the highest ever batting average per wicket in t20_i.db history, name their score, opposition, and date?",
+        "question": "Which team holds the highest ever batting average per wicket in T20I history, name their score, opposition, and date?",
         "query": "",
         "answer": [
             "('India', 283,'South Africa','2024-11-15', 283,)"
         ],
-        "question_english": "Which team holds the highest ever batting average per wicket in t20_i.db history, name their score, opposition, and date?",
+        "question_english": "Which team holds the highest ever batting average per wicket in T20I history, name their score, opposition, and date?",
         "column_names": [
         "Batting Team",
         "Total Score",
@@ -672,7 +672,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Canada appears twice in highest batting average records. Name both opponents, averages and scores?",
         "query": "SELECT d.bowling_team AS opponent, (SUM(d.runs_scored + d.extra_runs) * 1.0 / NULLIF(SUM(CASE WHEN d.wicket_type IS NOT NULL THEN 1 ELSE 0 END), 0)) AS average, SUM(d.runs_scored + d.extra_runs) AS score FROM Deliveries d WHERE d.batting_team = 'Canada' GROUP BY d.match_id, d.bowling_team ORDER BY average DESC LIMIT 2;",
@@ -688,14 +688,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which team achieved an average of 200 in t20_i.db history in just 14.1 overs. Name their opposition and score",
+        "question": "Which team achieved an average of 200 in T20I history in just 14.1 overs. Name their opposition and score",
         "query": "SELECT d.batting_team, d.bowling_team AS opposition, SUM(d.runs_scored + d.extra_runs) AS score FROM Deliveries d GROUP BY d.match_id, d.batting_team, d.bowling_team HAVING SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) = 85 AND (SUM(d.runs_scored + d.extra_runs) * 1.0 / NULLIF(SUM(CASE WHEN d.wicket_type IS NOT NULL THEN 1 ELSE 0 END), 0)) = 200;",
         "answer": [
             "('Serbia','Slovenia',200)"
         ],
-        "question_english": "Which team achieved an average of 200 in t20_i.db history in just 14.1 overs. Name their opposition and score",
+        "question_english": "Which team achieved an average of 200 in T20I history in just 14.1 overs. Name their opposition and score",
         "column_names": [
         "Bowling Team",
         "Opposition",
@@ -703,14 +703,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which team achieved the highest average per wicket in fewer than 9 overs in t20_i.db history. Give the name of the team, average, overs, opposition, and date?",
+        "question": "Which team achieved the highest average per wicket in fewer than 9 overs in T20I history. Give the name of the team, average, overs, opposition, and date?",
         "query": "SELECT d.batting_team AS team_name, (SUM(d.runs_scored + d.extra_runs) * 1.0 / NULLIF(SUM(CASE WHEN d.wicket_type IS NOT NULL THEN 1 ELSE 0 END), 0)) AS average, (SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) / 6.0) AS overs, d.bowling_team AS opposition, m.match_date AS date FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.batting_team, d.bowling_team, m.match_date HAVING SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) < 54 ORDER BY average DESC LIMIT 1;",
         "answer": [
             "('Belgium', 141, 8, 'Romania','2025-06-29')"
         ],
-        "question_english": "Which team achieved the highest average per wicket in fewer than 9 overs in t20_i.db history. Give the name of the team, average, overs, opposition, and date?",
+        "question_english": "Which team achieved the highest average per wicket in fewer than 9 overs in T20I history. Give the name of the team, average, overs, opposition, and date?",
         "column_names": [
         "Team Name",
         "Average",
@@ -720,14 +720,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which Associate nation achieved an average of 224 — the third highest in t20_i.db history — name the team, opposition, score, and date?",
+        "question": "Which Associate nation achieved an average of 224 — the third highest in T20I history — name the team, opposition, score, and date?",
         "query": "SELECT d.batting_team, d.bowling_team AS opposition, SUM(d.runs_scored + d.extra_runs) AS score, m.match_date FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.batting_team, d.bowling_team, m.match_date HAVING (SUM(d.runs_scored + d.extra_runs) * 1.0 / NULLIF(SUM(CASE WHEN d.wicket_type IS NOT NULL THEN 1 ELSE 0 END), 0)) = 224;",
         "answer": [
             "('Cayman Islands','Brazil', 224,'2024-12-14')"
         ],
-        "question_english": "Which Associate nation achieved an average of 224 — the third highest in t20_i.db history — name the team, opposition, score, and date?",
+        "question_english": "Which Associate nation achieved an average of 224 — the third highest in T20I history — name the team, opposition, score, and date?",
         "column_names": [
         "Batting Team",
         "Opposition",
@@ -736,14 +736,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which team holds the highest ever run rate in a completed t20_i.db innings, name their score, opposition and wickets lost",
+        "question": "Which team holds the highest ever run rate in a completed T20I innings, name their score, opposition and wickets lost",
         "query": "SELECT d.batting_team, SUM(d.runs_scored + d.extra_runs) AS score, d.bowling_team AS opposition, SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type NOT IN ('retired hurt', 'retired out') THEN 1 ELSE 0 END) AS wickets_lost FROM Deliveries d GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team ORDER BY (SUM(d.runs_scored + d.extra_runs) * 6.0 / NULLIF(SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END), 0)) DESC LIMIT 1;",
         "answer": [
             "('Zimbabwe', 17.20,'Gambia', 4)"
         ],
-        "question_english": "Which team holds the highest ever run rate in a completed t20_i.db innings, name their score, opposition and wickets lost",
+        "question_english": "Which team holds the highest ever run rate in a completed T20I innings, name their score, opposition and wickets lost",
         "column_names": [
         "Batting Team",
         "Total Score",
@@ -752,7 +752,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Three teams scored 258 runs in 20 overs with identical run rates of 12.90 — name both teams, their wickets lost, opponents",
         "query": "SELECT d.batting_team, SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type NOT IN ('retired hurt', 'retired out') THEN 1 ELSE 0 END) AS wickets_lost, d.bowling_team AS opponents FROM Deliveries d GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team HAVING SUM(d.runs_scored + d.extra_runs) = 258 AND SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) = 120;",
@@ -769,14 +769,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db history, which team achieved a run rate of 15.70 scoring 314 runs — name their opposition, wickets lost, and date?",
+        "question": "In T20I history, which team achieved a run rate of 15.70 scoring 314 runs — name their opposition, wickets lost, and date?",
         "query": "SELECT d.batting_team, d.bowling_team AS opposition, SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type NOT IN ('retired hurt', 'retired out') THEN 1 ELSE 0 END) AS wickets_lost, m.match_date FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team, m.match_date HAVING SUM(d.runs_scored + d.extra_runs) = 314;",
         "answer": [
             "('Nepal','Mongolia', 3,'2023-09-27')"
         ],
-        "question_english": "In t20_i.db history, which team achieved a run rate of 15.70 scoring 314 runs — name their opposition, wickets lost, and date?",
+        "question_english": "In T20I history, which team achieved a run rate of 15.70 scoring 314 runs — name their opposition, wickets lost, and date?",
         "column_names": [
         "Batting Team",
         "Opposition",
@@ -785,14 +785,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which team holds the lowest ever innings total in t20_i.db history, name their score, opposition, overs faced, and run rate?",
+        "question": "Which team holds the lowest ever innings total in T20I history, name their score, opposition, overs faced, and run rate?",
         "query": "SELECT d.batting_team, SUM(d.runs_scored + d.extra_runs) AS score, d.bowling_team AS opposition, (SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) / 6.0) AS overs_faced, (SUM(d.runs_scored + d.extra_runs) * 6.0 / NULLIF(SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END), 0)) AS run_rate FROM Deliveries d GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team ORDER BY score ASC LIMIT 1;",
         "answer": [
             "('Ivory Coast', 7,'Nigeria', 7.3, 0.93)"
         ],
-        "question_english": "Which team holds the lowest ever innings total in t20_i.db history, name their score, opposition, overs faced, and run rate?",
+        "question_english": "Which team holds the lowest ever innings total in T20I history, name their score, opposition, overs faced, and run rate?",
         "column_names": [
         "Batting Team",
         "Score",
@@ -802,15 +802,15 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Two teams have been dismissed for exactly 10 runs in t20_i.db history — name both teams, their opponents, overs faced, and innings numbers?",
+        "question": "Two teams have been dismissed for exactly 10 runs in T20I history — name both teams, their opponents, overs faced, and innings numbers?",
         "query": "SELECT d.batting_team, d.bowling_team AS opponents, (SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) / 6.0) AS overs_faced, d.inning AS innings_number FROM Deliveries d GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team HAVING SUM(d.runs_scored + d.extra_runs) = 10;",
         "answer": [
             "('Mongolia','Singapore', 10, 1)",
             "('Isle of Man','Spain', 8.4, 1)"
         ],
-        "question_english": "Two teams have been dismissed for exactly 10 runs in t20_i.db history — name both teams, their opponents, overs faced, and innings numbers?",
+        "question_english": "Two teams have been dismissed for exactly 10 runs in T20I history — name both teams, their opponents, overs faced, and innings numbers?",
         "column_names": [
         "Batting Team",
         "Opponents",
@@ -819,16 +819,16 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Turkey suffered three extremely low t20_i.db totals at the same venue on three consecutive days — name all three opponents, scores, innings numbers, and dates?",
+        "question": "Turkey suffered three extremely low T20I totals at the same venue on three consecutive days — name all three opponents, scores, innings numbers, and dates?",
         "query": "SELECT d.bowling_team AS opponents, SUM(d.runs_scored + d.extra_runs) AS scores, d.inning AS innings_numbers, m.match_date AS dates FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'Turkey' GROUP BY d.match_id, d.inning, d.bowling_team, m.match_date ORDER BY scores ASC LIMIT 3;",
         "answer": [
             "('Luxemborg', 28, 1,'2019-08-29')",
             "('Czech Rep.', 21, 2,'2019-08-30'),",
             "('Austria', 32, 1,'2019-08-31')"
         ],
-        "question_english": "Turkey suffered three extremely low t20_i.db totals at the same venue on three consecutive days — name all three opponents, scores, innings numbers, and dates?",
+        "question_english": "Turkey suffered three extremely low T20I totals at the same venue on three consecutive days — name all three opponents, scores, innings numbers, and dates?",
         "column_names": [
         "Opponents",
         "Score",
@@ -837,14 +837,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db history, which team scored just 12 runs , the third lowest total ever ,name their opposition, overs faced?",
+        "question": "In T20I history, which team scored just 12 runs , the third lowest total ever ,name their opposition, overs faced?",
         "query": "SELECT d.batting_team, d.bowling_team AS opposition, (SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) / 6.0) AS overs_faced FROM Deliveries d GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team HAVING SUM(d.runs_scored + d.extra_runs) = 12;",
         "answer": [
             "('Mongolia','Japan', 8.2)"
         ],
-        "question_english": "In t20_i.db history, which team scored just 12 runs , the third lowest total ever ,name their opposition, overs faced?",
+        "question_english": "In T20I history, which team scored just 12 runs , the third lowest total ever ,name their opposition, overs faced?",
         "column_names": [
         "Batting Team",
         "Opposition",
@@ -852,15 +852,15 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "China suffered back-to-back extremely low t20_i.db totals against different opponents on consecutive days at the same venue. Give both scores, opponents, venue, and dates?",
+        "question": "China suffered back-to-back extremely low T20I totals against different opponents on consecutive days at the same venue. Give both scores, opponents, venue, and dates?",
         "query": "SELECT SUM(d.runs_scored + d.extra_runs) AS scores, d.bowling_team AS opponents, m.venue, m.match_date AS dates FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'China' GROUP BY d.match_id, d.inning, d.bowling_team, m.venue, m.match_date ORDER BY scores ASC LIMIT 2;",
         "answer": [
             "(23, 'Malaysia','Kuala Lumpur','2023-07-26')",
             "(26,'Thailand','Kuala Lumpur','2023-07-27')"
         ],
-        "question_english": "China suffered back-to-back extremely low t20_i.db totals against different opponents on consecutive days at the same venue. Give both scores, opponents, venue, and dates?",
+        "question_english": "China suffered back-to-back extremely low T20I totals against different opponents on consecutive days at the same venue. Give both scores, opponents, venue, and dates?",
         "column_names": [
         "Score",
         "Opponents",
@@ -869,7 +869,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Among all players with 14 POTM awards, which has the best award-to-match ratio — name all four players, their matches played, and calculate ratio for each?",
         "query": "WITH POTM_Counts AS (SELECT player_of_match_id AS player_id, COUNT(*) AS potm_count FROM Matches WHERE player_of_match_id IS NOT NULL GROUP BY player_of_match_id HAVING COUNT(*) = 14), Match_Counts AS (SELECT player_id, COUNT(*) AS matches_played FROM PlayerInMatch GROUP BY player_id) SELECT p.player_name, mc.matches_played, (pc.potm_count * 1.0 / mc.matches_played) AS award_to_match_ratio FROM POTM_Counts pc JOIN Match_Counts mc ON pc.player_id = mc.player_id JOIN Players p ON pc.player_id = p.player_id ORDER BY award_to_match_ratio DESC LIMIT 4;",
@@ -887,7 +887,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "V Kohli and RG Sharma both have 14+ POTM awards. Give their awards, matches, spans, and award-to-match ratios",
         "query": "WITH MatchStats AS (SELECT pim.player_id, COUNT(pim.match_id) AS matches_played, MIN(m.match_date) || ' to ' || MAX(m.match_date) AS span FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id GROUP BY pim.player_id), POTMStats AS (SELECT player_of_match_id AS player_id, COUNT(*) AS potm_awards FROM Matches WHERE player_of_match_id IS NOT NULL GROUP BY player_of_match_id) SELECT p.player_name, ps.potm_awards, ms.matches_played, ms.span, (ps.potm_awards * 1.0 / ms.matches_played) AS award_to_match_ratio FROM Players p JOIN MatchStats ms ON p.player_id = ms.player_id JOIN POTMStats ps ON p.player_id = ps.player_id WHERE p.player_name IN ('V Kohli', 'RG Sharma') ORDER BY ps.potm_awards DESC;",
@@ -906,14 +906,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db_db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which player has won 8 POTM awards in the fewest matches in t20_i.db history — name his country, span, and award ratio?",
+        "question": "Which player has won 8 POTM awards in the fewest matches in T20I history — name his country, span, and award ratio?",
         "query": "WITH MatchStats AS (SELECT pim.player_id, MAX(pim.team_name) AS country, COUNT(pim.match_id) AS matches_played, MIN(m.match_date) || ' to ' || MAX(m.match_date) AS span FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id GROUP BY pim.player_id), POTMStats AS (SELECT player_of_match_id AS player_id, COUNT(*) AS potm_awards FROM Matches WHERE player_of_match_id IS NOT NULL GROUP BY player_of_match_id HAVING COUNT(*) = 8) SELECT p.player_name, ms.country, ms.span, (ps.potm_awards * 1.0 / ms.matches_played) AS award_ratio FROM POTMStats ps JOIN MatchStats ms ON ps.player_id = ms.player_id JOIN Players p ON ps.player_id = p.player_id ORDER BY ms.matches_played ASC LIMIT 1;",
         "answer": [
             "('F Damiao Couana','Mozambique','2019-2024', 0.210)"
         ],
-        "question_english": "Which player has won 8 POTM awards in the fewest matches in t20_i.db history — name his country, span, and award ratio?",
+        "question_english": "Which player has won 8 POTM awards in the fewest matches in T20I history — name his country, span, and award ratio?",
         "column_names": [
         "Player Name",
         "Country",
@@ -922,14 +922,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which t20_i.db match holds the record for the most batters dismissed lbw, name both teams, total lbw count, total wickets in the match, winner, and date?",
+        "question": "Which T20I match holds the record for the most batters dismissed lbw, name both teams, total lbw count, total wickets in the match, winner, and date?",
         "query": "SELECT m.team1, m.team2, SUM(CASE WHEN d.wicket_type = 'lbw' THEN 1 ELSE 0 END) AS total_lbw_count, SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) AS total_wickets, m.match_winner, m.match_date FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id GROUP BY m.match_id, m.team1, m.team2, m.match_winner, m.match_date ORDER BY total_lbw_count DESC LIMIT 1;",
         "answer": [
             "('Zimbabwe','Netherland', 8, 20, 'Zimbabwe','2022-07-17')"
         ],
-        "question_english": "Which t20_i.db match holds the record for the most batters dismissed lbw, name both teams, total lbw count, total wickets in the match, winner, and date?",
+        "question_english": "Which T20I match holds the record for the most batters dismissed lbw, name both teams, total lbw count, total wickets in the match, winner, and date?",
         "column_names": [
         "Team 1",
         "Team 2",
@@ -940,14 +940,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "The only t20_i.db match with 7 lbw dismissals that ended in a tie — name both teams, total wickets, venue, and date?",
+        "question": "The only T20I match with 7 lbw dismissals that ended in a tie — name both teams, total wickets, venue, and date?",
         "query": "SELECT m.team1, m.team2, SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) AS total_wickets, m.venue, m.match_date FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE m.result_type = 'tie' GROUP BY m.match_id, m.team1, m.team2, m.venue, m.match_date HAVING SUM(CASE WHEN d.wicket_type = 'lbw' THEN 1 ELSE 0 END) = 7;",
         "answer": [
             "'Namibia','Oman', 16,'Bridgetown','2024-06-02'"
         ],
-        "question_english": "The only t20_i.db match with 7 lbw dismissals that ended in a tie — name both teams, total wickets, venue, and date?",
+        "question_english": "The only T20I match with 7 lbw dismissals that ended in a tie — name both teams, total wickets, venue, and date?",
         "column_names": [
         "Team 1",
         "Team 2",
@@ -957,14 +957,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db lbw records, which match had 5 lbw dismissals but only 12 total wickets — name both teams, winner, and date",
+        "question": "In T20I lbw records, which match had 5 lbw dismissals but only 12 total wickets — name both teams, winner, and date",
         "query": "SELECT m.team1, m.team2, m.match_winner, m.match_date FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id GROUP BY m.match_id, m.team1, m.team2, m.match_winner, m.match_date HAVING SUM(CASE WHEN d.wicket_type = 'lbw' THEN 1 ELSE 0 END) = 5 AND SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) = 12;",
         "answer": [
             "('Netherland','Sri Lanka','Sri Lanka',2021-10-22)"
         ],
-        "question_english": "In t20_i.db lbw records, which match had 5 lbw dismissals but only 12 total wickets — name both teams, winner, and date",
+        "question_english": "In T20I lbw records, which match had 5 lbw dismissals but only 12 total wickets — name both teams, winner, and date",
         "column_names": [
         "Team 1",
         "Team 2",
@@ -973,14 +973,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "In t20_i.db history, which match involving India and Pakistan produced 5 lbw dismissals — name the venue, total wickets, winner, and date?",
+        "question": "In T20I history, which match involving India and Pakistan produced 5 lbw dismissals — name the venue, total wickets, winner, and date?",
         "query": "SELECT m.venue, SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) AS total_wickets, m.match_winner, m.match_date FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE (m.team1 = 'India' AND m.team2 = 'Pakistan') OR (m.team1 = 'Pakistan' AND m.team2 = 'India') GROUP BY m.match_id, m.venue, m.match_winner, m.match_date HAVING SUM(CASE WHEN d.wicket_type = 'lbw' THEN 1 ELSE 0 END) = 5;",
         "answer": [
             "('Mirpur', 15,'India','2016-02-27')"
         ],
-        "question_english": "In t20_i.db history, which match involving India and Pakistan produced 5 lbw dismissals — name the venue, total wickets, winner, and date?",
+        "question_english": "In T20I history, which match involving India and Pakistan produced 5 lbw dismissals — name the venue, total wickets, winner, and date?",
         "column_names": [
         "Venue",
         "Wickets",
@@ -989,14 +989,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which bowler reached 50 t20_i.db wickets in the fewest matches . Report the name of his country, number of matches that took him to achieve it, the date he achieved it, and calculate exactly how many days it took him?",
+        "question": "Which bowler reached 50 T20I wickets in the fewest matches . Report the name of his country, number of matches that took him to achieve it, the date he achieved it, and calculate exactly how many days it took him?",
         "query": "WITH BowlerMatchStats AS (SELECT pim.player_id, pim.team_name AS country, m.match_id, m.match_date, SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id LEFT JOIN Deliveries d ON m.match_id = d.match_id AND pim.player_id = d.bowler_id GROUP BY pim.player_id, pim.team_name, m.match_id, m.match_date), RunningStats AS (SELECT player_id, country, match_date, ROW_NUMBER() OVER(PARTITION BY player_id ORDER BY match_date, match_id) AS match_number, SUM(wickets) OVER(PARTITION BY player_id ORDER BY match_date, match_id) AS cumulative_wickets, MIN(match_date) OVER(PARTITION BY player_id) AS debut_date FROM BowlerMatchStats), Milestone AS (SELECT player_id, country, match_number, match_date, debut_date, ROW_NUMBER() OVER(PARTITION BY player_id ORDER BY match_number ASC) as rn FROM RunningStats WHERE cumulative_wickets >= 50) SELECT p.player_name, m.country, m.match_number, m.match_date, CAST(julianday(m.match_date) - julianday(m.debut_date) AS INTEGER) AS days_taken FROM Milestone m JOIN Players p ON m.player_id = p.player_id WHERE m.rn = 1 ORDER BY m.match_number ASC LIMIT 1;",
         "answer": [
             "('D Maisuria','Botswana', 22,'2019-05-29', 1469)"
         ],
-        "question_english": "Which bowler reached 50 t20_i.db wickets in the fewest matches. Report the name of his country, number of matches that took him to achieve it, the date he achieved it, and calculate exactly how many days it took him?",
+        "question_english": "Which bowler reached 50 T20I wickets in the fewest matches. Report the name of his country, number of matches that took him to achieve it, the date he achieved it, and calculate exactly how many days it took him?",
         "column_names": [
         "Player Name",
         "Country",
@@ -1006,7 +1006,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Name the top three Pakistani Bowlers who have fastest-to-50 wickets. Rank them by days taken fastest to slowest?",
         "query": "WITH BowlerMatchStats AS (SELECT pim.player_id, pim.team_name AS country, m.match_id, m.match_date, SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id LEFT JOIN Deliveries d ON m.match_id = d.match_id AND pim.player_id = d.bowler_id WHERE pim.team_name = 'Pakistan' GROUP BY pim.player_id, pim.team_name, m.match_id, m.match_date), RunningStats AS (SELECT player_id, country, match_date, ROW_NUMBER() OVER(PARTITION BY player_id ORDER BY match_date, match_id) AS match_number, SUM(wickets) OVER(PARTITION BY player_id ORDER BY match_date, match_id) AS cumulative_wickets, MIN(match_date) OVER(PARTITION BY player_id) AS debut_date FROM BowlerMatchStats), Milestone AS (SELECT player_id, country, match_number, match_date, debut_date, ROW_NUMBER() OVER(PARTITION BY player_id ORDER BY match_number ASC) as rn FROM RunningStats WHERE cumulative_wickets >= 50) SELECT p.player_name, CAST(julianday(m.match_date) - julianday(m.debut_date) AS INTEGER) AS days_taken FROM Milestone m JOIN Players p ON m.player_id = p.player_id WHERE m.rn = 1 ORDER BY days_taken ASC LIMIT 3;",
@@ -1022,7 +1022,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "YM Nkanya took 50 wickets in the shortest calendar time. Calculate the exact days, name his country, matches, and achievement date?",
         "query": "WITH BowlerMatchStats AS (SELECT pim.player_id, pim.team_name AS country, m.match_id, m.match_date, SUM(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out', 'retired hurt', 'retired out', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id LEFT JOIN Deliveries d ON m.match_id = d.match_id AND pim.player_id = d.bowler_id JOIN Players p ON pim.player_id = p.player_id WHERE p.player_name = 'YM Nkanya' GROUP BY pim.player_id, pim.team_name, m.match_id, m.match_date), RunningStats AS (SELECT player_id, country, match_date, ROW_NUMBER() OVER(PARTITION BY player_id ORDER BY match_date, match_id) AS match_number, SUM(wickets) OVER(PARTITION BY player_id ORDER BY match_date, match_id) AS cumulative_wickets, MIN(match_date) OVER(PARTITION BY player_id) AS debut_date FROM BowlerMatchStats), Milestone AS (SELECT player_id, country, match_number, match_date, debut_date, ROW_NUMBER() OVER(PARTITION BY player_id ORDER BY match_number ASC) as rn FROM RunningStats WHERE cumulative_wickets >= 50) SELECT CAST(julianday(m.match_date) - julianday(m.debut_date) AS INTEGER) AS exact_days, m.country, m.match_number AS matches, m.match_date AS achievement_date FROM Milestone m WHERE m.rn = 1;",
@@ -1038,7 +1038,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Sahibzada Farhan scored two T20 World Cup hundreds in the 2026 edition . Name both opponents and balls taken?",
         "query": "SELECT d.bowling_team AS opponents, SUM(CASE WHEN d.wides = 0 THEN 1 ELSE 0 END) AS balls_taken FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'Sahibzada Farhan' AND m.match_date LIKE '%2026%' GROUP BY d.match_id, d.bowling_team HAVING SUM(d.runs_scored) >= 100;",
@@ -1053,15 +1053,15 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Among all players with 5 t20_i.db career hundreds, compare GJ Maxwell and RG Sharma across innings played, average, SR, sixes, and ducks",
+        "question": "Among all players with 5 T20I career hundreds, compare GJ Maxwell and RG Sharma across innings played, average, SR, sixes, and ducks",
         "query": "WITH BatterMatch AS (SELECT d.striker_id AS player_id, d.match_id, SUM(d.runs_scored) AS runs_scored, SUM(CASE WHEN d.wides = 0 THEN 1 ELSE 0 END) AS balls_faced, SUM(CASE WHEN d.runs_scored = 6 THEN 1 ELSE 0 END) AS sixes FROM Deliveries d GROUP BY d.striker_id, d.match_id), Dismissals AS (SELECT player_out_id AS player_id, match_id, 1 AS is_out FROM Deliveries WHERE player_out_id IS NOT NULL) SELECT p.player_name, COUNT(bm.match_id) AS innings_played, (SUM(bm.runs_scored) * 1.0 / NULLIF(COUNT(dm.is_out), 0)) AS average, (SUM(bm.runs_scored) * 100.0 / NULLIF(SUM(bm.balls_faced), 0)) AS sr, SUM(bm.sixes) AS sixes, SUM(CASE WHEN bm.runs_scored = 0 AND dm.is_out = 1 THEN 1 ELSE 0 END) AS ducks FROM BatterMatch bm JOIN Players p ON bm.player_id = p.player_id LEFT JOIN Dismissals dm ON bm.player_id = dm.player_id AND bm.match_id = dm.match_id WHERE p.player_name IN ('GJ Maxwell', 'RG Sharma') GROUP BY bm.player_id, p.player_name;",
         "answer": [
             "('GJ Maxwell', 118, 28.97, 150, 5)",
             "('RG Sharma', 151, 32.05, 205, 12)"
         ],
-        "question_english": "Among all players with 5 t20_i.db career hundreds, compare GJ Maxwell and RG Sharma across innings played, average, SR, sixes, and ducks",
+        "question_english": "Among all players with 5 T20I career hundreds, compare GJ Maxwell and RG Sharma across innings played, average, SR, sixes, and ducks",
         "column_names": [
         "Player Name",
         "Innings",
@@ -1071,7 +1071,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Abhishek Sharma has the highest career SR among all players with 2 hundreds . Give his strike rate, hundreds, average, and calculate how many balls he faces per hundred on average?",
         "query": "WITH BatterInnings AS (SELECT d.striker_id AS player_id, d.match_id, d.inning, SUM(d.runs_scored) AS runs_scored, SUM(CASE WHEN d.wides = 0 THEN 1 ELSE 0 END) AS balls_faced, CASE WHEN SUM(d.runs_scored) >= 100 THEN 1 ELSE 0 END AS is_hundred FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'Abhishek Sharma' GROUP BY d.striker_id, d.match_id, d.inning), CareerStats AS (SELECT player_id, SUM(runs_scored) AS total_runs, SUM(balls_faced) AS total_balls, SUM(is_hundred) AS total_hundreds FROM BatterInnings GROUP BY player_id), Dismissals AS (SELECT player_out_id AS player_id, COUNT(*) AS total_dismissals FROM Deliveries d JOIN Players p ON d.player_out_id = p.player_id WHERE p.player_name = 'Abhishek Sharma' GROUP BY d.player_out_id) SELECT p.player_name, (c.total_runs * 100.0 / NULLIF(c.total_balls, 0)) AS strike_rate, c.total_hundreds AS hundreds, (c.total_runs * 1.0 / NULLIF(d.total_dismissals, 0)) AS average, (c.total_balls * 1.0 / NULLIF(c.total_hundreds, 0)) AS balls_per_hundred FROM CareerStats c JOIN Players p ON c.player_id = p.player_id LEFT JOIN Dismissals d ON c.player_id = d.player_id;",
@@ -1088,15 +1088,15 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Two teams suffered 4 stumpings in a single innings in t20_i.db history — name both teams, their scores and opposition",
+        "question": "Two teams suffered 4 stumpings in a single innings in T20I history — name both teams, their scores and opposition",
         "query": "SELECT d.batting_team, SUM(d.runs_scored + d.extra_runs) AS score, d.bowling_team AS opposition FROM Deliveries d GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team HAVING SUM(CASE WHEN d.wicket_type = 'stumped' THEN 1 ELSE 0 END) = 4;",
         "answer": [
             "('Netherlands', 93,'Pakistan')",
             "('Pakistan', 82,'West Indies')"
         ],
-        "question_english": "Two teams suffered 4 stumpings in a single innings in t20_i.db history — name both teams, their scores and opposition",
+        "question_english": "Two teams suffered 4 stumpings in a single innings in T20I history — name both teams, their scores and opposition",
         "column_names": [
         "Batting Team",
         "Score",
@@ -1104,7 +1104,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Australia scored 197/7 with 3 stumpings and still won . Name the opposition, venue, date, and calculate what percentage of their wickets were stumpings?",
         "query": "SELECT d.bowling_team AS opposition, m.venue, m.match_date, d.inning AS innings_number, (SUM(CASE WHEN d.wicket_type = 'stumped' THEN 1 ELSE 0 END) * 100.0 / NULLIF(SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END), 0)) AS stumping_percentage FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'Australia' AND m.match_winner = 'Australia' GROUP BY d.match_id, d.inning, d.bowling_team, m.venue, m.match_date HAVING SUM(d.runs_scored + d.extra_runs) = 197 AND SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) = 7 AND SUM(CASE WHEN d.wicket_type = 'stumped' THEN 1 ELSE 0 END) = 3;",
@@ -1121,7 +1121,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Samoa suffered 3 stumpings scoring 148/8 yet still lost. Name the opposition, venue, date ?",
         "query": "SELECT d.bowling_team AS opposition, m.venue, m.match_date FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'Samoa' AND m.match_winner != 'Samoa' GROUP BY d.match_id, d.inning, d.bowling_team, m.venue, m.match_date HAVING SUM(CASE WHEN d.wicket_type = 'stumped' THEN 1 ELSE 0 END) = 3 AND SUM(d.runs_scored + d.extra_runs) = 148 AND SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) = 8;",
@@ -1136,7 +1136,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "List all players who batted in Innings 2 and scored 70+ runs on debut. Give names, teams, and scores.",
         "query": "SELECT p.player_name, pd.team_name, SUM(d.runs_scored) AS total_runs FROM Deliveries d JOIN (SELECT pim.player_id, pim.match_id, pim.team_name FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id WHERE m.match_date = (SELECT MIN(m2.match_date) FROM PlayerInMatch pim2 JOIN Matches m2 ON pim2.match_id = m2.match_id WHERE pim2.player_id = pim.player_id)) pd ON d.match_id = pd.match_id AND d.striker_id = pd.player_id JOIN Players p ON pd.player_id = p.player_id WHERE d.inning = 2 GROUP BY p.player_id HAVING SUM(d.runs_scored) >= 70;",
@@ -1153,15 +1153,15 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Spain have won two t20_i.db matches by 1 wicket in their history. Name both matches with targets, opposition, grounds, and dates.",
+        "question": "Spain have won two T20I matches by 1 wicket in their history. Name both matches with targets, opposition, grounds, and dates.",
         "query": "SELECT m.match_date, m.venue AS ground, CASE WHEN m.team1 = 'Spain' THEN m.team2 ELSE m.team1 END AS opposition, (SELECT SUM(runs_scored + extra_runs) FROM Deliveries d2 WHERE d2.match_id = m.match_id AND d2.inning = 1) + 1 AS target FROM Matches m WHERE m.match_winner = 'Spain' AND m.result_type = 'wickets' AND m.result_margin = 1;",
         "answer": [
             "('2021-09-11','Almeria','Germany','120')",
             "('2024-04-14','Cartagena','Jersey','142')"
         ],
-        "question_english": "Spain have won two t20_i.db matches by 1 wicket in their history. Name both matches with targets, opposition, grounds, and dates.",
+        "question_english": "Spain have won two T20I matches by 1 wicket in their history. Name both matches with targets, opposition, grounds, and dates.",
         "column_names": [
         "Match Date",
         "Venue",
@@ -1170,14 +1170,14 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Which match had the highest number of no-balls ever recorded in a t20_i.db? Name the teams, ground, date, and calculate what percentage of total extras in that match were no-balls alone.",
+        "question": "Which match had the highest number of no-balls ever recorded in a T20I? Name the teams, ground, date, and calculate what percentage of total extras in that match were no-balls alone.",
         "query": "SELECT m.team1, m.team2, m.venue AS ground, m.match_date AS date, SUM(d.noballs) AS total_noballs, (SUM(d.noballs) * 100.0 / NULLIF(SUM(d.extra_runs), 0)) AS noball_percentage FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id GROUP BY m.match_id, m.team1, m.team2, m.venue, m.match_date ORDER BY total_noballs DESC LIMIT 1;",
         "answer": [
             "('Ghana','Uganda','Benoni','2022-09-20', 12, 41.4)"
         ],
-        "question_english": "Which match had the highest number of no-balls ever recorded in a t20_i.db? Name the teams, ground, date, and calculate what percentage of total extras in that match were no-balls alone.",
+        "question_english": "Which match had the highest number of no-balls ever recorded in a T20I? Name the teams, ground, date, and calculate what percentage of total extras in that match were no-balls alone.",
         "column_names": [
         "Team 1",
         "Team 2",
@@ -1188,23 +1188,23 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "New Zealand vs West Indies at Auckland ended in 31.2 overs with 359 combined team runs . Calculate the runs scored from non-extras and also calculate extras as a percentage of total team runs",
         "query": "SELECT SUM(runs_scored) AS non_extras, (SUM(extra_runs) * 100.0 / SUM(runs_scored + extra_runs)) AS extras_percentage FROM Deliveries WHERE match_id = 1108;",
         "answer": [
             " 318, 11.4"
         ],
-        "question_english": "New Zealand vs West Indies at Auckland (t20_i.db #1108) ended in 31.2 overs with 359 combined team runs . Calculate the runs scored from non-extras and extras as a percentage of total team runs",
+        "question_english": "New Zealand vs West Indies at Auckland (T20I #1108) ended in 31.2 overs with 359 combined team runs . Calculate the runs scored from non-extras and extras as a percentage of total team runs",
         "column_names": [
         "Non-Extras",
         "Extras percentage"
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "List the top 3 t20_i.db matches with the highest no-balls per over ratio. Name both the teams and give the corresponding ratio as well. ",
+        "question": "List the top 3 T20I matches with the highest no-balls per over ratio. Name both the teams and give the corresponding ratio as well. ",
         "query": "SELECT m.team1, m.team2, (SUM(d.noballs) * 1.0 / (COUNT(DISTINCT d.match_id || d.inning || d.over_number))) AS nb_per_over_ratio FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id GROUP BY m.match_id, m.team1, m.team2 ORDER BY nb_per_over_ratio DESC LIMIT 3;",
         "answer": [
             "('Ghana','Uganda', 0.319)",
@@ -1219,9 +1219,9 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Among the top 5 run-scorers in t20_i.db history, give the strike rate , the average runs per innings for each, and rank them by batting average.",
+        "question": "Among the top 5 run-scorers in T20I history, give the strike rate , the average runs per innings for each, and rank them by batting average.",
         "query": "WITH BatterStats AS (SELECT d.striker_id, p.player_name, SUM(d.runs_scored) AS total_runs, SUM(CASE WHEN d.wides = 0 THEN 1 ELSE 0 END) AS balls_faced, COUNT(DISTINCT d.match_id) AS innings_played FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id GROUP BY d.striker_id, p.player_name), Top5Batters AS (SELECT * FROM BatterStats ORDER BY total_runs DESC LIMIT 5), Dismissals AS (SELECT player_out_id AS player_id, COUNT(*) AS times_out FROM Deliveries WHERE player_out_id IS NOT NULL GROUP BY player_out_id) SELECT t.player_name, (t.total_runs * 100.0 / NULLIF(t.balls_faced, 0)) AS strike_rate, (t.total_runs * 1.0 / NULLIF(t.innings_played, 0)) AS avg_runs_per_innings, (t.total_runs * 1.0 / NULLIF(d.times_out, 0)) AS batting_average FROM Top5Batters t LEFT JOIN Dismissals d ON t.striker_id = d.player_id ORDER BY batting_average DESC;",
         "answer": [
             "('V Kohli', 137.04, 48.69)",
@@ -1230,7 +1230,7 @@
             "('RG Sharma', 140.89, 32.05)",
             "('PR Stirling', 134.35, 26.31)"
         ],
-        "question_english": "Among the top 5 run-scorers in t20_i.db history, give the strike rate , the average runs per innings for each, and rank them by batting average.",
+        "question_english": "Among the top 5 run-scorers in T20I history, give the strike rate , the average runs per innings for each, and rank them by batting average.",
         "column_names": [
         "Player Name",
         "Strike Rate",
@@ -1239,21 +1239,21 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
-        "question": "Babar Azam leads all t20_i.db run-scorers with 4596 runs. Give his runs per match ratio and what percentage of his runs came in boundaries",
+        "question": "Babar Azam leads all T20I run-scorers with 4596 runs. Give his runs per match ratio and what percentage of his runs came in boundaries",
         "query": "SELECT (SUM(d.runs_scored) * 1.0 / (SELECT COUNT(DISTINCT pim.match_id) FROM PlayerInMatch pim JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'Babar Azam')) AS runs_per_match_ratio, (SUM(CASE WHEN d.runs_scored IN (4, 6) THEN d.runs_scored ELSE 0 END) * 100.0 / SUM(d.runs_scored)) AS boundary_percentage FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'Babar Azam';",
         "answer": [
             "(31.7, 0.519)"
         ],
-        "question_english": "Babar Azam leads all t20_i.db run-scorers with 4596 runs. Give his runs per match ratio and what percentage of his runs came in boundaries",
+        "question_english": "Babar Azam leads all T20I run-scorers with 4596 runs. Give his runs per match ratio and what percentage of his runs came in boundaries",
         "column_names": [
         "Runs per match ratio",
         "Boundary Percentage"
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "List the top 5 players by catches per innings ratio also give the respective ratios.",
         "query": "WITH Catches AS (SELECT fd.fielder_id, COUNT(fd.fielder_dismissal_id) AS total_catches FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id WHERE d.wicket_type IN ('caught', 'caught and bowled') GROUP BY fd.fielder_id), InningsPlayed AS (SELECT player_id, COUNT(DISTINCT match_id) AS total_innings FROM PlayerInMatch GROUP BY player_id) SELECT p.player_name, (c.total_catches * 1.0 / NULLIF(i.total_innings, 0)) AS catches_per_innings_ratio FROM Catches c JOIN InningsPlayed i ON c.fielder_id = i.player_id JOIN Players p ON c.fielder_id = p.player_id ORDER BY catches_per_innings_ratio DESC LIMIT 5;",
@@ -1271,7 +1271,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Who scored the most runs off a single over in T20I history, and how many runs were scored? Also name the bowler and the match.",
         "query": "SELECT p_striker.player_name AS batter, SUM(d.runs_scored) AS runs_scored, p_bowler.player_name AS bowler, m.team1 || ' vs ' || m.team2 || ' on ' || m.match_date AS match FROM Deliveries d JOIN Players p_striker ON d.striker_id = p_striker.player_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.inning, d.over_number, d.striker_id, d.bowler_id, p_striker.player_name, p_bowler.player_name, m.team1, m.team2, m.match_date ORDER BY runs_scored DESC LIMIT 1;",
@@ -1287,7 +1287,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Dipendra Singh Airee appears twice in the most runs off one over records in T20Is. List both instances with  runs, bowler, match, venue, and date.",
         "query": "SELECT SUM(d.runs_scored) AS runs, pb.player_name AS bowler, m.team1 || ' vs ' || m.team2 AS match, m.venue, m.match_date FROM Deliveries d JOIN Players ps ON d.striker_id = ps.player_id JOIN Players pb ON d.bowler_id = pb.player_id JOIN Matches m ON d.match_id = m.match_id WHERE ps.player_name = 'Dipendra Singh Airee' GROUP BY d.match_id, d.inning, d.over_number, pb.player_name, m.team1, m.team2, m.venue, m.match_date ORDER BY runs DESC LIMIT 2;",
@@ -1306,7 +1306,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which instances in the most runs off one over records in T20Is involved a wicket being taken in the same over? List the player, runs, bowler, match, venue, and date.",
         "query": "WITH WicketOvers AS (SELECT DISTINCT match_id, inning, over_number FROM Deliveries WHERE player_out_id IS NOT NULL) SELECT p_striker.player_name AS player, SUM(d.runs_scored) AS runs, p_bowler.player_name AS bowler, m.team1 || ' vs ' || m.team2 AS match, m.venue, m.match_date AS date FROM Deliveries d JOIN WicketOvers wo ON d.match_id = wo.match_id AND d.inning = wo.inning AND d.over_number = wo.over_number JOIN Players p_striker ON d.striker_id = p_striker.player_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Matches m ON d.match_id = m.match_id GROUP BY d.match_id, d.inning, d.over_number, d.striker_id, d.bowler_id, p_striker.player_name, p_bowler.player_name, m.team1, m.team2, m.venue, m.match_date ORDER BY runs DESC;",
@@ -1325,7 +1325,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "What is the shortest completed innings in T20I history by balls? Give the team, score, balls, run rate, opposition.",
         "query": "SELECT d.batting_team AS team, SUM(d.runs_scored + d.extra_runs) AS score, SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END) AS balls, (SUM(d.runs_scored + d.extra_runs) * 6.0 / NULLIF(SUM(CASE WHEN d.wides = 0 AND d.noballs = 0 THEN 1 ELSE 0 END), 0)) AS run_rate, d.bowling_team AS opposition FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.result_type NOT IN ('no result', 'abandoned') GROUP BY d.match_id, d.inning, d.batting_team, d.bowling_team ORDER BY balls ASC LIMIT 1;",
@@ -1342,7 +1342,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "List all T20I matches in the most wides records where wides exceeded 40 in a single match.",
         "query": "SELECT m.team1, m.team2, m.match_date, m.venue, SUM(d.wides) AS total_wides FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id GROUP BY m.match_id, m.team1, m.team2, m.match_date, m.venue HAVING SUM(d.wides) > 40 ORDER BY total_wides DESC;",
@@ -1362,7 +1362,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "For each player who carried the bat through a completed T20I innings, calculate their runs as a percentage of the team total.",
         "query": "WITH FirstDel AS (SELECT match_id, inning, MIN(delivery_id) AS min_del FROM Deliveries GROUP BY match_id, inning), Openers AS (SELECT d.match_id, d.inning, d.striker_id AS player_id FROM Deliveries d JOIN FirstDel fd ON d.delivery_id = fd.min_del UNION SELECT d.match_id, d.inning, d.non_striker_id AS player_id FROM Deliveries d JOIN FirstDel fd ON d.delivery_id = fd.min_del), MatchStats AS (SELECT match_id, inning, batting_team, bowling_team, SUM(runs_scored + extra_runs) AS team_total, SUM(CASE WHEN player_out_id IS NOT NULL AND wicket_type NOT IN ('retired hurt', 'retired not out') THEN 1 ELSE 0 END) AS wickets FROM Deliveries GROUP BY match_id, inning, batting_team, bowling_team), BatterStats AS (SELECT match_id, inning, striker_id, SUM(runs_scored) AS runs FROM Deliveries GROUP BY match_id, inning, striker_id) SELECT p.player_name, bs.runs, ms.team_total, (bs.runs * 100.0 / ms.team_total) AS percentage_of_team_total, ms.bowling_team AS opposition, m.match_date FROM BatterStats bs JOIN Openers o ON bs.match_id = o.match_id AND bs.inning = o.inning AND bs.striker_id = o.player_id JOIN MatchStats ms ON bs.match_id = ms.match_id AND bs.inning = ms.inning JOIN Matches m ON bs.match_id = m.match_id JOIN Players p ON bs.striker_id = p.player_id WHERE ms.wickets = 10 AND NOT EXISTS (SELECT 1 FROM Deliveries out_d WHERE out_d.match_id = bs.match_id AND out_d.inning = bs.inning AND out_d.player_out_id = bs.striker_id) ORDER BY percentage_of_team_total DESC;",
@@ -1382,7 +1382,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "CG Williams of Namibia scored fifties in 4 consecutive T20I innings. List all four innings with runs, team name, opposition, and venue",
         "query": "WITH PlayerAllInnings AS (SELECT p.player_name, m.match_date, SUM(d.runs_scored) AS runs, d.batting_team AS team_name, d.bowling_team AS opposition, m.venue, ROW_NUMBER() OVER (ORDER BY m.match_date) AS inning_seq FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'CG Williams' GROUP BY p.player_name, d.match_id, m.match_date, d.batting_team, d.bowling_team, m.venue), FiftyInnings AS (SELECT *, ROW_NUMBER() OVER (ORDER BY match_date) AS fifty_seq FROM PlayerAllInnings WHERE runs >= 50), StreakGroups AS (SELECT *, (inning_seq - fifty_seq) AS streak_id FROM FiftyInnings), ValidStreaks AS (SELECT streak_id FROM StreakGroups GROUP BY streak_id HAVING COUNT(*) >= 4) SELECT sg.player_name, sg.runs, sg.team_name, sg.opposition, sg.venue FROM StreakGroups sg JOIN ValidStreaks vs ON sg.streak_id = vs.streak_id ORDER BY sg.match_date LIMIT 4;",
@@ -1402,7 +1402,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Who has played the most T20I matches in career history? Give their number of matches, runs, wickets, and span.",
         "query": "WITH MatchStats AS (SELECT pim.player_id, COUNT(DISTINCT pim.match_id) AS matches, MIN(m.match_date) || ' to ' || MAX(m.match_date) AS span FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id GROUP BY pim.player_id), RunStats AS (SELECT striker_id AS player_id, SUM(runs_scored) AS runs FROM Deliveries GROUP BY striker_id), WicketStats AS (SELECT bowler_id AS player_id, COUNT(player_out_id) AS wickets FROM Deliveries WHERE player_out_id IS NOT NULL AND wicket_type NOT IN ('run out', 'retired hurt', 'retired not out', 'obstructing the field') GROUP BY bowler_id) SELECT p.player_name, ms.matches, COALESCE(rs.runs, 0) AS runs, COALESCE(ws.wickets, 0) AS wickets, ms.span FROM MatchStats ms JOIN Players p ON ms.player_id = p.player_id LEFT JOIN RunStats rs ON ms.player_id = rs.player_id LEFT JOIN WicketStats ws ON ms.player_id = ws.player_id ORDER BY ms.matches DESC LIMIT 1;",
@@ -1419,7 +1419,7 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which player holds the highest batting average in T20I career among players who have played 100 or more T20I matches? Give number of matches, runs, average, and span.",
         "query": "WITH MatchStats AS (SELECT pim.player_id, COUNT(DISTINCT pim.match_id) AS matches_played, MIN(m.match_date) || ' to ' || MAX(m.match_date) AS span FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id GROUP BY pim.player_id HAVING COUNT(DISTINCT pim.match_id) >= 100), BattingStats AS (SELECT striker_id AS player_id, SUM(runs_scored) AS total_runs FROM Deliveries GROUP BY striker_id), DismissalStats AS (SELECT player_out_id AS player_id, COUNT(delivery_id) AS dismissals FROM Deliveries WHERE player_out_id IS NOT NULL AND wicket_type NOT IN ('retired hurt', 'retired not out') GROUP BY player_out_id) SELECT p.player_name, ms.matches_played AS matches, COALESCE(bs.total_runs, 0) AS runs, ROUND(CAST(COALESCE(bs.total_runs, 0) AS FLOAT) / NULLIF(COALESCE(ds.dismissals, 0), 0), 2) AS average, ms.span FROM MatchStats ms JOIN Players p ON ms.player_id = p.player_id LEFT JOIN BattingStats bs ON ms.player_id = bs.player_id LEFT JOIN DismissalStats ds ON ms.player_id = ds.player_id ORDER BY average DESC LIMIT 1;",
@@ -1436,19 +1436,18 @@
         ]
     },
     {
-        "db_id": "t20_i.db",
+        "db_id": "t20_I.db",
         "context_url": "https://www.espncricinfo.com/records/format/twenty20-internationals-3",
         "question": "Which player has carried the bat through a completed T20I innings with the highest individual score? Give runs, team total,  opposition,  and date.",
         "query": "WITH FirstDel AS (SELECT match_id, inning, MIN(delivery_id) AS min_del FROM Deliveries GROUP BY match_id, inning), Openers AS (SELECT d.match_id, d.inning, d.striker_id AS player_id FROM Deliveries d JOIN FirstDel fd ON d.delivery_id = fd.min_del UNION SELECT d.match_id, d.inning, d.non_striker_id AS player_id FROM Deliveries d JOIN FirstDel fd ON d.delivery_id = fd.min_del), MatchStats AS (SELECT match_id, inning, batting_team, bowling_team, SUM(runs_scored + extra_runs) AS team_total, SUM(CASE WHEN player_out_id IS NOT NULL AND wicket_type NOT IN ('retired hurt', 'retired not out') THEN 1 ELSE 0 END) AS wickets FROM Deliveries GROUP BY match_id, inning, batting_team, bowling_team), BatterStats AS (SELECT match_id, inning, striker_id, SUM(runs_scored) AS runs FROM Deliveries GROUP BY match_id, inning, striker_id) SELECT p.player_name, bs.runs, ms.team_total, ms.bowling_team AS opposition, m.match_date FROM BatterStats bs JOIN Openers o ON bs.match_id = o.match_id AND bs.inning = o.inning AND bs.striker_id = o.player_id JOIN MatchStats ms ON bs.match_id = ms.match_id AND bs.inning = ms.inning JOIN Matches m ON bs.match_id = m.match_id JOIN Players p ON bs.striker_id = p.player_id WHERE ms.wickets = 10 AND NOT EXISTS (SELECT 1 FROM Deliveries out_d WHERE out_d.match_id = bs.match_id AND out_d.inning = bs.inning AND out_d.player_out_id = bs.striker_id) ORDER BY bs.runs DESC LIMIT 1;",
         "answer": [
-            "('CH Gayle', '63*', 101,'West Indies','Sri Lanka', '2009-06-19')"
+            "('CH Gayle', '63*', 101,'Sri Lanka', '2009-06-19')"
         ],
         "question_english": "Which player has carried the bat through a completed T20I innings with the highest individual score? Give runs, team total, opposition, and date.",
         "column_names": [
             "Player",
             "Runs",
             "Team Total",
-            "Team",
             "Opposition",
             "Date"
         ]
