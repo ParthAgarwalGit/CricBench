@@ -6,12 +6,12 @@
         "query": "WITH finals AS (SELECT match_id, match_date, CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS losing_team, CAST(strftime('%Y', match_date) AS INTEGER) AS year FROM Matches WHERE stage = 'Final') SELECT f1.losing_team AS team_name, f1.year AS year1, f2.year AS year2 FROM finals f1 JOIN finals f2 ON f1.losing_team = f2.losing_team AND f2.year = f1.year + 4 ORDER BY team_name;", 
         "difficulty": "Easy", 
         "answer": 
-        [ "('Sri Lanka', 2007, 2019)",
+        [ "('Sri Lanka', 2007, 2011)",
         "('New Zealand', 2015, 2019)"], 
         "question_english": "From 2003, which teams lost successive World Cup finals? Mention the team name and the years of these matches.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "2003 నుంచి ఏ టిములు వరుసగా వరల్డ్ కప్పు ఫినల్స్ ఓడిపోయారు? టీం యొక్క పేరు మరియు మ్యాచులు ఆడిన సంవత్సరాలు రాయండి.", 
         "column_names": [ "Team Name, Year 1, Year 2" ] 
     },
     { 
@@ -29,7 +29,7 @@
         "question_english": "When did ties in ODI World Cup matches take place? Mention the year, the two teams playing and the location of the match.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ODI వరల్డ్ కప్పు మ్యాచులలో టై ఎప్పుడు జరిగినది? సంవత్సరం, ఆడే టిములు మరియు మ్యాచ్ యొక్క స్థానం రాయండి.", 
         "column_names": [ "Year, Team 1, Team 2, Match Location" ] 
     },
     { 
@@ -47,7 +47,7 @@
         "question_english": "List the top 5 players that took the most wickets for New Zealand in a World Cup season? Mention the player, the season and the number of wickets.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఏ టాప్ 5 క్రీడాకార్లు న్యూ జిలెండ్ కోసం అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు? క్రీడాకార్లు, సీజన్ మరియు వికెట్ల సంఖ్య రాయండి.", 
         "column_names": [ "Player Name, Season, Wickets" ] 
     },
     { 
@@ -65,7 +65,7 @@
         "question_english": "Which players made the most dismissals as wicketkeeper in a World Cup? Mention the player, the season and the number of dismissals.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఏ క్రీడాకార్లు వికెట్ కీపర్ గా అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు? క్రీడాకార్లు, సీజన్ మరియు తీసుకున్న వికెట్ల సంఖ్య రాయండి.", 
         "column_names": [ "Player Name, Season, Number of dismissals" ] 
     },
     { 
@@ -81,7 +81,7 @@
         "question_english": "Which players have the most 50+ scores in a World Cup while batting at No 5 or below? Mention the number of scores, the player and the season.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఏ క్రీడాకార్లు వరల్డ్ కప్పులో నెంబర్ 5 లేదా దానికన్నా తక్కువ స్థానంలో బ్యాటింగ్ చేసేదప్పుడు అన్నిటికన్నా ఎక్కువ అర్ధ శతాబ్దాలు సంపాదించారు? అర్ధ శతాబ్దాల సంఖ్య, క్రీడాకార్లు మరియు సీజన్ రాయండి.", 
         "column_names": [ "Player Name, Season, Number of 50+ scores" ] 
     },
     { 
@@ -100,7 +100,7 @@
         "question_english": "Which players made the most fielding dismissals in the 2019 World Cup? Mention the player name and the number of dismissals.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఏ క్రీడాకార్లు 2019 వరల్డ్ కప్పులో అన్నిటికన్నా ఎక్కువ ఫీల్డింగ్ ద్వారా అవుట్లు తీసుకున్నారు? క్రీడాకార్ల పేరులు మరియు అవుట్ల సంఖ్య రాయండి.", 
         "column_names": [ "Player Name, Number of dismissals" ] 
     },
     { 
@@ -117,7 +117,7 @@
         "question_english": "Which players have the most wickets in powerplay 1 in the 2019 World Cup? Mention the player name and the number of wickets.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఏ క్రీడాకార్ల దగ్గర 2019 వరల్డ్ కప్పులో పవర్ప్లే 1 లో అన్నిటికన్నా ఎక్కువ వికెట్లు ఉన్నాయి? క్రీడాకార్ల పేరులు మరియు వికెట్ల సంఖ్య రాయండి.", 
         "column_names": [ "Player Name, Number of wickets" ] 
     },
     { 
@@ -134,7 +134,7 @@
         "question_english": "In how many instances has a batsman scored 500+ runs in a World Cup edition? Mention the season and the number of instances.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఎన్ని ఉదాహరణాలలో ఒక వరల్డ్ కప్పు ఎడిషన్లో ఒక బ్యాట్స్మన్ 500 లేదా దానికన్నా ఎక్కువ పరుగులు సంపాదించారు? సీజన్ మరియు ఉదాహరణాల సంఖ్య రాయండి.", 
         "column_names": [ "Season, Number of Instances" ] 
     },
     { 
@@ -151,7 +151,7 @@
         "question_english": "Which players made the most wickets for England in World Cups from 2003? Mention the player name, season and the number of wickets.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "ఏ క్రీడాకార్లు 2003 నుంచి వరల్డ్ కప్పులో ఇంగ్లండ్ కోసం అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు? క్రీడాకార్ల పేరులు, సీజన్ మరియు వికెట్ల సంఖ్య రాయండి.", 
         "column_names": [ "Player Name, Season, Number of wickets" ] 
     },
     { 
@@ -174,7 +174,7 @@
         "question_english": "What are the average balls to individual 50s for each team in the 2019 World Cup?", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "2019 వరల్డ్ కప్పులో ప్రతి టీం కోసం 50 పరుగులు చేరడానికి ఎన్ని బంతులు పట్టాయి?", 
         "column_names": [ "Team Name, Average balls" ] 
     },
     { 
@@ -193,7 +193,7 @@
         "question_english": "What were New Zealand's Powerplay 1 scores in the last 4 matches it played in the 2019 World Cup?", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "2019 వరల్డ్ కప్పులో న్యూ జిలెండ్ యొక్క చివరి 4 మ్యాచులలో పవర్ప్లే 1 స్కోర్లు ఏమిటి?", 
         "column_names": [ "Match Stage", "Powerplay 1 Score" ] 
     },
     { 
@@ -212,7 +212,7 @@
         "question_english": "Which players took the most wickets in Powerplay 1 in the 2019 World Cup?", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "2019 వరల్డ్ కప్పులో పవర్ప్లే 1 లో ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు?", 
         "column_names": [ "Player Name", "Wickets" ] 
     },
     { 
@@ -229,7 +229,7 @@
         "question_english": "What are the stats of Martin Guptill in World Cups? Mention the season, total runs he scored, average runs he scored, strike rate and high score.", 
         "question_hindi": "", 
         "question_punjabi": "", 
-        "question_telugu": "", 
+        "question_telugu": "వరల్డ్ కుప్పులలో Martin Guptill యొక్క గణాంకాలు ఏమిటి? సీజన్, సంపాదించిన పరుగులు, సంపాదించిన పరుగుల ఆవెరేజ్, స్ట్రైక్ రేట్ మరియు హై స్కోర్ రాయండి.", 
         "column_names": [ "Season", "Total Runs", "Average", "Strike Rate", "High Score" ] 
     },
     {
@@ -250,7 +250,7 @@
         "question_english": "Which teams have suffered semifinal defeats in ODI World Cups from the 2002/03 edition onwards? Mention the team name and the number of semifinal defeats.",
         "question_hindi": "",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2002/03 వరల్డ్ కప్పు ఎడిషన్ నుండి ఏ టిములు సెమీఫైనల్స్లో ఓడిపోయారు? టీం యొక్క పేరు మరియు సెమీఫైనల్ ఓటమి సంఖ్య రాయండి.",
         "column_names": [ "Team Name", "Semifinal Defeats" ]
     },
     {
@@ -265,13 +265,13 @@
         "question_english": "In how many instances have the last five wickets scored 169 or more runs in a World Cup run chase? Mention the season, teams, venue and runs scored by the last five wickets.",
         "question_hindi": "",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఎన్ని ఉదాహరణాలలో ఒక వరల్డ్ కప్పు రన్ చేస్లో చివరి 5 వికెట్లు 169 లేదా దానికన్నా ఎక్కువ పరుగులు సంపాదించారు? సీజన్, టిములు, స్థానం మరియు చివరి 5 వికెట్లు సంపాదించిన పరుగులు రాయండి.",
         "column_names": [ "Season", "Team 1", "Team 2", "Venue", "Last Five Wickets Runs" ]
     },
     {
         "db_id": "wc_db",
         "context_url": "https://www.cricbuzz.com/profiles/1413/virat-kohli",
-        "question": "What are Virat Kohli's batting performances in ODI World Cup knockout matches from the 2002/03 edition onwards? Mention the season, stage, runs and balls faced.",
+        "question": "What are Virat Kohli's batting performances in ODI World Cup knockout matches? Mention the season, stage, runs and balls faced.",
         "query": "SELECT M.season, M.stage, SUM(D.runs_scored) AS runs, COUNT(*) AS balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'V Kohli' AND M.stage IN ('Quarter-final','Semi-final','Final') AND CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 GROUP BY M.season, M.stage, D.match_id ORDER BY CAST(SUBSTR(M.season,1,4) AS INTEGER), CASE M.stage WHEN 'Quarter-final' THEN 1 WHEN 'Semi-final' THEN 2 WHEN 'Final' THEN 3 END;",
         "difficulty": "Medium",
         "answer": [
@@ -283,10 +283,10 @@
             "('2023/24','Semi-final',117,113)",
             "('2023/24','Final',54,63)"
         ],
-        "question_english": "What are Virat Kohli's batting performances in ODI World Cup knockout matches from the 2002/03 edition onwards? Mention the season, stage, runs and balls faced.",
+        "question_english": "What are Virat Kohli's batting performances in ODI World Cup knockout matches? Mention the season, stage, runs and balls faced.",
         "question_hindi": "",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ODI వరల్డ్ కప్పు నాకౌట్ మ్యాచులలో Virat Kohli యొక్క బ్యాటింగ్ గణాంకాలు ఏమిటి? సీజన్, స్టేజ్, పరుగులు మరియు ఎదుర్కొన్న బంతుల సంఖ్య రాయండి.",
         "column_names": [ "Season", "Stage", "Runs", "Balls Faced" ]
     },
     {
@@ -305,7 +305,7 @@
         "question_english": "Who scored the most runs for New Zealand in a single ODI World Cup edition (excluding editions before 2002/03)? Mention the player name, season and total runs.",
         "question_hindi": "",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో (2002/03 సీజన్ నుంచి) New Zealand కోసం అన్నిటికన్నా ఎక్కువ పరుగులు ఎవరు సంపాదించారు? క్రీడాకార్ల పేరు, సీజన్ మరియు సంపాదించిన పరుగుల సంఖ్య రాయండి.",
         "column_names": [ "Player Name", "Season", "Total Runs" ]
     },
     {
@@ -323,7 +323,7 @@
         "question_english": "How many balls did Kane Williamson take to reach his half-centuries in the 2019 ODI World Cup? Mention the opponent, venue and balls taken.",
         "question_hindi": "",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో అతన అర్ధ శతకం సాధించడానికి Kane Williamson కి ఎన్ని బంతుల అవదరం వచ్చింది? వ్యతిరేక టీం, స్థానం మరియు బంతుల సంఖ్య రాయండి.",
         "column_names": [ "Opponent", "Venue", "Balls to 50" ]
     },
     {
@@ -343,7 +343,7 @@
         "question_english": "What were the lowest Powerplay 1 scores in the 2019 ODI World Cup? Mention the batting team, opponent, venue and score.",
         "question_hindi": "",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో అన్నిటికన్నా తక్కువ పవర్ప్లే 1 స్కోర్లు ఏమిటి? బ్యాటింగ్ టీం, వ్యతిరేక టీం, స్థానం మరియు స్కోర్ రాయండి.",
         "column_names": [ "Batting Team", "Opponent", "Venue", "Powerplay 1 Score" ]
     },
     {
@@ -670,4 +670,5 @@
         "question_telugu": "",
         "column_names": ["Season", "Team", "Runs Added After 5th Wicket"]
     }
+
 ]
