@@ -362,7 +362,7 @@
         "question_english": "What are Australia's results in ODI World Cup semifinals from the 2002/03 edition onwards?",
         "question_hindi": "",
         "question_punjabi": "2002/03 ਐਡੀਸ਼ਨ ਤੋਂ ਅਤੇ ਉਸਤੋਂ ਬਾਅਦ ODI ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲਾਂ ਵਿੱਚ Australia ਦੇ ਨਤੀਜੇ ਕੀ ਰਹੇ?",
-        "question_telugu": "",
+        "question_telugu": "2002/03 ఎడిషన్ నుంచి ODI వరల్డ్ కప్పు సెమీఫైనల్స్లో Australia యొక్క గణాంకాలు ఏమిటి?",
         "column_names": [ "Season", "Result", "Opponent", "Margin", "Margin Type" ]
     },
     {
@@ -383,7 +383,7 @@
         "question_english": "Who took the most wickets in a single ODI World Cup edition?",
         "question_hindi": "",
         "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸਨੇ ਲਈਆਂ?",
-        "question_telugu": "",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్లో ఎవరు అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు?",
         "column_names": [ "Player Name", "Season", "Wickets" ]
     },
     {
@@ -406,7 +406,7 @@
         "question_english": "What were the opening partnership stands between Jason Roy and Jonny Bairstow in the 2019 ODI World Cup, ordered chronologically with match stage specified?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ Jason Roy ਅਤੇ Jonny Bairstow ਵਿਚਕਾਰ ਓਪਨਿੰਗ ਸਾਂਝੇਦਾਰੀ ਕਿੰਨੀ ਰਹੀ, ਸਮੇਂ ਅਨੁਸਾਰ ਕ੍ਰਮ ਵਿੱਚ ਅਤੇ ਮੈਚ ਦੇ ਪੜਾਅ ਸਮੇਤ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో Jason Roy మరియు Jonny Bairstow యొక్క భాగస్వామ్యాలు ఏమిటి? మ్యాచ్ స్టేజ్ తో పాటు టైమ్ ఆర్డర్లో రాయండి.",
         "column_names": ["Stage", "Opponent", "Opening Stand"]
     },
     {
@@ -429,7 +429,7 @@
         "question_english": "What were Jason Roy's individual scores in the 2019 ODI World Cup, ordered chronologically and specifying the match stage?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ Jason Roy ਦੇ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕੀ ਸਨ, ਸਮੇਂ ਅਨੁਸਾਰ ਕ੍ਰਮ ਵਿੱਚ ਅਤੇ ਮੈਚ ਦੇ ਪੜਾਅ ਸਮੇਤ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో Jason Roy యొక్క స్కోర్లు ఏమిటి? మ్యాచ్ స్టేజ్ తో పాటు టైమ్ ఆర్డర్లో రాయండి.",
         "column_names": ["Stage", "Opponent", "Runs"]
     },
     {
@@ -450,7 +450,7 @@
         "question_english": "What were Australia's death overs (41-50) scores when batting first in the 2019 ODI World Cup?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਪਹਿਲਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦਿਆਂ Australia ਦੇ Death Overs (41-50) ਦੇ ਸਕੋਰ ਕੀ ਸਨ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో మొదటి సారి బ్యాట్ చేసేదప్పుడు Australia యొక్క Death Overs (41-50) స్కోర్లు ఏమిటి?",
         "column_names": ["Stage", "Opponent", "Venue", "Runs", "Wickets"]
     },
     {
@@ -465,7 +465,7 @@
         "question_english": "Which team lost the most wickets in death overs (41-50) while batting first in the 2019 ODI World Cup including knockout matches?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਨਾਕਆਊਟ ਮੈਚਾਂ ਸਮੇਤ, ਪਹਿਲਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦਿਆਂ Death Overs (41-50) ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਹੜੀ ਟੀਮ ਨੇ ਗੁਆਈਆਂ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో నాకౌట్ మ్యాచులుతో సహ ఏ టీం Death Overs (41-50) లో మొదటి సారి బ్యాట్ చేసేదప్పుడు అన్నిటికన్నా ఎక్కువ వికెట్లు కోల్పోయారు?",
         "column_names": ["Team", "Wickets Lost in Death Overs"]
     },
     {
@@ -483,7 +483,7 @@
         "question_english": "Who took the most outfield catches in a single ODI World Cup edition?",
         "question_hindi": "",
         "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ outfield ਕੈਚ ਕਿਸਨੇ ਫੜੇ?",
-        "question_telugu": "",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్లో ఎవరు అన్నిటికన్నా ఎక్కువ ఔట్ఫీల్డ్ క్యాచులు తీసుకున్నారు?",
         "column_names": ["Player Name", "Season", "Catches"]
     },
     {
@@ -500,7 +500,7 @@
         "question_english": "What were Steve Smith's scores in the knockout matches of the 2015 ODI World Cup?",
         "question_hindi": "",
         "question_punjabi": "2015 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ Steve Smith ਦੇ ਸਕੋਰ ਕੀ ਸਨ?",
-        "question_telugu": "",
+        "question_telugu": "2015 ODI వరల్డ్ కప్పులో నాకౌట్ మ్యాచులలో Steve Smith యొక్క స్కోర్లు ఏమిటి?",
         "column_names": ["Stage", "Opponent", "Venue", "Runs", "Balls"]
     },
     {
@@ -516,7 +516,7 @@
         "question_english": "What were Aaron Finch's scores against England in ODI World Cups?",
         "question_hindi": "",
         "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ England ਵਿਰੁੱਧ Aaron Finch ਦੇ ਸਕੋਰ ਕੀ ਸਨ?",
-        "question_telugu": "",
+        "question_telugu": "ODI వరల్డ్ కుప్పులలో England కి వ్యతిరేకంగా Aaron Finch యొక్క స్కోర్లు ఏమిటి?",
         "column_names": ["Season", "Venue", "Runs", "Balls"]
     },
     {
@@ -534,7 +534,7 @@
         "question_english": "Which players took the most wickets in the middle overs (11-40) in an ODI World Cup edition?",
         "question_hindi": "",
         "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਮਿਡਲ ਓਵਰਜ਼ (11-40) ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਲਈਆਂ?",
-        "question_telugu": "",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్లో ఏ క్రీడాకార్లు మిడిల్ ఓవర్లలో (11-40) అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు?",
         "column_names": ["Player Name", "Season", "Middle Overs Wickets"]
     },
     {
@@ -553,7 +553,7 @@
         "question_english": "Which players scored the most runs in knockout matches of the 2019 ODI World Cup?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਏ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పు నాకౌట్ మ్యాచులలో ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ పరుగులు సంపాదించారు?",
         "column_names": ["Player Name", "Knockout Runs"]
     },
     {
@@ -572,7 +572,7 @@
         "question_english": "What are the highest individual scores in ODI World Cup knockout matches?",
         "question_hindi": "",
         "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕੀ ਹਨ?",
-        "question_telugu": "",
+        "question_telugu": "ODI వరల్డ్ కప్పు నాకౌట్ మ్యాచులలో అన్నిటికన్నా ఎక్కువ ఇండివిడ్యువల్ స్కోర్లు ఏమిటి? ",
         "column_names": ["Player Name", "Season", "Stage", "Runs"]
     },
     {
@@ -591,7 +591,7 @@
         "question_english": "Which bowlers bowled the most dot balls in the 2019 ODI World Cup?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਡੌਟ ਬਾਲਾਂ ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ਾਂ ਨੇ ਸੁੱਟੀਆਂ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో ఏ బౌలర్లు అన్నిటికన్నా ఎక్కువ డాట్ బాల్స విసిరారు?",
         "column_names": ["Player Name", "Dot Balls"]
     },
     {
@@ -610,7 +610,7 @@
         "question_english": "Which bowlers had the best economy rate in death overs (41-50) in an ODI World Cup edition (minimum 100 balls bowled)?",
         "question_hindi": "",
         "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ Death Overs (41-50) ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਇਕਾਨਮੀ ਰੇਟ ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ਾਂ ਦਾ ਸੀ (ਘੱਟੋ-ਘੱਟ 100 ਗੇਂਦਾਂ ਸੁੱਟੀਆਂ)?",
-        "question_telugu": "",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్లో Death Overs (41-50) లో ఏ బౌలర్లకి అన్నిటికన్నా మంచి ఎకానమీ రేట్ ఉన్నది? (కనీసం 100 బంతులు విసిరిన)",
         "column_names": ["Player Name", "Season", "Economy"]
     },
     {
@@ -629,7 +629,7 @@
         "question_english": "Which players scored the most 50+ scores in the 2019 ODI World Cup?",
         "question_hindi": "",
         "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ 50+ ਸਕੋਰ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਏ?",
-        "question_telugu": "",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ 50+ స్కోర్లు సంపాదించారు?",
         "column_names": ["Player Name", "50+ Scores"]
     },
     {
@@ -648,7 +648,7 @@
         "question_english": "Which teams have won the most matches while chasing in ODI World Cup history?",
         "question_hindi": "",
         "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਚੇਜ਼ ਕਰਦਿਆਂ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਨੇ ਜਿੱਤੇ ਹਨ?",
-        "question_telugu": "",
+        "question_telugu": "ODI వరల్డ్ కప్పు ఇతిహాసలో ఏ టిములు చేస్ చేసేదప్పుడు అన్నిటికన్నా ఎక్కువ మ్యాచులు గెలిచారు?",
         "column_names": ["Team", "Chase Wins"]
     },
     {
@@ -667,7 +667,7 @@
         "question_english": "What are the largest lower-order recoveries in successful run chases in ODI World Cup history (runs added after the fall of the fifth wicket)?",
         "question_hindi": "",
         "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਫਲ ਰਨ ਚੇਜ਼ ਵਿੱਚ ਹੇਠਲੇ ਕ੍ਰਮ ਦੀਆਂ ਸਭ ਤੋਂ ਵੱਡੀਆਂ recoveries ਕੀ ਹਨ (ਪੰਜਵੀਂ ਵਿਕਟ ਡਿੱਗਣ ਤੋਂ ਬਾਅਦ ਜੋੜੇ ਰਨ?)",
-        "question_telugu": "",
+        "question_telugu": "ODI వరల్డ్ కప్పు ఇతిహాసలో విజయవంతమైన రన్ చేసులలో అన్నిటికన్నా పెద్ద లోవర్ ఆర్డర్ రికవరీలు ఏమిటి? (ఐదవ వికెట్ పడిపోయిన తరువాత సంపాదించిన పరుగులు)",
         "column_names": ["Season", "Team", "Runs Added After 5th Wicket"]
     }
     
