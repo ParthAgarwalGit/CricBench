@@ -9,7 +9,7 @@
             "('Virat Kohli', 'Shreyas Iyer', 537)"
         ],
         "question_english": "Who has most partnership runs in a World Cup?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप में सबसे ज्यादा साझेदारी रन किसके हैं?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੇਦਾਰੀ ਰਨ ਕਿਸ ਦੇ ਹਨ?",
         "question_telugu": "ఎవరి దగ్గర వరల్డ్ కప్పులో అన్నిటికన్నా ఎక్కువ భాగస్వామ్య పరుగులు ఉన్నాయి?",
         "column_names": [
@@ -30,7 +30,7 @@
             "('Australia', 2003, 96)"
         ],
         "question_english": "List most wickets taken by bowlers of a team in a single World Cup Edition.",
-        "question_hindi": "",
+        "question_hindi": "एक ही विश्व कप संस्करण में किसी टीम के गेंदबाजों द्वारा लिए गए सबसे ज्यादा विकेटों की सूची दें।",
         "question_punjabi": " ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਕਿਸੇ ਟੀਮ ਦੇ ਗੇਂਦਬਾਜ਼ਾਂ ਦੁਆਰਾ ਲਈਆਂ ਗਈਆਂ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఒక టీం యొక్క బౌలర్లు తీసిన అన్నిటికన్నా ఎక్కువ విక్కెట్ల జాబితా ఏమిటి?",
         "column_names": [
@@ -51,7 +51,7 @@
             "(1979, 'England', 4)"
         ],
         "question_english": "Which teams had their only defeat in a World Cup edition coming in the final?",
-        "question_hindi": "",
+        "question_hindi": "किन टीमों की विश्व कप के किसी संस्करण में एकमात्र हार फाइनल में आई थी?",
         "question_punjabi": "ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਦੀ ਕਿਸੇ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਇਕਲੌਤੀ ਹਾਰ ਸਿਰਫ਼ ਫਾਈਨਲ ਵਿੱਚ ਹੋਈ ਸੀ?",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఒకే ఓటమి ఫైనల్లోనే వచ్చిన టీం ఏమిటి?",
         "column_names": [
@@ -74,7 +74,7 @@
             "('M Muralitharan', 2007, 23)"
         ],
         "question_english": "Who has most wickets in a single edition of the World Cup?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप के एक ही संस्करण में सबसे ज्यादा विकेट किसके हैं?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇੱਕ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸ ਦੀਆਂ ਹਨ?",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఎవరికి అన్నిటికన్నా ఎక్కువ వికెట్లు ఉన్నాయి?",
         "column_names": [
@@ -96,7 +96,7 @@
             "('Travis Head', 2023)"
         ],
         "question_english": "Who won the Player of the Match in semifinal and final of a World Cup?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप के सेमीफाइनल और फाइनल में प्लेयर ऑफ द मैच किसने जीता?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਸੈਮੀਫਾਈਨਲ ਅਤੇ ਫਾਈਨਲ ਦੋਵਾਂ ਵਿੱਚ 'ਪਲੇਅਰ ਆਫ਼ ਦ ਮੈਚ' ਕੌਣ ਰਿਹਾ ਹੈ?",
         "question_telugu": "ఒక వరల్డ్ కప్పులో ఎవరు సెమీఫైనల్ మరియు ఫైనల్లో ప్లేయర్ ఆఫ్ తే మ్యాచ్ గెలిచారు?",
         "column_names": [
@@ -116,7 +116,7 @@
             "('A Gilchrist', 'M Hayden', 172)"
         ],
         "question_english": "Who has the highest partnerships in World Cup finals?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप फाइनल में सबसे बड़ी साझेदारियां किनकी हैं?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਫਾਈਨਲ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡੀ ਸਾਂਝੇਦਾਰੀ ਕਿਸ ਦੀ ਰਹੀ ਹੈ?",
         "question_telugu": "వరల్డ్ కప్పు ఫైనల్సలో ఎవరికి అన్నిటికన్నా పెద్ద భాగస్వామ్యం ఉన్నది?",
         "column_names": [
@@ -137,7 +137,7 @@
             "('New Zealand', '4 wickets', 'New Zealand', 'South Africa', 2015, 'Semifinal)"
         ],
         "question_english": "What are the lowest win-margins in World Cup knockouts (by wickets)?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप नॉकआउट मैचों में विकेटों के हिसाब से सबसे कम जीत के अंतर क्या हैं?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਵਿਕਟਾਂ ਦੇ ਲਿਹਾਜ਼ ਨਾਲ ਜਿੱਤ ਦੇ ਸਭ ਤੋਂ ਘੱਟ ਅੰਤਰ ਕਿਹੜੇ ਹਨ?",
         "question_telugu": "వరల్డ్ కప్పు నౌక్అవుట్సలో అన్నితకన్న తక్కువ గెలుపు అంచులు ఏమిటి? (విక్కెట్ల ద్వారా)",
         "column_names": [
@@ -162,7 +162,7 @@
             "('South Africa', 4)"
         ],
         "question_english": "Which team has most defeats in World Cup semi-finals?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप सेमीफाइनल में सबसे ज्यादा हार किस टीम की है?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਹਾਰਾਂ ਕਿਸ ਟੀਮ ਦੀਆਂ ਹਨ?",
         "question_telugu": "వరల్డ్ కప్పు సెమీఫైనల్స్లో ఏ టీం అన్నిటికన్నా ఎక్కువ సార్లు ఓడిపోయింది?",
         "column_names": [
@@ -184,7 +184,7 @@
             "('Sri Lanka', 8, 2007)"
         ],
         "question_english": "Which teams have most wins in a single World Cup edition?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप के एक ही संस्करण में सबसे ज्यादा जीत किन टीमों की हैं?",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇੱਕ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਕਿਸ ਟੀਮ ਦੀਆਂ ਹਨ?",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఏ టిములు అన్నిటికన్నా ఎక్కువ సార్లు గెలిచారు?",
         "column_names": [
@@ -203,7 +203,7 @@
             "(22, 16, 5, 1)"
         ],
         "question_english": "Give stats of AUS vs SA in ODIs since 2016?",
-        "question_hindi": "",
+        "question_hindi": "2016 से अब तक वनडे में ऑस्ट्रेलिया बनाम दक्षिण अफ्रीका के आंकड़े बताइए।",
         "question_punjabi": " 2016 ਤੋਂ ਬਾਅਦ ODI ਮੈਚਾਂ ਵਿੱਚ Australia vs South Africa ਦੇ ਅੰਕੜੇ ਦੱਸੋ।",
         "question_telugu": "2016 నుంచి ODIల లో ఆస్ట్రేలియా సౌత్ ఆఫ్రికా కి వ్యతిరేకంగా ఆడిన మ్యాచుల గణాంకాలు ఏమిటి?",
         "column_names": [
@@ -227,7 +227,7 @@
             "('Sri Lanka', 3)"
         ],
         "question_english": "Which teams have qualified for the World Cup finals most often?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप फाइनल के लिए सबसे ज्यादा बार कौन-सी टीमें क्वालीफाई हुई हैं?",
         "question_punjabi": " ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਫਾਈਨਲ ਲਈ ਕੁਆਲੀਫਾਈ ਕੀਤਾ ਹੈ?",
         "question_telugu": "ఏ టిములు అన్నిటికన్నా ఎక్కువ సార్లు వరల్డ్ కప్పు ఫినల్స్ కి చేరారు?",
         "column_names": [
@@ -248,7 +248,7 @@
             "('Marco Jansen', 2023, 17)"
         ],
         "question_english": "Who has the most wickets in a World Cup edition for South Africa?",
-        "question_hindi": "",
+        "question_hindi": "दक्षिण अफ्रीका के लिए विश्व कप के एक संस्करण में सबसे ज्यादा विकेट किसके हैं?",
         "question_punjabi": "South Africa ਲਈ ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸ ਦੀਆਂ ਹਨ?",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో సౌత్ ఆఫ్రికా తరపన ఎవరికి అన్నిటికన్నా ఎక్కువ వికెట్లు ఉన్నాయి?",
         "column_names": [
@@ -270,7 +270,7 @@
             "('Quinton de Kock', 2023, 20)"
         ],
         "question_english": "Who has most wicketkeeping dismissals in a World Cup edition?",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप के एक संस्करण में विकेटकीपर के रूप में सबसे ज्यादा डिसमिसल किसके हैं?",
         "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਵਿਕਟਕੀਪਰ ਵਜੋਂ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸ ਦੀਆਂ ਹਨ?",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఎవరికి అన్నిటికన్నా ఎక్కువ వికెట్కీపర్ ద్వారా జరిగిన అవుట్లు ఉన్నాయి?",
         "column_names": [
@@ -289,7 +289,7 @@
             "('Adam Zampa', 'South Africa', 45.66)"
         ],
         "question_english": "Who has the highest bowling average in ODIs against any opponent?",
-        "question_hindi": "",
+        "question_hindi": "वनडे में किसी भी प्रतिद्वंद्वी के खिलाफ सबसे ज्यादा गेंदबाजी औसत किसका है?",
         "question_punjabi": "ODI ਵਿੱਚ ਕਿਸੇ ਵੀ ਵਿਰੋਧੀ ਦੇ ਖਿਲਾਫ ਸਭ ਤੋਂ ਵੱਧ ਗੇਂਦਬਾਜ਼ੀ ਔਸਤ ਕਿਸਦੀ ਹੈ?",
         "question_telugu": "ODIల లో ఎవరికి అన్నిటికన్నా ఎక్కువ బౌలింగ్ ఆవెరేజ్ ఉన్నది?",
         "column_names": [
@@ -308,7 +308,7 @@
             "('Lungi Ngidi', 19.52)"
         ],
         "question_english": "Who has the lowest average in ODIs as a bowler between Australia and South Africa?",
-        "question_hindi": "",
+        "question_hindi": "ऑस्ट्रेलिया और दक्षिण अफ्रीका के बीच वनडे में गेंदबाज के रूप में सबसे कम औसत किसका है?",
         "question_punjabi": "ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਦੱਖਣੀ ਅਫ਼ਰੀਕਾ ਵਿਚਕਾਰ ODI ਮੈਚਾਂ ਵਿੱਚ ਇੱਕ ਗੇਂਦਬਾਜ਼ ਵਜੋਂ ਸਭ ਤੋਂ ਘੱਟ ਔਸਤ ਕਿਸਦੀ ਹੈ?",
         "question_telugu": "ODIల లో ఆస్ట్రేలియా సౌత్ ఆఫ్రికా కి వ్యతిరేకంగా ఆడిన మ్యాచులలో ఆడిన బౌలర్లలో ఎవరికి అన్నిటికన్నా తక్కువ ఆవెరేజ్ ఉన్నది?",
         "column_names": [
@@ -327,7 +327,7 @@
             "('David Miller', 'Semifinal', 101)"
         ],
         "question_english": "Who has hit Hundreds for SA in ICC ODI tournament knockouts?",
-        "question_hindi": "",
+        "question_hindi": "आईसीसी वनडे टूर्नामेंट के नॉकआउट में दक्षिण अफ्रीका के लिए शतक किसने लगाए हैं?",
         "question_punjabi": "ICC ODI ਟੂਰਨਾਮੈਂਟ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਦੱਖਣੀ ਅਫ਼ਰੀਕਾ ਲਈ ਸੈਂਕੜੇ ਕਿਸਨੇ ਮਾਰੇ ਹਨ?",
         "question_telugu": "ODI టోర్నమెంట్ నొక్ఔట్లలో సౌత్ ఆఫ్రికా తరపన ఎవరు శతకాలు కొట్టారు?",
         "column_names": [
@@ -349,7 +349,7 @@
             "('AB de Villiers', 6)"
         ],
         "question_english": "List Most ODI hundreds from No.5 or below.",
-        "question_hindi": "",
+        "question_hindi": "नंबर 5 या उससे नीचे बल्लेबाजी करते हुए सबसे ज्यादा वनडे शतकों की सूची दें।",
         "question_punjabi": "ਨੰਬਰ 5 ਜਾਂ ਉਸ ਤੋਂ ਹੇਠਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ ਸਭ ਤੋਂ ਵੱਧ ODI ਸੈਂਕੜਿਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "నెంబర్ 5 లేదా దానికన్నా కింద ఉన్న ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ శతకాలు కొట్టారు?",
         "column_names": [
@@ -369,7 +369,7 @@
             "('Kevin Pietersen', 'South Africa', 3)"
         ],
         "question_english": "List Most ODI hundreds against a team from No. 5 or below.",
-        "question_hindi": "",
+        "question_hindi": "नंबर 5 या उससे नीचे बल्लेबाजी करते हुए किसी एक टीम के खिलाफ सबसे ज्यादा वनडे शतकों की सूची दें।",
         "question_punjabi": "ਕਿਸੇ ਇੱਕ ਟੀਮ ਦੇ ਖਿਲਾਫ ਨੰਬਰ 5 ਜਾਂ ਉਸ ਤੋਂ ਹੇਠਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ ਸਭ ਤੋਂ ਵੱਧ ODI ਸੈਂਕੜਿਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "నెంబర్ 5 లేదా దానికన్నా కింద ఉన్న ఏ క్రీడాకార్లు ఒక టీం కి వ్యతిరేకంగా అన్నిటికన్నా ఎక్కువ శతకాలు కొట్టారు?",
         "column_names": [
@@ -392,7 +392,7 @@
             "('Quinton de Kock', 118)"
         ],
         "question_english": "Who has most ODI sixes for South Africa?",
-        "question_hindi": "",
+        "question_hindi": "दक्षिण अफ्रीका के लिए वनडे में सबसे ज्यादा छक्के किसके हैं?",
         "question_punjabi": "South Africa ਲਈ ODI ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਕਿਸਦੇ ਹਨ?",
         "question_telugu": "సౌత్ ఆఫ్రికా కి తరపన ఎవరు అన్నిటికన్నా ఎక్కువ సిక్సులు కొట్టారు?",
         "column_names": [
@@ -410,10 +410,9 @@
             "('David Miller', 101, 'Semifinal', 2015)",
             "('Faf du Plessis', 82, 'Semifinal', 2015)",
             "('Quinton de Kock', 78, 'Quarter Final', 2015)"
-
         ],
         "question_english": "List the Highest individual scores for SA in World Cup knockouts.",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप नॉकआउट में दक्षिण अफ्रीका के लिए सर्वोच्च व्यक्तिगत स्कोरों की सूची दें।",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ South Africa ਲਈ ਸਭ ਤੋਂ ਵੱਡੇ ਵਿਅਕਤੀਗਤ ਸਕੋਰਾਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "వరల్డ్ కప్పు నొక్ఔట్లలో సౌత్ ఆఫ్రికా కి తరపన అన్నిటికన్నా ఎక్కువ స్కోర్లు ఏమిటి?",
         "column_names": [
@@ -436,7 +435,7 @@
             "('South Africa', 'Sri Lanka', 2023, 31)"
         ],
         "question_english": "List Most sixes hit in a World Cup match.",
-        "question_hindi": "",
+        "question_hindi": "एक विश्व कप मैच में लगाए गए सबसे ज्यादा छक्कों की सूची दें।",
         "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਮੈਚ ਵਿੱਚ ਮਾਰੇ ਗਏ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕਿਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "ఒక వరల్డ్ కప్పు మ్యాచ్లో అన్నిటికన్నా ఎక్కువ సిక్సులు ఏమిటి?",
         "column_names": [
@@ -458,7 +457,7 @@
             "('India', 'New Zealand', 2023, 724)"
         ],
         "question_english": "What are the highest aggregates in a World Cup match?",
-        "question_hindi": "",
+        "question_hindi": "एक विश्व कप मैच में सबसे बड़े कुल स्कोर क्या हैं?",
         "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਮੈਚ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੁੱਲ ਰਨ ਕਿੰਨੇ ਹਨ?",
         "question_telugu": "ఒక వరల్డ్ కప్పు మ్యాచ్లో అన్నిటికన్నా ఎక్కువ సముదాయాలు ఏమిటి?",
         "column_names": [
@@ -480,7 +479,7 @@
             "('Daryl Mitchell', 2023, 552)"
         ],
         "question_english": "List the players having Most runs in a World Cup edition for New Zealand.",
-        "question_hindi": "",
+        "question_hindi": "न्यूजीलैंड के लिए विश्व कप के एक संस्करण में सबसे ज्यादा रन बनाने वाले खिलाड़ियों की सूची दें।",
         "question_punjabi": "New Zealand ਲਈ ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో న్యూ జిలెండ్ తరపన ఎవరికి అన్నిటికన్నా ఎక్కువ పరుగులు ఉన్నాయి?",
         "column_names": [
@@ -501,7 +500,7 @@
             "('Shreyas Iyer', 2023, 24)"
         ],
         "question_english": "List the players having most sixes in a World Cup edition.",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप के एक संस्करण में सबसे ज्यादा छक्के लगाने वाले खिलाड़ियों की सूची दें।",
         "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਮਾਰਨ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఏ క్రీడాకార్లుకి అన్నిటికన్నా ఎక్కువ ఆరులు ఉన్నాయి?",
         "column_names": [
@@ -521,7 +520,7 @@
             "('Stuart Binny', 6, 4)"
         ],
         "question_english": "List the best bowling returns for India in ODIs.",
-        "question_hindi": "",
+        "question_hindi": "वनडे में भारत के लिए सर्वश्रेष्ठ गेंदबाजी प्रदर्शन की सूची दें।",
         "question_punjabi": "ODI ਵਿੱਚ India ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਗੇਂਦਬਾਜ਼ੀ ਪ੍ਰਦਰਸ਼ਨ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "ODIల లో ఇండియా తరపన అత్యుత్తమ బౌలింగ్ రిటర్న్‌లు ఏమిటి?",
         "column_names": [
@@ -541,7 +540,7 @@
             "('Mohammed Shami', 'New Zealand', 2)"
         ],
         "question_english": "Who has two (or more) World Cup five-fors against an opponent?",
-        "question_hindi": "",
+        "question_hindi": "किसने किसी एक प्रतिद्वंद्वी के खिलाफ विश्व कप में दो या अधिक बार पांच विकेट लिए हैं?",
         "question_punjabi": "ਕਿਸੇ ਵਿਰੋਧੀ ਟੀਮ ਦੇ ਖਿਲਾਫ ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਦੋ ਜਾਂ ਇਸ ਤੋਂ ਵੱਧ ਵਾਰ ਪੰਜ ਵਿਕਟਾਂ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਕਿਸਦੇ ਨਾਮ ਹੈ?",
         "question_telugu": "వరల్డ్ కప్పులో ఏ క్రీడాకార్లుకి ఒక టీం కి వ్యతిరేకంగా 2 లేదా దానికన్నా ఎక్కువ ఫైవ్-ఫోర్లు ఉన్నాయి?",
         "column_names": [
@@ -562,7 +561,7 @@
             "('Mohammed Shami', 2023, 24)"
         ],
         "question_english": "List the players having most wickets in a single World Cup edition.",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप के एक ही संस्करण में सबसे ज्यादा विकेट लेने वाले खिलाड़ियों की सूची दें।",
         "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఏ క్రీడాకార్లుకి అన్నిటికన్నా ఎక్కువ వికెట్లు ఉన్నాయి?",
         "column_names": [
@@ -582,7 +581,7 @@
             "('Mitchell Starc', 3)"
         ],
         "question_english": "List players having most five-fors in World Cups.",
-        "question_hindi": "",
+        "question_hindi": "विश्व कप में सबसे ज्यादा पांच विकेट लेने वाले खिलाड़ियों की सूची दें।",
         "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਪੰਜ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
         "question_telugu": "వరల్డ్ కప్పులో ఏ క్రీడాకార్లుకి అన్నిటికన్నా ఎక్కువ ఫైవ్-ఫోర్లు ఉన్నాయి?",
         "column_names": [
