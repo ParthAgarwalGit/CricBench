@@ -1259,7 +1259,7 @@
         "question_english": "Among all players with 5 T20I career hundreds, compare GJ Maxwell and RG Sharma across innings played, average, SR, sixes, and ducks",
         "question_hindi": "टी20I करियर में 5 शतक वाले सभी खिलाड़ियों में जीजे मैक्सवेल और आरजी शर्मा की तुलना कीजिए: खेली गई पारियां, औसत, SR, छक्के और डक बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "5 T20I శతకాలు ఉన్న క్రీడాకారలో GJ Maxwell మరియు RG Sharma ని పోల్చండీ. ఆడిన ఇన్నింగ్ల సంఖ్య, ఆవెరేజ, స్ట్రైక్ రేట్, సిక్సుల సంఖ్య మరియు డక్కుల సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Innings",
@@ -1280,7 +1280,7 @@
         "question_english": "Abhishek Sharma has the highest career SR among all players with 2 hundreds . Give his strike rate, hundreds, average, and calculate how many balls he faces per hundred on average?",
         "question_hindi": "2 शतक वाले सभी खिलाड़ियों में अभिषेक शर्मा का करियर SR सबसे ऊंचा है। उनका स्ट्राइक रेट, शतक, औसत, और औसतन प्रति शतक कितनी गेंदें खेलते हैं, बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2 శతకాలు ఉన్న క్రీడాకార్లలో Abhishek Sharma దగ్గర అన్నిటికన్నా పెద్ద కెరీర్ స్ట్రైక్ రేట్ ఉన్నది. అతన స్ట్రైక్ రేట్, శతకాల సంఖ్య, ఆవెరేజ్ మరియు ప్రతి శతకం సంపాదించడానికి బంతుల సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Strike Rate",
