@@ -7,7 +7,7 @@
         "question_english": "Which Batsmen has the highest batting average against Australia in T20 history?",
         "question_hindi": "टी20 इतिहास में ऑस्ट्रेलिया के खिलाफ सबसे अधिक बल्लेबाजी औसत किस बल्लेबाज़ का है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 ఇతిహాసలో Australia కి వ్యతిరేకంగా ఏ బ్యాట్స్మ్యాన్ దగ్గర అన్నిటికన్నా పెద్ద బ్యాటింగ్ ఆవెరేజ్ ఉన్నది?",
         "column_names": [
             "player_name"
         ],
@@ -23,7 +23,7 @@
         "question_english": "Across all T20 World Cup editions, which team has used the most bowlers in a single innings and did that strategy result in a win or loss?",
         "question_hindi": "सभी टी20 विश्व कप संस्करणों में, एक पारी में सबसे ज़्यादा गेंदबाज़ों का उपयोग किस टीम ने किया और क्या उस रणनीति का परिणाम जीत रहा या हार?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 వరల్డ్ కప్పు ఎడిషన్లలో ఒక ఇన్నింగ్స్లో ఏ టీం అన్నిటికన్నా ఎక్కువ బౌలర్లని వాదింది? అప్పుడు వాళ్ళు ఒడిపోయారా లేదా గెలిచారా?",
         "column_names": [
             "bowling_team",
             "total_bowlers_used",
@@ -41,7 +41,7 @@
         "question_english": "Which bowler has the best economy rate in overs 17-20 across all T20 World Cups, with a minimum of 100 balls bowled in that phase?",
         "question_hindi": "सभी टी20 विश्व कपों में, 17-20 ओवरों में कम-से-कम 100 वैध गेंदें फेंकने वालों में सबसे बेहतरीन इकॉनमी रेट किस गेंदबाज़ का है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "అన్నీ T20 వరల్డ్ కప్పులలో ఏ బౌలర్ దగ్గర 17-20 ఓవర్లలో అన్నిటికన్నా మంచి ఎకానమీ రేట్ ఉన్నది? (కనీసం 100 బంతులు విసిరిన)",
         "column_names": [
             "player_name"
         ],
@@ -57,7 +57,7 @@
         "question_english": "Who has the best average among bowlers with 10+ wickets, and what is their economy and strike rate?",
         "question_hindi": "10 या उससे अधिक विकेट लेने वाले गेंदबाज़ों में सबसे बेहतरीन औसत किसका है, और उनकी इकॉनमी तथा स्ट्राइक रेट क्या है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "10+ వికెట్లు సంపాదించిన బౌలర్లలో ఎవరి దగ్గర అన్నిటికన్నా మంచి ఆవెరేజ్ ఉన్నది? వాళ్ళ ఎకానమీ మరియు స్ట్రైక్ రేట్ ఏమిటి?",
         "column_names": [
             "Player Name",
             "Bowling_Average",
@@ -76,7 +76,7 @@
         "question_english": "Which fielder has the most dismissals in knockout stage matches, and give dismissals per innings as well?",
         "question_hindi": "नॉकआउट चरण के मैचों में सबसे अधिक डिसमिसल किस फील्डर ने किए हैं, और प्रति पारी डिसमिसल भी बताइए?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "నాకౌట్ మ్యాచులలో ఏ ఫీల్డర్ దగ్గర అన్నిటికన్నా ఎక్కువ వికెట్లు ఉన్నాయి? ఇన్నింగ్స్‌కు సగటు డిస్మిసల్స్ కూడా రాయండి.",
         "column_names": [
             "player_name",
             "Dismissals",
@@ -94,7 +94,7 @@
         "question_english": "In T20 history list the top two teams in terms of percentage of matches won ,also give the percentages .",
         "question_hindi": "टी20 इतिहास में जीते गए मैचों के प्रतिशत के आधार पर शीर्ष दो टीमों की सूची दीजिए, साथ ही उनके प्रतिशत भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 ఇతిహాసలో గెలిచిన మ్యాచుల శాతం ఆధారంగా టాప్ 2 టీములు ఏమిటి? వాళ్ళ శాతాలు కూడా రాయండి.",
         "column_names": [
             "Team Name",
             "Win Percentage"
@@ -112,7 +112,7 @@
         "question_english": "For Hetmyer, Farhan, and Kishan — what percentage of their total runs came from boundaries in T-20 season 2026?",
         "question_hindi": "हेटमायर, फरहान और किशन के लिए — टी-20 सीज़न 2026 में उनके कुल रनों का कितना प्रतिशत बाउंड्री से आया?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2026 యొక్క T20 సీజన్లో Hetmyer, Farhan మరియు Kishan యొక్క పరుగులలో ఏ శాతం బౌండరీలు నుంచి వచ్చింది?",
         "column_names": [
             "Player Name",
             "Boundary Percentage"
@@ -131,7 +131,7 @@
         "question_english": "Calculate non-boundary runs for Mendis, Nissanka, and Markram. Who scored most between the wickets in T-20 season 2026?",
         "question_hindi": "मेंडिस, निसांका और मार्करम के नॉन-बाउंड्री रन की गणना कीजिए। टी-20 सीज़न 2026 में विकेटों के बीच सबसे ज़्यादा रन किसने बनाए?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2026 యొక్క T20 సీజన్లో Mendis, Nissanka మరియు Markram యొక్క బౌండరీలు లేకుండా సాధించిన పరుగులు ఏమిటి? వికెట్ల మద్య అన్నిటికనన్స్ ఎక్కువ పరుగులు ఎవరు సంపాదించారు?",
         "column_names": [
             "Player Name",
             "Non-Boundary Runs"
@@ -150,7 +150,7 @@
         "question_english": "Who are the top 3 batsmen with highest batting average in T20 season 2026",
         "question_hindi": "टी20 सीज़न 2026 में सबसे अधिक बल्लेबाजी औसत वाले शीर्ष 3 बल्लेबाज़ कौन हैं?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2026 యొక్క T20 సీజన్లో ఏ 3 బ్యాట్స్మెన్ల దగ్గర అన్నిటికన్నా ఎక్కువ బ్యాటింగ్ ఆవెరేజ్ ఉన్నది?",
         "column_names": [
             "Player Name",
             "Batting average"
@@ -169,7 +169,7 @@
         "question_english": "Name the two players who have exactly 4 ducks (0s), played for the same country.",
         "question_hindi": "उन दो खिलाड़ियों के नाम बताइए जिनके ठीक 4 डक (0) हैं और जो एक ही देश के लिए खेले।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ రెండు క్రీడాకార్ల దగ్గర సరిగ్గా 4 సున్నాలు ఉన్నాయి? వాళ్ళు ఒకే దేశం కోసం ఆడారు.",
         "column_names": [
             "Player Name"
         ],
@@ -185,7 +185,7 @@
         "question_english": "Which player has the highest strike rate (SR) among all those with exactly 3 ducks, and what is that SR?",
         "question_hindi": "ठीक 3 डक वाले सभी खिलाड़ियों में सबसे अधिक स्ट्राइक रेट (SR) किस खिलाड़ी का है, और वह SR क्या है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "సరిగ్గా 3 డక్కులు ఉన్ను క్రీడాకార్లలో అన్నిటికన్నా మంచి స్ట్రైక్ రేట్ ఎవరిది? ఆ స్ట్రైక్ రేట్ ఏమిటి?",
         "column_names": [
             "Player Name",
             "Batting Strike Rate",
@@ -203,7 +203,7 @@
         "question_english": "Name the team that conceded the most extras, state the ground, opposition, and how many were wides.",
         "question_hindi": "उस टीम का नाम बताइए जिसने सबसे ज़्यादा एक्स्ट्रा दिए, मैदान, विपक्षी टीम, और कितने वाइड्स थे यह भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ టీం అన్నిటికన్నా ఎక్కువ ఎక్సట్రాలు ఇచ్చింది? గ్రౌండ్, వ్యతిరేకమైన టీం మరియు వైడ్ల సంఖ్య రాయండి.",
         "column_names": [
             "Bowling Team",
             "Venue",
@@ -222,7 +222,7 @@
         "question_english": "Among all entries with exactly 19 extras, which team had the highest run rate, and what was their score?",
         "question_hindi": "ठीक 19 एक्स्ट्रा वाली सभी प्रविष्टियों में किस टीम का रन रेट सबसे अधिक था, और उसका स्कोर क्या था?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "సరిగ్గా 19 ఎక్సట్రాలు ఉన్న మ్యాచులలో ఏ టీం దగ్గర అన్నిటికన్నా ఎక్కువ రన్ రేట్ ఉన్నది? వాళ్ళ స్కోర్ కూడా రాయండి.",
         "column_names": [
             "Batting Team",
             "Run Rate",
@@ -240,7 +240,7 @@
         "question_english": "Among players with over 800 runs and exactly 3 ducks, who has the lower strike rate — and by how much?",
         "question_hindi": "800 से अधिक रन और ठीक 3 डक वाले खिलाड़ियों में किसका स्ट्राइक रेट कम है — और कितना कम है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "సరిగ్గా 3 డక్కులు మరియు 800 కన్నా ఎక్కువ పరుగులు సంపాదించిన క్రీడాకార్లలో ఎవరి దగ్గర అన్నిటికన్నా తక్కువ స్ట్రైక్ రేట్ ఉన్నది? ఆ స్ట్రైక్ రేట్ ఏమిటి?",
         "column_names": [
             "Player Name",
             "Strike Rate"
@@ -257,7 +257,7 @@
         "question_english": "Which team gave away 19 extras while bowling out the opposition for just 68 runs, and who was the opposition?",
         "question_hindi": "किस टीम ने 19 एक्स्ट्रा दिए जबकि विपक्षी टीम को सिर्फ 68 रन पर ऑल आउट कर दिया, और विपक्षी टीम कौन थी?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ టీం 19 ఎక్సట్రాలు ఇస్తూ 68 పరుగులలో వ్యతిరేకమైన టీముని అల్ అవుట్ చేశారు? వ్యతిరేకమైన టీం ఏమిటి?",
         "column_names": [
             "Bowling Team",
             "Opposing Team"
@@ -274,7 +274,7 @@
         "question_english": "In the ICC Men's T20 World Cup 2026, which bowler took 4 wickets while conceding just 7 runs, against which opposition, and what was his economy rate?",
         "question_hindi": "आईसीसी पुरुष टी20 विश्व कप 2026 में, किस गेंदबाज़ ने सिर्फ 7 रन देकर 4 विकेट लिए, किस विपक्ष के खिलाफ, और उनका इकॉनमी रेट क्या था?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ICC Men యొక్క T20 వరల్డ్ కప్పు 2026 లో ఏ బౌలర్ 4 వికెట్లు తీసుకున్నప్పుడు కేవలం 7 పరుగులు ఇచ్చాడు? వ్యతిరేకమైన టీం మరియు ఎకానమీ రేట్ రాయండి.",
         "column_names": [
             "Player Name",
             "Opposing Team",
@@ -292,7 +292,7 @@
         "question_english": "Which Australian bowler appeared in the T20 World Cup 2026 best bowling figures list twice, name his two opponents and combined wickets across both performances",
         "question_hindi": "कौन सा ऑस्ट्रेलियाई गेंदबाज़ टी20 विश्व कप 2026 की सर्वश्रेष्ठ गेंदबाज़ी आंकड़ों की सूची में दो बार आया, उसके दोनों विपक्षी कौन थे, और दोनों प्रदर्शनों में कुल कितने विकेट लिए?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ ఆస్ట్రేలియా బౌలర్ T20 వరల్డ్ కప్పు 2026 యొక్క 'బెస్ట్ బౌలింగ్ ఫిగర్స్' జాబితాలో రెండు సార్లు వచ్చాడు? అతన 2 వ్యతిరేకమైన టిములు మరియు 2 మ్యాచులలో కలిపిన విక్కెట్ల సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Opponents",
@@ -310,7 +310,7 @@
         "question_english": "In T20 World Cup 2026, which bowler claimed a five-wicket haul in only 3 overs, name his country, opposition, and his Economy",
         "question_hindi": "टी20 विश्व कप 2026 में, किस गेंदबाज़ ने केवल 3 ओवर में पांच विकेट लिए, उसका देश, विपक्षी टीम, और उसकी इकॉनमी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 వరల్డ్ కప్పు 2026 లో ఏ బౌలర్ కేవలం 3 ఓవర్లలో 5 వికెట్లు తీసుకున్నాడు? అతన దేశం, వ్యతిరేకమైన టీం మరియు ఎకానమీ రాయండి.",
         "column_names": [
             "Player Name",
             "Country",
@@ -329,7 +329,7 @@
         "question_english": "Which two bowlers took 4 wickets each against India in T20 World Cup 2026 — name both, their countries, and which was more economical and by how much.",
         "question_hindi": "टी20 विश्व कप 2026 में भारत के खिलाफ 4-4 विकेट लेने वाले दो गेंदबाज़ कौन थे — दोनों के नाम, देश, और कौन अधिक किफायती था तथा कितने अंतर से, बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 వరల్డ్ కప్పు 2026 లో ఏ 2 బౌలర్లు ఇండియా కి వ్యతిరేకంగా ప్రతి ఒక్కరూ 4 వికెట్లు తీసుకున్నారు? వాళ్ళ పేరులు మరియు దేశాలు రాయండి. ఎవరి ఎకానమీ ఎక్కువ మంచిది? ఎంత తేడాతో?",
         "column_names": [
             "Bowler Name 1",
             "Country 1",
@@ -350,7 +350,7 @@
         "question_english": "In T20 World Cup history, which South African fielder has the highest Ct/Inn ratio among all players with 16+ catches,  total catches, and Maximum catches in a single innings? ",
         "question_hindi": "टी20 विश्व कप इतिहास में, 16 या उससे अधिक कैच वाले खिलाड़ियों में किस दक्षिण अफ्रीकी फील्डर का Ct/Inn अनुपात सबसे अधिक है, साथ ही कुल कैच और एक पारी में सर्वाधिक कैच भी बताइए?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 వరల్డ్ కప్పు ఇతిహాసలో కనీసం 16 క్యాచులు పట్టిన సౌత్ ఆఫ్రికా ఫీల్డర్లలో ఒక మ్యాచ్కు ఎక్కువ క్యాచులు పట్టే (Ct/Inn ఎక్కువగా ఉన్న) క్రీడాకారుడు ఎవరు? అతని మొత్తం క్యాచులు మరియు ఒక ఇన్నింగ్స్లో అన్నిటికన్నా ఎక్కువ క్యాచులు రాయండి.",
         "column_names": [
             "Player Name",
             "Total Catches",
@@ -369,7 +369,8 @@
         "question_english": "Among all players with exactly 14 catches, which has the best Ct/Inn ratio, name all four players with 14 catches, their countries, and rank them by Ct/Inn best to worst.",
         "question_hindi": "ठीक 14 कैच वाले सभी खिलाड़ियों में किसका Ct/Inn अनुपात सबसे अच्छा है, 14 कैच वाले सभी चार खिलाड़ियों के नाम, उनके देश, और Ct/Inn के आधार पर सर्वश्रेष्ठ से सबसे कम तक रैंकिंग बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "సరిగ్గా 14 క్యాచులు ఉన్న క్రీడాకార్లలో ఎవరి దగ్గర అన్నిటికన్నా మంచి Ct/Inn రేషియో ఉన్నది? అన్నీ నలుగురు ఆటగాళ్లు మరియు వాళ్ళ దేశాలు రాయండి. వారిని Ct/Inn రేషియో ప్రకారం ఎక్కువ నుండి తక్కువ వరుసలో అమర్చండి.
+",
         "column_names": [
             "Player Name",
             "Country",
@@ -391,7 +392,7 @@
         "question_english": " Name the only West Indian fielder who played fewer than 30 matches yet took 15+ catches, his Ct/Inn ratio, and Maximum wickets in an innings . ",
         "question_hindi": "30 से कम मैच खेलने के बावजूद 15 या उससे अधिक कैच लेने वाला एकमात्र वेस्ट इंडियन फील्डर कौन है, उसका Ct/Inn अनुपात और एक पारी में अधिकतम विकेट क्या हैं?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ వెస్ట్ ఇండీస్ ఫీల్డర్ 30 కన్నా తక్కువ మ్యాచులు ఆడిన సరే 15 కన్నా ఎక్కువ క్యాచులు పట్టుకున్నాడు? అతన Ct/Inn రేషియో మరియు ఒక ఇన్నింగ్స్లో అతను పట్టిన అత్యధిక క్యాచుల సంఖ్యను రాయండి.",
         "column_names": [
             "Player Name",
             "CT/Inn ratio",
@@ -409,7 +410,7 @@
         "question_english": "Name all the teams which won a match with a margin of 1 run , give the opposing team as well as the target score.",
         "question_hindi": "उन सभी टीमों के नाम बताइए जिन्होंने 1 रन के अंतर से मैच जीता, साथ में विपक्षी टीम और लक्ष्य स्कोर भी दीजिए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ టిములు 1 పరుగు అంచుతో మ్యాచ్ గెలిచారు? వ్యతిరేకమైన టీం మరియు లక్ష్య స్కోర్ రాయండి.",
         "column_names": [
             "Winning Team",
             "Opposing Team",
@@ -432,7 +433,7 @@
         "question_english": "In T20 history, excluding the teams with No Results (NR), which team has the worst win-loss record in a single series, and what is their exact record?",
         "question_hindi": "टी20 इतिहास में, नो रिज़ल्ट (NR) वाली टीमों को छोड़कर, किसी एक सीरीज़ में सबसे खराब जीत-हार रिकॉर्ड किस टीम का है, और उसका सटीक रिकॉर्ड क्या है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 ఇతిహాసలో రిసల్ట్ లేని (NR) టిములు మినహాయించి ఒక సిరీస్లో ఏ టీం దగ్గర అన్నిటికన్నా తక్కువ గెలుపు ఓటమి రికార్డు ఉన్నది? ఆ రికార్డు ఏమిటి?",
         "column_names": [
             "Team Name",
             "Season",
@@ -451,7 +452,7 @@
         "question_english": "Name the players who have scored multiple fastest hundreds in T20 World Cups and also tell the number of hundreds?",
         "question_hindi": "उन खिलाड़ियों के नाम बताइए जिन्होंने टी20 विश्व कपों में एक से अधिक सबसे तेज़ शतक बनाए हैं, और शतकों की संख्या भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ క్రీడాకార్లు T20 వరల్డ్ కుప్పుల్లో అనేక వేగవంతమైన శతకాలు కొట్టారు? వాళ్ళు ఎన్ని శతకాలు కొట్టారు?",
         "column_names": [
             "Player Name",
             "Number of Hundreds"
@@ -469,7 +470,7 @@
         "question_english": "Name the batsmen who scored fastest hundreds against Bangladesh and also report the balls faced by them",
         "question_hindi": "उन बल्लेबाज़ों के नाम बताइए जिन्होंने बांग्लादेश के खिलाफ सबसे तेज़ शतक बनाए और उनके द्वारा खेली गई गेंदें भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ క్రీడాకార్లు బంగ్లాదేశ్ కి వ్యతిరేకంగా వేగవంతమైన శతకాలు కొట్టారు? వాళ్ళు ఎన్ని బంతులు ఎదుర్కున్నారు?",
         "column_names": [
             "Player Name",
             "Balls Faced"
@@ -489,7 +490,7 @@
         "question_english": "Which match holds the record for the highest run rate, and what is that run rate?",
         "question_hindi": "सबसे ऊंचे रन रेट का रिकॉर्ड किस मैच के नाम है, और वह रन रेट क्या है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ మ్యాచ్లో అన్నిటికన్నా ఎక్కువ రన్ రేట్ ఉన్నది? ఆ రన్ రేట్ ఏమిటి?",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -507,7 +508,7 @@
         "question_english": "What is the average number of balls bowled across the 15 shortest matches (by the balls bowled) ?",
         "question_hindi": "सबसे छोटे 15 मैचों (फेंकी गई गेंदों के आधार पर) में औसतन कितनी गेंदें फेंकी गईं?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "15 అన్నిటికన్నా చిన్న మ్యాచులలో (విసిరిన బంతుల ద్వారా) విసిరిన బంతుల సంఖ్య యొక్క ఆవెరేజ్ ఏమిటి?",
         "column_names": [
             "Avg Bowls Bowled"
         ],
@@ -523,7 +524,7 @@
         "question_english": "Which team has the highest aggregate losses in the shortest matches (by the balls bowled) without ever winning?",
         "question_hindi": "सबसे छोटे मैचों (फेंकी गई गेंदों के आधार पर) में बिना एक भी मैच जीते, कुल हार सबसे अधिक किस टीम की है?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "అన్నిటికన్నా చిన్న మ్యాచులలో (విసిరిన బంతుల ద్వారా) ఏ టీం దగ్గర అన్నిటికన్నా ఎక్కువ మొత్తం నష్టాలు ఉన్నాయి? (ఒక గెలుపు కూడా లేకనడ)",
         "column_names": [
             "Team Name",
             "Aggregate Losses"
@@ -540,7 +541,7 @@
         "question_english": "In T20 world cup history, which match has the highest ratio of wides to total balls bowled, and what is that ratio?",
         "question_hindi": "टी20 विश्व कप इतिहास में, किस मैच में वाइड्स और कुल फेंकी गई गेंदों का अनुपात सबसे अधिक था, और वह अनुपात क्या था?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20 వరల్డ్ కప్పు ఇతిహాసలో ఏ మ్యాచ్కు అన్నిటికన్నా ఎక్కువ వైడ్లు/విసిరిన బంతుల రేషియో ఉన్నది? ఆ రేషియో ఏమిటి?",
         "column_names": [
             "Batting Team",
             "Bowling Team",
@@ -558,7 +559,7 @@
         "question_english": "Which team had the most no balls while conceding the fewest wides? Also report the opposing team and the No balls to wides ratio",
         "question_hindi": "सबसे कम वाइड्स देते हुए सबसे अधिक नो-बॉल किस टीम ने फेंकी? विपक्षी टीम और नो-बॉल से वाइड्स का अनुपात भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ టీం అన్నిటికన్నా తక్కువ వైడ్లు ఇస్తూ అన్నిటికన్నా ఎక్కువ నో బాల్స సంపాదించింది? వ్యతిరేకమైన టీం మరియు నో బాల్స/వైడ్ల రేషియో రాయండి.",
         "column_names": [
             "Bowling Team",
             "Opposing Team",
@@ -576,7 +577,7 @@
         "question_english": "Which team recorded the most leg byes in a T20I innings, how many , against whom, at what venue, and what were their total extras and score?",
         "question_hindi": "टी20I की एक पारी में सबसे अधिक लेग बाय किस टीम ने दर्ज किए, कितने, किसके खिलाफ, किस मैदान पर, और उनके कुल एक्स्ट्रा तथा स्कोर क्या थे?",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఒక T20I ఇన్నింగ్స్లో ఏ టీం అన్నిటికన్నా ఎక్కువ లెగ్ బై పరుగులు సంపాదించింది? లెగ్ బైల సంఖ్య, వ్యతిరేకమైన టీం, స్థానం, మొత్తం ఎక్స్ట్రా పరుగులు మరియు స్కోర్ రాయండి.",
         "column_names": [
             "Batting Team",
             "Total legbyes",
@@ -597,7 +598,7 @@
         "question_english": "Which team recorded 10 leg byes while scoring just 92 runs in 20 overs against Oman — name the team, venue, and their run rate?",
         "question_hindi": "ओमान के खिलाफ 20 ओवर में सिर्फ 92 रन बनाते हुए 10 लेग बाय दर्ज करने वाली टीम कौन थी — टीम, मैदान और उनका रन रेट बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ టీం 10 లెగ్ బైలు సంపాదిస్తూ 20 ఓవర్లలో ఒమాన్ కి వ్యతిరేకంగా కేవలం 92 పరుగులు సంపాదించింది? టీం, స్థానం మరియు రన్ రేట్ రాయండి.",
         "column_names": [
             "Batting Team",
             "Venue",
@@ -615,7 +616,7 @@
         "question_english": "In T20I career batting history, which Indian batter has the highest strike rate among all Indian players with 3000+ runs. Report the Strike rate, average, and total sixes?",
         "question_hindi": "टी20I करियर बल्लेबाज़ी इतिहास में, 3000 से अधिक रन वाले सभी भारतीय खिलाड़ियों में सबसे अधिक स्ट्राइक रेट किस भारतीय बल्लेबाज़ का है? उसका स्ट्राइक रेट, औसत और कुल छक्के बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I బ్యాటింగ్ ఇతిహాసలో 3000+ పరుగులు సంపాదించిన భారతీయ క్రీడాకార్లలో ఎవరి దగ్గర అన్నిటికన్నా ఎక్కువ స్ట్రైక్ రేట్ ఉన్నది? స్ట్రైక్ రేట్, ఒక మ్యాచ్లో ఆవెరేజ్ పరుగులు మరియు సిక్సుల సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Strike Rate",
@@ -634,7 +635,7 @@
         "question_english": "Among all players with 29 (50+ scores), which has the highest SR, name all four players, their countries, and also give their SR",
         "question_hindi": "29 (50+ स्कोर) वाले सभी खिलाड़ियों में सबसे अधिक SR किसका है, सभी चार खिलाड़ियों के नाम, उनके देश, और उनका SR भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "కనీసం 29 ఇన్నింగ్స్లో 50 లేదా దానికన్నా ఎక్కువ పరుగులు సంపాదించిన క్రీడాకార్లలో ఎవరికి అన్నిటికన్నా ఎక్కువ స్ట్రైక్ రేట్ ఉన్నది? అన్నిటికన్నా మంచి క్రీడాకార్లు వాళ్ళ దేశం మరియు స్ట్రైక్ రేట్ తో సహ రాయండి.",
         "column_names": [
             "Player Name",
             "Country",
@@ -655,7 +656,7 @@
         "question_english": "In T20I history, which player has the most sixes among all players with 30+ fifty-plus scores , average, and ducks?",
         "question_hindi": "टी20I इतिहास में, 30 या उससे अधिक 50+ स्कोर वाले खिलाड़ियों में सबसे अधिक छक्के किस खिलाड़ी ने लगाए हैं, साथ ही उसका औसत और डक भी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో 30+ యాభై కన్నా ఎక్కువ స్కోర్ ఉన్న క్రీడాకార్లలో ఎవరి దగ్గర అన్నిటికన్నా ఎక్కువ సిక్సులు ఉన్నాయి? అతన ఆవెరేజ్ మరియు డక్కూల సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Total Sixes",
@@ -674,7 +675,7 @@
         "question_english": "Which bowler took consecutive four wicket hauls where both spells came in the first innings against the same opposition on consecutive days .Report his country, ratio of wickets to runs conceded, and opponents?",
         "question_hindi": "किस गेंदबाज़ ने लगातार चार-चार विकेट वाले स्पेल लिए, जहाँ दोनों स्पेल पहली पारी में, उसी विपक्ष के खिलाफ, लगातार दिनों में आए? उसका देश, लिए गए विकेट और दिए गए रन का अनुपात, तथा विपक्षी टीम बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ బౌలర్ వరుసగా 4 వికెట్లు తీసుకున్నాడు? రెండు స్పెల్స్ ఒకే టీం కి వ్యతిరేకంగా వరుస రోజుల్లో మొదటి ఇన్నింగ్స్లో వచ్చాయి. అతన దేశం, వికెట్లు/ఇచ్చిన పరుగుల రేషియో మరియు వ్యతిరేకమైన టీం రాయండి.",
         "column_names": [
             "Player Name",
             "Country",
@@ -693,7 +694,7 @@
         "question_english": "In T20I career bowling history, which spinner has bowled the most balls despite never taking a five-wicket haul, name his country, wickets, economy?",
         "question_hindi": "टी20I करियर गेंदबाज़ी इतिहास में, पांच विकेट हॉल कभी न लेने के बावजूद सबसे अधिक गेंदें किस स्पिनर ने फेंकी हैं, उसका देश, विकेट और इकॉनमी बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I బౌలింగ్ ఇతిహాసలో ఏ స్పిన్నర్ ఒక ఇన్నింగ్స్లో 5 వికెట్లు తీసుకోకుండా అన్నిటికన్నా ఎక్కువ బంతులు విసిరాడు? అతన దేశం, వికెట్ల సంఖ్య మరియు ఎకానమీ రాయండి.",
         "column_names": [
             "Player Name",
             "Country",
@@ -712,7 +713,7 @@
         "question_english": "Which Bangladeshi bowler has taken the most five-wicket hauls with 2700+ balls. Report his economy, wickets, and how many five-wicket hauls does he have?",
         "question_hindi": "2700 से अधिक गेंदें फेंकने वाले बांग्लादेशी गेंदबाज़ों में सबसे अधिक पांच विकेट हॉल किसने लिए हैं? उसकी इकॉनमी, विकेट, और कुल पांच विकेट हॉल बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "2700+ బంతులు విసిరిన ఏ బంగ్లాదేశ్ బౌలర్ అన్నిటికన్నా ఎక్కువ సార్లు ఒక ఇన్నింగ్స్లో 5 వికెట్లు తీసుకున్నాడు? అతన ఎకానమీ, వికెట్ల సంఖ్య మరియు ఒక ఇన్నింగ్స్లో 5 వికెట్లు తీసుకున్న సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Economy",
@@ -731,7 +732,7 @@
         "question_english": "New Zealand and India tied in T20Is on consecutive days. Give the dates and venues of the matches.",
         "question_hindi": "न्यूज़ीलैंड और भारत लगातार दिनों में टी20I में टाई हुए। उन मैचों की तारीखें और स्थल बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20Iలలో వరుస రోజుల్లో న్యూ జిలెండ్ మరియు ఇండియా మ్యాచులలో టై ఎప్పుడు జరిగినది? మ్యాచుల తేదీలు మరియు స్థానాలు రాయండి.",
         "column_names": [
             "Date",
             "Venue"
@@ -748,7 +749,7 @@
         "question_english": "In T20I history, which team chased the highest ever target on the last ball.Give their name their target, opponents, margin of victory, and date?",
         "question_hindi": "टी20I इतिहास में, आखिरी गेंद पर सबसे बड़ा लक्ष्य किस टीम ने सफलतापूर्वक हासिल किया? टीम का नाम, लक्ष्य, विपक्षी टीम, जीत का अंतर, और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం ఆఖరి బంతి వరకు అన్నిటికన్నా పెద్ద లక్ష్యం వెంబడించింది? ఆ టీం యొక్క పేరు, లక్ష్యం, వ్యతిరేకమైన టీం, విజయ తేడా మరియు తేదీ రాయండి.",
         "column_names": [
             "Team Name",
             "Target Score",
@@ -768,7 +769,7 @@
         "question_english": "Name the only last-ball T20I win completed in just 5 overs. State the winner, opposition, target and margin?",
         "question_hindi": "सिर्फ 5 ओवर में पूरा हुआ आखिरी गेंद वाला एकमात्र टी20I जीत कौन-सी थी? विजेता, विपक्षी टीम, लक्ष्य और जीत का अंतर बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ T20I ఆఖరి బంతి గెలుపు కేవలం 5 ఓవర్లలో పూర్తి అయ్యింది? విజయవంతమైన టీం, వ్యతిరేకమైన టీం, లక్ష్యం మరియు విజయ తేడా రాయండి.",
         "column_names": [
             "Winning Team",
             "Opposing Team",
@@ -788,7 +789,7 @@
         "question_english": "Which team holds the highest ever batting average per wicket in T20I history, name their score, opposition, date and batting average?",
         "question_hindi": "टी20I इतिहास में प्रति विकेट सबसे अधिक बल्लेबाजी औसत किस टीम का है, उनका स्कोर, विपक्षी टीम, तारीख और बल्लेबाजी औसत बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం దగ్గర అన్నిటికన్నా పెద్ద వికెట్కు బ్యాటింగ్ ఆవెరేజ్ ఉన్నది? ఆ టీం యొక్క స్కోర్, వ్యతిరేకమైన టీం, తేదీ మరియు బ్యాటింగ్ ఆవెరేజ్ రాయండి.",
         "column_names": [
             "Batting Team",
             "Total Score",
@@ -808,7 +809,7 @@
         "question_english": "Canada appears twice in highest batting average records. Name both opponents, averages and scores?",
         "question_hindi": "उच्चतम बल्लेबाजी औसत के रिकॉर्ड में कनाडा दो बार आता है। दोनों विपक्षी टीमों, औसत और स्कोर बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "అన్నిటికన్నా పెద్ద బ్యాటింగ్ ఆవెరేజ్ రికార్డులో కెనడా రెండు సార్లు వస్తుంది. వ్యతిరేకమైన టీముల పేరులు, ఆవేరాజులు మరియు స్కోర్లు రాయండి.",
         "column_names": [
             "Opponents",
             "Average",
@@ -827,7 +828,7 @@
         "question_english": "Which team achieved an average of 200 in T20I history in just 14.1 overs. Name their opposition and score",
         "question_hindi": "टी20I इतिहास में सिर्फ 14.1 ओवर में 200 का औसत किस टीम ने हासिल किया? उसकी विपक्षी टीम और स्कोर बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం కేవలం 14.1 ఓవర్లలో 200 ఆవెరేజ్ సంపాదించింది? వ్యతిరేకమైన టీం మరియు స్కోర్ రాయండి.",
         "column_names": [
             "Batting Team",
             "Opposition",
@@ -845,7 +846,7 @@
         "question_english": "Which team achieved the highest average per wicket in fewer than 9 overs in T20I history. Give the name of the team, average, overs, opposition, and date?",
         "question_hindi": "टी20I इतिहास में 9 ओवर से कम में प्रति विकेट सबसे अधिक औसत किस टीम ने हासिल किया? टीम का नाम, औसत, ओवर, विपक्षी टीम और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం 9 ఓవర్లు కన్నా తక్కువలో ప్రతి వికెట్కు అన్నిటికన్నా పెద్ద ఆవెరేజ్ సంపాదించింది? టీం యొక్క పేరు, ఆవెరేజ్, ఓవర్లు, వ్యతిరేకమైన టీం మరియు తేదీ రాయండి.",
         "column_names": [
             "Team Name",
             "Average",
@@ -865,7 +866,7 @@
         "question_english": "Which Associate nation achieved an average of 224 — the third highest in T20I history — name the team, opposition, score, and date?",
         "question_hindi": "224 का औसत हासिल करने वाली, जो टी20I इतिहास में तीसरा सबसे ऊंचा है, वह कौन-सी एसोसिएट राष्ट्र टीम थी — टीम, विपक्षी टीम, स्कोर और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ అసోసియేట్ దేశం 224 యొక్క ఆవెరేజ్ సంపాదించింది? (T20I ఇతిహాసలో లో 3వ అత్యాధికా) టీం, వ్యతిరేకమైన టీం, స్కోర్ మరియు తేదీ రాయండి.",
         "column_names": [
             "Batting Team",
             "Opposition",
@@ -884,7 +885,7 @@
         "question_english": "Which team holds the highest ever run rate in a completed T20I innings, name their score, opposition and wickets lost",
         "question_hindi": "पूर्ण टी20I पारी में अब तक का सबसे ऊंचा रन रेट किस टीम का है, उसका स्कोर, विपक्षी टीम और खोए गए विकेट बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "పూర్తి అయ్యిన T20I ఇన్నింగ్స్లో ఏ టీం దగ్గర అన్నిటికన్నా పెద్ద రన్ రేట్ ఉన్నది? స్కోర్, వ్యతిరేకమైన టీం మరియు కోల్పోయిన వికెట్ల సంఖ్య రాయండి.",
         "column_names": [
             "Batting Team",
             "Total Score",
@@ -904,7 +905,7 @@
         "question_english": "Three teams scored 258 runs in 20 overs with identical run rates of 12.90 — name the teams, their wickets lost, opponents?",
         "question_hindi": "तीन टीमों ने 20 ओवर में 258 रन बनाए और उनका रन रेट समान 12.90 था — उन टीमों के नाम, खोए गए विकेट और विपक्षी टीम बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "3 టీములు 20 ఓవర్లలో రన్ రేటులు 12.9 తో 258 పరుగులు సంపాదించారు. టీముల పేరులు, కోల్పోయిన వికెట్ల సంఖ్య మరియు వ్యతిరేకమైన టీం పేరు రాయండి.",
         "column_names": [
             "Batting Team",
             "Wickets",
@@ -924,7 +925,7 @@
         "question_english": "In T20I history, which team achieved a run rate of 15.70 scoring 314 runs — name their opposition, wickets lost, and date?",
         "question_hindi": "टी20I इतिहास में 314 रन बनाकर 15.70 का रन रेट किस टीम ने हासिल किया? उसकी विपक्षी टीम, खोए गए विकेट और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం 15.7 రన్ రేట్ తో 314 పరుగులు సంపాదించి? వేయతిరేకమైన టీం, కోల్పోయిన వికెట్లు మరియు తేదీ రాయండి.",
         "column_names": [
             "Batting Team",
             "Opposition",
@@ -943,7 +944,7 @@
         "question_english": "Which team holds the lowest ever innings total in T20I history, name their score, opposition, overs faced, and run rate?",
         "question_hindi": "टी20I इतिहास में सबसे कम पारी स्कोर किस टीम का है, उसका स्कोर, विपक्षी टीम, खेले गए ओवर और रन रेट बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం దగ్గర అన్నిటికన్నా తక్కువ ఇన్నింగ్స్ స్కోర్ ఉన్నది? స్కోర్, వ్యతిరేకమైన టీం, ఓవర్ల సంఖ్య మరియు రన్ రేట్ రాయండి.",
         "column_names": [
             "Batting Team",
             "Score",
@@ -963,7 +964,7 @@
         "question_english": "Two teams have been dismissed for exactly 10 runs in T20I history — name both teams, their opponents, overs faced, and innings numbers?",
         "question_hindi": "टी20I इतिहास में ठीक 10 रन पर आउट होने वाली दो टीमें कौन-सी हैं — दोनों टीमों के नाम, उनके विपक्षी, खेले गए ओवर, और पारी संख्या बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో 2 టీములు సరిగ్గా 10 పరుగులలో అల్ అవుట్ అయ్యారు. టీముల పేరులు, వ్యతిరేకమైన టీములు, ఓవర్ల సంఖ్య మరియు ఇన్నింగ్ సంఖ్య రాయండి.",
         "column_names": [
             "Batting Team",
             "Opponents",
@@ -983,7 +984,7 @@
         "question_english": "Turkey suffered three extremely low T20I totals at the same venue on three consecutive days — name all three opponents, scores, innings numbers, and dates?",
         "question_hindi": "तुर्की ने एक ही स्थल पर लगातार तीन दिनों में तीन बेहद कम टी20I स्कोर बनाए — तीनों विपक्षी टीमों, स्कोर, पारी संख्या और तारीखें बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఒకే స్థానంలో వరుసగా 3 రోజుల్లో టర్కి 3 చాలా తక్కువ T20I స్కోర్లు సంపాదించింది. 3 వ్యతిరేకమైన టీములు, స్కోర్లు, ఇన్నింగ్ సంఖ్యలు మరియు తేదీలు రాయండి.",
         "column_names": [
             "Opponents",
             "Score",
@@ -1004,7 +1005,7 @@
         "question_english": "In T20I history, which team scored just 12 runs , the third lowest total ever ,name their opposition, overs faced?",
         "question_hindi": "टी20I इतिहास में सिर्फ 12 रन बनाने वाली, जो अब तक का तीसरा सबसे कम कुल स्कोर है, वह कौन-सी टीम थी — उसकी विपक्षी टीम और खेले गए ओवर बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ టీం కేవలం 12 పరుగులు సంపాదించింది? (అన్నిటికన్నా 3 వ తక్కువ తోటల్) వ్యతిరేకమైన టీం మరియు ఓవర్ల సంఖ్య రాయండి.",
         "column_names": [
             "Batting Team",
             "Opposition",
@@ -1022,7 +1023,7 @@
         "question_english": "China suffered back-to-back extremely low T20I totals against different opponents on consecutive days at the same venue. Give both scores, opponents, venue, and dates?",
         "question_hindi": "चीन ने एक ही स्थल पर लगातार दिनों में अलग-अलग विपक्षियों के खिलाफ बेहद कम टी20I स्कोर बनाए। दोनों स्कोर, विपक्षी टीमों, स्थल और तारीखें बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఒకే స్థానంలో వరుసగా 2 రోజుల్లో చైనా 2 చాలా తక్కువ T20I స్కోర్లు సంపాదించింది. 2 స్కోర్లు, వ్యతిరేకమైన టీములు, స్థానం మరియు తేదీలు రాయండి.",
         "column_names": [
             "Score",
             "Opponents",
@@ -1042,7 +1043,7 @@
         "question_english": "Among all players with 14 POTM awards, which has the best award-to-match ratio — name all four players, their matches played, and calculate ratio for each",
         "question_hindi": "14 POTM अवॉर्ड वाले सभी खिलाड़ियों में किसका अवॉर्ड-प्रति-मैच अनुपात सबसे अच्छा है — सभी चार खिलाड़ियों के नाम, खेले गए मैच, और प्रत्येक का अनुपात बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "14 'ప్లేయర్ ఆఫ్ తే మ్యాచ్' అవార్డ్లు ఉన్న క్రీడాకార్లలో ఎవరి దగ్గర అన్నిటికన్నా మంచి అవార్డ్ల సంఖ్య/మ్యాచుల సంఖ్య రేషియో ఉన్నది? క్రీడాకార్ల పేరు, మ్యాచుల సంఖ్య మరియు రేషియోలు రాయండి.",
         "column_names": [
             "Player Name",
             "Matches Played",
@@ -1063,7 +1064,7 @@
         "question_english": "V Kohli and RG Sharma both have 14+ POTM awards. Give their awards, matches, spans, and award-to-match ratios",
         "question_hindi": "वी कोहली और आरजी शर्मा दोनों के पास 14 या उससे अधिक POTM अवॉर्ड हैं। उनके अवॉर्ड, मैच, करियर स्पैन, और अवॉर्ड-प्रति-मैच अनुपात बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "V Kohli మరియు RG Sharma దగ్గర 14+ 'ప్లేయర్ ఆఫ్ తే మ్యాచ్' అవార్డ్లు ఉన్నాయి. వాళ్ళ అవార్డ్ల సంఖ్య, మ్యాచుల సంఖ్య, ఆడిన సంవత్సరాలు మరియు అవార్డ్ల సంఖ్య/మ్యాచుల సంఖ్య రేషియోలు రాయబడి.",
         "column_names": [
             "Player Name",
             "Player of match awards",
@@ -1084,7 +1085,7 @@
         "question_english": "Which player has won 8 POTM awards in the fewest matches in T20I history — name his country, span, and award ratio?",
         "question_hindi": "टी20I इतिहास में सबसे कम मैचों में 8 POTM अवॉर्ड जीतने वाला खिलाड़ी कौन है — उसका देश, करियर स्पैन और अवॉर्ड अनुपात बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ క్రీడాకారుడు అన్నిటికన్నా తక్కువ మ్యాచులలో 8 'ప్లేయర్ ఆఫ్ తే మ్యాచ్' అవార్డ్లు గెలిచాడు? అతన దేశం, ఆడిన సంవత్సరాలు మరియు రేషియో రాయండి.",
         "column_names": [
             "Player Name",
             "Country",
@@ -1103,7 +1104,7 @@
         "question_english": "Which T20I match holds the record for the most batters dismissed lbw, name both teams, total lbw count, total wickets in the match, winner, and date?",
         "question_hindi": "किस टी20I मैच में सबसे अधिक बल्लेबाज़ lbw आउट हुए, दोनों टीमों के नाम, कुल lbw की संख्या, मैच में कुल विकेट, विजेता और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ T20I మ్యాచ్లో అన్నిటికన్నా ఎక్కువ బ్యాట్స్మెన్ LBW అవుట్ అయ్యారు? టీముల పేరులు, LBW సంఖ్య, మ్యాచ్లో వికెట్ల సంఖ్య, విజేత మరియు తేదీ రాయండి.",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1124,7 +1125,7 @@
         "question_english": "The only T20I match with 7 lbw dismissals that ended in a tie — name both teams, total wickets, venue, and date?",
         "question_hindi": "7 lbw आउट होने वाला और टाई पर समाप्त हुआ एकमात्र टी20I मैच कौन-सा था — दोनों टीमों के नाम, कुल विकेट, स्थल और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ T20I మ్యాచ్లో 7 LBW అవుట్లు అయ్యి టై అయ్యింది? టీముల పేరులు, వికెట్ల సంఖ్య, స్థానం మరియు తేదీ రాయండి.",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1144,7 +1145,7 @@
         "question_english": "In T20I lbw records, which match had 5 lbw dismissals but only 12 total wickets — name both teams, winner, and date",
         "question_hindi": "टी20I के lbw रिकॉर्ड में, किस मैच में 5 lbw आउट हुए लेकिन कुल विकेट केवल 12 थे — दोनों टीमों के नाम, विजेता और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ మ్యాచ్లో 5 LBW అయ్యిన సరే మొత్తం కేవలం 12 వికెట్లు పడిపోవయాయి? టీముల పేరులు, విజేత మరియు తేదీ రాయండి.",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1163,7 +1164,7 @@
         "question_english": "In T20I history, which match involving India and Pakistan produced 5 lbw dismissals — name the venue, total wickets, winner, and date?",
         "question_hindi": "टी20I इतिहास में, भारत और पाकिस्तान वाला कौन-सा मैच 5 lbw आउट के साथ समाप्त हुआ — स्थल, कुल विकेट, विजेता और तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "T20I ఇతిహాసలో ఏ ఇండియా vs పాకిస్థాన్ మ్యాచ్లో 5 LBW అవుట్లు జరిగాయి? స్థానం, వికెట్ల సంఖ్య, విజేత మరియు తేదీ రాయండి.",
         "column_names": [
             "Venue",
             "Wickets",
@@ -1182,7 +1183,7 @@
         "question_english": "Which bowler reached 50 T20I wickets in the fewest matches. Report the name of his country, number of matches that took him to achieve it, the date he achieved it, and calculate exactly how many days it took him?",
         "question_hindi": "सबसे कम मैचों में 50 टी20I विकेट किस गेंदबाज़ ने पूरे किए? उसका देश, यह उपलब्धि हासिल करने में लगे मैच, उपलब्धि की तारीख, और ठीक-ठीक कितने दिन लगे, बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ బౌలర్ అన్నిటికన్నా తక్కువ మ్యాచులలో 50 T20I వికెట్లు సంపాదించాడు? అతన దేశం, ఆడిన మ్యాచుల సంఖ్య, సంపాదించిన తేదీ మరియు సంపాదించడానికి రోజుల సంఖ్య రాయండి.",
         "column_names": [
             "Player Name",
             "Country",
@@ -1202,7 +1203,7 @@
         "question_english": "Name the top three Pakistani Bowlers who have fastest-to-50 wickets. Rank them by days taken fastest to slowest?",
         "question_hindi": "50 विकेट तक सबसे तेज़ पहुंचने वाले शीर्ष तीन पाकिस्तानी गेंदबाज़ों के नाम बताइए। उन्हें लगे दिनों के आधार पर सबसे तेज़ से सबसे धीमे क्रम में रैंक कीजिए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "ఏ 3 పాకిస్థాన్ బౌలర్లకు అన్నిటికన్నా వేగంగా 50 వికెట్లు సంపాదించారు? సంపాదించడానికి రోజుల ఆధారంగా తాకువ నుంచి ఎక్కువ దాకా ఆర్డర్ చేయండి.",
         "column_names": [
             "Player Name",
             "Days Taken"
@@ -1221,7 +1222,7 @@
         "question_english": "YM Nkanya took 50 wickets in the shortest calendar time. Calculate the exact days, name his country, matches, and achievement date?",
         "question_hindi": "वाईएम नकान्या ने सबसे कम कैलेंडर समय में 50 विकेट लिए। सटीक दिनों की गणना कीजिए, उसका देश, मैच, और उपलब्धि की तारीख बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "YM Nkanya అన్నిటికన్నా తక్కువ సమయంలో 50 వికెట్లు తీసుకున్నాడు. సంపాదించడానికి రోజుల సంఖ్య, దేశం, మ్యాచులు మరియు సంపాదించిన తేదీ రాయండి.",
         "column_names": [
             "Days",
             "Country",
@@ -1240,7 +1241,7 @@
         "question_english": "Sahibzada Farhan scored two T20 World Cup hundreds in the 2026 edition . Name both opponents and balls taken?",
         "question_hindi": "साहिबज़ादा फरहान ने 2026 संस्करण में दो टी20 विश्व कप शतक बनाए। दोनों विपक्षी टीमों और लगी गेंदों की संख्या बताइए।",
         "question_punjabi": "",
-        "question_telugu": "",
+        "question_telugu": "Sahibzada Farhan 2026 ఎడిషన్లో 2 T20 వరల్డ్ కప్పు శతకాలు కొట్టాడు. రెండు వ్యతిరేకమైన టీములు మరియు బంతుల సంఖ్య రాయండి.",
         "column_names": [
             "Opponents",
             "Balls Faced"
