@@ -5,7 +5,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name = 'England tour of India' AND m.season = '2020/21' AND d.batting_team = 'India' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 5",
     "question_english": "Show me the top 5 run scorers for India in the 2021 home series against England.",
     "question_hindi_1": "इंग्लैंड के खिलाफ 2021 होम सीरीज़ में भारत के शीर्ष 5 रन स्कोरर कौन हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "England ਦੇ ਖਿਲਾਫ 2021 ਦੀ ਘਰੇਲੂ ਸੀਰੀਜ਼ ਵਿੱਚ India ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ 5 ਖਿਡਾਰੀ ਦਿਖਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -40,7 +40,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.venue = 'Melbourne Cricket Ground' AND (m.team1 = 'Australia' OR m.team2 = 'Australia') AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 1",
     "question_english": "Which bowler has taken the most wickets at the Melbourne Cricket Ground in matches involving Australia?",
     "question_hindi_1": "मेलबर्न क्रिकेट ग्राउंड पर ऑस्ट्रेलिया से जुड़े मैचों में सबसे ज़्यादा विकेट लेने वाले गेंदबाज़ कौन हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਗੇਂਦਬਾਜ਼ ਨੇ Melbourne Cricket Ground 'ਤੇ Australia ਨਾਲ ਜੁੜੇ ਮੈਚਾਂ ਵਿਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲਈਆਂ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -59,7 +59,7 @@
     "query": "SELECT p.player_name, COUNT(*) as awards FROM Matches m JOIN Players p ON m.player_of_match_id = p.player_id WHERE m.series_name LIKE '%Border-Gavaskar%' GROUP BY p.player_id HAVING awards > 1",
     "question_english": "List all players who have been 'Player of the Match' more than once in the Border-Gavaskar Trophy.",
     "question_hindi_1": "बॉर्डर-गावस्कर ट्रॉफी में एक से अधिक बार 'प्लेयर ऑफ द मैच' जीतने वाले खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "Border-Gavaskar ਟਰਾਫੀ ਵਿੱਚ ਇੱਕ ਤੋਂ ਵੱਧ ਵਾਰ 'Player of the match' ਰਹੇ ਸਾਰੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -98,7 +98,7 @@
     "query": "SELECT p_fielder.player_name, COUNT(*) as catches FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Players p_fielder ON fd.fielder_id = p_fielder.player_id WHERE p_bowler.player_name = 'Harbhajan Singh' AND d.wicket_type = 'caught' GROUP BY p_fielder.player_id ORDER BY catches DESC LIMIT 1",
     "question_english": "Which fielder has taken the most catches off Harbhajan Singh's bowling in Test matches?",
     "question_hindi_1": "टेस्ट मैचों में हरभजन सिंह की गेंदबाज़ी पर सबसे ज़्यादा कैच पकड़ने वाले फील्डर कौन हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚਾਂ ਵਿਚ Harbhajan singh ਦੀ ਗੇਂਦਬਾਜ਼ੀ 'ਤੇ ਕਿਸ ਫੀਲਡਰ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਕੈਚ ਲਏ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -117,7 +117,7 @@
     "query": "SELECT p_s.player_name, p_ns.player_name, p_b.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Players p_b ON d.bowler_id = p_b.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.venue LIKE '%Bangalore%' AND m.season = '2001/02' AND m.match_type_number = 3 ORDER BY d.delivery_id DESC LIMIT 1",
     "question_english": "Find the striker, non-striker, and bowler for the delivery that ended the 2001 Test match in Bangalore.",
     "question_hindi_1": "बैंगलोर में 2001 टेस्ट मैच के अंतिम ओवर में स्ट्राइकर, नॉन-स्ट्राइकर और गेंदबाज़ कौन थे?",
-    "question_punjabi": "",
+    "question_punjabi": "Bangalore ਵਿੱਚ 2001 ਦੇ ਟੈਸਟ ਮੈਚ ਦੀ ਸਮਾਪਤੀ ਲਈ ਸਟ੍ਰਾਈਕਰ, ਨਾਨ-ਸਟ੍ਰਾਈਕਰ ਅਤੇ ਗੇਂਦਬਾਜ਼ ਲੱਭੋ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -138,7 +138,7 @@
     "query": "SELECT p.player_name FROM Players p JOIN (SELECT striker_id, match_id, SUM(runs_scored) as match_runs FROM Deliveries GROUP BY striker_id, match_id HAVING match_runs >= 100) cent ON p.player_id = cent.striker_id JOIN (SELECT player_id, MIN(start_date) as debut_date FROM Matches m JOIN PlayerInMatch pim ON m.match_id = pim.match_id GROUP BY player_id) deb ON p.player_id = deb.player_id JOIN Matches m_first ON cent.match_id = m_first.match_id WHERE m_first.start_date = deb.debut_date",
     "question_english": "List the players who scored a century in their debut Test match.",
     "question_hindi_1": "अपने पदार्पण टेस्ट मैच में शतक लगाने वाले खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਆਪਣੇ ਪਹਿਲੇ ਟੈਸਟ ਮੈਚ ਵਿੱਚ ਸੈਂਕੜਾ ਲਗਾਇਆ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -437,7 +437,7 @@
     "query": "SELECT m.match_id, p.player_name FROM Matches m JOIN (SELECT match_id, striker_id FROM Deliveries WHERE inning IN (1,2) GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100 INTERSECT SELECT match_id, striker_id FROM Deliveries WHERE inning IN (3,4) GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100) twin ON m.match_id = twin.match_id JOIN Players p ON twin.striker_id = p.player_id",
     "question_english": "Identify the match where a player scored a century in both innings.",
     "question_hindi_1": "वह मैच पहचानें जिसमें किसी खिलाड़ी ने दोनों पारियों में शतक लगाया।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਕਿਸੇ ਖਿਡਾਰੀ ਨੇ ਦੋਵੇਂ ਪਾਰੀਆਂ ਵਿੱਚ ਸੈਂਕੜਾ ਲਗਾਇਆ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -616,7 +616,7 @@
     "query": "SELECT p_ns.player_name FROM (SELECT d.delivery_id, d.non_striker_id, SUM(d.runs_scored) OVER (PARTITION BY d.match_id, d.inning, d.striker_id ORDER BY d.delivery_id) AS cum_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'BC Lara') t JOIN Players p_ns ON t.non_striker_id = p_ns.player_id WHERE t.cum_runs >= 400 ORDER BY t.delivery_id ASC LIMIT 1",
     "question_english": "Which player was the non-striker when Brian Lara scored his 400th run?",
     "question_hindi_1": "ब्रायन लारा के 400वें रन के समय नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Brian Lara ਦੇ ਆਪਣੀ 400ਵੀਂ ਰਨ ਬਣਾਉਣ ਵੇਲੇ ਕਿਹੜਾ ਖਿਡਾਰੀ ਨਾਨ-ਸਟ੍ਰਾਈਕਰ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -633,7 +633,7 @@
     "query": "SELECT p.player_name, COUNT(*) as stumpings FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id JOIN Players p ON fd.fielder_id = p.player_id WHERE d.wicket_type = 'stumped' GROUP BY p.player_id, m.series_name HAVING stumpings > 5",
     "question_english": "Find the wicketkeepers who have taken more than 5 stumpings in a single series.",
     "question_hindi_1": "एक सीरीज़ में 5 से ज़्यादा स्टम्पिंग करने वाले विकेटकीपरों को खोजें।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ wicketkeepers ਨੂੰ ਲੱਭੋ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਲੜੀ ਵਿੱਚ 5 ਤੋਂ ਵੱਧ ਸਟੰਪਿੰਗ ਕੀਤੇ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -668,7 +668,7 @@
     "query": "SELECT m.match_id, m.venue, p.player_name FROM Matches m JOIN Players p ON m.player_of_match_id = p.player_id JOIN PlayerInMatch pim ON m.match_id = pim.match_id AND p.player_id = pim.player_id WHERE m.match_winner IS NOT NULL AND pim.team_name != m.match_winner",
     "question_english": "List the matches where the player of the match was from the losing side.",
     "question_hindi_1": "वे मैच सूचीबद्ध करें जिनमें 'प्लेयर ऑफ द मैच' हारने वाली टीम से था।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਮੈਚਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ ਹਾਰਨ ਵਾਲੇ ਪਾਸਿਓਂ player of the match ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -769,7 +769,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name LIKE '%Ashes%' AND m.season = '2010/11' AND d.bowling_team = 'England' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 1",
     "question_english": "Who was the leading wicket-taker for England in the 2010/11 Ashes in Australia?",
     "question_hindi_1": "2010/11 ऑस्ट्रेलिया में ऐशेज़ में इंग्लैंड का सबसे ज़्यादा विकेट लेने वाला गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Australia ਵਿੱਚ 2010/11 ਏਸ਼ੇਜ਼ ਵਿੱਚ England ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟ ਲੈਣ ਵਾਲਾ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -788,7 +788,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) as match_runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2023' GROUP BY d.match_id, d.inning, d.striker_id HAVING match_runs >= 200)",
     "question_english": "How many double centuries were scored in Test matches in 2023?",
     "question_hindi_1": "2023 में टेस्ट मैचों में कितने दोहरे शतक लगाए गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2023 ਵਿੱਚ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਕਿੰਨੇ Double ਸੈਂਕੜੇ ਬਣਾਏ ਗਏ ਸਨ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -805,7 +805,7 @@
     "query": "SELECT p_bowler.player_name FROM (SELECT d.delivery_id, d.bowler_id, d.match_id, SUM(d.runs_scored) OVER (PARTITION BY d.match_id, d.inning, d.striker_id ORDER BY d.delivery_id) AS cum_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'AN Cook' AND m.start_date = (SELECT MAX(m2.start_date) FROM Matches m2 JOIN Deliveries d2 ON m2.match_id = d2.match_id JOIN Players p2 ON d2.striker_id = p2.player_id WHERE p2.player_name = 'AN Cook' GROUP BY m2.match_id, d2.inning HAVING SUM(d2.runs_scored) >= 100 ORDER BY m2.start_date DESC LIMIT 1)) t JOIN Players p_bowler ON t.bowler_id = p_bowler.player_id WHERE t.cum_runs >= 100 ORDER BY t.delivery_id ASC LIMIT 1",
     "question_english": "Who was the bowler when Alastair Cook scored his final Test century?",
     "question_hindi_1": "अलस्टेयर कुक के अंतिम टेस्ट शतक के समय गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ Alastair Cook ਨੇ ਆਪਣਾ ਆਖਰੀ ਟੈਸਟ ਸੈਂਕੜਾ ਬਣਾਇਆ ਤਾਂ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -822,7 +822,7 @@
     "query": "SELECT p.player_name, COUNT(*) as stumped_count FROM Deliveries d JOIN Players p ON d.player_out_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'stumped' GROUP BY p.player_id, m.series_name HAVING stumped_count > 2",
     "question_english": "List the players who have been dismissed 'stumped' more than twice in the same series.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जो एक ही सीरीज़ में 2 से ज़्यादा बार 'स्टम्प्ड' आउट हुए।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜੋ ਇੱਕੋ ਲੜੀ ਵਿੱਚ ਦੋ ਤੋਂ ਵੱਧ ਵਾਰ 'ਸਟੰਪਡ' ਆਊਟ ਹੋਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -841,7 +841,7 @@
     "query": "SELECT DISTINCT m.match_id, m.venue FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE d.inning = 1 AND m.match_winner = d.batting_team GROUP BY m.match_id, d.inning HAVING SUM(d.runs_scored + d.extra_runs) < 100",
     "question_english": "Identify the match where a team won despite being bowled out for less than 100 runs in their first innings.",
     "question_hindi_1": "वह मैच पहचानें जिसमें एक टीम पहली पारी में 100 से कम रन पर आउट होने के बावजूद जीती।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਟੀਮ ਆਪਣੀ ਪਹਿਲੀ ਪਾਰੀ ਵਿੱਚ 100 ਤੋਂ ਘੱਟ ਰਨ 'ਤੇ ਆਊਟ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਜਿੱਤ ਗਈ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -864,7 +864,7 @@
     "query": "SELECT p_f.player_name FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_f ON fd.fielder_id = p_f.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'RT Ponting' AND m.start_date = (SELECT MAX(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'RT Ponting') AND d.wicket_type = 'caught' ORDER BY d.inning DESC LIMIT 1",
     "question_english": "Who was the fielder who took the catch to dismiss Ricky Ponting in his last Test innings?",
     "question_hindi_1": "रिकी पॉन्टिंग की आखिरी टेस्ट पारी में उन्हें कैच आउट करने वाला फील्डर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਹ ਫੀਲਡਰ ਕੌਣ ਸੀ ਜਿਸ ਨੇ ਆਪਣੀ ਆਖਰੀ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ Ricky Ponting ਨੂੰ ਆਊਟ ਕਰਨ ਲਈ ਕੈਚ ਲਿਆ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -881,7 +881,7 @@
     "query": "SELECT venue, COUNT(*) as match_count FROM Matches WHERE start_date >= '2020-01-01' GROUP BY venue ORDER BY match_count DESC LIMIT 1",
     "question_english": "Which venue has hosted the most matches in the 2020s so far?",
     "question_hindi_1": "2020 के दशक में अब तक सबसे ज़्यादा मैचों की मेज़बानी किस स्थल ने की है?",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਵਿੱਚ ਹੁਣ ਤੱਕ ਕਿਸ ਸਥਾਨ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕੀਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -900,7 +900,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) * 1.0 / NULLIF(COUNT(CASE WHEN d.player_out_id = p.player_id THEN 1 END), 0) AS avg FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'India' AND d.bowling_team = 'Pakistan' AND m.team1 = 'Pakistan' GROUP BY p.player_id HAVING COUNT(CASE WHEN d.player_out_id = p.player_id THEN 1 END) > 5 ORDER BY avg DESC LIMIT 1",
     "question_english": "Who has the highest batting average for India against Pakistan in Pakistan?",
     "question_hindi_1": "पाकिस्तान में पाकिस्तान के खिलाफ भारत की सबसे ज़्यादा बल्लेबाज़ी औसत किसकी है?",
-    "question_punjabi": "",
+    "question_punjabi": "Pakistan ਵਿੱਚ India ਦੇ ਖਿਲਾਫ Pakistan ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਬੱਲੇਬਾਜ਼ੀ ਔਸਤ ਕਿਸਦੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -914,7 +914,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id WHERE d.inning = 1 AND d.over_number = 0 AND d.ball_number = 1 AND d.wicket_type IS NOT NULL",
     "question_english": "List the bowlers who have taken a wicket with the very first ball of a Test match.",
     "question_hindi_1": "वे गेंदबाज़ सूचीबद्ध करें जिन्होंने टेस्ट मैच की पहली गेंद पर विकेट लिया।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਟੈਸਟ ਮੈਚ ਦੀ ਪਹਿਲੀ ਗੇਂਦ ਨਾਲ ਵਿਕਟ ਲਈ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -949,7 +949,7 @@
     "query": "SELECT batting_team, SUM(runs_scored + extra_runs) as chase FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.venue LIKE '%Lord''s%' AND d.inning = 4 AND m.match_winner = d.batting_team GROUP BY m.match_id ORDER BY chase DESC LIMIT 1",
     "question_english": "Which team has the highest successful run chase at the Lord's Cricket Ground?",
     "question_hindi_1": "लॉर्ड्स क्रिकेट ग्राउंड पर सबसे सफल रन चेज़ किस टीम ने किया?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਟੀਮ ਨੇ Lord's Cricket Ground 'ਤੇ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਦਾ ਪਿੱਛਾ ਕੀਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -968,7 +968,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT player_id FROM (SELECT pim.player_id, m.start_date, SUM(d.runs_scored) as match_runs FROM PlayerInMatch pim JOIN Matches m ON pim.match_id = m.match_id JOIN Deliveries d ON pim.match_id = d.match_id AND pim.player_id = d.striker_id GROUP BY pim.player_id, pim.match_id ORDER BY m.start_date ASC) GROUP BY player_id HAVING COUNT(*) >= 2 AND SUM(CASE WHEN match_runs >= 100 THEN 1 ELSE 0 END) = 2)",
     "question_english": "How many times did a player score a century in each of their first two Test matches?",
     "question_hindi_1": "कितनी बार किसी खिलाड़ी ने अपने पहले दो टेस्ट मैचों में शतक लगाया?",
-    "question_punjabi": "",
+    "question_punjabi": "ਇੱਕ ਖਿਡਾਰੀ ਨੇ ਆਪਣੇ ਪਹਿਲੇ ਦੋ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਕਿੰਨੀ ਵਾਰ ਸੈਂਕੜਾ ਲਗਾਇਆ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -985,7 +985,7 @@
     "query": "SELECT m.match_id, m.venue, p.player_name FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id JOIN Players p ON d.bowler_id = p.player_id JOIN PlayerInMatch pim ON m.match_id = pim.match_id AND p.player_id = pim.player_id WHERE m.match_winner IS NOT NULL AND pim.team_name != m.match_winner AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY d.match_id, d.inning, d.bowler_id HAVING COUNT(*) >= 7",
     "question_english": "Identify the match where a bowler took 7 or more wickets in an innings and still ended up on the losing side.",
     "question_hindi_1": "वह मैच पहचानें जिसमें किसी गेंदबाज़ ने एक पारी में 7 या उससे अधिक विकेट लिए और फिर भी हारने वाली टीम में रहे।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਗੇਂਦਬਾਜ਼ ਨੇ ਇੱਕ ਪਾਰੀ ਵਿੱਚ 7 ​​ਜਾਂ ਵੱਧ ਵਿਕਟਾਂ ਲਈਆਂ ਅਤੇ ਫਿਰ ਵੀ ਹਾਰਨ ਵਾਲੇ ਪਾਸੇ ਹੀ ਖਤਮ ਹੋਇਆ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -1126,7 +1126,7 @@
     "query": "SELECT p.player_name, COUNT(*) as ducks FROM (  SELECT d.match_id, d.inning, d.player_out_id   FROM Deliveries d   WHERE d.bowling_team = 'Australia'   GROUP BY d.match_id, d.inning, d.player_out_id   HAVING SUM(d.runs_scored) = 0     AND SUM(CASE WHEN d.wicket_type IS NOT NULL THEN 1 ELSE 0 END) > 0) duck_innings JOIN Players p ON duck_innings.player_out_id = p.player_id GROUP BY p.player_id ORDER BY ducks DESC LIMIT 1",
     "question_english": "Which player has the most Test ducks against Australia?",
     "question_hindi_1": "ऑस्ट्रेलिया के खिलाफ सबसे ज़्यादा टेस्ट डक किस खिलाड़ी के नाम हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਖਿਡਾਰੀ ਨੇ Australia ਦੇ ਖਿਲਾਫ ਸਭ ਤੋਂ ਵੱਧ ਟੈਸਟ ਡੱਕ ਖੇਡੇ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -1145,7 +1145,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name LIKE '%India%Pakistan%' AND m.season = '2003/04' GROUP BY d.match_id, d.inning, d.striker_id, d.non_striker_id HAVING SUM(d.runs_scored + d.extra_runs) = (SELECT MAX(part) FROM (SELECT SUM(d2.runs_scored + d2.extra_runs) AS part FROM Deliveries d2 JOIN Matches m2 ON d2.match_id = m2.match_id WHERE m2.series_name LIKE '%India%Pakistan%' AND m2.season = '2003/04' GROUP BY d2.match_id, d2.inning, d2.striker_id, d2.non_striker_id)) LIMIT 1",
     "question_english": "Who was the non-striker during the largest partnership of the 2004 series between India and Pakistan?",
     "question_hindi_1": "2004 भारत-पाकिस्तान सीरीज़ की सबसे बड़ी साझेदारी के दौरान नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "India ਅਤੇ Pakistan ਵਿਚਾਲੇ 2004 ਸੀਰੀਜ਼ ਦੀ ਸਭ ਤੋਂ ਵੱਡੀ ਸਾਂਝੇਦਾਰੀ ਦੌਰਾਨ ਨਾਨ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1162,7 +1162,7 @@
     "query": "SELECT m.match_id, m.venue FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE d.wicket_type = 'obstructing the field'",
     "question_english": "Identify the match where a player was dismissed 'obstructing the field'.",
     "question_hindi_1": "वह मैच पहचानें जिसमें किसी खिलाड़ी को 'फील्ड में बाधा डालने' पर आउट किया गया।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਖਿਡਾਰੀ ਨੂੰ 'ਫੀਲਡ ਵਿੱਚ ਰੁਕਾਵਟ ਪਾਉਣ' ਕਾਰਨ ਆਊਟ ਕੀਤਾ ਗਿਆ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -1181,7 +1181,7 @@
     "query": "SELECT p.player_name FROM Players p JOIN (SELECT match_id, striker_id FROM Deliveries WHERE inning IN (1,2) GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100 INTERSECT SELECT match_id, striker_id FROM Deliveries WHERE inning IN (3,4) GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100) twin ON p.player_id = twin.striker_id JOIN Matches m ON twin.match_id = m.match_id JOIN PlayerInMatch pim ON m.match_id = pim.match_id AND p.player_id = pim.player_id WHERE m.match_winner IS NOT NULL AND pim.team_name != m.match_winner",
     "question_english": "Identify the batsman who scored a century in both innings of a Test match and still lost the match.",
     "question_hindi_1": "वह बल्लेबाज़ कौन है जिसने टेस्ट मैच की दोनों पारियों में शतक लगाया और फिर भी मैच हारा?",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਬੱਲੇਬਾਜ਼ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿਸ ਨੇ ਟੈਸਟ ਮੈਚ ਦੀਆਂ ਦੋਵੇਂ ਪਾਰੀਆਂ ਵਿੱਚ ਸੈਂਕੜਾ ਲਗਾਇਆ ਅਤੇ ਫਿਰ ਵੀ ਮੈਚ ਹਾਰ ਗਿਆ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1210,7 +1210,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Players p JOIN FielderDismissals fd1 ON p.player_id = fd1.fielder_id JOIN Deliveries d1 ON fd1.delivery_id = d1.delivery_id JOIN FielderDismissals fd2 ON p.player_id = fd2.fielder_id JOIN Deliveries d2 ON fd2.delivery_id = d2.delivery_id WHERE d1.wicket_type = 'caught' AND d2.wicket_type = 'stumped' AND d1.match_id = d2.match_id AND d1.inning = d2.inning",
     "question_english": "List the players who have taken a catch and a stumping in the same innings.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जिन्होंने एक ही पारी में एक कैच और एक स्टम्पिंग किया।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕੋ ਪਾਰੀ ਵਿੱਚ ਇੱਕ ਕੈਚ ਅਤੇ ਸਟੰਪਿੰਗ ਕੀਤੀ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1413,7 +1413,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'Australia' AND m.season = '2003/04' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Who was the leading run-scorer for Australia in the 2003/04 season?",
     "question_hindi_1": "2003/04 सीज़न में ऑस्ट्रेलिया के लिए सबसे ज़्यादा रन बनाने वाला बल्लेबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2003/04 ਸੀਜ਼ਨ ਵਿੱਚ Australia ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲਾ ਖਿਡਾਰੀ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -1432,7 +1432,7 @@
     "query": "SELECT m.match_id, m.venue FROM Matches m WHERE m.result_type = 'wickets' AND m.result_margin = 1",
     "question_english": "Identify the match where a team won by 1 wicket.",
     "question_hindi_1": "वह मैच पहचानें जिसमें किसी टीम ने 1 विकेट से जीत दर्ज की।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਟੀਮ 1 ਵਿਕਟ ਨਾਲ ਜਿੱਤੀ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -1471,7 +1471,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'KP Pietersen' AND m.start_date = (SELECT MAX(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'KP Pietersen') AND d.wicket_type IS NOT NULL ORDER BY d.delivery_id DESC LIMIT 1",
     "question_english": "Who was the non-striker when Kevin Pietersen was dismissed in his last Test innings?",
     "question_hindi_1": "केविन पीटरसन की आखिरी टेस्ट पारी में आउट होने पर नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ Kevin Pietersen ਆਪਣੀ ਆਖਰੀ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ ਆਊਟ ਹੋਇਆ ਤਾਂ ਨਾਨ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1488,7 +1488,7 @@
     "query": "SELECT venue, COUNT(*) as match_count FROM Matches WHERE ((team1 = 'England' AND team2 = 'Australia') OR (team1 = 'Australia' AND team2 = 'England')) GROUP BY venue ORDER BY match_count DESC LIMIT 1",
     "question_english": "Which ground has hosted the most matches between England and Australia?",
     "question_hindi_1": "इंग्लैंड और ऑस्ट्रेलिया के बीच सबसे ज़्यादा मैचों की मेज़बानी किस मैदान ने की है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਮੈਦਾਨ ਨੇ England ਅਤੇ Australia ਵਿਚਕਾਰ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕੀਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -1507,7 +1507,7 @@
     "query": "SELECT p_s.player_name, p_b.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_b ON d.bowler_id = p_b.player_id GROUP BY d.striker_id, d.bowler_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Identify the batsman who has the most runs against a single bowler in Test history (approximated).",
     "question_hindi_1": "टेस्ट इतिहास में किस बल्लेबाज़ ने किसी एक गेंदबाज़ के खिलाफ सबसे ज़्यादा रन बनाए हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਗੇਂਦਬਾਜ਼ ਦੇ ਖਿਲਾਫ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਦੀ ਪਛਾਣ ਕਰੋ (ਲਗਭਗ)।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -1528,7 +1528,7 @@
     "query": "SELECT p.player_name FROM Players p JOIN Matches m ON m.player_of_match_id = p.player_id JOIN (SELECT pim.player_id, MIN(m2.start_date) as debut_date       FROM PlayerInMatch pim JOIN Matches m2 ON pim.match_id = m2.match_id       GROUP BY pim.player_id) deb ON p.player_id = deb.player_id WHERE m.start_date = deb.debut_date",
     "question_english": "List the players who have won 'Player of the Match' in their very first Test.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जिन्होंने अपने पहले टेस्ट मैच में ही 'प्लेयर ऑफ द मैच' जीता।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਆਪਣੇ ਪਹਿਲੇ ਟੈਸਟ ਵਿੱਚ 'Player of the match' ਜਿੱਤਿਆ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1689,7 +1689,7 @@
     "query": "SELECT batting_team, AVG(run_rate) as avg_rr FROM (SELECT match_id, inning, batting_team, (SUM(runs_scored + extra_runs) * 6.0 / COUNT(*)) as run_rate FROM Deliveries WHERE over_number < 10 GROUP BY match_id, inning, batting_team) GROUP BY batting_team ORDER BY avg_rr DESC LIMIT 1",
     "question_english": "Which team has the highest run rate in the first 10 overs of a Test innings?",
     "question_hindi_1": "टेस्ट पारी के पहले 10 ओवर में सबसे ज़्यादा रन रेट किस टीम का है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਟੀਮ ਦੀ ਟੈਸਟ ਪਾਰੀ ਦੇ ਪਹਿਲੇ 10 ਓਵਰਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਰੇਟ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -1708,7 +1708,7 @@
     "query": "SELECT DISTINCT umpire_name FROM (SELECT umpire1 as umpire_name FROM Matches WHERE ((team1 = 'India' AND team2 = 'Pakistan') OR (team1 = 'Pakistan' AND team2 = 'India')) AND start_date >= '2000-01-01' UNION SELECT umpire2 FROM Matches WHERE ((team1 = 'India' AND team2 = 'Pakistan') OR (team1 = 'Pakistan' AND team2 = 'India')) AND start_date >= '2000-01-01')",
     "question_english": "List the umpires who have stood in matches involving Pakistan and India since 2000.",
     "question_hindi_1": "2000 से भारत और पाकिस्तान के बीच मैचों में अंपायरिंग करने वाले अंपायरों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਅੰਪਾਇਰਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜੋ 2000 ਤੋਂ ਬਾਅਦ Pakistan ਅਤੇ India ਦੇ ਮੈਚਾਂ ਵਿੱਚ ਖੜੇ ਹੋਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Umpire Name"
@@ -1737,7 +1737,7 @@
     "query": "SELECT SUM(runs_scored + extra_runs) as chase FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.team1 = 'India' AND d.inning = 4 AND m.match_winner = d.batting_team GROUP BY m.match_id ORDER BY chase DESC LIMIT 1",
     "question_english": "What is the highest fourth innings total successfully chased in India?",
     "question_hindi_1": "भारत में सफलतापूर्वक पीछा किया गया सबसे बड़ा चौथी पारी का स्कोर क्या है?",
-    "question_punjabi": "",
+    "question_punjabi": "India ਵਿੱਚ ਸਫਲਤਾਪੂਰਵਕ ਪਿੱਛਾ ਕੀਤੀ ਗਈ ਸਭ ਤੋਂ ਉੱਚੀ ਚੌਥੀ ਪਾਰੀ ਕੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Chase"
@@ -1753,8 +1753,8 @@
     "question": "How many lbw dismissals were made by Ravichandran Ashwin in home Tests?",
     "query": "SELECT COUNT(*) FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'R Ashwin' AND d.wicket_type = 'lbw' AND m.team1 = 'India'",
     "question_english": "How many lbw dismissals were made by Ravichandran Ashwin in home Tests?",
-    "question_hindi_1": "घरेलू टेस्ट में रविचंद्रन अश्विन ने कितने एलबीडब्ल्यू विकेट लिए?",
-    "question_punjabi": "",
+    "question_hindi_1": "घरेलू टेस्ट में रविचंद्रन अश्विन ने कितने lbw विकेट लिए?",
+    "question_punjabi": "ਘਰੇਲੂ ਟੈਸਟਾਂ ਵਿੱਚ Ravichandran Ashwin ਨੇ ਕਿੰਨੇ lbw ਆਊਟ ਕੀਤੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -1771,7 +1771,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Players p JOIN (SELECT match_id, striker_id AS player_id FROM Deliveries WHERE inning IN (3,4) GROUP BY match_id, inning, striker_id HAVING SUM(runs_scored) >= 100) centuries ON p.player_id = centuries.player_id JOIN (SELECT match_id, bowler_id AS player_id FROM Deliveries WHERE inning IN (3,4) AND wicket_type IS NOT NULL AND wicket_type != 'run out' GROUP BY match_id, inning, bowler_id HAVING COUNT(*) >= 5) fifers ON p.player_id = fifers.player_id AND centuries.match_id = fifers.match_id",
     "question_english": "List the players who have scored a century and taken 5 wickets in the second innings of a Test match.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जिन्होंने किसी टेस्ट मैच की दूसरी पारी में शतक लगाया और 5 विकेट भी लिए।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਟੈਸਟ ਮੈਚ ਦੀ ਦੂਜੀ ਪਾਰੀ ਵਿੱਚ ਸੈਂਕੜਾ ਲਗਾਇਆ ਅਤੇ 5 ਵਿਕਟਾਂ ਲਈਆਂ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1784,7 +1784,7 @@
     "query": "SELECT team_name, (CAST(wins AS FLOAT) / total) * 100 as win_pc FROM (SELECT team_name, COUNT(*) as total, SUM(CASE WHEN match_winner = team_name THEN 1 ELSE 0 END) as wins FROM (SELECT team1 as team_name, match_winner FROM Matches WHERE venue LIKE '%Perth%' UNION ALL SELECT team2 as team_name, match_winner FROM Matches WHERE venue LIKE '%Perth%') GROUP BY team_name) GROUP BY team_name ORDER BY win_pc DESC LIMIT 1",
     "question_english": "Which team has the best win percentage at the WACA, Perth?",
     "question_hindi_1": "पर्थ के WACA में सबसे अच्छी जीत प्रतिशत किस टीम की है?",
-    "question_punjabi": "",
+    "question_punjabi": "WACA, ਪਰਥ ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਜਿੱਤ ਦੀ ਸਭ ਤੋਂ ਵਧੀਆ ਪ੍ਰਤੀਸ਼ਤਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team Name",
@@ -1803,7 +1803,7 @@
     "query": "SELECT p.player_name, COUNT(*) AS dismissals FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Players p_s ON d.striker_id = p_s.player_id WHERE p_s.player_name = 'KC Sangakkara' AND d.player_out_id = p_s.player_id AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY dismissals DESC LIMIT 1",
     "question_english": "Which bowler has dismissed Kumar Sangakkara the most times in Test matches?",
     "question_hindi_1": "टेस्ट मैचों में किस गेंदबाज़ ने कुमार संगकारा को सबसे ज़्यादा बार आउट किया?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਗੇਂਦਬਾਜ਼ ਨੇ Kumar Sangakkara ਨੂੰ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਆਊਟ ਕੀਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -1822,7 +1822,7 @@
     "query": "SELECT venue FROM Matches WHERE (team1 = 'Australia' OR team2 = 'Australia') GROUP BY venue HAVING COUNT(*) >= 5 AND SUM(CASE WHEN match_winner != 'Australia' AND match_winner IS NOT NULL THEN 1 ELSE 0 END) = 0",
     "question_english": "List the venues where Australia has never lost a Test match (min 5 matches).",
     "question_hindi_1": "वे स्थल सूचीबद्ध करें जहाँ ऑस्ट्रेलिया ने कभी कोई टेस्ट मैच नहीं हारा (न्यूनतम 5 मैच)।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਹਨਾਂ ਸਥਾਨਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ Australia ਕਦੇ ਵੀ ਟੈਸਟ ਮੈਚ ਨਹੀਂ ਹਾਰਿਆ (ਘੱਟੋ-ਘੱਟ 5 ਮੈਚ)।",
     "question_telugu": "",
     "column_names": [
       "Venue"
@@ -1839,7 +1839,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'BA Stokes' AND m.venue LIKE '%Headingley%' AND m.start_date LIKE '2019%' AND m.match_winner = 'England' ORDER BY d.delivery_id DESC LIMIT 1",
     "question_english": "Who was the non-striker when Ben Stokes played his winning shot at Headingley in 2019?",
     "question_hindi_1": "2019 में हेडिंग्ले में बेन स्टोक्स के विजयी शॉट के समय नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ ਬੇਨ ਸਟੋਕਸ ਨੇ 2019 ਵਿੱਚ ਹੈਡਿੰਗਲੇ ਵਿੱਚ ਆਪਣਾ ਜੇਤੂ ਸ਼ਾਟ ਖੇਡਿਆ ਤਾਂ ਗੈਰ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1856,7 +1856,7 @@
     "query": "SELECT team_name, (CAST(wins AS FLOAT) / total) * 100 as win_pc FROM (SELECT team_name, COUNT(*) as total, SUM(CASE WHEN match_winner = team_name THEN 1 ELSE 0 END) as wins FROM (SELECT team1 as team_name, match_winner FROM Matches WHERE start_date >= '2000-01-01' UNION ALL SELECT team2 as team_name, match_winner FROM Matches WHERE start_date >= '2000-01-01') GROUP BY team_name) GROUP BY team_name ORDER BY win_pc DESC LIMIT 1",
     "question_english": "Which team has the highest win percentage in the 21st century?",
     "question_hindi_1": "21वीं सदी में सबसे अच्छी जीत प्रतिशत किस टीम की है?",
-    "question_punjabi": "",
+    "question_punjabi": "21ਵੀਂ ਸਦੀ ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਜਿੱਤ ਦੀ ਪ੍ਰਤੀਸ਼ਤਤਾ ਸਭ ਤੋਂ ਵੱਧ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team Name",
@@ -1875,7 +1875,7 @@
     "query": "SELECT p.player_name, AVG(inning_runs) AS avg_score FROM (SELECT match_id, inning, striker_id, SUM(runs_scored) AS inning_runs FROM Deliveries WHERE batting_team = 'England' AND inning IN (3, 4) GROUP BY match_id, inning, striker_id) runs JOIN Players p ON runs.striker_id = p.player_id GROUP BY p.player_id ORDER BY avg_score DESC LIMIT 1",
     "question_english": "Who has the highest average second innings score for England in Test matches?",
     "question_hindi_1": "इंग्लैंड के लिए टेस्ट मैचों में दूसरी पारी का सबसे ज़्यादा औसत स्कोर किसका है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ England ਲਈ ਦੂਜੀ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਔਸਤ ਸਕੋਰ ਕਿਸ ਦਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -1894,7 +1894,7 @@
     "query": "SELECT m.venue, SUM(d.runs_scored) as total_runs FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE m.match_id NOT IN (SELECT match_id FROM Deliveries GROUP BY match_id, striker_id HAVING SUM(runs_scored) >= 100) GROUP BY m.venue ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Which ground has seen the most Test runs scored without a single century?",
     "question_hindi_1": "किस मैदान पर एक भी शतक के बिना सबसे ज़्यादा टेस्ट रन बने हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਮੈਦਾਨ 'ਤੇ ਇਕ ਵੀ ਸੈਂਕੜੇ ਦੇ ਬਿਨਾਂ ਸਭ ਤੋਂ ਵੱਧ ਟੈਸਟ ਰਨ ਬਣਾਏ ਗਏ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -1913,7 +1913,7 @@
     "query": "SELECT p_bowler.player_name FROM (SELECT d.delivery_id, d.bowler_id, d.match_id, d.inning, SUM(d.runs_scored) OVER (PARTITION BY d.match_id, d.inning, d.striker_id ORDER BY d.delivery_id) AS cum_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'V Kohli') t JOIN Matches m ON t.match_id = m.match_id JOIN Players p_bowler ON t.bowler_id = p_bowler.player_id WHERE t.cum_runs >= 100 AND m.start_date = (SELECT MIN(m2.start_date) FROM Matches m2 JOIN Deliveries d2 ON m2.match_id = d2.match_id JOIN Players p2 ON d2.striker_id = p2.player_id WHERE p2.player_name = 'V Kohli' GROUP BY m2.match_id, d2.inning HAVING SUM(d2.runs_scored) >= 100 ORDER BY m2.start_date ASC LIMIT 1) ORDER BY t.delivery_id ASC LIMIT 1",
     "question_english": "Who was the bowler when Virat Kohli scored his first Test century?",
     "question_hindi_1": "विराट कोहली के पहले टेस्ट शतक के समय गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ Virat Kohli ਨੇ ਆਪਣਾ ਪਹਿਲਾ ਟੈਸਟ ਸੈਂਕੜਾ ਲਗਾਇਆ ਤਾਂ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1930,7 +1930,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Players p JOIN (SELECT d.bowler_id, MIN(m.start_date) as debut_date FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY d.bowler_id) deb ON p.player_id = deb.bowler_id JOIN Deliveries d_first ON p.player_id = d_first.bowler_id JOIN Matches m_first ON d_first.match_id = m_first.match_id WHERE m_first.start_date = deb.debut_date AND d_first.over_number = 0 AND d_first.ball_number = 1 AND d_first.wicket_type IS NOT NULL",
     "question_english": "List the players who have taken a wicket with their very first ball in Test cricket.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जिन्होंने टेस्ट क्रिकेट में अपनी पहली ही गेंद पर विकेट लिया।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਟੈਸਟ ਕ੍ਰਿਕਟ ਵਿੱਚ ਆਪਣੀ ਪਹਿਲੀ ਗੇਂਦ ਨਾਲ ਵਿਕਟ ਲਈ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1947,7 +1947,7 @@
     "query": "SELECT match_winner AS team_name, COUNT(*) AS wins FROM Matches WHERE team1 = 'Australia' AND match_winner != 'Australia' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins against Australia in Australia?",
     "question_hindi_1": "ऑस्ट्रेलिया में ऑस्ट्रेलिया के खिलाफ सबसे ज़्यादा जीत किस टीम की है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਹੜੀ ਟੀਮ ਨੇ Australia ਖਿਲਾਫ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਹਾਸਲ ਕੀਤੀਆਂ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Team Name",
@@ -1966,7 +1966,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'SR Tendulkar' AND m.start_date = (SELECT MAX(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'SR Tendulkar') AND d.runs_scored = 0 AND d.player_out_id = p_s.player_id LIMIT 1",
     "question_english": "Who was the non-striker when Sachin Tendulkar was dismissed for 0 in his last Test match?",
     "question_hindi_1": "सचिन तेंदुलकर की आखिरी टेस्ट मैच में 0 रन पर आउट होने के समय नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Sachin Tendulkar ਜਦੋਂ ਆਪਣੇ ਆਖਰੀ ਟੈਸਟ ਮੈਚ ਵਿੱਚ 0 ਰਨ 'ਤੇ ਆਊਟ ਹੋ ਗਿਆ ਸੀ ਤਾਂ ਨਾਨ-ਸਟ੍ਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -1983,7 +1983,7 @@
     "query": "SELECT p.player_name, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id WHERE d.wicket_type = 'caught' GROUP BY d.match_id, d.inning, p.player_id HAVING catches >= 5",
     "question_english": "List the players who have taken 5 catches in a single Test innings.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जिन्होंने एक टेस्ट पारी में 5 कैच लिए।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ 5 ਕੈਚ ਲਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -2422,7 +2422,7 @@
     "query": "SELECT batting_team, SUM(runs_scored + extra_runs) as chase FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.venue LIKE '%Eden Gardens%' AND d.inning = 4 AND m.match_winner = d.batting_team GROUP BY m.match_id ORDER BY chase DESC LIMIT 1",
     "question_english": "Which team has the highest successful run chase at the Eden Gardens, Kolkata?",
     "question_hindi_1": "कोलकाता के ईडन गार्डन्स में सबसे सफल रन चेज़ किस टीम ने किया?",
-    "question_punjabi": "",
+    "question_punjabi": "ਈਡਨ ਗਾਰਡਨ, ਕੋਲਕਾਤਾ ਵਿਖੇ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਦਾ ਪਿੱਛਾ ਕੀਤਾ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -2441,7 +2441,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2000-01-01' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY d.match_id, d.inning, d.bowler_id HAVING COUNT(*) >= 8",
     "question_english": "List the bowlers who have taken 8 or more wickets in a single Test innings in the 21st century.",
     "question_hindi_1": "21वीं सदी में एक टेस्ट पारी में 8 या उससे ज़्यादा विकेट लेने वाले गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ 21ਵੀਂ ਸਦੀ ਵਿੱਚ ਇੱਕ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ 8 ਜਾਂ ਵੱਧ ਵਿਕਟਾਂ ਲਈਆਂ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2515,7 +2515,7 @@
     "query": "SELECT team_name, (CAST(wins AS FLOAT) / total) * 100 as win_pc FROM (SELECT team_name, COUNT(*) as total, SUM(CASE WHEN match_winner = team_name THEN 1 ELSE 0 END) as wins FROM (SELECT team1 as team_name, match_winner FROM Matches WHERE city IN ('Lahore', 'Karachi', 'Rawalpindi', 'Multan', 'Peshawar', 'Faisalabad') UNION ALL SELECT team2 as team_name, match_winner FROM Matches WHERE city IN ('Lahore', 'Karachi', 'Rawalpindi', 'Multan', 'Peshawar', 'Faisalabad')) GROUP BY team_name) GROUP BY team_name ORDER BY win_pc DESC LIMIT 1",
     "question_english": "Which team has the best win percentage in Test matches played in Pakistan?",
     "question_hindi_1": "पाकिस्तान में खेले गए टेस्ट मैचों में सबसे अच्छी जीत प्रतिशत किस टीम की है?",
-    "question_punjabi": "",
+    "question_punjabi": "Pakistan ਵਿੱਚ ਖੇਡੇ ਗਏ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਜਿੱਤ ਦੀ ਪ੍ਰਤੀਸ਼ਤਤਾ ਸਭ ਤੋਂ ਵਧੀਆ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team Name",
@@ -2533,8 +2533,8 @@
     "question": "How many lbw dismissals were made by James Anderson in home Tests?",
     "query": "SELECT COUNT(*) FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'JM Anderson' AND d.wicket_type = 'lbw' AND m.team1 = 'England'",
     "question_english": "How many lbw dismissals were made by James Anderson in home Tests?",
-    "question_hindi_1": "घरेलू टेस्ट में जेम्स एंडर्सन ने कितने एलबीडब्ल्यू विकेट लिए?",
-    "question_punjabi": "",
+    "question_hindi_1": "घरेलू टेस्ट में जेम्स एंडर्सन ने कितने lbw विकेट लिए?",
+    "question_punjabi": "ਘਰੇਲੂ ਟੈਸਟਾਂ ਵਿੱਚ James Anderson ਨੇ ਕਿੰਨੇ lbw ਆਊਟ ਕੀਤੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -2551,7 +2551,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'South Africa' AND m.start_date BETWEEN '2010-01-01' AND '2019-12-31' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Who was the leading run-scorer for South Africa in the 2010s?",
     "question_hindi_1": "2010 के दशक में दक्षिण अफ्रीका के लिए सबसे ज़्यादा रन बनाने वाला बल्लेबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਵਿੱਚ South Africa ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲਾ ਖਿਡਾਰੀ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -2570,7 +2570,7 @@
     "query": "SELECT p.player_name, COUNT(*) AS dismissals FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Players p_s ON d.striker_id = p_s.player_id WHERE p_s.player_name = 'BC Lara' AND d.player_out_id = p_s.player_id AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY dismissals DESC LIMIT 1",
     "question_english": "Which bowler has dismissed Brian Lara the most times in Test matches?",
     "question_hindi_1": "टेस्ट मैचों में किस गेंदबाज़ ने ब्रायन लारा को सबसे ज़्यादा बार आउट किया?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਗੇਂਦਬਾਜ਼ ਨੇ Brian Lara ਨੂੰ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਆਊਟ ਕੀਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -2589,7 +2589,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'AN Cook' AND m.series_name LIKE '%Ashes%' AND m.season = '2010/11' AND d.runs_scored > 0 GROUP BY d.match_id, d.inning, d.striker_id HAVING SUM(d.runs_scored) >= 200 LIMIT 1",
     "question_english": "Who was the non-striker when Alastair Cook scored his double century against Australia in 2010?",
     "question_hindi_1": "2010 ऑस्ट्रेलिया के खिलाफ अलस्टेयर कुक के दोहरे शतक के समय नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਵਿੱਚ ਜਦੋਂ Alastair Cook ਨੇ Australia ਦੇ ਖਿਲਾਫ ਆਪਣਾ ਦੋਹਰਾ ਸੈਂਕੜਾ ਲਗਾਇਆ ਸੀ ਤਾਂ ਗੈਰ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2606,7 +2606,7 @@
     "query": "SELECT p.player_name, AVG(inning_runs) AS avg_score FROM (SELECT match_id, inning, striker_id, SUM(runs_scored) AS inning_runs FROM Deliveries WHERE batting_team = 'New Zealand' AND inning IN (1, 2) GROUP BY match_id, inning, striker_id) runs JOIN Players p ON runs.striker_id = p.player_id GROUP BY p.player_id ORDER BY avg_score DESC LIMIT 1",
     "question_english": "Who has the highest average first innings score for New Zealand in Test matches?",
     "question_hindi_1": "टेस्ट मैचों में न्यूज़ीलैंड के लिए पहली पारी का सबसे ज़्यादा औसत स्कोर किसका है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ New Zealand ਲਈ ਪਹਿਲੀ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਔਸਤ ਸਕੋਰ ਕਿਸ ਦਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -2625,7 +2625,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id WHERE d.over_number = 0 AND d.ball_number = 1 AND d.wicket_type IS NOT NULL",
     "question_english": "List the players who have taken a wicket with their very first ball in a Test innings.",
     "question_hindi_1": "वे खिलाड़ी सूचीबद्ध करें जिन्होंने टेस्ट पारी में अपनी पहली ही गेंद पर विकेट लिया।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ ਆਪਣੀ ਪਹਿਲੀ ਗੇਂਦ ਨਾਲ ਵਿਕਟ ਲਈ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2735,7 +2735,7 @@
     "query": "SELECT team2 as touring_team, COUNT(*) as wins FROM Matches WHERE team1 = 'India' AND match_winner != 'India' AND match_winner IS NOT NULL GROUP BY touring_team ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins against India in India?",
     "question_hindi_1": "भारत में भारत के खिलाफ सबसे ज़्यादा जीत किस टीम की है?",
-    "question_punjabi": "",
+    "question_punjabi": "India ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਨੇ India ਖਿਲਾਫ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਹਾਸਲ ਕੀਤੀਆਂ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Touring Team",
@@ -2754,7 +2754,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'RT Ponting' AND m.start_date = (SELECT MAX(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'RT Ponting') AND d.wicket_type IS NOT NULL LIMIT 1",
     "question_english": "Who was the non-striker when Ricky Ponting was dismissed in his last Test innings?",
     "question_hindi_1": "रिकी पॉन्टिंग की आखिरी टेस्ट पारी में आउट होने पर नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ Ricky Ponting ਆਪਣੀ ਆਖਰੀ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ ਆਊਟ ਹੋ ਗਿਆ ਤਾਂ ਗੈਰ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2771,7 +2771,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE d.batting_team = 'Pakistan' AND d.bowling_team = 'India' GROUP BY d.match_id, d.inning, d.striker_id HAVING SUM(d.runs_scored) >= 150",
     "question_english": "List the players who have scored 150+ runs in a single Test innings for Pakistan against India.",
     "question_hindi_1": "पाकिस्तान के खिलाफ एक टेस्ट पारी में 150 से ज़्यादा रन बनाने वाले खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ India ਵਿਰੁੱਧ Pakistan ਲਈ ਇੱਕ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ 150+ ਰਨ ਬਣਾਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2794,7 +2794,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.team1 = 'Australia' AND m.team2 = 'Sri Lanka' AND m.season = '2007/08' AND d.bowling_team = 'Australia' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 1",
     "question_english": "Who was the leading wicket-taker for Australia in the 2007 series against Sri Lanka?",
     "question_hindi_1": "2007 सीरीज़ में श्रीलंका के खिलाफ ऑस्ट्रेलिया का सबसे ज़्यादा विकेट लेने वाला गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Sri Lanka ਦੇ ਖਿਲਾਫ 2007 ਦੀ ਸੀਰੀਜ਼ ਵਿੱਚ Australia ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟ ਲੈਣ ਵਾਲਾ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -2813,7 +2813,7 @@
     "query": "SELECT DISTINCT m.match_id, m.venue FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE d.inning = 1 AND m.match_winner IS NOT NULL AND m.match_winner != d.batting_team GROUP BY m.match_id, d.inning HAVING SUM(d.runs_scored + d.extra_runs) >= 500",
     "question_english": "Identify the match where a team lost despite scoring 500+ runs in their first innings.",
     "question_hindi_1": "वह मैच पहचानें जिसमें किसी टीम ने पहली पारी में 500 से ज़्यादा रन बनाने के बाद भी हार गई।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਟੀਮ ਆਪਣੀ ਪਹਿਲੀ ਪਾਰੀ ਵਿੱਚ 500+ ਰਨ ਬਣਾਉਣ ਦੇ ਬਾਵਜੂਦ ਹਾਰ ਗਈ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -2844,7 +2844,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT d.match_id, d.inning, d.over_number FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'M Muralitharan' AND m.start_date BETWEEN '2000-01-01' AND '2009-12-31' GROUP BY d.match_id, d.inning, d.over_number HAVING SUM(d.runs_scored + d.extra_runs) = 0)",
     "question_english": "How many maidens did Muttiah Muralitharan bowl in the 2000s?",
     "question_hindi_1": "2000 के दशक में मुत्तया मुरलीधरन ने कितने मेडन ओवर डाले?",
-    "question_punjabi": "",
+    "question_punjabi": "2000 ਦੇ ਦਹਾਕੇ ਵਿੱਚ Muttiah Muralitharan ਨੇ ਕਿੰਨੀਆਂ ਮੇਡਨਜ਼ ਨੂੰ ਗੇਂਦਬਾਜ਼ੀ ਕੀਤੀ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -2861,7 +2861,7 @@
     "query": "SELECT p_bowler.player_name FROM (SELECT d.delivery_id, d.bowler_id, SUM(d.runs_scored) OVER (PARTITION BY d.match_id, d.inning, d.striker_id ORDER BY d.delivery_id) AS cum_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'MJ Clarke') t JOIN Players p_bowler ON t.bowler_id = p_bowler.player_id WHERE t.cum_runs >= 300 ORDER BY t.delivery_id ASC LIMIT 1",
     "question_english": "Who was the bowler when Michael Clarke scored his triple century against India?",
     "question_hindi_1": "भारत के खिलाफ अपने तिहरे शतक के समय माइकल क्लार्क के खिलाफ गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ Michael Clarke ਨੇ India ਦੇ ਖਿਲਾਫ triple ਸੈਂਕੜਾ ਲਗਾਇਆ ਤਾਂ ਉਹ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2878,7 +2878,7 @@
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.player_out_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'handled the ball' AND m.start_date >= '2000-01-01'",
     "question_english": "List the players who have been dismissed 'handled the ball' in the 21st century.",
     "question_hindi_1": "21वीं सदी में 'हैंडल्ड द बॉल' पर आउट होने वाले खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜੋ 21ਵੀਂ ਸਦੀ ਵਿੱਚ 'ਹੈਂਡਲ ਦਾ ਬਾਲ' ਆਊਟ ਹੋਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -2895,7 +2895,7 @@
     "query": "SELECT batting_team, AVG(run_rate) as avg_rr FROM (SELECT match_id, batting_team, (SUM(runs_scored + extra_runs) * 6.0 / COUNT(*)) as run_rate FROM Deliveries WHERE inning = 3 GROUP BY match_id, batting_team) GROUP BY batting_team HAVING COUNT(*) >= 10 ORDER BY avg_rr DESC LIMIT 1",
     "question_english": "Which team has the highest run rate in the third innings of a Test match (min 10 matches)?",
     "question_hindi_1": "टेस्ट मैच की तीसरी पारी में सबसे ज़्यादा रन रेट किस टीम का है (न्यूनतम 10 मैच)?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚ ਦੀ ਤੀਜੀ ਪਾਰੀ (ਘੱਟੋ-ਘੱਟ 10 ਮੈਚ) ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਰੇਟ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -2914,7 +2914,7 @@
     "query": "SELECT batting_team, AVG(run_rate) as avg_rr FROM (SELECT match_id, batting_team, (SUM(runs_scored + extra_runs) * 6.0 / COUNT(*)) as run_rate FROM Deliveries WHERE inning = 4 GROUP BY match_id, batting_team) GROUP BY batting_team HAVING COUNT(*) >= 10 ORDER BY avg_rr DESC LIMIT 1",
     "question_english": "Which team has the highest run rate in the fourth innings of a Test match (min 10 matches)?",
     "question_hindi_1": "टेस्ट मैच की चौथी पारी में सबसे ज़्यादा रन रेट किस टीम का है (न्यूनतम 10 मैच)?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚ ਦੀ ਚੌਥੀ ਪਾਰੀ (ਘੱਟੋ-ਘੱਟ 10 ਮੈਚ) ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਰੇਟ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -2932,8 +2932,8 @@
     "question": "List all players who have been dismissed 'LBW' more than 50 times in Test matches.",
     "query": "SELECT p.player_name, COUNT(*) as lbw_count FROM Deliveries d JOIN Players p ON d.player_out_id = p.player_id WHERE d.wicket_type = 'lbw' GROUP BY p.player_id HAVING lbw_count > 50 ORDER BY lbw_count DESC",
     "question_english": "List all players who have been dismissed 'LBW' more than 50 times in Test matches.",
-    "question_hindi_1": "टेस्ट मैचों में 50 से ज़्यादा बार एलबीडब्ल्यू आउट होने वाले सभी खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_hindi_1": "टेस्ट मैचों में 50 से ज़्यादा बार lbw आउट होने वाले सभी खिलाड़ियों की सूची बनाएं।",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ 50 ਤੋਂ ਵੱਧ ਵਾਰ 'lbw' ਆਊਟ ਹੋਏ ਸਾਰੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -2956,7 +2956,7 @@
     "query": "SELECT away_team, (CAST(draws AS FLOAT) / total) * 100 as draw_pc FROM (SELECT team2 as away_team, COUNT(*) as total, SUM(CASE WHEN result_type = 'draw' THEN 1 ELSE 0 END) as draws FROM Matches GROUP BY team2) ORDER BY draw_pc DESC LIMIT 1",
     "question_english": "Which team has the highest percentage of drawn matches away from home?",
     "question_hindi_1": "घर से बाहर सबसे ज़्यादा ड्रॉ मैच प्रतिशत किस टीम का है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਘਰ ਤੋਂ ਦੂਰ ਡਰਾਅ ਮੈਚਾਂ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਪ੍ਰਤੀਸ਼ਤਤਾ ਕਿਸ ਟੀਮ ਕੋਲ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Away Team",
@@ -2975,7 +2975,7 @@
     "query": "SELECT m.start_date, p_out.player_name, d.wicket_type FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Players p_fielder ON fd.fielder_id = p_fielder.player_id JOIN Players p_out ON d.player_out_id = p_out.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_bowler.player_name = 'A Kumble' AND p_fielder.player_name = 'R Dravid'",
     "question_english": "List the wickets taken by Anil Kumble where the fielder was Rahul Dravid.",
     "question_hindi_1": "अनिल कुंबले के वे विकेट जहाँ फील्डर राहुल द्रविड़ थे।",
-    "question_punjabi": "",
+    "question_punjabi": "Anil Kumble ਦੁਆਰਾ ਲਈਆਂ ਗਈਆਂ ਵਿਕਟਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ ਫੀਲਡਰ Rahul Dravid ਸਨ।",
     "question_telugu": "",
     "column_names": [
       "Start Date",
@@ -3101,7 +3101,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT d.match_id, SUM(d.runs_scored) as match_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'KC Sangakkara' AND d.bowling_team = 'Pakistan' GROUP BY d.match_id, d.inning HAVING match_runs >= 200)",
     "question_english": "How many double centuries did Kumar Sangakkara score against Pakistan?",
     "question_hindi_1": "पाकिस्तान के खिलाफ कुमार संगकारा ने कितने दोहरे शतक लगाए?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕੁਮਾਰ ਸੰਗਾਕਾਰਾ ਨੇ Pakistan ਖਿਲਾਫ ਕਿੰਨੇ ਦੋਹਰੇ ਸੈਂਕੜੇ ਬਣਾਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -3118,7 +3118,7 @@
     "query": "SELECT p.player_name, m.series_name, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'caught' GROUP BY p.player_id, m.series_name HAVING catches >= 10",
     "question_english": "List the players who have taken 10 catches in a single series.",
     "question_hindi_1": "वे खिलाड़ी जिन्होंने एक ही सीरीज़ में 10 कैच लिए हैं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਲੜੀ ਵਿੱਚ 10 ਕੈਚ ਲਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -4739,7 +4739,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT d.match_id, d.inning, d.over_number FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'JM Anderson' AND m.start_date BETWEEN '2010-01-01' AND '2019-12-31' GROUP BY d.match_id, d.inning, d.over_number HAVING SUM(d.runs_scored + d.extra_runs) = 0)",
     "question_english": "How many maidens did James Anderson bowl in the 2010s?",
     "question_hindi_1": "2010 के दशक में जेम्स एंडर्सन ने कितने मेडन ओवर डाले?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਦੇ ਦਹਾਕੇ ਵਿੱਚ ਜੇਮਸ ਐਂਡਰਸਨ ਨੇ ਕਿੰਨੀਆਂ ਮੇਡਨਜ਼ ਨੂੰ ਗੇਂਦਬਾਜ਼ੀ ਕੀਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -4755,8 +4755,8 @@
     "question": "List all players who have been dismissed 'LBW' by Shane Warne.",
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.player_out_id = p.player_id JOIN Players p_b ON d.bowler_id = p_b.player_id WHERE p_b.player_name = 'SK Warne' AND d.wicket_type = 'lbw'",
     "question_english": "List all players who have been dismissed 'LBW' by Shane Warne.",
-    "question_hindi_1": "शेन वॉर्न द्वारा एलबीडब्ल्यू आउट किए गए सभी खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_hindi_1": "शेन वॉर्न द्वारा lbw आउट किए गए सभी खिलाड़ियों की सूची बनाएं।",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਸਾਰੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੂੰ ਸ਼ੇਨ ਵਾਰਨ ਨੇ 'lbw' ਆਊਟ ਕੀਤਾ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -4836,7 +4836,7 @@
     "query": "SELECT team_name, (CAST(wins AS FLOAT) / total) * 100 as win_pc FROM (SELECT team2 as team_name, COUNT(*) as total, SUM(CASE WHEN match_winner = team2 THEN 1 ELSE 0 END) as wins FROM Matches WHERE start_date >= '2000-01-01' GROUP BY team2) ORDER BY win_pc DESC LIMIT 1",
     "question_english": "Which team has the highest percentage of away wins in the 21st century?",
     "question_hindi_1": "21वीं सदी में घर से बाहर सबसे ज़्यादा जीत प्रतिशत किस टीम का है?",
-    "question_punjabi": "",
+    "question_punjabi": "21ਵੀਂ ਸਦੀ ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਦੂਰ ਜਿੱਤ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਪ੍ਰਤੀਸ਼ਤਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team Name",
@@ -4855,7 +4855,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name LIKE '%Border-Gavaskar%' AND m.season = '2014/15' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Identify the batsman who scored the most runs in the 2014/15 Border-Gavaskar Trophy.",
     "question_hindi_1": "2014/15 बॉर्डर-गावस्कर ट्रॉफी में सबसे ज़्यादा रन बनाने वाला बल्लेबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2014/15 ਬਾਰਡਰ-ਗਾਵਸਕਰ ਟਰਾਫੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਦੀ ਪਛਾਣ ਕਰੋ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -4874,7 +4874,7 @@
     "query": "SELECT m.start_date, p_out.player_name, d.wicket_type FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Players p_fielder ON fd.fielder_id = p_fielder.player_id JOIN Players p_out ON d.player_out_id = p_out.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_bowler.player_name = 'GD McGrath' AND p_fielder.player_name = 'SK Warne'",
     "question_english": "List the wickets taken by Glenn McGrath where the fielder was Shane Warne.",
     "question_hindi_1": "ग्लेन मैक्ग्रा के वे विकेट जहाँ फील्डर शेन वॉर्न थे।",
-    "question_punjabi": "",
+    "question_punjabi": "ਗਲੇਨ ਮੈਕਗ੍ਰਾ ਦੁਆਰਾ ਲਈਆਂ ਗਈਆਂ ਵਿਕਟਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ ਫੀਲਡਰ ਸ਼ੇਨ ਵਾਰਨ ਸਨ।",
     "question_telugu": "",
     "column_names": [
       "Start Date",
@@ -4925,7 +4925,7 @@
     "query": "SELECT m.venue, SUM(d.runs_scored) as total_runs FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE d.batting_team = 'Australia' GROUP BY m.venue ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Which ground has seen the most Test runs scored by Australian batsmen?",
     "question_hindi_1": "किस मैदान पर ऑस्ट्रेलियाई बल्लेबाज़ों ने सबसे ज़्यादा टेस्ट रन बनाए हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਮੈਦਾਨ 'ਤੇ Australian ਬੱਲੇਬਾਜ਼ਾਂ ਦੁਆਰਾ ਸਭ ਤੋਂ ਵੱਧ ਟੈਸਟ ਰਨ ਬਣਾਏ ਗਏ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -4944,7 +4944,7 @@
     "query": "SELECT player_name FROM (SELECT p.player_name, m.match_id, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'caught' GROUP BY p.player_id, m.match_id HAVING catches >= 5) GROUP BY player_name HAVING COUNT(*) >= 2",
     "question_english": "List the players who have taken 5 catches in a single Test match twice.",
     "question_hindi_1": "वे खिलाड़ी जिन्होंने एक टेस्ट मैच में दो बार 5 कैच लिए हैं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਟੈਸਟ ਮੈਚ ਵਿੱਚ ਦੋ ਵਾਰ 5 ਕੈਚ ਲਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -5138,7 +5138,7 @@
     "query": "SELECT batting_team, AVG(run_rate) as avg_rr FROM (SELECT match_id, batting_team, (SUM(runs_scored + extra_runs) * 6.0 / COUNT(*)) as run_rate FROM Deliveries WHERE inning = 2 GROUP BY match_id, batting_team) GROUP BY batting_team HAVING COUNT(*) >= 10 ORDER BY avg_rr DESC LIMIT 1",
     "question_english": "Which team has the highest run rate in the second innings of a Test match (min 10 matches)?",
     "question_hindi_1": "टेस्ट मैच की दूसरी पारी में सबसे ज़्यादा रन रेट किस टीम का है (न्यूनतम 10 मैच)?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚ ਦੀ ਦੂਜੀ ਪਾਰੀ (ਘੱਟੋ-ਘੱਟ 10 ਮੈਚ) ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਰੇਟ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -5157,7 +5157,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.bowling_team = 'India' AND m.series_name LIKE '%India%Pakistan%' AND m.season = '2003/04' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 1",
     "question_english": "Who was the leading wicket-taker for India in the 2004 series against Pakistan?",
     "question_hindi_1": "2004 पाकिस्तान के खिलाफ सीरीज़ में भारत का सबसे ज़्यादा विकेट लेने वाला गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Pakistan ਵਿਰੁੱਧ 2004 ਦੀ ਲੜੀ ਵਿੱਚ India ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲਾ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5176,7 +5176,7 @@
     "query": "SELECT DISTINCT m.match_id, m.venue FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE m.start_date >= '2020-01-01' AND d.inning = 1 AND m.match_winner = d.batting_team GROUP BY m.match_id, d.inning HAVING SUM(d.runs_scored + d.extra_runs) < 200",
     "question_english": "Identify the match where a team won despite scoring less than 200 runs in their first innings in the 2020s.",
     "question_hindi_1": "2020 के दशक में पहली पारी में 200 से कम रन बनाकर भी जीतने वाले मैचों की पहचान करें।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ 2020 ਵਿੱਚ ਇੱਕ ਟੀਮ ਆਪਣੀ ਪਹਿਲੀ ਪਾਰੀ ਵਿੱਚ 200 ਤੋਂ ਘੱਟ ਰਨ ਬਣਾਉਣ ਦੇ ਬਾਵਜੂਦ ਜਿੱਤੀ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -5223,7 +5223,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) * 1.0 / NULLIF(COUNT(CASE WHEN d.player_out_id = p.player_id THEN 1 END), 0) AS avg FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'Australia' AND d.bowling_team = 'India' AND m.team1 = 'India' GROUP BY p.player_id HAVING COUNT(CASE WHEN d.player_out_id = p.player_id THEN 1 END) >= 5 ORDER BY avg DESC LIMIT 1",
     "question_english": "Who has the highest batting average for Australia against India in India (min 5 matches)?",
     "question_hindi_1": "भारत में भारत के खिलाफ ऑस्ट्रेलिया की सबसे ज़्यादा बल्लेबाज़ी औसत किसकी है (न्यूनतम 5 मैच)?",
-    "question_punjabi": "",
+    "question_punjabi": "India ਵਿੱਚ Australia ਦੇ ਖਿਲਾਫ India ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਬੱਲੇਬਾਜ਼ੀ ਔਸਤ ਕਿਸਦੀ ਹੈ (ਘੱਟੋ-ਘੱਟ 5 ਮੈਚ)?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5242,7 +5242,7 @@
     "query": "SELECT venue, COUNT(*) as run_results FROM Matches WHERE result_type = 'runs' GROUP BY venue ORDER BY run_results DESC LIMIT 1",
     "question_english": "Which ground has seen the most Test match results decided by 'runs'?",
     "question_hindi_1": "रन से तय होने वाले सबसे ज़्यादा टेस्ट मैच किस मैदान पर हुए हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਮੈਦਾਨ 'ਤੇ ਸਭ ਤੋਂ ਵੱਧ ਟੈਸਟ ਮੈਚ ਦੇ ਨਤੀਜੇ 'ਰਨਾਂ' ਦੁਆਰਾ ਲਏ ਗਏ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -5261,7 +5261,7 @@
     "query": "SELECT p_bowler.player_name FROM (SELECT d.delivery_id, d.bowler_id, d.match_id, d.inning, SUM(d.runs_scored) OVER (PARTITION BY d.match_id, d.inning, d.striker_id ORDER BY d.delivery_id) AS cum_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'SR Tendulkar') t JOIN Matches m ON t.match_id = m.match_id JOIN Players p_bowler ON t.bowler_id = p_bowler.player_id WHERE t.cum_runs >= 100 AND m.start_date = (SELECT MIN(m2.start_date) FROM Matches m2 JOIN Deliveries d2 ON m2.match_id = d2.match_id JOIN Players p2 ON d2.striker_id = p2.player_id WHERE p2.player_name = 'SR Tendulkar' GROUP BY m2.match_id, d2.inning HAVING SUM(d2.runs_scored) >= 100 ORDER BY m2.start_date ASC LIMIT 1) ORDER BY t.delivery_id ASC LIMIT 1",
     "question_english": "Who was the bowler when Sachin Tendulkar scored his first Test century?",
     "question_hindi_1": "सचिन तेंदुलकर के पहले टेस्ट शतक के समय गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਸਚਿਨ ਤੇਂਦੁਲਕਰ ਨੇ ਆਪਣਾ ਪਹਿਲਾ ਟੈਸਟ ਸੈਂਕੜਾ ਜੜਨ ਵੇਲੇ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -5278,7 +5278,7 @@
     "query": "SELECT COUNT(*) FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'A Kumble' AND m.venue LIKE '%Feroz Shah Kotla%' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out'",
     "question_english": "How many wickets did Anil Kumble take at the Feroz Shah Kotla, Delhi?",
     "question_hindi_1": "फिरोज़ शाह कोटला, दिल्ली में अनिल कुंबले ने कितने विकेट लिए?",
-    "question_punjabi": "",
+    "question_punjabi": "Anil Kumble ਨੇ ਫਿਰੋਜ਼ਸ਼ਾਹ ਕੋਟਲਾ, ਦਿੱਲੀ ਵਿਖੇ ਕਿੰਨੀਆਂ ਵਿਕਟਾਂ ਲਈਆਂ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -5295,7 +5295,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'N Hussain' AND m.start_date = (SELECT MAX(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'N Hussain') AND d.wicket_type IS NOT NULL ORDER BY d.delivery_id DESC LIMIT 1",
     "question_english": "Who was the non-striker when Nasser Hussain was dismissed in his last Test innings?",
     "question_hindi_1": "नासिर हुसैन की आखिरी टेस्ट पारी में आउट होने पर नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ ਨਾਸਿਰ ਹੁਸੈਨ ਨੂੰ ਆਪਣੀ ਆਖਰੀ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ ਆਊਟ ਕੀਤਾ ਗਿਆ ਤਾਂ ਉਹ ਨਾਨ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -5312,7 +5312,7 @@
     "query": "SELECT team_name, (CAST(wins AS FLOAT) / total) * 100 as win_pc FROM (SELECT team1 as team_name, COUNT(*) as total, SUM(CASE WHEN match_winner = team1 THEN 1 ELSE 0 END) as wins FROM Matches WHERE start_date >= '2000-01-01' GROUP BY team1) ORDER BY win_pc DESC LIMIT 1",
     "question_english": "Which team has the highest percentage of home wins in the 21st century?",
     "question_hindi_1": "21वीं सदी में घर पर सबसे ज़्यादा जीत प्रतिशत किस टीम का है?",
-    "question_punjabi": "",
+    "question_punjabi": "21ਵੀਂ ਸਦੀ ਵਿੱਚ ਕਿਸ ਟੀਮ ਕੋਲ ਘਰੇਲੂ ਜਿੱਤਾਂ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਪ੍ਰਤੀਸ਼ਤਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team Name",
@@ -5331,7 +5331,7 @@
     "query": "SELECT p.player_name, COUNT(*) as pom_awards FROM Matches m JOIN Players p ON m.player_of_match_id = p.player_id WHERE m.series_name LIKE '%India%Pakistan%' AND m.season = '2003/04' GROUP BY p.player_id ORDER BY pom_awards DESC LIMIT 1",
     "question_english": "Who was the player of the series in the 2004 India-Pakistan series?",
     "question_hindi_1": "2004 भारत-पाकिस्तान सीरीज़ में सीरीज़ का सर्वश्रेष्ठ खिलाड़ी कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2004 ਦੀ India-Pakistan ਲੜੀ ਵਿੱਚ ਸੀਰੀਜ਼ ਦਾ ਖਿਡਾਰੀ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5350,7 +5350,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name LIKE '%Ashes%' AND m.season = '2013/14' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Identify the batsman who scored the most runs in the 2013/14 Ashes.",
     "question_hindi_1": "2013/14 ऐशेज़ में सबसे ज़्यादा रन बनाने वाला बल्लेबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2013/14 ਏਸ਼ੇਜ਼ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਦੀ ਪਛਾਣ ਕਰੋ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5369,7 +5369,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT d.match_id, SUM(d.runs_scored) as match_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'KC Sangakkara' AND m.start_date BETWEEN '2010-01-01' AND '2019-12-31' GROUP BY d.match_id, d.inning HAVING match_runs >= 200)",
     "question_english": "How many double centuries did Kumar Sangakkara score in the 2010s?",
     "question_hindi_1": "2010 के दशक में कुमार संगकारा ने कितने दोहरे शतक लगाए?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕੁਮਾਰ ਸੰਗਾਕਾਰਾ ਨੇ 2010 ਵਿੱਚ ਕਿੰਨੇ ਦੋਹਰੇ ਸੈਂਕੜੇ ਬਣਾਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -5386,7 +5386,7 @@
     "query": "SELECT p.player_name, strftime('%Y', m.start_date) as yr, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'caught' GROUP BY p.player_id, yr HAVING catches >= 10",
     "question_english": "List the players who have taken 10 catches in a single calendar year.",
     "question_hindi_1": "वे खिलाड़ी जिन्होंने एक कैलेंडर वर्ष में 10 कैच लिए हैं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਕੈਲੰਡਰ ਸਾਲ ਵਿੱਚ 10 ਕੈਚ ਲਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5401,7 +5401,7 @@
     "query": "SELECT p_ns.player_name FROM Deliveries d JOIN Players p_s ON d.striker_id = p_s.player_id JOIN Players p_ns ON d.non_striker_id = p_ns.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_s.player_name = 'AN Cook' AND m.start_date = (SELECT MAX(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'AN Cook') AND d.runs_scored > 0 ORDER BY d.delivery_id DESC LIMIT 1",
     "question_english": "Who was the non-striker when Alastair Cook scored his final run in Test cricket?",
     "question_hindi_1": "टेस्ट क्रिकेट में अपने अंतिम रन के समय अलस्टेयर कुक के साथ नॉन-स्ट्राइकर पर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ Alastair Cook ਨੇ ਟੈਸਟ ਕ੍ਰਿਕੇਟ ਵਿੱਚ ਆਪਣਾ ਆਖ਼ਰੀ ਰਨ ਬਣਾਇਆ ਤਾਂ ਗੈਰ-ਸਟਰਾਈਕਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -5418,7 +5418,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.bowling_team = 'England' AND m.team2 = 'West Indies' AND m.season = '2004' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 1",
     "question_english": "Who was the leading wicket-taker for England in the 2004 series against the West Indies?",
     "question_hindi_1": "2004 वेस्टइंडीज़ के खिलाफ सीरीज़ में इंग्लैंड का सबसे ज़्यादा विकेट लेने वाला गेंदबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "ਵੈਸਟਇੰਡੀਜ਼ ਵਿਰੁੱਧ 2004 ਦੀ ਲੜੀ ਵਿੱਚ England ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲਾ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5437,7 +5437,7 @@
     "query": "SELECT DISTINCT m.match_id, m.venue FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE d.inning = 1 AND m.match_winner = d.batting_team GROUP BY m.match_id, d.inning HAVING SUM(d.runs_scored + d.extra_runs) < 120",
     "question_english": "Identify the match where a team won after being bowled out for less than 120 runs in their first innings.",
     "question_hindi_1": "2010 के दशक में पहली पारी में 120 से कम रन बनाकर भी जीतने वाले मैचों की पहचान करें।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਟੀਮ ਆਪਣੀ ਪਹਿਲੀ ਪਾਰੀ ਵਿੱਚ 120 ਰਨ ਤੋਂ ਘੱਟ ਰਨ 'ਤੇ ਆਊਟ ਹੋਣ ਤੋਂ ਬਾਅਦ ਜਿੱਤੀ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -5468,7 +5468,7 @@
     "query": "SELECT p.player_name, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name LIKE '%Ashes%' AND m.season = '2013/14' GROUP BY p.player_id ORDER BY catches DESC LIMIT 1",
     "question_english": "Who was the fielder who took the most catches in the 2013/14 Ashes?",
     "question_hindi_1": "2013/14 ऐशेज़ में सबसे ज़्यादा कैच लेने वाला फील्डर कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2013/14 ਏਸ਼ੇਜ਼ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੈਚ ਲੈਣ ਵਾਲਾ ਫੀਲਡਰ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5487,7 +5487,7 @@
     "query": "SELECT team1 as home_team, (CAST(draws AS FLOAT) / total) * 100 as draw_pc FROM (SELECT team1, COUNT(*) as total, SUM(CASE WHEN result_type = 'draw' THEN 1 ELSE 0 END) as draws FROM Matches GROUP BY team1) ORDER BY draw_pc DESC LIMIT 1",
     "question_english": "Which team has the highest percentage of drawn matches at home?",
     "question_hindi_1": "घर पर सबसे ज़्यादा ड्रॉ मैच प्रतिशत किस टीम का है?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਹੜੀ ਟੀਮ ਦੇ ਘਰ ਵਿੱਚ ਡਰਾਅ ਮੈਚਾਂ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਪ੍ਰਤੀਸ਼ਤਤਾ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Home Team",
@@ -5506,7 +5506,7 @@
     "query": "SELECT p.player_name, COUNT(*) as pom_awards FROM Matches m JOIN Players p ON m.player_of_match_id = p.player_id WHERE m.team1 = 'Pakistan' AND m.team2 = 'India' AND m.season = '2003/04' GROUP BY p.player_id ORDER BY pom_awards DESC LIMIT 1",
     "question_english": "Who was the player of the series in the 2004 India-Pakistan series in Pakistan?",
     "question_hindi_1": "पाकिस्तान में 2004 भारत-पाकिस्तान सीरीज़ में सीरीज़ का सर्वश्रेष्ठ खिलाड़ी कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Pakistan ਵਿੱਚ 2004 ਦੀ India-Pakistan ਸੀਰੀਜ਼ ਵਿੱਚ ਪਲੇਅਰ ਆਫ ਦਿ ਸੀਰੀਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5525,7 +5525,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.team1 = 'England' AND m.team2 = 'India' AND m.season = '2018' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Identify the batsman who scored the most runs in the 2018 series between England and India.",
     "question_hindi_1": "2018 इंग्लैंड-भारत सीरीज़ में सबसे ज़्यादा रन बनाने वाला बल्लेबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "England ਅਤੇ India ਵਿਚਕਾਰ 2018 ਦੀ ਲੜੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਦੀ ਪਛਾਣ ਕਰੋ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -5544,7 +5544,7 @@
     "query": "SELECT m.start_date, p_out.player_name, d.wicket_type FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Players p_fielder ON fd.fielder_id = p_fielder.player_id JOIN Players p_out ON d.player_out_id = p_out.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_bowler.player_name = 'A Kumble' AND p_fielder.player_name = 'MS Dhoni'",
     "question_english": "List the wickets taken by Anil Kumble where the fielder was MS Dhoni.",
     "question_hindi_1": "अनिल कुंबले के वे विकेट जहाँ फील्डर एमएस धोनी थे।",
-    "question_punjabi": "",
+    "question_punjabi": "Anil Kumble ਦੁਆਰਾ ਲਈਆਂ ਗਈਆਂ ਵਿਕਟਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ ਫੀਲਡਰ ਐਮਐਸ ਧੋਨੀ ਸਨ।",
     "question_telugu": "",
     "column_names": [
       "Start Date",
@@ -5635,7 +5635,7 @@
     "query": "SELECT COUNT(*) FROM (SELECT d.match_id, SUM(d.runs_scored) as match_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id WHERE p.player_name = 'JH Kallis' GROUP BY d.match_id, d.inning HAVING match_runs >= 200)",
     "question_english": "How many double centuries did Jacques Kallis score in his career?",
     "question_hindi_1": "जैक्स कैलिस ने अपने करियर में कितने दोहरे शतक लगाए?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜੈਕ ਕੈਲਿਸ ਨੇ ਆਪਣੇ ਕਰੀਅਰ ਵਿੱਚ ਕਿੰਨੇ ਦੋਹਰੇ ਸੈਂਕੜੇ ਬਣਾਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -5652,7 +5652,7 @@
     "query": "SELECT player_name FROM (SELECT p.player_name, m.match_id, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'caught' GROUP BY p.player_id, m.match_id HAVING catches >= 5) GROUP BY player_name HAVING COUNT(*) >= 3",
     "question_english": "List the players who have taken 5 catches in a single Test match thrice.",
     "question_hindi_1": "वे खिलाड़ी जिन्होंने एक टेस्ट मैच में तीन बार 5 कैच लिए हैं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਇੱਕ ਟੈਸਟ ਮੈਚ ਵਿੱਚ ਤਿੰਨ ਵਾਰ 5 ਕੈਚ ਲਏ ਹਨ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -5795,7 +5795,7 @@
     "query": "SELECT batting_team, AVG(run_rate) as avg_rr FROM (SELECT match_id, batting_team, (SUM(runs_scored + extra_runs) * 6.0 / COUNT(*)) as run_rate FROM Deliveries WHERE inning = 1 GROUP BY match_id, batting_team) GROUP BY batting_team HAVING COUNT(*) >= 10 ORDER BY avg_rr DESC LIMIT 1",
     "question_english": "Which team has the highest run rate in the first innings of a Test match (min 10 matches)?",
     "question_hindi_1": "टेस्ट मैच की पहली पारी में सबसे ज़्यादा रन रेट किस टीम का है (न्यूनतम 10 मैच)?",
-    "question_punjabi": "",
+    "question_punjabi": "ਟੈਸਟ ਮੈਚ ਦੀ ਪਹਿਲੀ ਪਾਰੀ (ਘੱਟੋ-ਘੱਟ 10 ਮੈਚ) ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਰੇਟ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Batting Team",
@@ -5814,7 +5814,7 @@
     "query": "SELECT DISTINCT m.match_id, m.venue FROM Matches m JOIN Deliveries d ON m.match_id = d.match_id WHERE m.start_date BETWEEN '2010-01-01' AND '2019-12-31' AND d.inning = 1 AND m.match_winner = d.batting_team GROUP BY m.match_id, d.inning HAVING SUM(d.runs_scored + d.extra_runs) < 150",
     "question_english": "Identify the match where a team won despite scoring less than 150 runs in their first innings in the 2010s.",
     "question_hindi_1": "2010 के दशक में पहली पारी में 150 से कम रन बनाकर भी जीतने वाले मैचों की पहचान करें।",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਦੇ ਦਹਾਕੇ ਵਿੱਚ ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਟੀਮ ਆਪਣੀ ਪਹਿਲੀ ਪਾਰੀ ਵਿੱਚ 150 ਤੋਂ ਘੱਟ ਰਨ ਬਣਾਉਣ ਦੇ ਬਾਵਜੂਦ ਜਿੱਤੀ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -5845,7 +5845,7 @@
     "query": "SELECT p_bowler.player_name FROM Deliveries d JOIN Players p_striker ON d.striker_id = p_striker.player_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_striker.player_name = 'SR Tendulkar' AND m.start_date = (SELECT MIN(start_date) FROM Matches m2 JOIN PlayerInMatch pim ON m2.match_id = pim.match_id JOIN Players p2 ON pim.player_id = p2.player_id WHERE p2.player_name = 'SR Tendulkar') AND d.runs_scored > 0 ORDER BY d.delivery_id ASC LIMIT 1",
     "question_english": "Who was the bowler when Sachin Tendulkar scored his first Test run?",
     "question_hindi_1": "सचिन तेंदुलकर का पहला टेस्ट रन किस गेंदबाज़ की गेंद पर आया?",
-    "question_punjabi": "",
+    "question_punjabi": "ਜਦੋਂ ਸਚਿਨ ਤੇਂਦੁਲਕਰ ਨੇ ਆਪਣਾ ਪਹਿਲਾ ਟੈਸਟ ਰਨ ਬਣਾਏ ਤਾਂ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -5862,7 +5862,7 @@
     "query": "SELECT m.match_id, m.venue FROM Matches m WHERE m.result_type = 'runs' AND m.result_margin = 1",
     "question_english": "Identify the match where a team won by 1 run.",
     "question_hindi_1": "वह मैच पहचानें जिसमें किसी टीम ने 1 रन से जीत दर्ज की।",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਸ ਮੈਚ ਦੀ ਪਛਾਣ ਕਰੋ ਜਿੱਥੇ ਇੱਕ ਟੀਮ 1 ਦੌੜ ਨਾਲ ਜਿੱਤੀ ਸੀ।",
     "question_telugu": "",
     "column_names": [
       "Match Id",
@@ -5881,7 +5881,7 @@
     "query": "SELECT COUNT(*) FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p.player_name = 'SK Warne' AND m.venue LIKE '%Sydney Cricket Ground%' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out'",
     "question_english": "How many wickets did Shane Warne take at the Sydney Cricket Ground?",
     "question_hindi_1": "सिडनी क्रिकेट ग्राउंड पर शेन वॉर्न ने कितने विकेट लिए?",
-    "question_punjabi": "",
+    "question_punjabi": "ਸ਼ੇਨ ਵਾਰਨ ਨੇ ਸਿਡਨੀ ਕ੍ਰਿਕਟ ਗਰਾਊਂਡ 'ਤੇ ਕਿੰਨੀਆਂ ਵਿਕਟਾਂ ਲਈਆਂ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -5898,7 +5898,7 @@
     "query": "SELECT umpire_name, COUNT(*) as matches FROM (SELECT umpire1 as umpire_name FROM Matches WHERE team1 = 'Australia' OR team2 = 'Australia' UNION ALL SELECT umpire2 FROM Matches WHERE team1 = 'Australia' OR team2 = 'Australia') GROUP BY umpire_name ORDER BY matches DESC LIMIT 5",
     "question_english": "List the umpires who have officiated in most matches involving Australia.",
     "question_hindi_1": "ऑस्ट्रेलिया से जुड़े मैचों में सबसे ज़्यादा बार अंपायरिंग करने वाले अंपायर कौन हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "ਉਨ੍ਹਾਂ ਅੰਪਾਇਰਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ Australia ਨਾਲ ਜੁੜੇ ਜ਼ਿਆਦਾਤਰ ਮੈਚਾਂ ਵਿੱਚ ਕਾਰਜਕਾਰੀ ਕੀਤੀ ਹੈ।",
     "question_telugu": "",
     "column_names": [
       "Umpire Name",
@@ -5932,8 +5932,8 @@
     "question": "List all players who have been dismissed 'LBW' by Ravichandran Ashwin in home Tests.",
     "query": "SELECT DISTINCT p.player_name FROM Deliveries d JOIN Players p ON d.player_out_id = p.player_id JOIN Players p_b ON d.bowler_id = p_b.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_b.player_name = 'R Ashwin' AND d.wicket_type = 'lbw' AND m.team1 = 'India'",
     "question_english": "List all players who have been dismissed 'LBW' by Ravichandran Ashwin in home Tests.",
-    "question_hindi_1": "घरेलू टेस्ट में रविचंद्रन अश्विन द्वारा एलबीडब्ल्यू आउट किए गए सभी खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_hindi_1": "घरेलू टेस्ट में रविचंद्रन अश्विन द्वारा lbw आउट किए गए सभी खिलाड़ियों की सूची बनाएं।",
+    "question_punjabi": "ਘਰੇਲੂ ਟੈਸਟਾਂ ਵਿੱਚ ਰਵੀਚੰਦਰਨ ਅਸ਼ਵਿਨ ਦੁਆਰਾ 'lbw' ਆਊਟ ਕੀਤੇ ਗਏ ਸਾਰੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name"
@@ -6103,7 +6103,7 @@
     "query": "SELECT team2 as away_team, (CAST(SUM(CASE WHEN result_type = 'draw' THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*)) * 100 as draw_pc FROM Matches GROUP BY team2 HAVING COUNT(*) >= 20 ORDER BY draw_pc DESC LIMIT 1",
     "question_english": "Which team has the highest percentage of draws away from home (min 20 matches)?",
     "question_hindi_1": "घर से बाहर ड्रॉ मैच की सबसे ज़्यादा प्रतिशत किस टीम की है (न्यूनतम 20 मैच)?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਟੀਮ ਕੋਲ ਘਰ ਤੋਂ ਦੂਰ ਡਰਾਅ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਪ੍ਰਤੀਸ਼ਤਤਾ ਹੈ (ਘੱਟੋ-ਘੱਟ 20 ਮੈਚ)?",
     "question_telugu": "",
     "column_names": [
       "Away Team",
@@ -6122,7 +6122,7 @@
     "query": "SELECT p.player_name, COUNT(*) as pom_awards FROM Matches m JOIN Players p ON m.player_of_match_id = p.player_id WHERE m.series_name LIKE '%Border-Gavaskar%' AND m.season = '2008/09' GROUP BY p.player_id ORDER BY pom_awards DESC LIMIT 1",
     "question_english": "Who was the player of the series in the 2008 Border-Gavaskar Trophy?",
     "question_hindi_1": "2008 बॉर्डर-गावस्कर ट्रॉफी में सीरीज़ का सर्वश्रेष्ठ खिलाड़ी कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "2008 ਬਾਰਡਰ-ਗਾਵਸਕਰ ਟਰਾਫੀ ਵਿੱਚ ਸੀਰੀਜ਼ ਦਾ ਖਿਡਾਰੀ ਕੌਣ ਸੀ?",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6141,7 +6141,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as total_runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.series_name LIKE '%Ashes%' AND m.season = '2010/11' AND m.team1 = 'Australia' GROUP BY p.player_id ORDER BY total_runs DESC LIMIT 1",
     "question_english": "Identify the batsman who scored the most runs in the 2010/11 Ashes in Australia.",
     "question_hindi_1": "2010/11 ऑस्ट्रेलिया में ऐशेज़ में सबसे ज़्यादा रन बनाने वाला बल्लेबाज़ कौन था?",
-    "question_punjabi": "",
+    "question_punjabi": "Australia ਵਿੱਚ 2010/11 ਏਸ਼ੇਜ਼ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਦੀ ਪਛਾਣ ਕਰੋ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6160,7 +6160,7 @@
     "query": "SELECT m.start_date, p_out.player_name, d.wicket_type FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Players p_bowler ON d.bowler_id = p_bowler.player_id JOIN Players p_fielder ON fd.fielder_id = p_fielder.player_id JOIN Players p_out ON d.player_out_id = p_out.player_id JOIN Matches m ON d.match_id = m.match_id WHERE p_bowler.player_name = 'GD McGrath' AND p_fielder.player_name = 'SK Warne' AND m.start_date >= '2000-01-01'",
     "question_english": "List the wickets taken by Glenn McGrath where the fielder was Shane Warne in the 2000s.",
     "question_hindi_1": "2000 के दशक में ग्लेन मैक्ग्रा के वे विकेट जहाँ फील्डर शेन वॉर्न थे।",
-    "question_punjabi": "",
+    "question_punjabi": "Glenn McGrath ਦੁਆਰਾ ਲਈਆਂ ਗਈਆਂ ਵਿਕਟਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ 2000 ਦੇ ਦਹਾਕੇ ਵਿੱਚ ਫੀਲਡਰ ਸ਼ੇਨ ਵਾਰਨ ਸਨ।",
     "question_telugu": "",
     "column_names": [
       "Start Date",
@@ -6211,7 +6211,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE match_winner = 'India' AND start_date >= '2010-01-01'",
     "question_english": "How many matches did India win after 2010?",
     "question_hindi_1": "2010 के बाद भारत ने कितने मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ India ਨੇ ਕਿੰਨੇ ਮੈਚ ਜਿੱਤੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6228,7 +6228,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE start_date >= '2015-01-01' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins after 2015?",
     "question_hindi_1": "2015 के बाद किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6247,7 +6247,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE result_type = 'draw' AND start_date >= '2015-01-01'",
     "question_english": "How many matches ended in a draw after 2015?",
     "question_hindi_1": "2015 के बाद कितने मैच ड्रॉ पर समाप्त हुए?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਡਰਾਅ ਹੋਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6264,7 +6264,7 @@
     "query": "SELECT team_name, COUNT(*) as matches FROM (SELECT team1 as team_name FROM Matches WHERE start_date >= '2015-01-01' UNION ALL SELECT team2 FROM Matches WHERE start_date >= '2015-01-01') GROUP BY team_name ORDER BY matches DESC LIMIT 1",
     "question_english": "Which team played the most matches after 2015?",
     "question_hindi_1": "2015 के बाद किस टीम ने सबसे अधिक मैच खेले?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਖੇਡੇ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6283,7 +6283,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE season LIKE '2018%'",
     "question_english": "How many matches were played in 2018?",
     "question_hindi_1": "2018 में कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2018 ਵਿੱਚ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6300,7 +6300,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2019%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team won the most matches in 2019?",
     "question_hindi_1": "2019 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2019 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਜਿੱਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6319,7 +6319,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'Australia' OR team2 = 'Australia') AND match_winner IS NOT NULL AND match_winner != 'Australia' AND start_date >= '2015-01-01'",
     "question_english": "How many matches did Australia lose after 2015?",
     "question_hindi_1": "2015 के बाद ऑस्ट्रेलिया ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ Australia ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6336,7 +6336,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2020%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2020?",
     "question_hindi_1": "2020 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6355,7 +6355,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE start_date >= '2020-01-01'",
     "question_english": "How many matches were played after 2020?",
     "question_hindi_1": "2020 के बाद कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6372,7 +6372,7 @@
     "query": "SELECT venue, COUNT(*) as matches FROM Matches WHERE start_date >= '2020-01-01' GROUP BY venue ORDER BY matches DESC LIMIT 1",
     "question_english": "Which venue hosted the most matches after 2020?",
     "question_hindi_1": "2020 के बाद किस स्थल पर सबसे अधिक मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਸਥਾਨ ਨੇ 2020 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕੀਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -6391,7 +6391,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'England' OR team2 = 'England') AND match_winner IS NOT NULL AND match_winner != 'England' AND start_date >= '2015-01-01'",
     "question_english": "How many matches did England lose after 2015?",
     "question_hindi_1": "2015 के बाद इंग्लैंड ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ England ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6408,7 +6408,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2021%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2021?",
     "question_hindi_1": "2021 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2021 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6427,7 +6427,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE result_type = 'runs' AND start_date >= '2015-01-01'",
     "question_english": "How many matches ended by runs after 2015?",
     "question_hindi_1": "2015 के बाद कितने मैच रन से समाप्त हुए?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਰਨ ਨਾਲ ਖਤਮ ਹੋਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6444,7 +6444,7 @@
     "query": "SELECT team_name, COUNT(*) as losses FROM (SELECT team1 as team_name, match_winner FROM Matches WHERE start_date >= '2010-01-01' UNION ALL SELECT team2, match_winner FROM Matches WHERE start_date >= '2010-01-01') WHERE match_winner IS NOT NULL AND team_name != match_winner GROUP BY team_name ORDER BY losses DESC LIMIT 1",
     "question_english": "Which team has the most losses after 2010?",
     "question_hindi_1": "2010 के बाद किस टीम के सबसे अधिक हार हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਨੂੰ ਸਭ ਤੋਂ ਵੱਧ ਨੁਕਸਾਨ ਹੋਇਆ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6463,7 +6463,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'Pakistan' OR team2 = 'Pakistan') AND match_winner IS NOT NULL AND match_winner != 'Pakistan' AND start_date >= '2010-01-01'",
     "question_english": "How many matches did Pakistan lose after 2010?",
     "question_hindi_1": "2010 के बाद पाकिस्तान ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ Pakistan ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6480,7 +6480,7 @@
     "query": "SELECT team_name, COUNT(*) as draws FROM (SELECT team1 as team_name, result_type FROM Matches WHERE start_date >= '2015-01-01' UNION ALL SELECT team2, result_type FROM Matches WHERE start_date >= '2015-01-01') WHERE result_type = 'draw' AND team_name IS NOT NULL GROUP BY team_name ORDER BY draws DESC LIMIT 1",
     "question_english": "Which team has the most draws after 2015?",
     "question_hindi_1": "2015 के बाद किस टीम के सबसे अधिक ड्रॉ मैच हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਡਰਾਅ ਕੀਤੇ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6499,7 +6499,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE season LIKE '2021%'",
     "question_english": "How many matches were played in 2021?",
     "question_hindi_1": "2021 में कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2021 ਵਿੱਚ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ ਸਨ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6516,7 +6516,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2018%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team won the most matches in 2018?",
     "question_hindi_1": "2018 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2018 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਜਿੱਤੇ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6535,7 +6535,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'South Africa' OR team2 = 'South Africa') AND match_winner IS NOT NULL AND match_winner != 'South Africa' AND start_date >= '2015-01-01'",
     "question_english": "How many matches did South Africa lose after 2015?",
     "question_hindi_1": "2015 के बाद दक्षिण अफ्रीका ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ South Africa ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6552,7 +6552,7 @@
     "query": "SELECT venue, COUNT(*) as matches FROM Matches WHERE season LIKE '2019%' GROUP BY venue ORDER BY matches DESC LIMIT 1",
     "question_english": "Which venue hosted the most matches in 2019?",
     "question_hindi_1": "2019 में किस स्थल पर सबसे अधिक मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2019 ਵਿੱਚ ਕਿਸ ਸਥਾਨ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕੀਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -6571,7 +6571,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'New Zealand' OR team2 = 'New Zealand') AND match_winner IS NOT NULL AND match_winner != 'New Zealand' AND start_date >= '2015-01-01'",
     "question_english": "How many matches did New Zealand lose after 2015?",
     "question_hindi_1": "2015 के बाद न्यूजीलैंड ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ New Zealand ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6588,7 +6588,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2017%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2017?",
     "question_hindi_1": "2017 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2017 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6607,7 +6607,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE season LIKE '2016%'",
     "question_english": "How many matches were played in 2016?",
     "question_hindi_1": "2016 में कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2016 ਵਿੱਚ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ ਸਨ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6624,7 +6624,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2016%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2016?",
     "question_hindi_1": "2016 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2016 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -6643,7 +6643,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE result_type = 'wickets' AND start_date >= '2010-01-01'",
     "question_english": "How many matches ended by wickets after 2010?",
     "question_hindi_1": "2010 के बाद कितने मैच विकेट से समाप्त हुए?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਵਿਕਟਾਂ ਨਾਲ ਖਤਮ ਹੋਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -6660,7 +6660,7 @@
     "query": "SELECT p.player_name, MAX(runs) as highest_score FROM (SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY d.match_id, d.inning, d.striker_id) t JOIN Players p ON t.striker_id = p.player_id GROUP BY p.player_id ORDER BY highest_score DESC LIMIT 10",
     "question_english": "List up to 10 players who scored the most runs in a single Test innings after 2015.",
     "question_hindi_1": "2015 के बाद एक टेस्ट पारी में सबसे अधिक रन बनाने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਇੱਕ ਟੈਸਟ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6715,7 +6715,7 @@
     "query": "SELECT p.player_name, MAX(wickets) as best_figures FROM (SELECT d.match_id, d.inning, d.bowler_id, COUNT(*) as wickets FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY d.match_id, d.inning, d.bowler_id) t JOIN Players p ON t.bowler_id = p.player_id GROUP BY p.player_id ORDER BY best_figures DESC LIMIT 10",
     "question_english": "List up to 10 bowlers with the best single-innings wicket haul after 2015.",
     "question_hindi_1": "2015 के बाद एक पारी में सर्वश्रेष्ठ विकेट लेने वाले अधिकतम 10 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵਧੀਆ ਸਿੰਗਲ ਪਾਰੀ ਵਿਕਟਾਂ ਵਾਲੇ 10 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6770,7 +6770,7 @@
     "query": "SELECT p.player_name, COUNT(*) as fifties FROM (SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY d.match_id, d.inning, d.striker_id HAVING runs BETWEEN 50 AND 99) t JOIN Players p ON t.striker_id = p.player_id GROUP BY p.player_id ORDER BY fifties DESC LIMIT 10",
     "question_english": "List up to 10 players with the highest number of fifties after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक अर्धशतक बनाने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਅਰਧ ਸੈਂਕੜੇ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6825,7 +6825,7 @@
     "query": "SELECT p.player_name, MAX(catches) as max_catches FROM (SELECT d.match_id, d.inning, fd.fielder_id, COUNT(*) as catches FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id WHERE d.wicket_type = 'caught' GROUP BY d.match_id, d.inning, fd.fielder_id) t JOIN Players p ON t.fielder_id = p.player_id GROUP BY p.player_id ORDER BY max_catches DESC LIMIT 10",
     "question_english": "List up to 10 players who have taken the most catches in a single innings.",
     "question_hindi_1": "एक पारी में सबसे अधिक कैच लेने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਇੱਕ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੈਚ ਲੈਣ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6880,7 +6880,7 @@
     "query": "SELECT p.player_name, COUNT(DISTINCT d.match_id || '-' || d.inning || '-' || d.over_number) as overs FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY p.player_id ORDER BY overs DESC LIMIT 10",
     "question_english": "List up to 10 bowlers who have bowled the most overs after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक ओवर फेंकने वाले अधिकतम 10 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਓਵਰ ਕਰਨ ਵਾਲੇ 10 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6935,7 +6935,7 @@
     "query": "SELECT p.player_name, COUNT(*) as matches FROM PlayerInMatch pim JOIN Players p ON pim.player_id = p.player_id JOIN Matches m ON pim.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY p.player_id ORDER BY matches DESC LIMIT 10",
     "question_english": "List up to 10 players with the most appearances in Test matches after 2015.",
     "question_hindi_1": "2015 के बाद टेस्ट मैचों में सबसे अधिक खेलने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਖੇਡਣ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -6990,7 +6990,7 @@
     "query": "SELECT p.player_name, AVG(runs) as avg_runs FROM (SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) as runs FROM Deliveries d GROUP BY d.match_id, d.inning, d.striker_id) t JOIN Players p ON t.striker_id = p.player_id GROUP BY p.player_id HAVING COUNT(*) >= 10 ORDER BY avg_runs DESC LIMIT 10",
     "question_english": "List up to 10 players with the highest average runs per innings (min 10 innings).",
     "question_hindi_1": "कम से कम 10 पारियों में सबसे अधिक औसत रन बनाने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "ਪ੍ਰਤੀ ਪਾਰੀ ਸਭ ਤੋਂ ਵੱਧ ਔਸਤ ਰਨ (ਘੱਟੋ-ਘੱਟ 10 ਪਾਰੀਆਂ) ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਤੱਕ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7045,7 +7045,7 @@
     "query": "SELECT p.player_name, (COUNT(*) * 1.0 / SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' THEN 1 ELSE 0 END)) as strike_rate FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY p.player_id HAVING SUM(CASE WHEN d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' THEN 1 ELSE 0 END) > 20 ORDER BY strike_rate ASC LIMIT 10",
     "question_english": "List up to 10 bowlers with the best strike rate (balls per wicket) after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अच्छा स्ट्राइक रेट (प्रति विकेट गेंद) रखने वाले अधिकतम 10 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵਧੀਆ ਸਟ੍ਰਾਈਕ ਰੇਟ (ਗੇਂਦ ਪ੍ਰਤੀ ਵਿਕਟ) ਵਾਲੇ 10 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7100,7 +7100,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.batting_team = m.match_winner GROUP BY p.player_id ORDER BY runs DESC LIMIT 10",
     "question_english": "List up to 10 players with the most runs in winning matches after 2015.",
     "question_hindi_1": "2015 के बाद जीतने वाले मैचों में सबसे अधिक रन बनाने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਜਿੱਤੇ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7155,7 +7155,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.bowling_team = m.match_winner AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 10",
     "question_english": "List up to 10 bowlers with the most wickets in winning matches after 2015.",
     "question_hindi_1": "2015 के बाद जीतने वाले मैचों में सबसे अधिक विकेट लेने वाले अधिकतम 10 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਮੈਚ ਜਿੱਤਣ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ 10 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7210,7 +7210,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.batting_team != m.team1 GROUP BY p.player_id ORDER BY runs DESC LIMIT 10",
     "question_english": "List up to 10 players with the most runs in away matches after 2015.",
     "question_hindi_1": "2015 के बाद बाहर खेले गए मैचों में सबसे अधिक रन बनाने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਦੂਰ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7265,7 +7265,7 @@
     "query": "SELECT p.player_name, COUNT(DISTINCT d.match_id) as matches_with_wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY matches_with_wickets DESC LIMIT 10",
     "question_english": "List up to 10 bowlers who have taken wickets in the most matches after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक मैचों में विकेट लेने वाले अधिकतम 10 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਵਿੱਚ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ 10 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7320,7 +7320,7 @@
     "query": "SELECT p.player_name, COUNT(*) as not_outs FROM (SELECT d.match_id, d.inning, d.striker_id FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY d.match_id, d.inning, d.striker_id HAVING SUM(CASE WHEN d.player_out_id = d.striker_id THEN 1 ELSE 0 END) = 0) innings JOIN Players p ON innings.striker_id = p.player_id GROUP BY p.player_id ORDER BY not_outs DESC LIMIT 10",
     "question_english": "List up to 10 players with the most not-outs after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक नॉट आउट रहने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਨਾਟ-ਆਊਟ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7375,7 +7375,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.inning = 4 GROUP BY p.player_id ORDER BY runs DESC LIMIT 10",
     "question_english": "List up to 10 players with the most runs in the fourth innings after 2015.",
     "question_hindi_1": "2015 के बाद चौथी पारी में सबसे अधिक रन बनाने वाले अधिकतम 10 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਚੌਥੀ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ 10 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7430,7 +7430,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY p.player_id ORDER BY runs DESC LIMIT 5",
     "question_english": "List the top 5 players with most runs in Test matches after 2015.",
     "question_hindi_1": "2015 के बाद टेस्ट मैचों में सबसे अधिक रन बनाने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7465,7 +7465,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 5",
     "question_english": "List the top 5 wicket takers in Test matches after 2015.",
     "question_hindi_1": "2015 के बाद टेस्ट मैचों में सबसे अधिक विकेट लेने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਟੈਸਟ ਮੈਚਾਂ ਵਿੱਚ ਚੋਟੀ ਦੇ 5 ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7500,7 +7500,7 @@
     "query": "SELECT p.player_name, COUNT(*) as centuries FROM (SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY d.match_id, d.inning, d.striker_id HAVING runs >= 100) t JOIN Players p ON t.striker_id = p.player_id GROUP BY p.player_id ORDER BY centuries DESC LIMIT 5",
     "question_english": "List the top 5 players with most centuries after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक शतक लगाने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਸੈਂਕੜੇ ਲਗਾਉਣ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7534,8 +7534,8 @@
     "question": "List the top 5 bowlers with most lbw dismissals after 2015.",
     "query": "SELECT p.player_name, COUNT(*) as lbws FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'lbw' AND m.start_date >= '2015-01-01' GROUP BY p.player_id ORDER BY lbws DESC LIMIT 5",
     "question_english": "List the top 5 bowlers with most lbw dismissals after 2015.",
-    "question_hindi_1": "2015 के बाद सबसे अधिक एलबीडब्ल्यू विकेट लेने वाले शीर्ष 5 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_hindi_1": "2015 के बाद सबसे अधिक lbw विकेट लेने वाले शीर्ष 5 गेंदबाज़ों की सूची बनाएं।",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਐਲਬੀਡਬਲਿਊ ਆਊਟ ਕਰਨ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7570,7 +7570,7 @@
     "query": "SELECT p.player_name, COUNT(*) as catches FROM FielderDismissals fd JOIN Players p ON fd.fielder_id = p.player_id JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id WHERE d.wicket_type = 'caught' AND m.start_date >= '2015-01-01' GROUP BY p.player_id ORDER BY catches DESC LIMIT 5",
     "question_english": "List the top 5 players with most catches after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक कैच लेने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਕੈਚ ਫੜਨ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7605,7 +7605,7 @@
     "query": "SELECT venue, COUNT(*) as matches FROM Matches WHERE start_date >= '2015-01-01' GROUP BY venue ORDER BY matches DESC LIMIT 5",
     "question_english": "List the top 5 venues with most matches after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक मैचों की मेजबानी करने वाले शीर्ष 5 स्थलों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਸਥਾਨਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -7640,7 +7640,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE start_date >= '2015-01-01' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 5",
     "question_english": "List the top 5 teams with most wins after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक मैच जीतने वाली शीर्ष 5 टीमों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਵਾਲੀਆਂ ਚੋਟੀ ਦੀਆਂ 5 ਟੀਮਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -7675,7 +7675,7 @@
     "query": "SELECT p.player_name, COUNT(*) as ducks FROM (SELECT d.match_id, d.inning, d.player_out_id FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY d.match_id, d.inning, d.player_out_id HAVING SUM(d.runs_scored) = 0 AND SUM(CASE WHEN d.wicket_type IS NOT NULL THEN 1 ELSE 0 END) > 0) t JOIN Players p ON t.player_out_id = p.player_id GROUP BY p.player_id ORDER BY ducks DESC LIMIT 5",
     "question_english": "List the top 5 players with most ducks after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक डक पर आउट होने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਖਿਲਵਾੜਾਂ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7710,7 +7710,7 @@
     "query": "SELECT p.player_name, COUNT(*) as maidens FROM (SELECT d.match_id, d.inning, d.over_number, d.bowler_id FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' GROUP BY d.match_id, d.inning, d.over_number, d.bowler_id HAVING SUM(d.runs_scored + d.extra_runs) = 0) t JOIN Players p ON t.bowler_id = p.player_id GROUP BY p.player_id ORDER BY maidens DESC LIMIT 5",
     "question_english": "List the top 5 bowlers with most maiden overs after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक मेडन ओवर डालने वाले शीर्ष 5 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੇਡਨ ਓਵਰਾਂ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7745,7 +7745,7 @@
     "query": "SELECT p.player_name, COUNT(*) as stumpings FROM FielderDismissals fd JOIN Deliveries d ON fd.delivery_id = d.delivery_id JOIN Matches m ON d.match_id = m.match_id JOIN Players p ON fd.fielder_id = p.player_id WHERE d.wicket_type = 'stumped' AND m.start_date >= '2015-01-01' GROUP BY p.player_id ORDER BY stumpings DESC LIMIT 5",
     "question_english": "List the top 5 players with most stumpings after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक स्टम्पिंग करने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਸਟੰਪਿੰਗ ਕਰਨ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7780,7 +7780,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season LIKE '2020%' GROUP BY p.player_id ORDER BY runs DESC LIMIT 5",
     "question_english": "List the top 5 players with highest total runs in 2020.",
     "question_hindi_1": "2020 में सबसे अधिक कुल रन बनाने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੁੱਲ ਰਨ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7815,7 +7815,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season LIKE '2020%' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 5",
     "question_english": "List the top 5 bowlers with most wickets in 2020.",
     "question_hindi_1": "2020 में सबसे अधिक विकेट लेने वाले शीर्ष 5 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7850,7 +7850,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.season LIKE '2021%' GROUP BY p.player_id ORDER BY runs DESC LIMIT 5",
     "question_english": "List the top 5 players with most runs in 2021.",
     "question_hindi_1": "2021 में सबसे अधिक रन बनाने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2021 ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7885,7 +7885,7 @@
     "query": "SELECT team_name, COUNT(*) as matches FROM (SELECT team1 as team_name FROM Matches WHERE start_date >= '2015-01-01' UNION ALL SELECT team2 FROM Matches WHERE start_date >= '2015-01-01') GROUP BY team_name ORDER BY matches DESC LIMIT 5",
     "question_english": "List the top 5 teams with most matches after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक मैच खेलने वाली शीर्ष 5 टीमों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਵਾਲੀਆਂ ਚੋਟੀ ਦੀਆਂ 5 ਟੀਮਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -7920,7 +7920,7 @@
     "query": "SELECT city, COUNT(*) as matches FROM Matches WHERE start_date >= '2015-01-01' AND city IS NOT NULL GROUP BY city ORDER BY matches DESC LIMIT 5",
     "question_english": "List the top 5 cities with most matches after 2015.",
     "question_hindi_1": "2015 के बाद सबसे अधिक मैचों की मेजबानी करने वाले शीर्ष 5 शहरों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਸ਼ਹਿਰਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "City",
@@ -7955,7 +7955,7 @@
     "query": "SELECT p.player_name, SUM(d.runs_scored) as runs FROM Deliveries d JOIN Players p ON d.striker_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.bowling_team = 'Australia' GROUP BY p.player_id ORDER BY runs DESC LIMIT 5",
     "question_english": "List the top 5 players with most runs against Australia after 2015.",
     "question_hindi_1": "2015 के बाद ऑस्ट्रेलिया के खिलाफ सबसे अधिक रन बनाने वाले शीर्ष 5 खिलाड़ियों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ Australia ਵਿਰੁੱਧ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -7990,7 +7990,7 @@
     "query": "SELECT p.player_name, COUNT(*) as wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE m.start_date >= '2015-01-01' AND d.batting_team = 'India' AND d.wicket_type IS NOT NULL AND d.wicket_type != 'run out' GROUP BY p.player_id ORDER BY wickets DESC LIMIT 5",
     "question_english": "List the top 5 bowlers with most wickets against India after 2015.",
     "question_hindi_1": "2015 के बाद भारत के खिलाफ सबसे अधिक विकेट लेने वाले शीर्ष 5 गेंदबाज़ों की सूची बनाएं।",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ India ਵਿਰੁੱਧ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਚੋਟੀ ਦੇ 5 ਗੇਂਦਬਾਜ਼ਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
     "question_telugu": "",
     "column_names": [
       "Player Name",
@@ -8025,7 +8025,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE match_winner = 'India' AND start_date >= '2011-01-01'",
     "question_english": "How many matches did India win after 2010?",
     "question_hindi_1": "2010 के बाद भारत ने कितने मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ India ਨੇ ਕਿੰਨੇ ਮੈਚ ਜਿੱਤੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8042,7 +8042,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE start_date >= '2016-01-01' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins after 2015?",
     "question_hindi_1": "2015 के बाद किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8061,7 +8061,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE result_type = 'draw' AND start_date >= '2016-01-01'",
     "question_english": "How many matches ended in a draw after 2015?",
     "question_hindi_1": "2015 के बाद कितने मैच ड्रॉ पर समाप्त हुए?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਡਰਾਅ ਹੋਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8078,7 +8078,7 @@
     "query": "SELECT team_name, COUNT(*) as matches FROM (SELECT team1 as team_name FROM Matches WHERE start_date >= '2016-01-01' UNION ALL SELECT team2 FROM Matches WHERE start_date >= '2016-01-01') GROUP BY team_name ORDER BY matches DESC LIMIT 1",
     "question_english": "Which team played the most matches after 2015?",
     "question_hindi_1": "2015 के बाद किस टीम ने सबसे अधिक मैच खेले?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਖੇਡੇ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8097,7 +8097,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE season LIKE '2018%'",
     "question_english": "How many matches were played in 2018?",
     "question_hindi_1": "2018 में कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2018 ਵਿੱਚ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8114,7 +8114,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2019%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team won the most matches in 2019?",
     "question_hindi_1": "2019 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2019 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਜਿੱਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8133,7 +8133,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'Australia' OR team2 = 'Australia') AND match_winner IS NOT NULL AND match_winner != 'Australia' AND start_date >= '2016-01-01'",
     "question_english": "How many matches did Australia lose after 2015?",
     "question_hindi_1": "2015 के बाद ऑस्ट्रेलिया ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ Australia ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8150,7 +8150,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2020%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2020?",
     "question_hindi_1": "2020 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8169,7 +8169,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE start_date >= '2021-01-01'",
     "question_english": "How many matches were played after 2020?",
     "question_hindi_1": "2020 के बाद कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2020 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8186,7 +8186,7 @@
     "query": "SELECT venue, COUNT(*) as matches FROM Matches WHERE start_date >= '2021-01-01' GROUP BY venue ORDER BY matches DESC LIMIT 1",
     "question_english": "Which venue hosted the most matches after 2020?",
     "question_hindi_1": "2020 के बाद किस स्थल पर सबसे अधिक मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "ਕਿਸ ਸਥਾਨ ਨੇ 2020 ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕੀਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -8205,7 +8205,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'England' OR team2 = 'England') AND match_winner IS NOT NULL AND match_winner != 'England' AND start_date >= '2016-01-01'",
     "question_english": "How many matches did England lose after 2015?",
     "question_hindi_1": "2015 के बाद इंग्लैंड ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ England ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8222,7 +8222,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2021%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2021?",
     "question_hindi_1": "2021 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2021 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8241,7 +8241,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE result_type = 'runs' AND start_date >= '2016-01-01'",
     "question_english": "How many matches ended by runs after 2015?",
     "question_hindi_1": "2015 के बाद कितने मैच रन से समाप्त हुए?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਰਨ ਨਾਲ ਖਤਮ ਹੋਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8258,7 +8258,7 @@
     "query": "SELECT team_name, COUNT(*) as losses FROM (SELECT team1 as team_name, match_winner FROM Matches UNION ALL SELECT team2, match_winner FROM Matches) WHERE match_winner IS NOT NULL AND team_name != match_winner GROUP BY team_name ORDER BY losses DESC LIMIT 1",
     "question_english": "Which team has the most losses after 2010?",
     "question_hindi_1": "2010 के बाद किस टीम के सबसे अधिक हार हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਨੂੰ ਸਭ ਤੋਂ ਵੱਧ ਨੁਕਸਾਨ ਹੋਇਆ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8277,7 +8277,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'Pakistan' OR team2 = 'Pakistan') AND match_winner IS NOT NULL AND match_winner != 'Pakistan' AND start_date >= '2011-01-01'",
     "question_english": "How many matches did Pakistan lose after 2010?",
     "question_hindi_1": "2010 के बाद पाकिस्तान ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ Pakistan ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8294,7 +8294,7 @@
     "query": "SELECT team_name, COUNT(*) as draws FROM (SELECT team1 as team_name, result_type FROM Matches UNION ALL SELECT team2, result_type FROM Matches) WHERE result_type = 'draw' AND team_name IS NOT NULL GROUP BY team_name ORDER BY draws DESC LIMIT 1",
     "question_english": "Which team has the most draws after 2015?",
     "question_hindi_1": "2015 के बाद किस टीम के सबसे अधिक ड्रॉ मैच हैं?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਡਰਾਅ ਕੀਤੇ ਹਨ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8313,7 +8313,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE season LIKE '2021%'",
     "question_english": "How many matches were played in 2021?",
     "question_hindi_1": "2021 में कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2021 ਵਿੱਚ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ ਸਨ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8330,7 +8330,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2018%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team won the most matches in 2018?",
     "question_hindi_1": "2018 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2018 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਜਿੱਤੇ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8349,7 +8349,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'South Africa' OR team2 = 'South Africa') AND match_winner IS NOT NULL AND match_winner != 'South Africa' AND start_date >= '2016-01-01'",
     "question_english": "How many matches did South Africa lose after 2015?",
     "question_hindi_1": "2015 के बाद दक्षिण अफ्रीका ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ South Africa ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8366,7 +8366,7 @@
     "query": "SELECT venue, COUNT(*) as matches FROM Matches WHERE season LIKE '2019%' GROUP BY venue ORDER BY matches DESC LIMIT 1",
     "question_english": "Which venue hosted the most matches in 2019?",
     "question_hindi_1": "2019 में किस स्थल पर सबसे अधिक मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2019 ਵਿੱਚ ਕਿਸ ਸਥਾਨ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚਾਂ ਦੀ ਮੇਜ਼ਬਾਨੀ ਕੀਤੀ?",
     "question_telugu": "",
     "column_names": [
       "Venue",
@@ -8385,7 +8385,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE (team1 = 'New Zealand' OR team2 = 'New Zealand') AND match_winner IS NOT NULL AND match_winner != 'New Zealand' AND start_date >= '2016-01-01'",
     "question_english": "How many matches did New Zealand lose after 2015?",
     "question_hindi_1": "2015 के बाद न्यूजीलैंड ने कितने मैच हारे?",
-    "question_punjabi": "",
+    "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ New Zealand ਨੇ ਕਿੰਨੇ ਮੈਚ ਹਾਰੇ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8402,7 +8402,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2017%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2017?",
     "question_hindi_1": "2017 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2017 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8421,7 +8421,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE season LIKE '2016%'",
     "question_english": "How many matches were played in 2016?",
     "question_hindi_1": "2016 में कितने मैच खेले गए?",
-    "question_punjabi": "",
+    "question_punjabi": "2016 ਵਿੱਚ ਕਿੰਨੇ ਮੈਚ ਖੇਡੇ ਗਏ ਸਨ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8438,7 +8438,7 @@
     "query": "SELECT match_winner, COUNT(*) as wins FROM Matches WHERE season LIKE '2016%' AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY wins DESC LIMIT 1",
     "question_english": "Which team has the most wins in 2016?",
     "question_hindi_1": "2016 में किस टीम ने सबसे अधिक मैच जीते?",
-    "question_punjabi": "",
+    "question_punjabi": "2016 ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤੀ ਹੈ?",
     "question_telugu": "",
     "column_names": [
       "Team",
@@ -8457,7 +8457,7 @@
     "query": "SELECT COUNT(*) FROM Matches WHERE result_type = 'wickets' AND start_date >= '2011-01-01'",
     "question_english": "How many matches ended by wickets after 2010?",
     "question_hindi_1": "2010 के बाद कितने मैच विकेट से समाप्त हुए?",
-    "question_punjabi": "",
+    "question_punjabi": "2010 ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਮੈਚ ਵਿਕਟਾਂ ਨਾਲ ਖਤਮ ਹੋਏ?",
     "question_telugu": "",
     "column_names": [
       "Count"
@@ -8468,4 +8468,4 @@
       ]
     ]
   }
-] 
+]
