@@ -1367,7 +1367,7 @@
         "question_english": "Two teams suffered 4 stumpings in a single innings in T20I history — name both teams, their scores and opposition",
         "question_hindi": "टी20I इतिहास में दो टीमों ने एक पारी में 4 स्टंपिंग झेलीं — दोनों टीमों के नाम, उनके स्कोर और विपक्षी टीम बताइए।",
         "question_punjabi": "T20I ਇਤਿਹਾਸ ਵਿੱਚ ਦੋ ਟੀਮਾਂ ਨੇ ਇੱਕੋ ਪਾਰੀ ਵਿੱਚ 4 ਸਟੰਪਿੰਗ ਝੱਲੀਆਂ — ਦੋਵੇਂ ਟੀਮਾਂ, ਉਨ੍ਹਾਂ ਦੇ ਸਕੋਰ ਅਤੇ ਵਿਰੋਧੀ ਟੀਮਾਂ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20 అంతర్జాతీయ చరిత్రలో ఒకే ఇన్నింగ్స్‌లో 4 స్టంపింగ్‌లకు గురైన రెండు జట్లు — ఆ రెండు జట్ల పేర్లు, వాటి స్కోర్లు మరియు ప్రత్యర్థులు ఏవో పేర్కొనండి",
         "column_names": [
             "Batting Team",
             "Score",
@@ -1387,7 +1387,7 @@
         "question_english": "Australia scored 197/7 with 3 stumpings and still won . Name the opposition, venue, date, and calculate what percentage of their wickets were stumpings?",
         "question_hindi": "ऑस्ट्रेलिया ने 197/7 बनाकर 3 स्टंपिंग झेलीं और फिर भी जीत गया। विपक्षी टीम, स्थल, तारीख, और उनके कितने प्रतिशत विकेट स्टंपिंग थे, बताइए।",
         "question_punjabi": "Australia ਨੇ 3 ਸਟੰਪਿੰਗ ਦੇ ਬਾਵਜੂਦ 197/7 ਬਣਾਏ ਅਤੇ ਫਿਰ ਵੀ ਜਿੱਤਿਆ। ਵਿਰੋਧੀ ਟੀਮ, ਮੈਦਾਨ, ਤਾਰੀਖ ਦੱਸੋ ਅਤੇ ਗਣਨਾ ਕਰੋ ਕਿ ਉਨ੍ਹਾਂ ਦੀਆਂ ਕਿੰਨੀ ਪ੍ਰਤੀਸ਼ਤ ਵਿਕਟਾਂ ਸਟੰਪਿੰਗ ਸਨ?",
-        "question_telugu": "",
+        "question_telugu": "ఆస్ట్రేలియా 3 స్టంపింగ్‌లతో 197/7 స్కోరు చేసి గెలిచింది. ప్రత్యర్థి జట్టు, వేదిక, తేదీని పేర్కొని, వారి వికెట్లలో స్టంపింగ్‌ల శాతం ఎంత అని లెక్కించండి.",
         "column_names": [
             "Opposition",
             "Venue",
@@ -1408,7 +1408,7 @@
         "question_english": "Samoa suffered 3 stumpings scoring 148/8 yet still lost. Name the opposition, venue, date ?",
         "question_hindi": "समोआ ने 148/8 बनाते हुए 3 स्टंपिंग झेलीं, फिर भी हार गया। विपक्षी टीम, स्थल और तारीख बताइए।",
         "question_punjabi": "Samoa ਨੇ 3 ਸਟੰਪਿੰਗ ਦੇ ਬਾਵਜੂਦ 148/8 ਬਣਾਏ ਪਰ ਫਿਰ ਵੀ ਹਾਰ ਗਿਆ। ਵਿਰੋਧੀ ਟੀਮ, ਮੈਦਾਨ ਅਤੇ ਤਾਰੀਖ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "సమోవా 148/8 స్కోరు చేసి 3 స్టంపింగ్‌లకు గురైనప్పటికీ ఓడిపోయింది. ప్రత్యర్థి జట్టు, వేదిక, తేదీ తెలపండి?",
         "column_names": [
             "Opposition",
             "Venue",
@@ -1427,7 +1427,7 @@
         "question_english": "List all players who batted in Innings 2 and scored 70+ runs on debut. Give names, teams, and scores.",
         "question_hindi": "उन सभी खिलाड़ियों की सूची दीजिए जिन्होंने दूसरी पारी में बल्लेबाज़ी करते हुए डेब्यू पर 70 या उससे अधिक रन बनाए। नाम, टीम और स्कोर बताइए।",
         "question_punjabi": "ਉਨ੍ਹਾਂ ਸਾਰੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿਨ੍ਹਾਂ ਨੇ ਆਪਣੇ ਡੈਬਿਊ 'ਤੇ ਦੂਜੀ ਪਾਰੀ ਵਿੱਚ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ 70 ਜਾਂ ਵੱਧ ਰਨ ਬਣਾਏ। ਨਾਮ, ਟੀਮਾਂ ਅਤੇ ਸਕੋਰ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "రెండవ ఇన్నింగ్స్‌లో బ్యాటింగ్ చేసి, తమ అరంగేట్రంలోనే 70కి పైగా పరుగులు సాధించిన ఆటగాళ్లందరి పేర్లను, జట్లను, స్కోర్లను తెలపండి",
         "column_names": [
             "Player Name",
             "Team Name",
@@ -1448,7 +1448,7 @@
         "question_english": "Spain have won two T20I matches by 1 wicket in their history. Name both matches with targets, opposition, grounds, and dates.",
         "question_hindi": "स्पेन ने अपने इतिहास में 1 विकेट से दो टी20I मैच जीते हैं। दोनों मैचों के लक्ष्य, विपक्षी टीम, मैदान और तारीखें बताइए।",
         "question_punjabi": "Spain ਨੇ ਆਪਣੇ ਇਤਿਹਾਸ ਵਿੱਚ 1 ਵਿਕਟ ਨਾਲ ਦੋ T20I ਮੈਚ ਜਿੱਤੇ ਹਨ। ਦੋਵੇਂ ਮੈਚਾਂ ਦੇ ਟੀਚੇ, ਵਿਰੋਧੀ ਟੀਮਾਂ, ਮੈਦਾਨ ਅਤੇ ਤਾਰੀਖਾਂ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "స్పెయిన్ తమ చరిత్రలో రెండు టీ20ఐ మ్యాచ్‌లను 1 వికెట్ తేడాతో గెలుచుకుంది. ఆ రెండు మ్యాచ్‌ల పేర్లను, లక్ష్యాలను, ప్రత్యర్థులను, మైదానాలను మరియు తేదీలను తెలపండి",
         "column_names": [
             "Match Date",
             "Venue",
@@ -1469,7 +1469,7 @@
         "question_english": "Which match had the highest number of no-balls ever recorded in a T20I? Name the teams, ground, date, and calculate what percentage of total extras in that match were no-balls alone.",
         "question_hindi": "किस टी20I मैच में अब तक सबसे अधिक नो-बॉल दर्ज की गईं? टीमों के नाम, मैदान, तारीख, और उस मैच के कुल एक्स्ट्रा में से केवल नो-बॉल का प्रतिशत बताइए।",
         "question_punjabi": "T20I ਵਿੱਚ ਕਿਸ ਮੈਚ ਵਿੱਚ ਹੁਣ ਤੱਕ ਦੇ ਸਭ ਤੋਂ ਵੱਧ No Ball ਹੋਏ? ਟੀਮਾਂ, ਮੈਦਾਨ, ਤਾਰੀਖ ਦੱਸੋ ਅਤੇ ਗਣਨਾ ਕਰੋ ਕਿ ਉਸ ਮੈਚ ਵਿੱਚ ਕੁੱਲ ਵਾਧੂ ਰਨਾਂ ਦਾ ਕਿੰਨਾ ਪ੍ਰਤੀਸ਼ਤ ਸਿਰਫ਼ ਨੋ ਬਾਲ ਸਨ?",
-        "question_telugu": "",
+        "question_telugu": "T20I చరిత్రలో అత్యధిక నో-బాల్స్ నమోదైన మ్యాచ్ ఏది? ఆ జట్టు, మైదానం, తేదీని పేర్కొని, ఆ మ్యాచ్‌లోని మొత్తం ఎక్స్‌ట్రాలలో కేవలం నో-బాల్స్ శాతం ఎంత ఉందో లెక్కించండి.",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1490,8 +1490,8 @@
         "query": "SELECT SUM(runs_scored) AS non_extras, (SUM(extra_runs) * 100.0 / SUM(runs_scored + extra_runs)) AS extras_percentage FROM Deliveries WHERE match_id = 1108;",
         "question_english": "New Zealand vs West Indies at Auckland (T20I #1108) ended in 31.2 overs with 359 combined team runs . Calculate the runs scored from non-extras and extras as a percentage of total team runs",
         "question_hindi": "ऑकलैंड में न्यूज़ीलैंड बनाम वेस्ट इंडीज (टी20I #1108) 31.2 ओवर में समाप्त हुआ और दोनों टीमों ने मिलाकर 359 रन बनाए। नॉन-एक्स्ट्रा और एक्स्ट्रा से बने रनों को कुल टीम रनों के प्रतिशत के रूप में गणना कीजिए।",
-        "question_punjabi": "Aukland ਵਿੱਚ New Zealand ਬਨਾਮ West Indies ਮੈਚ 31.2 ਓਵਰਾਂ ਵਿੱਚ 359 ਕੁੱਲ ਟੀਮ ਰਨਾਂ ਨਾਲ ਸਮਾਪਤ ਹੋਇਆ। ਗੈਰ-ਵਾਧੂ ਰਨਾਂ ਦੀ ਗਣਨਾ ਕਰੋ ਅਤੇ ਕੁੱਲ ਟੀਮ ਰਨਾਂ ਦੇ ਪ੍ਰਤੀਸ਼ਤ ਵਜੋਂ ਵਾਧੂ ਰਨਾਂ ਦੀ ਵੀ ਗਣਨਾ ਕਰੋ?",
-        "question_telugu": "",
+        "question_punjabi": "Auckland ਵਿੱਚ New Zealand ਬਨਾਮ West Indies ਮੈਚ 31.2 ਓਵਰਾਂ ਵਿੱਚ 359 ਕੁੱਲ ਟੀਮ ਰਨਾਂ ਨਾਲ ਸਮਾਪਤ ਹੋਇਆ। ਗੈਰ-ਵਾਧੂ ਰਨਾਂ ਦੀ ਗਣਨਾ ਕਰੋ ਅਤੇ ਕੁੱਲ ਟੀਮ ਰਨਾਂ ਦੇ ਪ੍ਰਤੀਸ਼ਤ ਵਜੋਂ ਵਾਧੂ ਰਨਾਂ ਦੀ ਵੀ ਗਣਨਾ ਕਰੋ?",
+        "question_telugu": "ఆక్లాండ్‌లో జరిగిన న్యూజిలాండ్ vs వెస్ట్ ఇండీస్ (T20I #1108) మ్యాచ్ 31.2 ఓవర్లలో ముగిసింది, ఇందులో ఇరు జట్లు కలిసి 359 పరుగులు చేశాయి. మొత్తం జట్టు పరుగులలో నాన్-ఎక్స్‌ట్రాలు మరియు ఎక్స్‌ట్రాల ద్వారా వచ్చిన పరుగుల శాతాన్ని లెక్కించండి",
         "column_names": [
             "Non-Extras",
             "Extras percentage"
@@ -1509,7 +1509,7 @@
         "question_english": "List the top 3 matches with the highest no-balls per over ratio. Name both the teams and give the corresponding ratio as well.",
         "question_hindi": "प्रति ओवर सबसे अधिक नो-बॉल अनुपात वाले शीर्ष 3 मैचों की सूची दीजिए। दोनों टीमों के नाम और संबंधित अनुपात भी बताइए।",
         "question_punjabi": "ਪ੍ਰਤੀ ਓਵਰ ਸਭ ਤੋਂ ਵੱਧ No Ball ਅਨੁਪਾਤ ਵਾਲੇ ਚੋਟੀ ਦੇ 3 T20I ਮੈਚਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ। ਦੋਵੇਂ ਟੀਮਾਂ ਦੇ ਨਾਮ ਅਤੇ ਸੰਬੰਧਿਤ ਅਨੁਪਾਤ ਵੀ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "ఒక ఓవర్‌కు అత్యధిక నో-బాల్‌ల నిష్పత్తి కలిగిన టాప్ 3 మ్యాచ్‌లను పేర్కొనండి. ఆ రెండు జట్ల పేర్లను మరియు వాటికి సంబంధించిన నిష్పత్తులను కూడా తెలపండి",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1530,7 +1530,7 @@
         "question_english": "Among the top 5 run-scorers in T20I history, give the strike rate , the average runs per innings for each, and rank them by batting average.",
         "question_hindi": "टी20I इतिहास के शीर्ष 5 रन-स्कोररों के लिए स्ट्राइक रेट, प्रति पारी औसत रन बताइए, और उन्हें बल्लेबाजी औसत के आधार पर रैंक कीजिए।",
         "question_punjabi": "T20I ਇਤਿਹਾਸ ਵਿੱਚ ਚੋਟੀ ਦੇ 5 ਰਨ ਬਣਾਉਣ ਵਾਲਿਆਂ ਲਈ, ਹਰੇਕ ਦੀ ਸਟ੍ਰਾਈਕ ਰੇਟ ਅਤੇ ਔਸਤ ਰਨ ਪ੍ਰਤੀ ਪਾਰੀ ਦੱਸੋ, ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਬੱਲੇਬਾਜ਼ੀ ਔਸਤ ਅਨੁਸਾਰ ਦਰਜਾਬੰਦੀ ਕਰੋ?",
-        "question_telugu": "",
+        "question_telugu": "T20I చరిత్రలో అత్యధిక పరుగులు చేసిన మొదటి 5 మంది ఆటగాళ్లలో, ప్రతి ఒక్కరి స్ట్రైక్ రేట్, ప్రతి ఇన్నింగ్స్‌కు సగటు పరుగులు తెలిపి, బ్యాటింగ్ సగటు ఆధారంగా వారికి ర్యాంకులు ఇవ్వండి.",
         "column_names": [
             "Player Name",
             "Strike Rate",
@@ -1554,7 +1554,7 @@
         "question_english": "Babar Azam leads all T20I run-scorers with 4596 runs. Give his runs per match ratio and what percentage of his runs came in boundaries",
         "question_hindi": "बाबर आज़म 4596 रनों के साथ सभी टी20I रन-स्कोररों में शीर्ष पर हैं। उनका रन-प्रति-मैच अनुपात और उनके कितने प्रतिशत रन बाउंड्री से आए, बताइए।",
         "question_punjabi": "Babar Azam 4596 ਰਨਾਂ ਨਾਲ ਸਾਰੇ T20I ਰਨ ਬਣਾਉਣ ਵਾਲਿਆਂ ਵਿੱਚ ਸਭ ਤੋਂ ਅੱਗੇ ਹੈ। ਉਸਦਾ ਰਨ ਪ੍ਰਤੀ ਮੈਚ ਅਨੁਪਾਤ ਦੱਸੋ ਅਤੇ ਉਸਦੇ ਕਿੰਨੇ ਪ੍ਰਤੀਸ਼ਤ ਰਨ ਬਾਊਂਡਰੀਆਂ ਤੋਂ ਆਏ?",
-        "question_telugu": "",
+        "question_telugu": "బాబర్ అజామ్ 4596 పరుగులతో T20I పరుగుల స్కోరర్లందరిలో అగ్రస్థానంలో ఉన్నాడు. అతని ప్రతి మ్యాచ్ పరుగుల నిష్పత్తిని మరియు అతని పరుగులలో ఎంత శాతం బౌండరీల ద్వారా వచ్చాయో తెలపండి.",
         "column_names": [
             "Runs per match ratio",
             "Boundary Percentage"
@@ -1572,7 +1572,7 @@
         "question_english": "List the top 5 players by catches per innings ratio also give the respective ratios.",
         "question_hindi": "प्रति पारी कैच अनुपात के आधार पर शीर्ष 5 खिलाड़ियों की सूची दीजिए और उनके अनुपात भी बताइए।",
         "question_punjabi": "ਪ੍ਰਤੀ ਪਾਰੀ ਕੈਚ ਅਨੁਪਾਤ ਦੇ ਆਧਾਰ 'ਤੇ ਚੋਟੀ ਦੇ 5 ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਅਤੇ ਸੰਬੰਧਿਤ ਅਨੁਪਾਤ ਵੀ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "ప్రతి ఇన్నింగ్స్‌కు క్యాచ్‌ల నిష్పత్తి ప్రకారం టాప్ 5 ఆటగాళ్ల పేర్లను, అలాగే వారి సంబంధిత నిష్పత్తులను కూడా తెలపండి.",
         "column_names": [
             "Player Name",
             "CT/Inn ratio"
@@ -1594,7 +1594,7 @@
         "question_english": "Who scored the most runs off a single over in T20I history, and how many runs were scored? Also name the bowler and the match.",
         "question_hindi": "टी20I इतिहास में एक ही ओवर में सबसे ज़्यादा रन किसने बनाए, और कितने रन बने? गेंदबाज़ और मैच का नाम भी बताइए।",
         "question_punjabi": "T20I ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕੋ ਓਵਰ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਸਨੇ ਬਣਾਏ, ਅਤੇ ਕਿੰਨੇ ਰਨ ਬਣਾਏ? ਗੇਂਦਬਾਜ਼ ਅਤੇ ਮੈਚ ਦਾ ਨਾਮ ਵੀ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20 అంతర్జాతీయ చరిత్రలో ఒకే ఓవర్‌లో అత్యధిక పరుగులు ఎవరు సాధించారు, మరియు ఎన్ని పరుగులు చేశారు? ఆ బౌలర్ పేరు మరియు మ్యాచ్ పేరును కూడా తెలపండి.",
         "column_names": [
             "Player Name",
             "Runs",
@@ -1614,7 +1614,7 @@
         "question_english": "Dipendra Singh Airee appears twice in the most runs off one over records in T20Is. List both instances with full details including runs, bowler, match, venue, and date.",
         "question_hindi": "दीपेन्द्र सिंह ऐरी टी20I में एक ओवर में सबसे ज़्यादा रन बनाने के रिकॉर्ड में दो बार आते हैं। दोनों उदाहरण पूरे विवरण के साथ बताइए: रन, गेंदबाज़, मैच, स्थल और तारीख।",
         "question_punjabi": "Dipendra Singh Airee T20I ਵਿੱਚ ਇੱਕੋ ਓਵਰ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨਾਂ ਦੇ ਰਿਕਾਰਡਾਂ ਵਿੱਚ ਦੋ ਵਾਰ ਆਉਂਦਾ ਹੈ। ਦੋਵੇਂ ਮੌਕਿਆਂ ਦੇ ਰਨ, ਗੇਂਦਬਾਜ਼, ਮੈਚ, ਮੈਦਾਨ ਅਤੇ ਤਾਰੀਖਾਂ ਸਮੇਤ ਸੂਚੀਬੱਧ ਕਰੋ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20 అంతర్జాతీయ మ్యాచ్‌లలో ఒక ఓవర్‌లో అత్యధిక పరుగులు చేసిన రికార్డులలో దీపేంద్ర సింగ్ ఐరీ రెండుసార్లు కనిపిస్తాడు. ఆ రెండు సందర్భాలను పరుగులు, బౌలర్, మ్యాచ్, వేదిక మరియు తేదీతో సహా పూర్తి వివరాలతో పేర్కొనండి.",
         "column_names": [
             "Player Name ",
             "Runs",
@@ -1637,7 +1637,7 @@
         "question_english": "Which instances in the most runs off one over records in T20Is involved a wicket being taken in the same over? List the player, runs, bowler, match, venue, and date.",
         "question_hindi": "टी20I में एक ओवर में सबसे ज़्यादा रन के रिकॉर्ड वाले किन उदाहरणों में उसी ओवर में विकेट भी गिरा? खिलाड़ी, रन, गेंदबाज़, मैच, स्थल और तारीख बताइए।",
         "question_punjabi": "T20I ਵਿੱਚ ਇੱਕੋ ਓਵਰ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨਾਂ ਦੇ ਰਿਕਾਰਡਾਂ ਵਿੱਚੋਂ ਕਿਹੜੇ ਮੌਕਿਆਂ ਵਿੱਚ ਉਸੇ ਓਵਰ ਵਿੱਚ ਵਿਕਟ ਵੀ ਲਈ ਗਈ? ਖਿਡਾਰੀ, ਰਨ, ਗੇਂਦਬਾਜ਼, ਮੈਚ, ਮੈਦਾਨ ਅਤੇ ਤਾਰੀਖ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "T20Iలలో ఒకే ఓవర్‌లో అత్యధిక పరుగులు చేసిన రికార్డులలో, అదే ఓవర్‌లో వికెట్ కూడా పడిన సందర్భాలు ఏవి? ఆటగాడు, పరుగులు, బౌలర్, మ్యాచ్, వేదిక మరియు తేదీని తెలపండి.",
         "column_names": [
             "Player Name ",
             "Runs",
@@ -1660,7 +1660,7 @@
         "question_english": "What is the shortest completed innings in T20I history by balls? Give the team, score, balls, run rate, opposition.",
         "question_hindi": "गेंदों के आधार पर टी20I इतिहास की सबसे छोटी पूर्ण पारी कौन-सी है? टीम, स्कोर, गेंदें, रन रेट और विपक्षी टीम बताइए।",
         "question_punjabi": "ਗੇਂਦਾਂ ਦੇ ਹਿਸਾਬ ਨਾਲ T20I ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਛੋਟੀ ਪੂਰੀ ਹੋਈ ਪਾਰੀ ਕਿਹੜੀ ਹੈ? ਟੀਮ, ਸਕੋਰ, ਗੇਂਦਾਂ, ਰਨ ਰੇਟ ਅਤੇ ਵਿਰੋਧੀ ਟੀਮ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20 అంతర్జాతీయ చరిత్రలో బంతుల పరంగా అత్యంత తక్కువ సమయంలో పూర్తయిన ఇన్నింగ్స్ ఏది? ఆ జట్టు, స్కోరు, బంతులు, రన్ రేట్, ప్రత్యర్థిని తెలపండి",
         "column_names": [
             "Team",
             "Score",
@@ -1681,7 +1681,7 @@
         "question_english": "List all T20I matches in the most wides records where wides exceeded 40 in a single match.",
         "question_hindi": "उन सभी टी20I मैचों की सूची दीजिए जहाँ सबसे अधिक वाइड्स के रिकॉर्ड में एक मैच में वाइड्स 40 से अधिक थे।",
         "question_punjabi": "ਸਭ ਤੋਂ ਵੱਧ ਵਾਈਡਾਂ ਦੇ ਰਿਕਾਰਡਾਂ ਵਿੱਚ ਉਹ ਸਾਰੇ T20I ਮੈਚਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ ਜਿੱਥੇ ਇੱਕੋ ਮੈਚ ਵਿੱਚ ਵਾਈਡਾਂ 40 ਤੋਂ ਵੱਧ ਸਨ?",
-        "question_telugu": "",
+        "question_telugu": "ఒకే మ్యాచ్‌లో 40కి మించి వైడ్‌లు నమోదైన అన్ని T20I మ్యాచ్‌లను అత్యధిక వైడ్‌ల రికార్డులలో జాబితా చేయండి.",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1705,7 +1705,7 @@
         "question_english": "For each player who carried the bat through a completed T20I innings, calculate their runs as a percentage of the team total.",
         "question_hindi": "जिन खिलाड़ियों ने पूर्ण टी20I पारी में कैरी द बैट किया, उनमें प्रत्येक खिलाड़ी के रन टीम के कुल स्कोर का कितने प्रतिशत थे, इसकी गणना कीजिए।",
         "question_punjabi": "ਹਰੇਕ ਖਿਡਾਰੀ ਜਿਸਨੇ ਪੂਰੀ T20I ਪਾਰੀ ਵਿੱਚ ਨਾਟ ਆਊਟ ਰਿਹਾ, ਉਨ੍ਹਾਂ ਦੇ ਰਨਾਂ ਦੀ ਕੁੱਲ ਟੀਮ ਸਕੋਰ ਦੇ ਪ੍ਰਤੀਸ਼ਤ ਵਜੋਂ ਗਣਨਾ ਕਰੋ?",
-        "question_telugu": "",
+        "question_telugu": "పూర్తయిన ఒక T20I ఇన్నింగ్స్‌లో చివరి వరకు బ్యాటింగ్ చేసిన ప్రతి ఆటగాడి పరుగులను, జట్టు మొత్తం పరుగులలో శాతంగా లెక్కించండి",
         "column_names": [
             "Player",
             "Runs",
@@ -1729,7 +1729,7 @@
         "question_english": "CG Williams of Namibia scored fifties in 4 consecutive T20I innings. List all four innings with runs, team name, opposition, and venue",
         "question_hindi": "नामीबिया के सीजी विलियम्स ने लगातार 4 टी20I पारियों में अर्धशतक लगाए। चारों पारियों के रन, टीम का नाम, विपक्षी टीम और स्थल बताइए।",
         "question_punjabi": "Namibia ਦੇ CG Williams ਨੇ ਲਗਾਤਾਰ 4 T20I ਪਾਰੀਆਂ ਵਿੱਚ ਅਰਧ-ਸੈਂਕੜੇ ਲਗਾਏ। ਸਾਰੀਆਂ ਚਾਰ ਪਾਰੀਆਂ ਦੇ ਰਨ, ਟੀਮ ਦਾ ਨਾਮ, ਵਿਰੋਧੀ ਟੀਮ ਅਤੇ ਮੈਦਾਨ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "నమీబియాకు చెందిన సిజి విలియమ్స్ వరుసగా 4 టి20ఐ ఇన్నింగ్స్‌లలో అర్ధశతకాలు సాధించాడు. ఆ నాలుగు ఇన్నింగ్స్‌ల వివరాలను పరుగులు, జట్టు పేరు, ప్రత్యర్థి, మరియు వేదికతో పాటుగా తెలపండి",
         "column_names": [
             "Player",
             "Runs",
@@ -1753,7 +1753,7 @@
         "question_english": "Who has played the most T20I matches in career history? Give their number of matches, runs, wickets, and span.",
         "question_hindi": "करियर इतिहास में सबसे अधिक टी20I मैच किसने खेले हैं? उनके मैचों की संख्या, रन, विकेट और करियर स्पैन बताइए।",
         "question_punjabi": "ਕਰੀਅਰ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ T20I ਮੈਚ ਕਿਸਨੇ ਖੇਡੇ ਹਨ? ਉਨ੍ਹਾਂ ਦੇ ਮੈਚਾਂ ਦੀ ਗਿਣਤੀ, ਰਨ, ਵਿਕਟਾਂ ਅਤੇ ਸਮਾਂ-ਕਾਲ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "కెరీర్ చరిత్రలో అత్యధిక T20I మ్యాచ్‌లు ఎవరు ఆడారు? వారి మ్యాచ్‌ల సంఖ్య, పరుగులు, వికెట్లు మరియు కాలపరిమితిని తెలపండి.",
         "column_names": [
             "Player",
             "Matches",
@@ -1774,7 +1774,7 @@
         "question_english": "Which player holds the highest batting average in T20I career among players who have played 100 or more T20I matches? Give number of matches, runs, average, and span.",
         "question_hindi": "100 या अधिक टी20I मैच खेलने वाले खिलाड़ियों में टी20I करियर का सबसे ऊंचा बल्लेबाजी औसत किस खिलाड़ी का है? मैचों की संख्या, रन, औसत और करियर स्पैन बताइए।",
         "question_punjabi": "100 ਜਾਂ ਵੱਧ T20I ਮੈਚ ਖੇਡਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਵਿੱਚੋਂ T20I ਕਰੀਅਰ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਬੱਲੇਬਾਜ਼ੀ ਔਸਤ ਕਿਸਦੀ ਹੈ? ਮੈਚਾਂ ਦੀ ਗਿਣਤੀ, ਰਨ, ਔਸਤ ਅਤੇ ਸਮਾਂ-ਕਾਲ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "100 లేదా అంతకంటే ఎక్కువ T20I మ్యాచ్‌లు ఆడిన ఆటగాళ్లలో, తన T20I కెరీర్‌లో అత్యధిక బ్యాటింగ్ సగటును కలిగి ఉన్న ఆటగాడు ఎవరు? ఆడిన మ్యాచ్‌ల సంఖ్య, పరుగులు, సగటు మరియు కాలవ్యవధిని తెలపండి",
         "column_names": [
             "Player",
             "Matches",
@@ -1795,7 +1795,7 @@
         "question_english": "Which player has carried the bat through a completed T20I innings with the highest individual score? Give runs, team total, opposition, and date.",
         "question_hindi": "पूर्ण टी20I पारी में कैरी द बैट करते हुए सबसे बड़ा व्यक्तिगत स्कोर किस खिलाड़ी का है? रन, टीम का कुल स्कोर, विपक्षी टीम और तारीख बताइए।",
         "question_punjabi": "ਕਿਸ ਖਿਡਾਰੀ ਨੇ ਪੂਰੀ T20I ਪਾਰੀ ਵਿੱਚ ਨਾਟ ਆਊਟ ਰਹਿੰਦੇ ਹੋਏ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਬਣਾਇਆ? ਰਨ, ਟੀਮ ਕੁੱਲ ਸਕੋਰ, ਵਿਰੋਧੀ ਟੀਮ ਅਤੇ ਤਾਰੀਖ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "పూర్తయిన T20I ఇన్నింగ్స్‌లో అత్యధిక వ్యక్తిగత స్కోరుతో చివరి వరకు బ్యాటింగ్ చేసిన ఆటగాడు ఎవరు? పరుగులు, జట్టు మొత్తం స్కోరు, ప్రత్యర్థి జట్టు మరియు తేదీని తెలపండి.",
         "column_names": [
             "Player",
             "Runs",
@@ -1816,7 +1816,7 @@
         "question_english": "Which player scored the highest runs on the losing side while batting in 2 innings, and what was the difference between their score and the highest single-innings losing score in the entire table?",
         "question_hindi": "हारने वाली टीम की दूसरी पारी में बल्लेबाज़ी करते हुए सबसे अधिक रन किस खिलाड़ी ने बनाए, और उसका स्कोर पूरे तालिका में हारने वाली टीम के सर्वाधिक व्यक्तिगत स्कोर से कितना कम या ज़्यादा था?",
         "question_punjabi": "ਕਿਸ ਖਿਡਾਰੀ ਨੇ 2 ਪਾਰੀਆਂ ਵਿੱਚ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ ਹਾਰਨ ਵਾਲੀ ਟੀਮ ਵੱਲੋਂ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਏ, ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਸਕੋਰ ਅਤੇ ਪੂਰੀ ਟੇਬਲ ਵਿੱਚ ਹਾਰਨ ਵਾਲੀ ਟੀਮ ਦੇ ਸਭ ਤੋਂ ਵੱਧ ਸਿੰਗਲ ਪਾਰੀ ਸਕੋਰ ਵਿੱਚ ਕੀ ਫ਼ਰਕ ਸੀ?",
-        "question_telugu": "",
+        "question_telugu": "ఓడిపోయిన జట్టు తరఫున 2 ఇన్నింగ్స్‌లలో బ్యాటింగ్ చేసి అత్యధిక పరుగులు చేసిన ఆటగాడు ఎవరు, మరియు వారి స్కోరుకు, మొత్తం పట్టికలో ఒకే ఇన్నింగ్స్‌లో ఓడిపోయిన జట్టు చేసిన అత్యధిక స్కోరుకు మధ్య ఉన్న తేడా ఎంత?",
         "column_names": [
             "Player Name ",
             "Two Innings Losing Total",
@@ -1836,7 +1836,7 @@
         "question_english": "How many players scored exactly 110 runs on the losing side, and how many of them batted in 2 innings?",
         "question_hindi": "हारने वाली टीम की ओर से ठीक 110 रन कितने खिलाड़ियों ने बनाए, और उनमें से कितनों ने दूसरी पारी में बल्लेबाज़ी की?",
         "question_punjabi": "ਕਿੰਨੇ ਖਿਡਾਰੀਆਂ ਨੇ ਹਾਰਨ ਵਾਲੀ ਟੀਮ ਵੱਲੋਂ ਠੀਕ 110 ਰਨ ਬਣਾਏ, ਅਤੇ ਉਨ੍ਹਾਂ ਵਿੱਚੋਂ ਕਿੰਨਿਆਂ ਨੇ 2 ਪਾਰੀਆਂ ਵਿੱਚ ਬੱਲੇਬਾਜ਼ੀ ਕੀਤੀ?",
-        "question_telugu": "",
+        "question_telugu": "ఓడిపోయిన జట్టులో సరిగ్గా 110 పరుగులు చేసిన ఆటగాళ్ల సంఖ్య ఎంత, మరియు వారిలో 2 ఇన్నింగ్స్‌లలో బ్యాటింగ్ చేసిన వారు ఎంతమంది ?",
         "column_names": [
             "Number of players with 110 runs",
             "Number of players with 110 runs in 2 innings"
@@ -1854,7 +1854,7 @@
         "question_english": "In T20Is, which team posted the highest score despite having 4 or more batsmen run out in a single innings and still lost the match? Return the team, score, opposition.",
         "question_hindi": "टी20I में, एक ही पारी में 4 या उससे अधिक बल्लेबाज़ रन आउट होने के बावजूद और मैच हारने के बाद भी सबसे बड़ा स्कोर किस टीम ने बनाया? टीम, स्कोर और विपक्षी टीम बताइए।",
         "question_punjabi": "T20I ਵਿੱਚ, ਕਿਸ ਟੀਮ ਨੇ ਇੱਕੋ ਪਾਰੀ ਵਿੱਚ 4 ਜਾਂ ਵੱਧ ਬੱਲੇਬਾਜ਼ਾਂ ਦੇ ਰਨ ਆਊਟ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ ਬਣਾਇਆ ਅਤੇ ਫਿਰ ਵੀ ਮੈਚ ਹਾਰ ਗਈ? ਟੀਮ, ਸਕੋਰ ਅਤੇ ਵਿਰੋਧੀ ਟੀਮ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20ఐలలో, ఒకే ఇన్నింగ్స్‌లో నలుగురు లేదా అంతకంటే ఎక్కువ మంది బ్యాట్స్‌మెన్‌లు రనౌట్ అయినప్పటికీ అత్యధిక స్కోరు నమోదు చేసి, మ్యాచ్‌లో ఓడిపోయిన జట్టు ఏది? ఆ జట్టు, స్కోరు, ప్రత్యర్థి జట్టును తెలపండి",
         "column_names": [
             "Team Name",
             "Score",
@@ -1873,7 +1873,7 @@
         "question_english": "In T20Is, what is the only instance where a team had 7 batsmen run out in a single innings? Return the team, score, result, opposition, and year.",
         "question_hindi": "टी20I में, एक ही पारी में 7 बल्लेबाज़ रन आउट होने की एकमात्र घटना कौन-सी है? टीम, स्कोर, परिणाम, विपक्षी टीम और वर्ष बताइए।",
         "question_punjabi": "T20I ਵਿੱਚ, ਉਹ ਇੱਕਮਾਤਰ ਮੌਕਾ ਕਿਹੜਾ ਹੈ ਜਦੋਂ ਕਿਸੇ ਟੀਮ ਦੇ ਇੱਕੋ ਪਾਰੀ ਵਿੱਚ 7 ਬੱਲੇਬਾਜ਼ ਰਨ ਆਊਟ ਹੋਏ? ਟੀਮ, ਸਕੋਰ, ਨਤੀਜਾ, ਵਿਰੋਧੀ ਟੀਮ ਅਤੇ ਸਾਲ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20 అంతర్జాతీయ మ్యాచ్‌లలో, ఒకే ఇన్నింగ్స్‌లో ఒక జట్టులోని 7 మంది బ్యాట్స్‌మెన్‌లు రనౌట్ అయిన ఏకైక సందర్భం ఏది? ఆ జట్టు, స్కోరు, ఫలితం, ప్రత్యర్థి మరియు సంవత్సరాన్ని తెలపండి.",
         "column_names": [
             "Team Name",
             "Score",
@@ -1894,7 +1894,7 @@
         "question_english": "In T20Is, which match holds the record for the highest match aggregate, and what was the run rate of that match?",
         "question_hindi": "टी20I में, सबसे अधिक मैच एग्रीगेट का रिकॉर्ड किस मैच के नाम है, और उस मैच का रन रेट क्या था?",
         "question_punjabi": "T20I ਵਿੱਚ, ਕਿਹੜੇ ਮੈਚ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਕੁੱਲ ਸਕੋਰ ਦਾ ਰਿਕਾਰਡ ਹੈ, ਅਤੇ ਉਸ ਮੈਚ ਦੀ ਰਨ ਰੇਟ ਕੀ ਸੀ?",
-        "question_telugu": "",
+        "question_telugu": "T20Iలలో, అత్యధిక మ్యాచ్ అగ్రిగేట్ రికార్డును ఏ మ్యాచ్ కలిగి ఉంది మరియు ఆ మ్యాచ్ యొక్క రన్ రేట్ ఎంత?",
         "column_names": [
             "Team 1",
             "Team 2",
@@ -1915,7 +1915,7 @@
         "question_english": "In T20Is, which bowler-batter combination has the most dismissals, and what is the batter's average against that bowler?",
         "question_hindi": "टी20I में, किस गेंदबाज़-बल्लेबाज़ संयोजन में सबसे अधिक बार आउट होने की घटना हुई है, और उस गेंदबाज़ के खिलाफ बल्लेबाज़ का औसत क्या है?",
         "question_punjabi": "T20I ਵਿੱਚ, ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼-ਬੱਲੇਬਾਜ਼ ਜੋੜੀ ਦੀਆਂ ਸਭ ਤੋਂ ਵੱਧ ਆਊਟ ਹਨ, ਅਤੇ ਉਸ ਗੇਂਦਬਾਜ਼ ਦੇ ਖਿਲਾਫ਼ ਬੱਲੇਬਾਜ਼ ਦੀ ਔਸਤ ਕੀ ਹੈ?",
-        "question_telugu": "",
+        "question_telugu": "T20Iలలో, ఏ బౌలర్-బ్యాటర్ జోడికి  అత్యధిక డిస్మిసల్స్ ఉన్నాయి  మరియు ఆ బౌలర్‌పై బ్యాటర్ సగటు ఎంత?",
         "column_names": [
             "Bowler",
             "Batter",
@@ -1935,7 +1935,7 @@
         "question_english": "In T20Is, which bowler has dismissed two different batters 5 or more times each? Return the bowler, both batters, and the respective wicket counts.",
         "question_hindi": "टी20I में, किस गेंदबाज़ ने दो अलग-अलग बल्लेबाज़ों को 5 या उससे अधिक बार आउट किया है? गेंदबाज़, दोनों बल्लेबाज़, और संबंधित विकेट संख्या बताइए।",
         "question_punjabi": "T20I ਵਿੱਚ, ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ ਨੇ ਦੋ ਵੱਖ-ਵੱਖ ਬੱਲੇਬਾਜ਼ਾਂ ਨੂੰ 5 ਜਾਂ ਵੱਧ ਵਾਰ ਆਊਟ ਕੀਤਾ ਹੈ? ਗੇਂਦਬਾਜ਼, ਦੋਵੇਂ ਬੱਲੇਬਾਜ਼ ਅਤੇ ਸੰਬੰਧਿਤ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "T20Iలలో, ఏ బౌలర్ ఇద్దరు వేర్వేరు బ్యాటర్లను ఒక్కొక్కరిని 5 లేదా అంతకంటే ఎక్కువ సార్లు అవుట్ చేశాడు? ఆ బౌలర్, ఆ ఇద్దరు బ్యాటర్లు మరియు వారి వారి వికెట్ల సంఖ్యలను తెలపండి.",
         "column_names": [
             "Bowler",
             "Batter",
@@ -1958,7 +1958,7 @@
         "question_english": "In T20Is, what is the highest partnership recorded for Japan, and which wicket was it for?",
         "question_hindi": "टी20I में जापान के लिए दर्ज सबसे बड़ी साझेदारी कौन-सी है, और वह किस विकेट के लिए थी?",
         "question_punjabi": "T20I ਵਿੱਚ, Japan ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੀਦਾਰੀ ਕਿਹੜੀ ਦਰਜ ਕੀਤੀ ਗਈ ਹੈ, ਅਤੇ ਇਹ ਕਿਸ ਵਿਕਟ ਲਈ ਸੀ?",
-        "question_telugu": "",
+        "question_telugu": "T20Iలలో జపాన్ తరఫున నమోదైన అత్యధిక భాగస్వామ్యం ఎంత, మరియు అది ఏ వికెట్‌కు నమోదైంది?",
         "column_names": [
             "Batter 1",
             "Batter 2",
@@ -1978,7 +1978,7 @@
         "question_english": "In T20Is, among players with zero ducks in their career and 30+ innings, who has the highest strike rate? Return the player, team, strike rate, and innings.",
         "question_hindi": "टी20I में, करियर में शून्य डक और 30 या उससे अधिक पारियां खेलने वाले खिलाड़ियों में सबसे अधिक स्ट्राइक रेट किसका है? खिलाड़ी, टीम, स्ट्राइक रेट और पारियां बताइए।",
         "question_punjabi": "T20I ਵਿੱਚ, ਕਰੀਅਰ ਵਿੱਚ ਜ਼ੀਰੋ ਡੱਕ ਅਤੇ 30 ਜਾਂ ਵੱਧ ਪਾਰੀਆਂ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਵਿੱਚੋਂ ਕਿਸਦੀ ਸਭ ਤੋਂ ਵੱਧ ਸਟ੍ਰਾਈਕ ਰੇਟ ਹੈ? ਖਿਡਾਰੀ, ਟੀਮ, ਸਟ੍ਰਾਈਕ ਰੇਟ ਅਤੇ ਪਾਰੀਆਂ ਦੱਸੋ?",
-        "question_telugu": "",
+        "question_telugu": "T20I లలో, తమ కెరీర్‌లో ఒక్కసారి కూడా డకౌట్ కాకుండా 30కి పైగా ఇన్నింగ్స్‌లు ఆడిన ఆటగాళ్లలో, అత్యధిక స్ట్రైక్ రేట్ ఎవరిది? ఆ ఆటగాడి పేరు, జట్టు, స్ట్రైక్ రేట్ మరియు ఇన్నింగ్స్‌లను తెలపండి",
         "column_names": [
             "Player Name ",
             "Team Name",
@@ -2019,7 +2019,7 @@
         "question_english": "In T20Is, SR Watson scored the highest individual runs on the losing side. What was his score, which team did he represent, and who was the opposition?",
         "question_hindi": "T20I में, SR Watson ने हारने वाली टीम की तरफ से सबसे अधिक व्यक्तिगत रन बनाए। उनका स्कोर क्या था, वे किस टीम का प्रतिनिधित्व कर रहे थे, और विरोधी टीम कौन सी थी?",
         "question_punjabi": "T20I ਵਿੱਚ, SR Watson ਨੇ ਹਾਰਨ ਵਾਲੀ ਟੀਮ ਵੱਲੋਂ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਰਨ ਬਣਾਏ। ਉਸਦਾ ਸਕੋਰ ਕੀ ਸੀ, ਉਹ ਕਿਸ ਟੀਮ ਦਾ ਸੀ, ਅਤੇ ਵਿਰੋਧੀ ਟੀਮ ਕਿਹੜੀ ਸੀ?",
-        "question_telugu": "",
+        "question_telugu": "టీ20ఐలలో, ప్రత్యర్థి జట్టు కేవలం ఐదుగురు బౌలర్లను మాత్రమే ఉపయోగించినప్పుడు, ఒక జట్టు 220+ పరుగులు చేసినప్పటికీ ఎన్నిసార్లు మ్యాచ్‌లో ఓడిపోయింది? ఆ జట్ల పేర్లు, స్కోర్లు మరియు ప్రత్యర్థి జట్లను తెలపండి",
         "column_names": [
             "Player Name ",
             "Score",
