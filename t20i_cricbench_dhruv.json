@@ -20,7 +20,8 @@
       "5 Aus vs NZ in Auckland",
       "5 NZ vs Zim in Harare",
       "5 Pak vs Ban in Lahore"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -46,7 +47,8 @@
       "92 Rohit Sharma vs Aus Gros Islet 2024",
       "89*Virat Kohli vs WI Wankhede 2016",
       "84*Suryakumar Yadav vs USA Wankhede 2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -69,7 +71,8 @@
       "196 Ind vs WI Eden Gardens 2026",
       "195 USA vs Can Dallas 2024",
       "193 WI vs Ind Wankhede 2016"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -100,7 +103,8 @@
       "2022",
       "2024",
       "2026)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -127,7 +131,8 @@
       "4 dismissals",
       "Avg 14.25",
       "SR 109.61"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -153,7 +158,8 @@
       "5 dismissals",
       "Avg 3.00",
       "SR 71.42"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -174,7 +180,8 @@
       "76 West Indies T20 World Cup 2026",
       "70 Philippines vs Indonesia & South Korea 2025",
       "69 India vs New Zealand 2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -204,7 +211,8 @@
       "52 & 3/12 - Roston Chase vs SA",
       "North Sound",
       "2024"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -222,7 +230,8 @@
       "14 - Kane Williamson (21 matches)",
       "12 - Rohit Sharma (14 matches)",
       "12 - Daren Sammy (18 matches)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -236,7 +245,8 @@
     "column_names": [],
     "answer": [
       "3 out of 4"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -250,7 +260,8 @@
     "column_names": [],
     "answer": [
       "Chelmsford in 1999"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -286,7 +297,8 @@
       "64 - Sean Williams vs Bangladesh",
       "Brisbane",
       "2022"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -308,7 +320,8 @@
       "58(54) - Craig Ervine vs Scotland",
       "Hobart",
       "2022"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -329,7 +342,8 @@
       "82 - Kagiso Rabada",
       "64 - Dale Steyn",
       "61 - Imran Tahir"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -347,7 +361,8 @@
       "17 - Chris Gayle",
       "17 - Jos Buttler",
       "16 - MS Dhoni"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -372,7 +387,8 @@
       "53* - Will Jacks vs ITA",
       "Kolkata",
       "2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -407,7 +423,8 @@
       "413 - WI vs SA",
       "Joburg",
       "2007"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -429,7 +446,8 @@
       "317 - T Dilshan in 2009",
       "303 - Babar Azam in 2021",
       "302 - M Jayawardene in 2010"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -451,7 +469,8 @@
       "4 Babar Azam 2021",
       "4 Virat Kohli 2022",
       "4 Sahibzada Farhan 2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -478,7 +497,8 @@
       "168 Quinton de Kock & Rilee Rossouw SA vs BAN Sydney 2022",
       "166 Mahela Jayawardene & Kumar Sangakkara SL vs WI Barbados 2010",
       "154 Ibrahim Zadran & Rahmanullah Gurbaz AFG vs UGA Providence 2024"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -496,7 +516,8 @@
     "answer": [
       "2 Chris Gayle",
       "2 Sahibzada Farhan"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -523,7 +544,8 @@
       "208/3 vs WI Karachi 2021",
       "207/1 vs NZ Auckland 2025",
       "207 vs UAE Sharjah 2025"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -548,7 +570,8 @@
       "100* Sahibzada Farhan vs NAM Colombo SSC 2026",
       "100 Sahibzada Farhan vs SL Pallekele 2026",
       "94 Umar Akmal vs AUS Mirpur 2014"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -572,7 +595,8 @@
       "41 Shadab Khan",
       "41 Haris Rauf",
       "42 Shaheen Afridi"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -595,7 +619,8 @@
       "48 IND vs PAK Melbourne 2022",
       "43 ENG vs NZ Colombo RPS 2026",
       "41 SL vs IND Gros Islet 2010"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -619,7 +644,8 @@
       "8 balls",
       "8 runs",
       "2 dismissals"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -649,7 +675,8 @@
       "SR 153.0",
       "3 fours",
       "5 sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -672,7 +699,8 @@
       "Colombo RPS 2026",
       "England failed to take a wicket in the Powerplay",
       "conceded 4 sixes (most in WC 2026)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -687,7 +715,8 @@
     "answer": [
       "2 times – vs ENG Colombo RPS 2026",
       "vs UAE (10-wicket win)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -709,7 +738,8 @@
       "Hardik Pandya vs PAK 2026",
       "Matt Henry vs SL 2026",
       "Jofra Archer vs NZ 2026"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -731,7 +761,8 @@
       "West Indies vs India 2026 – 30 sixes",
       "India vs Zimbabwe 2026 – 28 sixes",
       "Pakistan vs Afghanistan 2024 – 29 sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -749,7 +780,8 @@
     "answer": [
       "35 Arshdeep Singh",
       "33 Jasprit Bumrah"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -771,7 +803,8 @@
     ],
     "answer": [
       "26 runs – Shivam Dube"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -793,7 +826,8 @@
     ],
     "answer": [
       "74 Brendan Taylor & Vusi Sibanda vs ENG Cape Town 2007"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -812,7 +846,8 @@
     "answer": [
       "Virandeep Singh",
       "Sikandar Raza"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -830,7 +865,8 @@
       "21 Brad Evans 2023-25",
       "19 Taskin Ahmed 2023-24",
       "19 Varun Chakaravarthy 2025-26"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -850,7 +886,8 @@
       "2 Australia",
       "2 South Africa",
       "2 Scotland"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -870,7 +907,8 @@
     "answer": [
       "Zimbabwe – 254/6 vs WI Wankhede 23 Feb 2026",
       "256/4 vs IND Chennai 26 Feb 2026"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -893,7 +931,8 @@
     "answer": [
       "87 Jayasuriya & Jayawardene vs Kenya Joburg 2007",
       "84* Hardik Pandya & Tilak Varma 31 balls RR 16.25"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -915,7 +954,8 @@
     "answer": [
       "IND vs Zimbabwe",
       "2026 Chennai 26 Feb 2026"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -930,7 +970,8 @@
     "answer": [
       "Zimbabwe – 1 catch dropped in 3 games",
       "95.2% catching efficiency"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -954,7 +995,8 @@
       "82/2 vs SCO Dubai 2021",
       "80/1 vs ZIM Chennai 2026",
       "76/1 vs NZ Joburg 2007"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -972,7 +1014,8 @@
     "answer": [
       "25 Steve Tikolo vs SL Joburg 2007",
       "23 Tinotenda Maposa vs IND Chennai 2026"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -998,7 +1041,8 @@
       "Avg 12.18",
       "SR 100.75",
       "HS 31"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1014,7 +1058,8 @@
     ],
     "answer": [
       "6.80 – lowest among the 20 teams"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1031,7 +1076,8 @@
     ],
     "answer": [
       "Brian Bennett – 1748 runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1052,7 +1098,8 @@
       "10 matches",
       "Avg 16.30",
       "HS 46"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1075,7 +1122,8 @@
       "249 runs",
       "Avg 62.25",
       "SR 148.21"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1092,7 +1140,8 @@
     ],
     "answer": [
       "South Africa – 9.65"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1112,7 +1161,8 @@
     ],
     "answer": [
       "3 dismissals in 23 balls across 4 innings"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1133,7 +1183,8 @@
     "answer": [
       "50 runs off 18 balls",
       "SR 277.77"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1159,7 +1210,8 @@
       "Avg 9.50",
       "SR 110.46",
       "HS 28"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1174,7 +1226,8 @@
     "answer": [
       "Marco Jansen – 50+; second overall after Michael Hussey (60* vs PAK",
       "2010 SF)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1194,7 +1247,8 @@
       "2012 SF; 54* Brathwaite/Samuels (WI) vs ENG",
       "2016 Final; 53* Hussey/Johnson (AUS) vs PAK",
       "2010 SF"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1217,7 +1271,8 @@
     "answer": [
       "73 – Marco Jansen & Tristan Stubbs vs NZ",
       "T20 World Cup 2026 SF"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1243,7 +1298,8 @@
       "2021; 368 (RR 9.2) – Jos Buttler & Alex Hales (ENG)",
       "2022; 335 (RR 8.93) – Adam Gilchrist & Matthew Hayden (AUS)",
       "2007"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1267,7 +1323,8 @@
       "2014; 2 – Babar Azam & Mohammad Rizwan (PAK)",
       "2021; 2 – Finn Allen & Tim Seifert (NZ)",
       "2026"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1284,7 +1341,8 @@
     ],
     "answer": [
       "20 – Finn Allen; 19 – Shimron Hetmyer; 18 – Sahibzada Farhan"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -1299,7 +1357,8 @@
     "answer": [
       "8 – Finn Allen (NZ)",
       "T20 World Cup 2026 – most for NZ in an innings and overall in a knockout"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1326,7 +1385,8 @@
       "2026; equals Brendon McCullum (11 fours",
       "7 sixes) vs BAN",
       "2012"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1346,7 +1406,8 @@
       "Australia (2022-2024); 7 – South Africa (2024)",
       "England (2010-2012)",
       "India (2012-2014)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1371,7 +1432,8 @@
       "2012; 104 – Glenn Phillips vs SL",
       "2022; 100* – Finn Allen vs SA",
       "2026"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -1397,7 +1459,8 @@
       "2026; 33 – Jan Nicol Loftie-Eaton vs NEP",
       "2024; 33 – Sikandar Raza vs GAM",
       "2024"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1416,7 +1479,8 @@
       "2009 SF; 89* – Virat Kohli vs WI",
       "2016 SF; 89 – Sanju Samson vs ENG",
       "2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1442,7 +1506,8 @@
       "2026; 101* – Jos Buttler vs SL",
       "2021; 100 – Harry Brook vs PAK",
       "2026"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -1459,7 +1524,8 @@
       "2009); Sri Lanka (2012",
       "2014); India (2024",
       "2026)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1483,7 +1549,8 @@
       "73 (39 fours",
       "34 sixes) – IND vs ENG",
       "2026 SF"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1508,7 +1575,8 @@
       "2014; 28 – IND vs ZIM",
       "2026; 25 – ENG vs ITA",
       "2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1522,7 +1590,8 @@
     "column_names": [],
     "answer": [
       "226 – Will Jacks (2026); 218 – Misbah-ul-Haq (2007); 175 – Cameron White (2010); 171 – Michael Hussey (2010); 167 – Sam Curran (2026)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1549,7 +1618,8 @@
       "2016; 488 – NZ vs AUS",
       "2018; 488 – BUL vs SER",
       "2022"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1577,7 +1647,8 @@
       "2026; 0/63 – Mashrafe Mortaza vs PAK",
       "2014; 1/62 – Richard Ngarava vs IND",
       "2026"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1594,7 +1665,8 @@
       "2026; 8.1 overs – ENG vs IND",
       "2026; 8.3 overs – IND vs ENG",
       "2026"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1621,7 +1693,8 @@
       "Avg 13.33",
       "SR 142.85",
       "6 dismissals"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1639,7 +1712,8 @@
     ],
     "answer": [
       "16 – Sanju Samson (2026); 15 – Rohit Sharma (2024); 15 – Shivam Dube (2026); 14 – Ishan Kishan (2026); 14 – Hardik Pandya (2026); 12 – Yuvraj Singh (2007)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1663,7 +1737,8 @@
       "12.15); West Indies – 62 (2024",
       "12.64); India – 61 (2024",
       "14.78)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1680,7 +1755,8 @@
     ],
     "answer": [
       "47 – Rohit Sharma; 43 – Shakib Al Hasan; 43 – Jos Buttler; 41 – David Warner; 38 – Adil Rashid; 37 – Mahmudullah"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -1697,7 +1773,8 @@
     ],
     "answer": [
       "8 – Rohit Sharma; 7 – Kumar Sangakkara; 7 – Mahela Jayawardene; 7 – Tillakaratne Dilshan; 7 – Lasith Malinga; 7 – Angelo Mathews; 7 – Jos Buttler; 7 – Adil Rashid"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1716,7 +1793,8 @@
     ],
     "answer": [
       "Overall T20Is: 17–12 India; T20 World Cups: 3–2 India; in India: 10–6 India; last 10 meetings: 7–3 India"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1741,7 +1819,8 @@
     "answer": [
       "Six of India’s top seven batters have scored at least one fifty; Tilak Varma has scored 20+ in all but one match with a highest of 44*; five different players have top-scored",
       "while Hardik Pandya has been 2nd-highest scorer in 3 matches and Tilak Varma in 2 matches"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1760,7 +1839,8 @@
     "answer": [
       "4 – Will Jacks (2026)",
       "Shane Watson (2012)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1779,7 +1859,8 @@
       "2024; 96 runs – IND vs NZ",
       "2026 Final; 90 runs – IND vs ENG",
       "2012"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1797,7 +1878,8 @@
       "2026 Final; 388 – AUS vs PAK",
       "2010 SF; 388 – IND vs WI",
       "2016 SF"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1814,7 +1896,8 @@
       "2022); Sri Lanka (2009",
       "2012); New Zealand (2021",
       "2026)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1828,7 +1911,8 @@
     "column_names": [],
     "answer": [
       "Suryakumar Yadav (80.77%); Rohit Sharma (80.65%); Sarfaraz Ahmed (78.38%); Mitchell Marsh (69.23%); Graeme Smith (66.67%)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1849,7 +1933,8 @@
       "33 matches",
       "31 wins",
       "2 losses"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1871,7 +1956,8 @@
       "25 wins",
       "1 loss",
       "1 no result"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1885,7 +1971,8 @@
     "column_names": [],
     "answer": [
       "15 matches; chasing team won 11; batting first won 4 (all 4 by India)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1909,7 +1996,8 @@
       "India – 3 titles (2007",
       "2024",
       "2026); first team to defend T20 WC title and win at home"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -1932,7 +2020,8 @@
     ],
     "answer": [
       "41 – SL vs KEN (2007); 37 – IND vs ENG (2026 SF); 37 – IND vs NZ (2026 Final); 36 – ENG vs IND (2026 SF)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1949,7 +2038,8 @@
       "highest in a T20 WC final (ahead of 85* Marlon Samuels",
       "2016 and 85 Kane Williamson",
       "2021)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1971,7 +2061,8 @@
     ],
     "answer": [
       "19 – NED vs IRE (2014); 19 – WI vs ZIM (2026); 19 – IND vs ENG (2026 SF); 18 – IND vs NZ (2026 Final); 17 – IND vs ZIM (2026); 16 – AUS vs IND (2010)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -1992,7 +2083,8 @@
     ],
     "answer": [
       "260/6 – SL vs KEN (2007); 256/4 – IND vs ZIM (2026); 255/5 – IND vs NZ (2026 Final); 254/6 – WI vs ZIM (2026); 253/7 – IND vs ENG (2026 SF); 246/7 – ENG vs IND (2026 SF)"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -2009,7 +2101,8 @@
     ],
     "answer": [
       "7 – India; 5 – SRH; 3 – West Indies; 3 – Zimbabwe; 3 – Surrey"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -2023,7 +2116,8 @@
     "column_names": [],
     "answer": [
       "Shahid Afridi (2009); Virat Kohli (2014); Sanju Samson (2026)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -2040,7 +2134,8 @@
     ],
     "answer": [
       "3 – Mahela Jayawardene (2010); 3 – Virat Kohli (2016–2021); 3 – Babar Azam (2021); 3 – KL Rahul (2021); 3 – Kusal Mendis (2026); 3 – Sahibzada Farhan (2026); 3 – Sanju Samson (2026)"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "t20i.db",
@@ -2063,7 +2158,8 @@
       "2021 World Test Championship",
       "2025 Champions Trophy (ODI)",
       "2026 T20 World Cup"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -2081,7 +2177,8 @@
     ],
     "answer": [
       "New Zealand lead 2–1 (wins in 2000 Champions Trophy and 2021 WTC; India won 2025 Champions Trophy)"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "t20i.db",
@@ -2103,7 +2200,8 @@
       "New Zealand lead 3–0 (2007 Johannesburg",
       "2016 Nagpur",
       "2021 Dubai)"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -2117,7 +2215,8 @@
     "column_names": [],
     "answer": [
       "4 finals (most by any team)"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "t20i.db",
@@ -2133,6 +2232,7 @@
       "Chasing side has won 6 of last 9 finals; India has 2 wins batting first (2007",
       "2024)",
       "both in last-over finishes"
-    ]
+    ],
+    "difficulty": "Medium"
   }
 ]
