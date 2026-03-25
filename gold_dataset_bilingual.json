@@ -19,7 +19,8 @@
       "Total Runs",
       "Balls Faced",
       "Dismissals"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -40,7 +41,8 @@
       "Fours",
       "Sixes",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -61,7 +63,8 @@
       "Batsman",
       "Opponent",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -80,7 +83,8 @@
       "Player Name",
       "Season",
       "Wickets Taken"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -97,7 +101,8 @@
     "column_names": [
       "Player Name",
       "Final Wins"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -114,7 +119,8 @@
     "column_names": [
       "Season",
       "Runs Per Over"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -132,7 +138,8 @@
       "Season",
       "Total Fours",
       "Total Sixes"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -151,7 +158,8 @@
     "column_names": [
       "Season",
       "Number of High-Scoring Matches"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -168,7 +176,8 @@
     "column_names": [
       "Runner-up Team",
       "Runner-up Count"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -185,7 +194,8 @@
     "column_names": [
       "Team",
       "Finals Appearances"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -203,7 +213,8 @@
       "Player of Match",
       "Season",
       "Venue"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -223,7 +234,8 @@
       "Team 2",
       "Match Winner",
       "Result Margin"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -242,7 +254,8 @@
       "Team 1 Score",
       "Team 2",
       "Team 2 Score"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -264,7 +277,8 @@
       "Player Name",
       "Season",
       "Number of Sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -287,7 +301,8 @@
     "column_names": [
       "Venue",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -310,7 +325,8 @@
     "column_names": [
       "Player Name",
       "Wickets Taken"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -329,7 +345,8 @@
       "Venue",
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -347,7 +364,8 @@
       "Player Name",
       "Total Runs",
       "Balls Played"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -372,7 +390,8 @@
       "Team 1",
       "Team 2",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -396,7 +415,8 @@
       "Player Name",
       "Season",
       "Total Runs Scored"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -416,7 +436,8 @@
       "Matches Played",
       "Wins",
       "Losses"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -432,7 +453,8 @@
     "question_punjabi": "2015 ਤੋਂ ਬਾਅਦ IPL ਪਲੇਅ-ਔਫ ਵਿੱਚ MI ਦੀਆਂ ਕੁੱਲ ਜਿੱਤਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
     "column_names": [
       "Total Mumbai Indians Wins"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -453,7 +475,8 @@
       "Economy Rate",
       "Average",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -471,7 +494,8 @@
     "column_names": [
       "Player Name",
       "Economy Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -491,7 +515,8 @@
       "Wickets Lost",
       "Batting Average",
       "Dot Ball Percentage"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -510,7 +535,8 @@
       "Team Category",
       "Batting Average",
       "Run Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -532,7 +558,8 @@
     "column_names": [
       "Player Name",
       "Wickets in First Over"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -550,7 +577,8 @@
     "column_names": [
       "Player Name",
       "Wickets in First Over"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -571,7 +599,8 @@
     "column_names": [
       "Player Name",
       "Number of 25+ Scores"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -589,7 +618,8 @@
     "column_names": [
       "Player Name",
       "Total Sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -613,7 +643,8 @@
       "Partnership Runs",
       "Opponent",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -634,7 +665,8 @@
       "Venue",
       "Opponent",
       "First Wicket Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -652,7 +684,8 @@
     "column_names": [
       "Player Name",
       "Sixes"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -673,7 +706,8 @@
       "Match Date",
       "Venue",
       "Opponent"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -691,7 +725,8 @@
     "column_names": [
       "Wins",
       "Losses"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -708,7 +743,8 @@
     "column_names": [
       "Player Name",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -727,7 +763,8 @@
     "column_names": [
       "Season",
       "Batting Team"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -747,7 +784,8 @@
       "MI Bowling Average",
       "MI Bowling Strike Rate",
       "MI Bowling Economy"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -768,7 +806,8 @@
     "question_punjabi": "ਉਹਨਾਂ ਸਾਰੇ ਗੇਂਦਬਾਜ਼ਾਂ ਦੇ ਨਾਮ ਦਿਖਾਓ ਜਿਨ੍ਹਾਂ ਨੇ IPL 2025 ਵਿੱਚ ਪਾਵਰਪਲੇ ਓਵਰਾਂ ਵਿੱਚ ਮੇਡਨ  ਓਵਰ ਕੀਤੇ ਹਨ।",
     "column_names": [
       "Player Name"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -785,7 +824,8 @@
     "question_punjabi": "IPL ਪਲੇਅ-ਔਫ ਵਿੱਚ ਸਫਲਤਾਪੂਰਵਕ ਬਚਾਏ ਗਏ ਸਭ ਤੋਂ ਘੱਟ target ਦਿਖਾਓ।",
     "column_names": [
       "Minimum Winning First Inning Target"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -807,7 +847,8 @@
       "Total Runs",
       "Batting Team",
       "Season"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -823,7 +864,8 @@
     "question_punjabi": "IPL 2025 ਵਿੱਚ 5ਵੀਂ ਵਿਕਟ ਡਿੱਗਣ ਵੇਲੇ ਪੰਜਾਬ ਦਾ ਸਭ ਤੋਂ ਘੱਟ ਸਕੋਰ ਕੀ ਸੀ?",
     "column_names": [
       "Minimum Score at 5 Wickets"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -847,7 +889,8 @@
     "column_names": [
       "Player Name",
       "Economy"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -865,7 +908,8 @@
       "Bowling Team",
       "Economy Rate",
       "Dot Ball Percentage"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -892,7 +936,8 @@
       "Player Name",
       "Season",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -913,7 +958,8 @@
       "Strike Rate",
       "Centuries",
       "Fifties"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -932,7 +978,8 @@
       "Innings",
       "Average",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -955,7 +1002,8 @@
       "Player Name",
       "Match Phase",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -979,7 +1027,8 @@
       "Total Runs",
       "Venue",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -997,7 +1046,8 @@
       "Partnership Runs",
       "Batsman 1 Name",
       "Batsman 2 Name"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1023,7 +1073,8 @@
       "Batting Team",
       "Runs Conceded",
       "Wickets Taken"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1048,7 +1099,8 @@
       "Season",
       "Total Runs",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1068,7 +1120,8 @@
       "Team",
       "Year",
       "Highest Opening Stand"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1084,7 +1137,8 @@
     "question_punjabi": "IPL 2025 ਵਿੱਚ ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪਾਵਰਪਲੇ ਦਾ ਸਭ ਤੋਂ ਘੱਟ ਸਕੋਰ ਕੀ ਸੀ?",
     "column_names": [
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1107,7 +1161,8 @@
       "Player Name",
       "Season",
       "Sixes Conceded"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1124,7 +1179,8 @@
     "question_punjabi": "IPL 2025 ਵਿੱਚ CSK ਦੁਆਰਾ ਇੱਕ ਓਵਰ ਵਿੱਚ ਬਣਾਏ ਗਏ ਚੋਟੀ ਦੇ  2 ਸਭ ਤੋਂ ਵੱਧ ਰੰਨਾਂ ਦੀ ਸੂਚੀ ਦਿਓ",
     "column_names": [
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1147,7 +1203,8 @@
       "Venue",
       "Target Score",
       "Chasing Team"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1170,7 +1227,8 @@
     "column_names": [
       "Player Name",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1194,7 +1252,8 @@
       "Total Runs",
       "Balls Faced",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1210,7 +1269,8 @@
     "question_punjabi": "IPL 2025 ਦੇ ਆਖਰੀ 5 ਓਵਰਾਂ ਵਿੱਚ (PBKS) ਦਾ ਰਨ-ਰੇਟ ਕੀ ਸੀ?",
     "column_names": [
       "Run Rate"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1233,7 +1293,8 @@
       "Player Name",
       "Team Name",
       "Missed Matches"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1256,7 +1317,8 @@
       "Player Name",
       "Franchise Name",
       "Matches Missed"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1278,7 +1340,8 @@
       "Venue",
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1296,7 +1359,8 @@
     "column_names": [
       "Batting Team",
       "Balls to 50 Runs"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1323,7 +1387,8 @@
     "column_names": [
       "Bowling Team",
       "Times Conceded 200+ Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1344,7 +1409,8 @@
       "Player 1",
       "Player 2",
       "Partnership Average"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1363,7 +1429,8 @@
     "column_names": [
       "Player Name",
       "Average"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1381,7 +1448,8 @@
       "Match ID",
       "Inning",
       "Number of Sixes"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1399,7 +1467,8 @@
       "Partner 1",
       "Partner 2",
       "Partnership Runs"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1420,7 +1489,8 @@
       "Player Name",
       "Season",
       "Number of Fast Fifties"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1438,7 +1508,8 @@
     "column_names": [
       "Season",
       "Number of Players"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1462,7 +1533,8 @@
       "Winning Team",
       "Losing Team",
       "Wins"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1480,7 +1552,8 @@
     "column_names": [
       "Season",
       "Team"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1502,7 +1575,8 @@
       "Total Runs",
       "Bowling Team",
       "Venue"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1523,7 +1597,8 @@
       "Total Runs",
       "Strike Rate",
       "Average"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1542,7 +1617,8 @@
       "Total Runs",
       "Strike Rate",
       "Batting Average"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1559,7 +1635,8 @@
     "column_names": [
       "Season",
       "Matches Lost"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1577,7 +1654,8 @@
     "column_names": [
       "Wins",
       "Losses"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1598,7 +1676,8 @@
       "Player Name",
       "Season",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1619,7 +1698,8 @@
     "column_names": [
       "Batting Team",
       "Total Sixes"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1646,7 +1726,8 @@
       "Batting Team",
       "Run Rate",
       "Boundary Percentage"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1668,7 +1749,8 @@
       "Player Name",
       "Balls Faced",
       "Sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1695,7 +1777,8 @@
     "column_names": [
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1716,7 +1799,8 @@
     "column_names": [
       "Player Name",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1743,7 +1827,8 @@
     "column_names": [
       "Team Name",
       "Successful Chases"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1767,7 +1852,8 @@
     "column_names": [
       "Player Name",
       "Fast Fifties Count"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1790,7 +1876,8 @@
       "Team 2",
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -1808,7 +1895,8 @@
     "question_punjabi": "2025 ਵਿੱਚ RR ਅਤੇ SRH ਦੇ ਮੈਚ ਵਿੱਚ Travis Head ਨੇ ਆਪਣਾ ਅਰਧ ਸੈਂਕੜਾ ਪੂਰਾ ਕਰਨ ਲਈ ਕਿੰਨੀਆਂ ਗੇਂਦਾਂ ਲਈਆਂ?",
     "column_names": [
       "Balls to Fifty"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1830,7 +1918,8 @@
     "column_names": [
       "Player Name",
       "Legal Deliveries"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1850,7 +1939,8 @@
       "Partnership Runs",
       "Opening Batsman 1",
       "Opening Batsman 2"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1871,7 +1961,8 @@
       "Match Date",
       "Venue",
       "Match Winner"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1888,7 +1979,8 @@
     "column_names": [
       "Total Runs",
       "Partnership Players"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -1909,7 +2001,8 @@
     "column_names": [
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1930,7 +2023,8 @@
     "question_punjabi": "GT ਦੁਆਰਾ ਕੀਤੇ ਗਏ 4 ਸਭ ਤੋਂ ਵੱਡੇ ਰਨ ਚੇਜ਼ ਦੀ ਸੂਚੀ ਦਿਓ।",
     "column_names": [
       "Total Runs Scored"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1953,7 +2047,8 @@
       "Opening Partnership Runs",
       "Venue",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1975,7 +2070,8 @@
     "column_names": [
       "Player Name",
       "Runs Scored"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -1993,7 +2089,8 @@
     "column_names": [
       "Batting Team",
       "Partnership Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2018,7 +2115,8 @@
       "Player 1 Name",
       "Player 2 Name",
       "Number of 100+ Partnerships"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2038,7 +2136,8 @@
       "Player 2 Name",
       "Season",
       "Number of 50+ Stands"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2058,7 +2157,8 @@
     "column_names": [
       "Balls Faced",
       "Runs Scored"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2076,7 +2176,8 @@
       "Player Name",
       "Balls Faced",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2103,7 +2204,8 @@
     "column_names": [
       "Batting Team",
       "Average Partnership"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2124,7 +2226,8 @@
       "Chasing Team",
       "Season",
       "Maximum Defeats"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2152,7 +2255,8 @@
     "column_names": [
       "Batting Team",
       "Wickets Lost"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2178,7 +2282,8 @@
       "Season",
       "Franchise",
       "Powerplay Run Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2194,7 +2299,8 @@
     "question_punjabi": "RR ਦਾ ਸਭ ਤੋਂ ਵੱਧ ਪਾਵਰਪਲੇ ਸਕੋਰ।",
     "column_names": [
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2215,7 +2321,8 @@
     "column_names": [
       "Player Name",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2232,7 +2339,8 @@
     "column_names": [
       "Batting Team",
       "Balls to Reach 50"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2263,7 +2371,8 @@
       "Season",
       "Batting Team",
       "Runs in First Over"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2279,7 +2388,8 @@
     "question_punjabi": "ਸਾਲ 2013 ਦੇ ਉਸ ਮੈਚ ਦੀ ਸੂਚੀ ਦਿਓ ਜਦੋਂ ਹੈਦਰਾਬਾਦ ਨੇ ਪਹਿਲੇ ਓਵਰ ਵਿੱਚ ਆਪਣੇ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਏ ਸਨ।",
     "column_names": [
       "Match ID"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2298,7 +2408,8 @@
     "column_names": [
       "Player Name",
       "Runs Conceded"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2317,7 +2428,8 @@
       "Wickets",
       "Overs Bowled",
       "Economy Rate"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2335,7 +2447,8 @@
       "Venue",
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2356,7 +2469,8 @@
     "column_names": [
       "Batting Team",
       "Final Total Runs"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2379,7 +2493,8 @@
       "Match ID",
       "Venue",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2398,7 +2513,8 @@
     "column_names": [
       "Runs Scored",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2428,7 +2544,8 @@
       "Opponent Team",
       "Target Score",
       "Season"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2448,7 +2565,8 @@
       "Winning Team",
       "Target Score",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2469,7 +2587,8 @@
       "Runs Conceded",
       "Batting Team",
       "Season"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2489,7 +2608,8 @@
       "Powerplay Runs",
       "Opponent",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2506,7 +2626,8 @@
     "column_names": [
       "Player Name",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2530,7 +2651,8 @@
       "Player Score",
       "Balls Faced",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2562,7 +2684,8 @@
       "Batting Team",
       "Opener 1",
       "Opener 2"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2589,7 +2712,8 @@
       "Team 1",
       "Team 2",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2615,7 +2739,8 @@
       "Player Score",
       "Balls Faced",
       "Season"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2640,7 +2765,8 @@
       "Team 1",
       "Team 2",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2658,7 +2784,8 @@
     "column_names": [
       "Player Name",
       "Score in Match"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2679,7 +2806,8 @@
     "column_names": [
       "Player Name",
       "Wickets"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2697,7 +2825,8 @@
     "column_names": [
       "Wicket Type",
       "Dismissal Count"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2721,7 +2850,8 @@
       "Runs",
       "Balls",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2744,7 +2874,8 @@
       "Player Name",
       "Bowling Team",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2768,7 +2899,8 @@
       "Batting Team",
       "Powerplay Score",
       "City"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2784,7 +2916,8 @@
     "question_punjabi": "ਸਾਲ 2025 ਵਿੱਚ ਰਨ ਆਊਟ ਹੋਣ ਵਾਲਾ MI ਦਾ ਪਹਿਲਾ ਬੱਲੇਬਾਜ਼ ਕੌਣ ਹੈ?",
     "column_names": [
       "Player Name"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2807,7 +2940,8 @@
       "Team 2",
       "Result Type",
       "Result Margin"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2841,7 +2975,8 @@
       "Total Runs",
       "Venue",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -2862,7 +2997,8 @@
     "column_names": [
       "Player Name",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2916,7 +3052,8 @@
     "column_names": [
       "City",
       "Venues"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2935,7 +3072,8 @@
     "column_names": [
       "Match ID",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -2958,7 +3096,8 @@
       "Strike Rate",
       "Fours",
       "Sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -2981,7 +3120,8 @@
       "Scores",
       "Teams",
       "Years"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3004,7 +3144,8 @@
       "Balls Faced",
       "Team 1",
       "Team 2"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3022,7 +3163,8 @@
     "column_names": [
       "Partnership Runs",
       "Batters"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3049,7 +3191,8 @@
       "Bowler Name",
       "Venue",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3072,7 +3215,8 @@
       "Player Name",
       "Opponent Team",
       "Total Sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3091,7 +3235,8 @@
       "Balls Faced",
       "Strike Rate",
       "Batting Average"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3110,7 +3255,8 @@
       "Player 1 Name",
       "Player 2 Name",
       "Partnership Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3128,7 +3274,8 @@
       "Season",
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3150,7 +3297,8 @@
       "Venue",
       "Match Date",
       "Over Number"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3167,7 +3315,8 @@
     "column_names": [
       "Player Name",
       "Runs Conceded"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3189,7 +3338,8 @@
       "Batting Team",
       "Season",
       "Balls to Reach 50"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3208,7 +3358,8 @@
       "Player Name",
       "Bowling Team",
       "Total Runs Scored"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3225,7 +3376,8 @@
     "column_names": [
       "Player Name",
       "Consecutive Fifties"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3246,7 +3398,8 @@
     "column_names": [
       "Player Name",
       "Number of 50+ Scores Against CSK"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3265,7 +3418,8 @@
     "column_names": [
       "Batting Team",
       "Dot Balls"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3288,7 +3442,8 @@
       "Batting Team",
       "Season",
       "Dot Balls"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3307,7 +3462,8 @@
     "column_names": [
       "Player Name",
       "Number of Sixes"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3323,7 +3479,8 @@
     "question_punjabi": "ਇੱਕ ਪਾਰੀ ਵਿੱਚ 10 ਓਵਰਾਂ ਤੋਂ ਬਾਅਦ GT ਦੁਆਰਾ ਬਣਾਏ ਗਏ ਸਭ ਤੋਂ ਵੱਧ ਰਨ।",
     "column_names": [
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3344,7 +3501,8 @@
     "column_names": [
       "Player Name",
       "Balls to 4000 Runs"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3360,7 +3518,8 @@
     "question_punjabi": "ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪਹਿਲੀ ਪਾਰੀ ਦਾ ਔਸਤ ਸਕੋਰ।",
     "column_names": [
       "Average Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3382,7 +3541,8 @@
       "Team 1",
       "Team 2",
       "Season"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3404,7 +3564,8 @@
       "Opponent",
       "Margin of Loss",
       "Season"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3423,7 +3584,8 @@
       "Venue",
       "Batting Team",
       "Wickets Fallen"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3444,7 +3606,8 @@
       "Season",
       "Team 1",
       "Team 2"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3463,7 +3626,8 @@
       "Total Runs",
       "Strike Rate",
       "Batting Average"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3484,7 +3648,8 @@
     "column_names": [
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3506,7 +3671,8 @@
     "column_names": [
       "Player Name",
       "25+ Score Streak"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3523,7 +3689,8 @@
     "column_names": [
       "Opponent Team",
       "Total Wins"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3558,7 +3725,8 @@
       "Player Name",
       "Venue",
       "Total Runs Scored"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3580,7 +3748,8 @@
     "column_names": [
       "Player Name",
       "Wickets"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3599,7 +3768,8 @@
     "column_names": [
       "Batting Team",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3622,7 +3792,8 @@
     "column_names": [
       "Player Name",
       "Total Hauls"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3645,7 +3816,8 @@
       "Bowling Team",
       "City",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3666,7 +3838,8 @@
     "question_punjabi": "IPL ਵਿੱਚ ਇੱਕ ਤੋਂ ਵੱਧ ਹੈਟ੍ਰਿਕ ਲੈਣ ਵਾਲੇ 3 ਗੇਂਦਬਾਜ਼।",
     "column_names": [
       "Player Name"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3686,7 +3859,8 @@
     "column_names": [
       "Match Date",
       "Opponent Team"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3702,7 +3876,8 @@
     "question_punjabi": "ਕਿਸੇ ਗੇਂਦਬਾਜ਼ ਦੁਆਰਾ CSK ਦੇ ਖਿਲਾਫ ਲਈਆਂ ਗਈਆਂ ਸਾਰੀਆਂ ਹੈਟ੍ਰਿਕਾਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
     "column_names": [
       "Player Name"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3724,7 +3899,8 @@
       "Match Date",
       "Venue",
       "Total Runs"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3749,7 +3925,8 @@
       "City",
       "Year",
       "Overs Taken to Win"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3774,7 +3951,8 @@
       "Venue",
       "Opponent",
       "Target Score"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3794,7 +3972,8 @@
       "Player Name",
       "Inning Number",
       "Runs Scored"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3813,7 +3992,8 @@
       "Players Involved",
       "Opposition",
       "Year"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3837,7 +4017,8 @@
       "Bowling Team",
       "City",
       "Season"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3855,7 +4036,8 @@
       "Opponent",
       "Season",
       "Overs Taken"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -3878,7 +4060,8 @@
       "Total Runs",
       "Average Runs Per Over",
       "Wickets Fallen"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3901,7 +4084,8 @@
     "column_names": [
       "Player Name",
       "Economy"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3923,7 +4107,8 @@
       "Opponent",
       "Total Runs",
       "Batting Average"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3950,7 +4135,8 @@
     "column_names": [
       "Player Name",
       "Total Wickets"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -3972,7 +4158,8 @@
       "Player Name",
       "Wickets",
       "Runs Conceded"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -3992,7 +4179,8 @@
       "Runs",
       "Strike Rate",
       "Average"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -4018,7 +4206,8 @@
     "column_names": [
       "Batting Team",
       "Total Sixes"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -4037,7 +4226,8 @@
       "Match ID",
       "Venue",
       "Match Date"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -4059,7 +4249,8 @@
     "column_names": [
       "Player Name",
       "Total Wides"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -4079,7 +4270,8 @@
     "column_names": [
       "Bowler Name",
       "Player Dismissed"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -4102,7 +4294,8 @@
       "Total Runs",
       "Balls Faced",
       "Strike Rate"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -4123,7 +4316,8 @@
       "Total Runs Scored",
       "Strike Rate",
       "Batting Average"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -4145,7 +4339,8 @@
       "Batting Team",
       "Score at 4 Wickets",
       "Final Score"
-    ]
+    ],
+    "difficulty": "Hard"
   },
   {
     "db_id": "ipl_db",
@@ -4170,7 +4365,8 @@
       "Powerplay Wickets",
       "City",
       "Year"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -4191,7 +4387,8 @@
     "column_names": [
       "Player Name",
       "Player of Match Awards"
-    ]
+    ],
+    "difficulty": "Easy"
   },
   {
     "db_id": "ipl_db",
@@ -4219,7 +4416,8 @@
       "Partner 1",
       "Partner 2",
       "Partnership Runs"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -4242,7 +4440,8 @@
     "column_names": [
       "Player Name",
       "50+ Scores Count"
-    ]
+    ],
+    "difficulty": "Medium"
   },
   {
     "db_id": "ipl_db",
@@ -4260,6 +4459,7 @@
       "Runs Scored",
       "Balls Faced",
       "Dismissals"
-    ]
+    ],
+    "difficulty": "Easy"
   }
 ]
