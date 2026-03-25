@@ -13,7 +13,8 @@
         ],
         "answer": [
             "('Virat Kohli')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -31,7 +32,8 @@
         ],
         "answer": [
             "('New Zealand',9,'Loss')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -47,7 +49,8 @@
         ],
         "answer": [
             "('Rashid Khan')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -66,7 +69,8 @@
         ],
         "answer": [
             "('Usman Tariq' ,9.80 ,6.32 ,9.30)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -84,7 +88,8 @@
         ],
         "answer": [
             "('Quinton De Kock', 114, 1.075)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -93,7 +98,7 @@
         "query": "WITH TeamMatches AS (SELECT team1 AS team, match_id, match_winner FROM Matches UNION ALL SELECT team2 AS team, match_id, match_winner FROM Matches) SELECT team, (SUM(CASE WHEN match_winner = team THEN 1 ELSE 0 END) * 100.0 / COUNT(match_id)) AS win_percentage FROM TeamMatches GROUP BY team ORDER BY win_percentage DESC LIMIT 2;",
         "question_english": "In T20 history list the top two teams in terms of percentage of matches won ,also give the percentages .",
         "question_hindi": "टी20 इतिहास में जीते गए मैचों के प्रतिशत के आधार पर शीर्ष दो टीमों की सूची दीजिए, साथ ही उनके प्रतिशत भी बताइए।",
-        "question_punjabi":"T20 ਇਤਿਹਾਸ ਵਿੱਚ ਮੈਚ ਜਿੱਤਣ ਦੀ ਪ੍ਰਤੀਸ਼ਤ ਦੇ ਹਿਸਾਬ ਨਾਲ ਚੋਟੀ ਦੀਆਂ ਦੋ ਟੀਮਾਂ ਕਿਹੜੀਆਂ ਹਨ, ਅਤੇ ਉਨ੍ਹਾਂ ਦੀਆਂ ਪ੍ਰਤੀਸ਼ਤਾ ਵੀ ਦੱਸੋ?",
+        "question_punjabi": "T20 ਇਤਿਹਾਸ ਵਿੱਚ ਮੈਚ ਜਿੱਤਣ ਦੀ ਪ੍ਰਤੀਸ਼ਤ ਦੇ ਹਿਸਾਬ ਨਾਲ ਚੋਟੀ ਦੀਆਂ ਦੋ ਟੀਮਾਂ ਕਿਹੜੀਆਂ ਹਨ, ਅਤੇ ਉਨ੍ਹਾਂ ਦੀਆਂ ਪ੍ਰਤੀਸ਼ਤਾ ਵੀ ਦੱਸੋ?",
         "question_telugu": "T20 ఇతిహాసలో గెలిచిన మ్యాచుల శాతం ఆధారంగా టాప్ 2 టీములు ఏమిటి? వాళ్ళ శాతాలు కూడా రాయండి.",
         "column_names": [
             "Team Name",
@@ -102,7 +107,8 @@
         "answer": [
             "('India',71.42)",
             "('Australia',62.74)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -121,7 +127,8 @@
             "('Farhan',67.1)",
             "('Hetmyer',74.0)",
             "('Kishan',80.7)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -140,7 +147,8 @@
             "('Kusal Mendis',104)",
             "('Pathum Nissanka',80)",
             "('Aiden Markram',50)"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -159,7 +167,8 @@
             "('Brian Bennet',180)",
             "('Sherfane Rutherford',157)",
             "('David Miller',146)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -175,7 +184,8 @@
         ],
         "answer": [
             "('LMP Simmons','J charles')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -193,7 +203,8 @@
         ],
         "answer": [
             "('MA Leask', 142.26, 'Scotland')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -212,7 +223,8 @@
         ],
         "answer": [
             "('South Africa','Johannesburg','West Indies',23)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -230,7 +242,8 @@
         ],
         "answer": [
             "('India', 7.75, 155)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -247,7 +260,8 @@
         ],
         "answer": [
             "('Shakib Al Hasan', 120.14)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -264,7 +278,8 @@
         ],
         "answer": [
             "('Ireland','West Indies')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -282,7 +297,8 @@
         ],
         "answer": [
             "('Mohammad Nabi','Canada', 1.75)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -300,7 +316,8 @@
         ],
         "answer": [
             "('Adam Zampa','Oman , Ireland', 8)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -319,7 +336,8 @@
         ],
         "answer": [
             "('Romario Shepherd','West Indies','Scotland', 6.67)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -340,7 +358,8 @@
         ],
         "answer": [
             "('Gerhard Erasmus','Namibia','Marco Jansen','South Africa','Gerhard Erasmus', 1.29)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -359,7 +378,8 @@
         ],
         "answer": [
             "('T Stubbs' , 16, 3, 0.888)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -381,7 +401,8 @@
             "('K Rabada','South Africa', 14, 0.518)",
             "('LRPL Taylor' ,'New Zealand', 14, 0.500)",
             "('RA Jadeja','India', 14, 0.466)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -399,7 +420,8 @@
         ],
         "answer": [
             "('DJ Bravo', 0.441, 3)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -422,7 +444,8 @@
             "('India','Bangladesh',147)",
             "('Zimbabwe','Pakistan',131)",
             "('South Africa','Nepal' ,116)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -441,7 +464,8 @@
         ],
         "answer": [
             "('Timor Leste','2025/26', 0 ,8)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -459,7 +483,8 @@
         "answer": [
             "('Chris Gayle',2)",
             "('Rossouw',2)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -479,7 +504,8 @@
             "('RR Rossouw',52)",
             "('RR Rossouw', 52)",
             "('Ahmed Shehzad', 58)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -497,7 +523,8 @@
         ],
         "answer": [
             "('Bulgaria','Gibraltar','14.18')"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -513,7 +540,8 @@
         ],
         "answer": [
             "(61.9)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -530,7 +558,8 @@
         ],
         "answer": [
             "('Mali', 4)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -548,7 +577,8 @@
         ],
         "answer": [
             "('Eswatini','Mozambique','23.9')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -566,7 +596,8 @@
         ],
         "answer": [
             "('Malaysia','Thailand',10)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -587,7 +618,8 @@
         ],
         "answer": [
             "('New Zealand', 17, 'England','Auckland', 23, 152 )"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -605,7 +637,8 @@
         ],
         "answer": [
             "('Samoa','Al Amerat', 4.60)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -624,7 +657,8 @@
         ],
         "answer": [
             "('SA Yadav', 162.77, 37.32, 175)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -645,7 +679,8 @@
             "('Muhammad Waseem','United Arab Emirates',150.56)",
             "('JC Buttler','England',147.88)",
             "('DA Warner','Australia',142.47)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -664,7 +699,8 @@
         ],
         "answer": [
             "('RG Sharma', 205, 32.05, 12)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -683,7 +719,8 @@
         ],
         "answer": [
             "('Junaid Siddique', 'United Arab Emirates', 4/14 ,'Scotland')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -702,7 +739,8 @@
         ],
         "answer": [
             "('AU Rashid','England', 159, 7.46)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -721,7 +759,8 @@
         ],
         "answer": [
             "('Shakib Al Hasan', 6.81, 149, 2)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -738,7 +777,8 @@
         ],
         "answer": [
             "('2020-01-29','Seddon Park','2020-01-31','McLean Park')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -758,7 +798,8 @@
         ],
         "answer": [
             "('Australia', 223, 'India', 5,'2023-11-28')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -778,7 +819,8 @@
         ],
         "answer": [
             "('Bangladesh','Pakistan', 65, 6,'2023-10-07')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -798,7 +840,8 @@
         ],
         "answer": [
             "('India', 283,'South Africa','2024-11-15', 283)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -817,7 +860,8 @@
         "answer": [
             "('Panama', 245, 245)",
             "('Philippines', 216, 216)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -835,7 +879,8 @@
         ],
         "answer": [
             "('Serbia','Slovenia',200)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -855,7 +900,8 @@
         ],
         "answer": [
             "('Belgium', 141, 8, 'Romania','2025-06-29')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -874,7 +920,8 @@
         ],
         "answer": [
             "('Cayman Islands','Brazil', 224,'2024-12-14')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -894,7 +941,8 @@
         ],
         "answer": [
             "('Zimbabwe', 344, 17.20,'Gambia', 4)"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -914,7 +962,8 @@
             "('Czech Rep.', 2,'Bulgaria')",
             "('West Indies', 5,'South Africa')",
             "('Japan', 0,'China')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -933,7 +982,8 @@
         ],
         "answer": [
             "('Nepal','Mongolia', 3,'2023-09-27')"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -953,7 +1003,8 @@
         ],
         "answer": [
             "('Ivory Coast', 7,'Nigeria', 7.3, 0.93)"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -973,7 +1024,8 @@
         "answer": [
             "('Mongolia','Singapore', 10, 1)",
             "('Isle of Man','Spain', 8.4, 1)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -994,7 +1046,8 @@
             "('Luxembourg', 28, 1,'2019-08-29')",
             "('Czech Rep.', 21, 2,'2019-08-30')",
             "('Austria', 32, 1,'2019-08-31')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1012,7 +1065,8 @@
         ],
         "answer": [
             "('Mongolia','Japan', 8.2)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1032,7 +1086,8 @@
         "answer": [
             "(23, 'Malaysia','Kuala Lumpur','2023-07-26')",
             "(26,'Thailand','Kuala Lumpur','2023-07-27')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1053,7 +1108,8 @@
             "('Muhammad Waseem', 97, 0.144)",
             "('Mohammad Nabi', 152, 0.092)",
             "('RG Sharma', 159, 0.088)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1074,7 +1130,8 @@
         "answer": [
             "('RG Sharma', 14, 159,'2007-2024', 0.088)",
             "('V Kohli', 16, 125,'2010-2024', 0.128)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1093,7 +1150,8 @@
         ],
         "answer": [
             "('F Damiao Couana','Mozambique','2019-2024', 0.210)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1114,7 +1172,8 @@
         ],
         "answer": [
             "('Zimbabwe','Netherlands', 8, 20, 'Zimbabwe','2022-07-17')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1134,7 +1193,8 @@
         ],
         "answer": [
             "('Namibia','Oman', 16,'Bridgetown','2024-06-02')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1153,7 +1213,8 @@
         ],
         "answer": [
             "('Netherlands','Sri Lanka','Sri Lanka','2021-10-22')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1172,7 +1233,8 @@
         ],
         "answer": [
             "('Mirpur', 15,'India','2016-02-27')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1192,7 +1254,8 @@
         ],
         "answer": [
             "('D Maisuria','Botswana', 22,'2019-05-29', 1469)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1211,7 +1274,8 @@
             "('Saeed Ajmal', 1026)",
             "('Shadab Khan', 1155)",
             "('Umar Gul', 1547)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1230,7 +1294,8 @@
         ],
         "answer": [
             "(345,'Tanzania', 37, '2023-08-28')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1248,7 +1313,8 @@
         "answer": [
             "('Namibia', 57)",
             "('Sri Lanka', 59)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1269,7 +1335,8 @@
         "answer": [
             "('GJ Maxwell', 118, 28.97, 150, 5)",
             "('RG Sharma', 151, 32.05, 205, 12)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1289,7 +1356,8 @@
         ],
         "answer": [
             "('Abhishek Sharma', 190.92, 2, 34.17, 52.4)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1308,7 +1376,8 @@
         "answer": [
             "('Netherlands', 93,'Pakistan')",
             "('Pakistan', 82,'West Indies')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1328,7 +1397,8 @@
         ],
         "answer": [
             "('Pakistan','Gros Islet','2010-05-14', 2, 42.9)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1346,7 +1416,8 @@
         ],
         "answer": [
             "('Vanuatu','Apia','2019-07-12')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1366,7 +1437,8 @@
             "('Adnan Idrees','Kuwait', 79)",
             "('RR Rossouw','South Africa', 78)",
             "('K Dasan','Bulgaria', 74)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1386,7 +1458,8 @@
         "answer": [
             "('2021-09-11','Almeria','Germany','120')",
             "('2024-04-14','Cartagena','Jersey','142')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1407,7 +1480,8 @@
         ],
         "answer": [
             "('Ghana','Uganda','Benoni','2022-09-20', 12, 41.4)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1424,7 +1498,8 @@
         ],
         "answer": [
             "(318, 11.4)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1444,7 +1519,8 @@
             "('Ghana','Uganda', 0.319)",
             "('Bulgaria','Malta', 0.275)",
             "('Croatia','Cyprus', 0.275)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1467,7 +1543,8 @@
             "('JC Buttler', 147.77, 33.71)",
             "('RG Sharma', 140.89, 32.05)",
             "('PR Stirling', 134.35, 26.31)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1484,7 +1561,8 @@
         ],
         "answer": [
             "(31.7, 51.9)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1505,7 +1583,8 @@
             "('Muhammad Waseem', 0.762)",
             "('S Chandramohan', 0.745)",
             "('DA Miller', 0.623)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1524,7 +1603,8 @@
         ],
         "answer": [
             "('Darius Visser', 39, 'Nalin Nipiko', 'Samoa v Vanuatu')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1546,7 +1626,8 @@
         "answer": [
             "('Dipendra Singh Airee', 36, 'Kamran Khan', 'Nepal v Qatar', 'Al Amerat', '13/04/2024')",
             "('Dipendra Singh Airee', 32, 'Mungun Altankhuyag', 'Nepal v Mongolia', 'Hangzhou', '27/09/2023')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1568,7 +1649,8 @@
         "answer": [
             "('Rakep Patel', 31, 'Bright Balala', 'Kenya v Malawi', 'Nairobi', '04/07/2024')",
             "('Mohammad Nabi', 32, 'Dunith Wellalage', 'Afghanistan v Sri Lanka', 'Abu Dhabi', '18/09/2025')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1588,7 +1670,8 @@
         ],
         "answer": [
             "('Rwanda', 24, 37, 3.89, 'Nigeria')"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -1611,7 +1694,8 @@
             "('Romania','Czech Rep.','2021-09-03','Ilfov County', 42)",
             "('Costa Rica','Falkland Isl','2025-03-11','Guacima', 41)",
             "('Romania','Gibraltar','2024-05-25','Ilfov County', 40)"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -1634,7 +1718,8 @@
             "('R Baaleri', '56*', 115, '48.7%')",
             "('Litton Das', '54*', 105, '51.4%')",
             "('J Bangura', '37*', 95, '38.9%')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1657,7 +1742,8 @@
             "('CG Williams', 57,'Namibia', 'U.A.E.', 'ICCA Dubai')",
             "('CG Williams', 50,'Namibia', 'Scotland', 'ICCA Dubai')",
             "('CG Williams', 57,'Namibia', 'P.N.G.', 'ICCA Dubai')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1677,7 +1763,8 @@
         ],
         "answer": [
             "('PR Stirling', 163, 3895, 20, '2009-2026')"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -1697,7 +1784,8 @@
         ],
         "answer": [
             "('V Kohli (IND)', 125, 4188, 48.69, '2010-2024')"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1717,7 +1805,8 @@
         ],
         "answer": [
             "('CH Gayle', '63*', 101,'Sri Lanka', '2009-06-19')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1736,7 +1825,8 @@
         ],
         "answer": [
             "('Babar Hayat', 122, 124, 2)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1753,7 +1843,8 @@
         ],
         "answer": [
             "(5, 2)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1771,7 +1862,8 @@
         ],
         "answer": [
             "('Gibraltar', 177,'Bulgaria')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1791,7 +1883,8 @@
         ],
         "answer": [
             "('Rwanda', 159,'Won','Malawi', 2022)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1811,7 +1904,8 @@
         ],
         "answer": [
             "('South Africa','West Indies','2023-03-26', 517, 13.31)"
-        ]
+        ],
+        "difficulty": "Medium"
     },
     {
         "db_id": "t20_I.db",
@@ -1830,7 +1924,8 @@
         ],
         "answer": [
             "('Rashid Khan','R P Burl', 7, 16.71)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1852,7 +1947,8 @@
             "('Haris Rauf','DP Conway', 5)",
             "('Haris Rauf','JDS Nisham', 5)",
             "('Haris Rauf','MS Chapman', 5)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1871,7 +1967,8 @@
         ],
         "answer": [
             "('L Yamamoto-Lake','K Kadowaki-Fleming', 258, 1)"
-        ]
+        ],
+        "difficulty": "Easy"
     },
     {
         "db_id": "t20_I.db",
@@ -1890,7 +1987,8 @@
         ],
         "answer": [
             "('T Banton','England', 150.32, 32)"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1910,7 +2008,8 @@
         ],
         "answer": [
             "(1,'South Africa', 221,'India','2022-10-02')"
-        ]
+        ],
+        "difficulty": "Hard"
     },
     {
         "db_id": "t20_I.db",
@@ -1930,6 +2029,7 @@
         ],
         "answer": [
             "('SR Watson', 124, 'Australia','India','2016-01-31')"
-        ]
+        ],
+        "difficulty": "Easy"
     }
 ]
