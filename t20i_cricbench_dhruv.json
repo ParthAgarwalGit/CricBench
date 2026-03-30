@@ -15,11 +15,11 @@
       "Wins"
     ],
     "answer": [
-      "6 Pak vs WI in Karachi",
-      "6 Ind vs Ire in Malahide",
-      "5 Aus vs NZ in Auckland",
-      "5 NZ vs Zim in Harare",
-      "5 Pak vs Ban in Lahore"
+      ["Pakistan", "West Indies", "Karachi", 6],
+      ["India", "Ireland", "Malahide", 6],
+      ["Australia", "New Zealand", "Auckland", 5],
+      ["New Zealand", "Zimbabwe", "Harare", 5],
+      ["Pakistan", "Bangladesh", "Lahore", 5]
     ],
     "difficulty": "Hard"
   },
@@ -42,11 +42,11 @@
       "Opponent"
     ],
     "answer": [
-      "101 Suresh Raina vs SA Gros Islet 2010",
-      "97*Sanju Samson vs WI Eden Gardens 2026",
-      "92 Rohit Sharma vs Aus Gros Islet 2024",
-      "89*Virat Kohli vs WI Wankhede 2016",
-      "84*Suryakumar Yadav vs USA Wankhede 2026"
+      ["Suresh Raina", 101, null, "", "Gros Islet", "2010", "South Africa"],
+      ["Sanju Samson", 97, null, "*", "Eden Gardens", "2026", "West Indies"],
+      ["Rohit Sharma", 92, null, "", "Gros Islet", "2024", "Australia"],
+      ["Virat Kohli", 89, null, "*", "Wankhede", "2016", "West Indies"],
+      ["Suryakumar Yadav", 84, null, "*", "Wankhede", "2026", "USA"]
     ],
     "difficulty": "Medium"
   },
@@ -66,11 +66,11 @@
       "Season"
     ],
     "answer": [
-      "230 Eng vs SA Wankhede 2016",
-      "206 SA vs WI Wanderers 2007",
-      "196 Ind vs WI Eden Gardens 2026",
-      "195 USA vs Can Dallas 2024",
-      "193 WI vs Ind Wankhede 2016"
+      ["England", 230, "Wankhede", "2016"],
+      ["South Africa", 206, "Wanderers", "2007"],
+      ["India", 196, "Eden Gardens", "2026"],
+      ["USA", 195, "Dallas", "2024"],
+      ["West Indies", 193, "Wankhede", "2016"]
     ],
     "difficulty": "Medium"
   },
@@ -78,31 +78,20 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139461/wi-vs-ind-52nd-match-super-8-group-1-x1-v-x3-icc-mens-t20-world-cup-2026",
     "question": "Which teams have made the most semifinal appearances in T20 World Cups?",
-    "sql_query": "WITH semi_matches AS ( SELECT m.match_id, m.season FROM Matches m WHERE m.season IN ('2007','2009','2010','2012','2014','2016','2021/22','2022/23','2024','2025/26') AND m.team1 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') AND m.team2 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') AND m.stage = 'Semi Final' ), teams AS ( SELECT sm.season, m.team1 AS team FROM semi_matches sm JOIN Matches m ON sm.match_id = m.match_id UNION ALL SELECT sm.season, m.team2 FROM semi_matches sm JOIN Matches m ON sm.match_id = m.match_id ) SELECT team, COUNT(DISTINCT season) AS semifinal_appearances, GROUP_CONCAT(season, ', ') AS seasons FROM teams GROUP BY team ORDER BY semifinal_appearances DESC LIMIT 10;",
+    "sql_query": "WITH semi_matches AS ( SELECT m.match_id, m.season FROM Matches m WHERE m.season IN ('2007','2009','2010','2012','2014','2016','2021/22','2022/23','2024','2025/26') AND m.team1 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') AND m.team2 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') AND m.stage = 'Semi Final' ), teams AS ( SELECT sm.season, m.team1 AS team FROM semi_matches sm JOIN Matches m ON sm.match_id = m.match_id UNION ALL SELECT sm.season, m.team2 FROM semi_matches sm JOIN Matches m ON sm.match_id = m.match_id ) SELECT team, COUNT(DISTINCT season) AS semifinal_appearances, GROUP_CONCAT(DISTINCT season, ', ') AS seasons FROM teams GROUP BY team ORDER BY semifinal_appearances DESC LIMIT 10;",
     "question_english": "Which teams have made the most semifinal appearances in T20 World Cups?",
     "question_hindi": "T20 World Cups में सबसे अधिक सेमीफाइनल में कौन सी टीमें पहुंची हैं?",
     "question_punjabi": "T20 World Cups ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਪਹੁੰਚੀਆਂ ਹਨ?",
     "question_telugu": "T20 World Cups లో అత్యధికసార్లు సెమీఫైనల్‌లో ఆడిన జట్లు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Team",
+      "Semifinal Appearances",
+      "Seasons"
+    ],
     "answer": [
-      "6 Pakistan (2007",
-      "2009",
-      "2010",
-      "2012",
-      "2021",
-      "2022)",
-      "6 India (2007",
-      "2014",
-      "2016",
-      "2022",
-      "2024",
-      "2026)",
-      "6 England (2010",
-      "2016",
-      "2021",
-      "2022",
-      "2024",
-      "2026)"
+      ["Pakistan", 6, "2007, 2009, 2010, 2012, 2021, 2022"],
+      ["India", 6, "2007, 2014, 2016, 2022, 2024, 2026"],
+      ["England", 6, "2010, 2016, 2021, 2022, 2024, 2026"]
     ],
     "difficulty": "Medium"
   },
@@ -126,11 +115,7 @@
       "Strike Rate"
     ],
     "answer": [
-      "52 balls",
-      "57 runs",
-      "4 dismissals",
-      "Avg 14.25",
-      "SR 109.61"
+      ["Sanju Samson", "Jason Holder", null, 52, 57, 4, 14.25, 109.61]
     ],
     "difficulty": "Medium"
   },
@@ -153,11 +138,7 @@
       "Strike Rate"
     ],
     "answer": [
-      "21 balls",
-      "15 runs",
-      "5 dismissals",
-      "Avg 3.00",
-      "SR 71.42"
+      ["Shimron Hetmyer", "Jasprit Bumrah", 21, 15, 5, 3.00, 71.42]
     ],
     "difficulty": "Medium"
   },
@@ -171,15 +152,15 @@
     "question_punjabi": "T20I ਸੀਰੀਜ਼ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਕਿਹੜੀ ਟੀਮ ਨੇ ਲਗਾਏ ਹਨ?",
     "question_telugu": "T20I సిరీస్‌లో అత్యధిక సిక్సర్లు కొట్టిన జట్లు ఏవి?",
     "column_names": [
-      "Event Name",
+      "Season",
       "Batting Team",
       "Sixes"
     ],
     "answer": [
-      "78 Bulgaria vs Gibraltar & Turkey 2025",
-      "76 West Indies T20 World Cup 2026",
-      "70 Philippines vs Indonesia & South Korea 2025",
-      "69 India vs New Zealand 2026"
+      ["2025", "Bulgaria", 78],
+      ["2026", "West Indies", 76],
+      ["2025", "Philippines", 70],
+      ["2026", "India", 69]
     ],
     "difficulty": "Medium"
   },
@@ -189,28 +170,24 @@
     "question": "Which players have scored 50 or more runs and taken 3 or more wickets in a single T20 World Cup match?",
     "sql_query": "WITH batting_innings AS ( SELECT d.match_id, d.striker_id, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' GROUP BY d.match_id, d.inning, d.striker_id HAVING SUM(d.runs_scored) >= 50 ), bowling_innings AS ( SELECT d.match_id, d.bowler_id, COUNT(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out', 'obstructing the field') THEN 1 END) AS wickets, SUM(d.runs_scored + d.wides + d.noballs) AS runs_conceded FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' GROUP BY d.match_id, d.inning, d.bowler_id HAVING COUNT(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out', 'obstructing the field') THEN 1 END) >= 3 ), combined AS ( SELECT b.match_id, b.striker_id AS player_id, b.runs, bw.wickets, bw.runs_conceded FROM batting_innings b JOIN bowling_innings bw ON b.match_id = bw.match_id AND b.striker_id = bw.bowler_id ) SELECT p.player_name, c.runs, c.wickets, c.runs_conceded, m.venue, m.season, CASE WHEN m.team1 = (SELECT pim.team_name FROM PlayerInMatch pim WHERE pim.match_id = c.match_id AND pim.player_id = c.player_id LIMIT 1) THEN m.team2 ELSE m.team1 END AS opponent FROM combined c JOIN Players p ON c.player_id = p.player_id JOIN Matches m ON c.match_id = m.match_id ORDER BY c.runs DESC;",
     "question_english": "Which players have scored 50 or more runs and taken 3 or more wickets in a single T20 World Cup match?",
-    "question_hindi": "T20 World Cup के एक ही मैच में 50 या अधिक रन बनाने और 3 या अधिक विकेट लेने वाले खिलाड़ी कौन हैं?",
+    "question_hindi": "T20 World Cup के एक ही मैच में 50 या अधिक रन बनाने और 3 या अधिक विकेट लेने वाले खिलाड���ी कौन हैं?",
     "question_punjabi": "T20 World Cup ਦੇ ਇੱਕ ਹੀ ਮੈਚ ਵਿੱਚ 50 ਜਾਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਅਤੇ 3 ਜਾਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "ఒకే T20 World Cup మ్యాచ్‌లో 50+ రన్లు చేసి 3+ వికెట్లు తీసిన ఆటగాళ్ళు ఎవరు?",
     "column_names": [
-      "Team Name"
+      "Player Name",
+      "Runs",
+      "Wickets",
+      "Runs Conceded",
+      "Venue",
+      "Season",
+      "Opponent"
     ],
     "answer": [
-      "66* & 4/38 - Dwayne Bravo vs IND",
-      "Lord’s",
-      "2009",
-      "51 & 3/26 - Shane Watson vs IRE",
-      "Colombo RPS",
-      "2012",
-      "72 & 3/34 - Shane Watson vs IND",
-      "Colombo RPS",
-      "2012",
-      "67* & 3/19 - Marcus Stoinis vs OMAN",
-      "Bridgetown",
-      "2024",
-      "52 & 3/12 - Roston Chase vs SA",
-      "North Sound",
-      "2024"
+      ["Dwayne Bravo", 66, 4, 38, "Lord’s", "2009", "India"],
+      ["Shane Watson", 72, 3, 34, "Colombo RPS", "2012", "India"],
+      ["Shane Watson", 51, 3, 26, "Colombo RPS", "2012", "Ireland"],
+      ["Marcus Stoinis", 67, 3, 19, "Bridgetown", "2024", "Oman"],
+      ["Roston Chase", 52, 3, 12, "North Sound", "2024", "South Africa"]
     ],
     "difficulty": "Hard"
   },
@@ -223,13 +200,17 @@
     "question_hindi": "पुरुष T20 World Cup इतिहास में सबसे अधिक जीत किस कप्तान के नाम है?",
     "question_punjabi": "ਮਰਦਾਂ ਦੇ T20 World Cup ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਕਿਹੜੇ ਕਪਤਾਨ ਦੇ ਨਾਮ ਹਨ?",
     "question_telugu": "పురుషుల T20 World Cup చరిత్రలో అత్యధిక విజయాలు సాధించిన కెప్టెన్ ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Wins",
+      "Matches"
+    ],
     "answer": [
-      "21 - MS Dhoni (33 matches)",
-      "15 - Aiden Markram (16 matches)",
-      "14 - Kane Williamson (21 matches)",
-      "12 - Rohit Sharma (14 matches)",
-      "12 - Daren Sammy (18 matches)"
+      ["MS Dhoni", 21, 33],
+      ["Aiden Markram", 15, 16],
+      ["Kane Williamson", 14, 21],
+      ["Rohit Sharma", 12, 14],
+      ["Daren Sammy", 12, 18]
     ],
     "difficulty": "Medium"
   },
@@ -242,9 +223,12 @@
     "question_hindi": "South Africa ने Zimbabwe के खिलाफ कितने World Cup मैच (ODI और T20) जीते हैं?",
     "question_punjabi": "South Africa ਨੇ Zimbabwe ਦੇ ਖਿਲਾਫ਼ ਕਿੰਨੇ World Cup ਮੈਚ (ODI ਅਤੇ T20) ਜਿੱਤੇ ਹਨ?",
     "question_telugu": "South Africa Zimbabwe పై ఎన్ని World Cup మ్యాచ్‌లు (ODI మరియు T20) గెలిచింది?",
-    "column_names": [],
+    "column_names": [
+      "Wc Wins Sa Vs Zim",
+      "Total Matches"
+    ],
     "answer": [
-      "3 out of 4"
+      [3, 4]
     ],
     "difficulty": "Medium"
   },
@@ -257,9 +241,14 @@
     "question_hindi": "Zimbabwe ने South Africa के खिलाफ अपनी एकमात्र World Cup जीत कब और कहाँ दर्ज की?",
     "question_punjabi": "Zimbabwe ਨੇ South Africa ਦੇ ਖਿਲਾਫ਼ ਆਪਣੀ ਇਕਲੌਤੀ World Cup ਜਿੱਤ ਕਦੋਂ ਅਤੇ ਕਿੱਥੇ ਦਰਜ ਕੀਤੀ?",
     "question_telugu": "Zimbabwe South Africa పై తమ ఏకైక World Cup విజయాన్ని ఎప్పుడు, ఎక్కడ నమోదు చేసింది?",
-    "column_names": [],
+    "column_names": [
+      "Match Date",
+      "Venue",
+      "City",
+      "Season"
+    ],
     "answer": [
-      "Chelmsford in 1999"
+      ["1999-05-29", "County Ground", "Chelmsford", "1999"]
     ],
     "difficulty": "Easy"
   },
@@ -282,21 +271,11 @@
       "Opponent"
     ],
     "answer": [
-      "97* - Brian Bennett vs India",
-      "Chennai",
-      "2026",
-      "82 - Sikandar Raza vs Ireland",
-      "Hobart",
-      "2022",
-      "73 - Sikandar Raza vs South Africa",
-      "Delhi",
-      "2026",
-      "64* - Brian Bennett vs Australia",
-      "Colombo RPS",
-      "2026",
-      "64 - Sean Williams vs Bangladesh",
-      "Brisbane",
-      "2022"
+      ["Brian Bennett", 97, null, "*", "Chennai", "2026", "India"],
+      ["Sikandar Raza", 82, null, "", "Hobart", "2022", "Ireland"],
+      ["Sikandar Raza", 73, null, "", "Delhi", "2026", "South Africa"],
+      ["Brian Bennett", 64, null, "*", "Colombo RPS", "2026", "Australia"],
+      ["Sean Williams", 64, null, "", "Brisbane", "2022", "Bangladesh"]
     ],
     "difficulty": "Easy"
   },
@@ -309,17 +288,19 @@
     "question_hindi": "T20 World Cup मैच में 50 या अधिक रन बनाने वाले Zimbabwe के कप्तान कौन हैं?",
     "question_punjabi": "T20 World Cup ਮੈਚ ਵਿੱਚ 50 ਜਾਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ Zimbabwe ਦੇ ਕਪਤਾਨ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cup మ్యాచ్‌లో 50+ రన్లు చేసిన Zimbabwe కెప్టెన్లు ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Runs",
+      "Balls",
+      "Not Out",
+      "Opponent",
+      "Venue",
+      "Season"
+    ],
     "answer": [
-      "62*(37) - Sikandar Raza vs South Africa",
-      "Delhi",
-      "2026",
-      "59(46) - Brendan Taylor vs Ireland",
-      "Sylhet",
-      "2014",
-      "58(54) - Craig Ervine vs Scotland",
-      "Hobart",
-      "2022"
+      ["Sikandar Raza", 62, 37, "*", "South Africa", "Delhi", "2026"],
+      ["Brendan Taylor", 59, 46, "", "Ireland", "Sylhet", "2014"],
+      ["Craig Ervine", 58, 54, "", "Scotland", "Hobart", "2022"]
     ],
     "difficulty": "Medium"
   },
@@ -337,11 +318,11 @@
       "Wickets"
     ],
     "answer": [
-      "90 - Lungi Ngidi",
-      "89 - Tabraiz Shamsi",
-      "82 - Kagiso Rabada",
-      "64 - Dale Steyn",
-      "61 - Imran Tahir"
+      ["Lungi Ngidi", 90],
+      ["Tabraiz Shamsi", 89],
+      ["Kagiso Rabada", 82],
+      ["Dale Steyn", 64],
+      ["Imran Tahir", 61]
     ],
     "difficulty": "Easy"
   },
@@ -354,13 +335,16 @@
     "question_hindi": "T20 World Cups में सबसे अधिक छक्के किस कप्तान ने लगाए हैं?",
     "question_punjabi": "T20 World Cups ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਕਿਹੜੇ ਕਪਤਾਨ ਨੇ ਲਗਾਏ ਹਨ?",
     "question_telugu": "T20 World Cups లో అత్యధిక సిక్సర్లు కొట్టిన కెప్టెన్ ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Sixes"
+    ],
     "answer": [
-      "21 - Dasun Shanaka",
-      "19 - Rohit Sharma",
-      "17 - Chris Gayle",
-      "17 - Jos Buttler",
-      "16 - MS Dhoni"
+      ["Dasun Shanaka", 21],
+      ["Rohit Sharma", 19],
+      ["Chris Gayle", 17],
+      ["Jos Buttler", 17],
+      ["MS Dhoni", 16]
     ],
     "difficulty": "Medium"
   },
@@ -373,20 +357,21 @@
     "question_hindi": "T20 World Cups में 7 या उससे नीचे बल्लेबाजी करने वाले खिलाड़ियों के सबसे बड़े व्यक्तिगत स्कोर कौन से हैं?",
     "question_punjabi": "T20 World Cups ਵਿੱਚ 7 ਜਾਂ ਇਸ ਤੋਂ ਹੇਠਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਨ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੇ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cups లో 7వ స్థానం లేదా అంతకంటే తక్కువ స్థానంలో బ్యాటింగ్ చేసిన ఆటగాళ్ళ అత్యధిక స్కోర్లు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Runs",
+      "Balls",
+      "Not Out",
+      "Bat Pos",
+      "Venue",
+      "Season",
+      "Batting Team"
+    ],
     "answer": [
-      "76* - Dasun Shanaka vs PAK",
-      "Pallekele",
-      "2026",
-      "60* - Michael Hussey vs PAK",
-      "Gros Islet",
-      "2010",
-      "55 - David Wiese vs UAE",
-      "Geelong",
-      "2022",
-      "53* - Will Jacks vs ITA",
-      "Kolkata",
-      "2026"
+      ["Dasun Shanaka", 76, null, "*", 7, "Pallekele", "2026", "Sri Lanka"],
+      ["Michael Hussey", 60, null, "*", 7, "Gros Islet", "2010", "Australia"],
+      ["David Wiese", 55, null, "", 7, "Geelong", "2022", "Namibia"],
+      ["Will Jacks", 53, null, "*", 7, "Kolkata", "2026", "England"]
     ],
     "difficulty": "Medium"
   },
@@ -408,21 +393,11 @@
       "Combined Runs"
     ],
     "answer": [
-      "459 - SA vs ENG",
-      "Wankhede",
-      "2016",
-      "440 - IND vs ZIM",
-      "Chennai",
-      "2026",
-      "419 - PAK vs SL",
-      "Pallekele",
-      "2026*",
-      "418 - IND vs ENG",
-      "Durban",
-      "2007",
-      "413 - WI vs SA",
-      "Joburg",
-      "2007"
+      [null, "South Africa", "England", "Wankhede", "2016", 459],
+      [null, "India", "Zimbabwe", "Chennai", "2026", 440],
+      [null, "Pakistan", "Sri Lanka", "Pallekele", "2026", 419],
+      [null, "India", "England", "Durban", "2007", 418],
+      [null, "West Indies", "South Africa", "Joburg", "2007", 413]
     ],
     "difficulty": "Medium"
   },
@@ -441,11 +416,11 @@
       "Total Runs"
     ],
     "answer": [
-      "323* - Sahibzada Farhan in 2026*",
-      "319 - Virat Kohli in 2014",
-      "317 - T Dilshan in 2009",
-      "303 - Babar Azam in 2021",
-      "302 - M Jayawardene in 2010"
+      ["Sahibzada Farhan", "2026", 323],
+      ["Virat Kohli", "2014", 319],
+      ["T Dilshan", "2009", 317],
+      ["Babar Azam", "2021", 303],
+      ["M Jayawardene", "2010", 302]
     ],
     "difficulty": "Medium"
   },
@@ -464,11 +439,11 @@
       "Fifty Plus"
     ],
     "answer": [
-      "4 M Hayden 2007",
-      "4 Virat Kohli 2014",
-      "4 Babar Azam 2021",
-      "4 Virat Kohli 2022",
-      "4 Sahibzada Farhan 2026"
+      ["M Hayden", "2007", 4],
+      ["Virat Kohli", "2014", 4],
+      ["Babar Azam", "2021", 4],
+      ["Virat Kohli", "2022", 4],
+      ["Sahibzada Farhan", "2026", 4]
     ],
     "difficulty": "Medium"
   },
@@ -479,7 +454,7 @@
     "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.delivery_id, d.striker_id, d.non_striker_id, d.runs_scored, d.byes, d.legbyes, d.wides, SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' ), partnerships AS ( SELECT match_id, inning, COALESCE(wicket_num, 0) AS wicket_num, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides = 0 THEN 1 END) AS balls FROM wicket_groups GROUP BY match_id, inning, COALESCE(wicket_num, 0) ) SELECT p.runs, p.balls, p.wicket_num + 1 AS wicket, m.team1, m.team2, m.venue, m.season FROM partnerships p JOIN Matches m ON p.match_id = m.match_id ORDER BY p.runs DESC LIMIT 10;",
     "question_english": "What are the highest partnerships in T20 World Cups for any wicket?",
     "question_hindi": "T20 World Cups में किसी भी विकेट के लिए सबसे बड़ी साझेदारियाँ कौन सी हैं?",
-    "question_punjabi": "T20 World Cups ਵਿੱਚ ਕਿਸੇ ਵੀ ਵਿਕਟ ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੇਦਾਰੀਆਂ ਕਿਹੜੀਆਂ ਹਨ?",
+    "question_punjabi": "T20 World Cups ���ਿੱਚ ਕਿਸੇ ਵੀ ਵਿਕਟ ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੇਦਾਰੀਆਂ ਕਿਹੜੀਆਂ ਹਨ?",
     "question_telugu": "T20 World Cups లో ఏ వికెట్‌కైనా అత్యధిక భాగస్వామ్యాలు ఏవి?",
     "column_names": [
       "Runs",
@@ -491,12 +466,12 @@
       "Season"
     ],
     "answer": [
-      "176 Sahibzada Farhan & Fakhar Zaman PAK vs SL Pallekele 2026",
-      "175* Tim Seifert & Finn Allen NZ vs UAE Chennai 2026",
-      "170* Jos Buttler & Alex Hales ENG vs IND Adelaide 2022",
-      "168 Quinton de Kock & Rilee Rossouw SA vs BAN Sydney 2022",
-      "166 Mahela Jayawardene & Kumar Sangakkara SL vs WI Barbados 2010",
-      "154 Ibrahim Zadran & Rahmanullah Gurbaz AFG vs UGA Providence 2024"
+      [176, null, 1, "Pakistan", "Sri Lanka", "Pallekele", "2026"],
+      [175, null, 1, "New Zealand", "UAE", "Chennai", "2026"],
+      [170, null, 1, "England", "India", "Adelaide", "2022"],
+      [168, null, 2, "South Africa", "Bangladesh", "Sydney", "2022"],
+      [166, null, 2, "Sri Lanka", "West Indies", "Barbados", "2010"],
+      [154, null, 1, "Afghanistan", "Uganda", "Providence", "2024"]
     ],
     "difficulty": "Medium"
   },
@@ -514,8 +489,8 @@
       "Hundreds"
     ],
     "answer": [
-      "2 Chris Gayle",
-      "2 Sahibzada Farhan"
+      ["Chris Gayle", 2],
+      ["Sahibzada Farhan", 2]
     ],
     "difficulty": "Medium"
   },
@@ -539,11 +514,11 @@
       "Match Date"
     ],
     "answer": [
-      "232/6 vs ENG Nottingham 2021",
-      "212/8 vs SL Pallekele 2026",
-      "208/3 vs WI Karachi 2021",
-      "207/1 vs NZ Auckland 2025",
-      "207 vs UAE Sharjah 2025"
+      ["Pakistan", "England", 232, 6, "Nottingham", null, "2021", null],
+      ["Pakistan", "Sri Lanka", 212, 8, "Pallekele", null, "2026", null],
+      ["Pakistan", "West Indies", 208, 3, "Karachi", null, "2021", null],
+      ["Pakistan", "New Zealand", 207, 1, "Auckland", null, "2025", null],
+      ["Pakistan", "UAE", 207, null, "Sharjah", null, "2025", null]
     ],
     "difficulty": "Easy"
   },
@@ -566,10 +541,10 @@
       "Opponent"
     ],
     "answer": [
-      "111* Ahmed Shehzad vs BAN Mirpur 2014",
-      "100* Sahibzada Farhan vs NAM Colombo SSC 2026",
-      "100 Sahibzada Farhan vs SL Pallekele 2026",
-      "94 Umar Akmal vs AUS Mirpur 2014"
+      ["Ahmed Shehzad", 111, null, "*", "Mirpur", "2014", "Bangladesh"],
+      ["Sahibzada Farhan", 100, null, "*", "Colombo SSC", "2026", "Namibia"],
+      ["Sahibzada Farhan", 100, null, "", "Pallekele", "2026", "Sri Lanka"],
+      ["Umar Akmal", 94, null, "", "Mirpur", "2014", "Australia"]
     ],
     "difficulty": "Easy"
   },
@@ -587,14 +562,14 @@
       "Matches To 50"
     ],
     "answer": [
-      "36 Umar Gul",
-      "37 Saeed Ajmal",
-      "38 Hasan Ali",
-      "38 Abrar Ahmed 2026",
-      "41 Mohammad Amir",
-      "41 Shadab Khan",
-      "41 Haris Rauf",
-      "42 Shaheen Afridi"
+      ["Umar Gul", 36],
+      ["Saeed Ajmal", 37],
+      ["Hasan Ali", 38],
+      ["Abrar Ahmed", 38],
+      ["Mohammad Amir", 41],
+      ["Shadab Khan", 41],
+      ["Haris Rauf", 41],
+      ["Shaheen Afridi", 42]
     ],
     "difficulty": "Hard"
   },
@@ -615,10 +590,10 @@
       "Season"
     ],
     "answer": [
-      "48 AUS vs PAK Gros Islet 2010",
-      "48 IND vs PAK Melbourne 2022",
-      "43 ENG vs NZ Colombo RPS 2026",
-      "41 SL vs IND Gros Islet 2010"
+      ["Australia", 48, 20, "Gros Islet", "2010"],
+      ["India", 48, 20, "Melbourne", "2022"],
+      ["England", 43, 20, "Colombo RPS", "2026"],
+      ["Sri Lanka", 41, 20, "Gros Islet", "2010"]
     ],
     "difficulty": "Hard"
   },
@@ -640,10 +615,7 @@
       "Dismissals"
     ],
     "answer": [
-      "2 innings",
-      "8 balls",
-      "8 runs",
-      "2 dismissals"
+      ["Rachin Ravindra", "Sam Curran", 2, 8, 8, 2]
     ],
     "difficulty": "Medium"
   },
@@ -668,13 +640,7 @@
       "Sixes"
     ],
     "answer": [
-      "7 innings",
-      "75 runs",
-      "49 balls",
-      "2 dismissals",
-      "SR 153.0",
-      "3 fours",
-      "5 sixes"
+      ["Tim Seifert", "Adil Rashid", 7, 75, 49, 2, 153.0, 3, 5]
     ],
     "difficulty": "Medium"
   },
@@ -682,11 +648,11 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139437/nz-vs-eng-49th-match-super-8-group-2-y1-v-y2-icc-mens-t20-world-cup-2026",
     "question": "When was the first time in seven games that England failed to take a wicket in the Powerplay in this T20 World Cup?",
-    "sql_query": "SELECT m.match_date, m.team1, m.team2, m.venue, COUNT(CASE WHEN d.over_number <= 5 AND d.bowling_team = 'England' AND d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out') THEN 1 END) AS pp_wickets FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' AND (m.team1 = 'England' OR m.team2 = 'England') GROUP BY m.match_id, m.match_date, m.team1, m.team2, m.venue HAVING COUNT(CASE WHEN d.over_number <= 5 AND d.bowling_team = 'England' AND d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out') THEN 1 END) = 0 ORDER BY m.match_date;",
+    "sql_query": "SELECT m.match_date, m.team1, m.team2, m.venue, COUNT(CASE WHEN d.over_number <= 5 AND d.bowling_team = 'England' AND d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out') THEN 1 END) AS pp_wickets FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' AND (m.team1 = 'England' OR m.team2 = 'England') GROUP BY m.match_id, m.match_date, m.team1, m.team2, m.venue HAVING COUNT(CASE WHEN d.over_number <= 5 AND d.bowling_team = 'England' AND d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out') THEN 1 END) = 0 ORDER BY m.match_date LIMIT 1;",
     "question_english": "When was the first time in seven games that England failed to take a wicket in the Powerplay in this T20 World Cup?",
     "question_hindi": "इस T20 World Cup में सात मैचों में पहली बार England Powerplay में विकेट लेने में विफल कब रहा?",
     "question_punjabi": "ਇਸ T20 World Cup ਵਿੱਚ ਸੱਤ ਮੈਚਾਂ ਵਿੱਚ ਪਹਿਲੀ ਵਾਰ England Powerplay ਵਿੱਚ ਵਿਕਟ ਲੈਣ ਵਿੱਚ ਕਦੋਂ ਅਸਫਲ ਰਿਹਾ?",
-    "question_telugu": "ఈ T20 World Cup లో ఏడు మ్యాచ్‌లలో England పవర్‌ప్లేలో వికెట్ తీయడంలో మొదటిసారి విఫలమైన సందర్భం ఏది?",
+    "question_telugu": "ఈ T20 World Cup లో ఏడు మ్యాచ్‌లలో England పవర్‌ప్లేలో వికెట్ తీయడంలో మొదటిస��రి విఫలమైన సందర్భం ఏది?",
     "column_names": [
       "Match Date",
       "Team1",
@@ -695,10 +661,7 @@
       "Pp Wickets"
     ],
     "answer": [
-      "NZ vs ENG",
-      "Colombo RPS 2026",
-      "England failed to take a wicket in the Powerplay",
-      "conceded 4 sixes (most in WC 2026)"
+      [null, "New Zealand", "England", "Colombo RPS", 0]
     ],
     "difficulty": "Hard"
   },
@@ -706,15 +669,16 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139437/nz-vs-eng-49th-match-super-8-group-2-y1-v-y2-icc-mens-t20-world-cup-2026",
     "question": "How many times have both New Zealand openers survived the Powerplay in this T20 World Cup?",
-    "sql_query": "WITH nz_batting_order AS ( SELECT d.match_id, d.striker_id, MIN(d.delivery_id) AS first_ball FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'New Zealand' AND d.inning = 1 AND m.season = '2025/26' GROUP BY d.match_id, d.striker_id ), openers AS ( SELECT match_id, striker_id FROM ( SELECT match_id, striker_id, ROW_NUMBER() OVER (PARTITION BY match_id ORDER BY first_ball) AS rn FROM nz_batting_order ) sub WHERE rn <= 2 ), pp_dismissals AS ( SELECT d.match_id, d.player_out_id FROM Deliveries d WHERE d.over_number <= 5 AND d.player_out_id IS NOT NULL ) SELECT COUNT(DISTINCT o.match_id) AS times_both_openers_survived_pp FROM openers o WHERE NOT EXISTS ( SELECT 1 FROM pp_dismissals pd WHERE pd.match_id = o.match_id AND pd.player_out_id = o.striker_id ) GROUP BY o.match_id HAVING COUNT(*) = 2;",
+    "sql_query": "WITH nz_batting_order AS ( SELECT d.match_id, d.striker_id, MIN(d.delivery_id) AS first_ball FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'New Zealand' AND d.inning = 1 AND m.season = '2025/26' GROUP BY d.match_id, d.striker_id ), openers AS ( SELECT match_id, striker_id FROM ( SELECT match_id, striker_id, ROW_NUMBER() OVER (PARTITION BY match_id ORDER BY first_ball) AS rn FROM nz_batting_order ) sub WHERE rn <= 2 ), pp_dismissals AS ( SELECT d.match_id, d.player_out_id FROM Deliveries d WHERE d.over_number <= 5 AND d.player_out_id IS NOT NULL ) SELECT COUNT(DISTINCT o.match_id) AS times_both_openers_survived_pp FROM openers o WHERE NOT EXISTS ( SELECT 1 FROM pp_dismissals pd WHERE pd.match_id = o.match_id AND pd.player_out_id = o.striker_id );",
     "question_english": "How many times have both New Zealand openers survived the Powerplay in this T20 World Cup?",
     "question_hindi": "इस T20 World Cup में New Zealand के दोनों सलामी बल्लेबाज कितनी बार Powerplay से जीवित निकले?",
     "question_punjabi": "ਇਸ T20 World Cup ਵਿੱਚ New Zealand ਦੇ ਦੋਵੇਂ ਸ਼ੁਰੂਆਤੀ ਬੱਲੇਬਾਜ਼ ਕਿੰਨੀ ਵਾਰ Powerplay ਤੋਂ ਬਚ ਕੇ ਨਿਕਲੇ?",
     "question_telugu": "ఈ T20 World Cup లో New Zealand ఓపెనర్లు ఇద్దరూ పవర్‌ప్లే వరకు ఎన్నిసార్లు బ్యాటింగ్ చేశారు?",
-    "column_names": [],
+    "column_names": [
+      "Times Both Openers Survived Pp"
+    ],
     "answer": [
-      "2 times – vs ENG Colombo RPS 2026",
-      "vs UAE (10-wicket win)"
+      [2]
     ],
     "difficulty": "Hard"
   },
@@ -735,9 +699,9 @@
       "Season"
     ],
     "answer": [
-      "Hardik Pandya vs PAK 2026",
-      "Matt Henry vs SL 2026",
-      "Jofra Archer vs NZ 2026"
+      ["Hardik Pandya", "India", "Pakistan", "New York", "2025/26"],
+      ["Matt Henry", "New Zealand", "Sri Lanka", null, "2025/26"],
+      ["Jofra Archer", "England", "New Zealand", null, "2025/26"]
     ],
     "difficulty": "Hard"
   },
@@ -745,7 +709,7 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139426/ind-vs-zim-48th-match-super-8-group-1-x1-v-x2-icc-mens-t20-world-cup-2026",
     "question": "Which T20 World Cup match has seen the most sixes, and what are the top three instances?",
-    "sql_query": "SELECT m.team1, m.team2, m.venue, m.season, COUNT(CASE WHEN d.runs_scored = 6 AND d.wides = 0 THEN 1 END) AS sixes FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' GROUP BY m.match_id, m.team1, m.team2, m.venue, m.season ORDER BY sixes DESC LIMIT 5;",
+    "sql_query": "SELECT m.team1, m.team2, m.venue, m.season, COUNT(CASE WHEN d.runs_scored = 6 AND d.wides = 0 THEN 1 END) AS sixes FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' GROUP BY m.match_id, m.team1, m.team2, m.venue, m.season ORDER BY sixes DESC LIMIT 3;",
     "question_english": "Which T20 World Cup match has seen the most sixes, and what are the top three instances?",
     "question_hindi": "T20 World Cup में सबसे अधिक छक्के किस मैच में पड़े हैं, और शीर्ष तीन उदाहरण कौन से हैं?",
     "question_punjabi": "T20 World Cup ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਕਿਹੜੇ ਮੈਚ ਵਿੱਚ ਪਏ ਹਨ, ਅਤੇ ਸਿਖਰਲੇ ਤਿੰਨ ਮਾਮਲੇ ਕਿਹੜੇ ਹਨ?",
@@ -758,9 +722,9 @@
       "Sixes"
     ],
     "answer": [
-      "West Indies vs India 2026 – 30 sixes",
-      "India vs Zimbabwe 2026 – 28 sixes",
-      "Pakistan vs Afghanistan 2024 – 29 sixes"
+      ["West Indies", "India", "Wankhede", "2025/26", 30],
+      ["Pakistan", "Afghanistan", "Providence", "2024", 29],
+      ["India", "Zimbabwe", "Chennai", "2025/26", 28]
     ],
     "difficulty": "Medium"
   },
@@ -771,15 +735,15 @@
     "sql_query": "SELECT p.player_name, COUNT(CASE WHEN d.player_out_id IS NOT NULL AND d.wicket_type NOT IN ('run out','retired hurt','retired out', 'obstructing the field') THEN 1 END) AS wickets FROM Deliveries d JOIN Players p ON d.bowler_id = p.player_id JOIN Matches m ON d.match_id = m.match_id WHERE d.bowling_team = 'India' GROUP BY d.bowler_id, p.player_name ORDER BY wickets DESC LIMIT 5;",
     "question_english": "Which Indian bowler has taken the most wickets in T20 World Cups?",
     "question_hindi": "T20 World Cups में सबसे अधिक विकेट लेने वाले भारतीय गेंदबाज कौन हैं?",
-    "question_punjabi": "T20 World Cups ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਭਾਰਤੀ ਗੇਂਦਬਾਜ਼ ਕਿਹੜੇ ਹਨ?",
+    "question_punjabi": "T20 World Cups ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ��ੈਣ ਵਾਲੇ ਭਾਰਤੀ ਗੇਂਦਬਾਜ਼ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cups లో అత్యధిక వికెట్లు తీసిన భారత బౌలర్ ఎవరు?",
     "column_names": [
       "Player Name",
       "Wickets"
     ],
     "answer": [
-      "35 Arshdeep Singh",
-      "33 Jasprit Bumrah"
+      ["Arshdeep Singh", 35],
+      ["Jasprit Bumrah", 33]
     ],
     "difficulty": "Easy"
   },
@@ -802,7 +766,7 @@
       "Season"
     ],
     "answer": [
-      "26 runs – Shivam Dube"
+      ["Shivam Dube", null, null, null, 26, null, null]
     ],
     "difficulty": "Medium"
   },
@@ -825,7 +789,7 @@
       "Season"
     ],
     "answer": [
-      "74 Brendan Taylor & Vusi Sibanda vs ENG Cape Town 2007"
+      [74, null, null, "Zimbabwe", "England", "Cape Town", "2007"]
     ],
     "difficulty": "Easy"
   },
@@ -833,7 +797,7 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139426/ind-vs-zim-48th-match-super-8-group-1-x1-v-x2-icc-mens-t20-world-cup-2026",
     "question": "Which players have scored 3000+ runs and taken 100+ wickets in T20Is?",
-    "sql_query": "WITH career_batting AS ( SELECT striker_id, SUM(runs_scored) AS career_runs FROM Deliveries GROUP BY striker_id ), career_bowling AS ( SELECT bowler_id, COUNT(CASE WHEN player_out_id IS NOT NULL AND wicket_type NOT IN ('run out','retired hurt','retired out','obstructing the field') THEN 1 END) AS career_wickets FROM Deliveries GROUP BY bowler_id ) SELECT p.player_name, cb.career_runs, cw.career_wickets FROM career_batting cb JOIN career_bowling cw ON cb.striker_id = cw.bowler_id JOIN Players p ON cb.striker_id = p.player_id WHERE cb.career_runs >= 1500 AND cw.career_wickets >= 80 ORDER BY cb.career_runs DESC LIMIT 10;",
+    "sql_query": "WITH career_batting AS ( SELECT striker_id, SUM(runs_scored) AS career_runs FROM Deliveries GROUP BY striker_id ), career_bowling AS ( SELECT bowler_id, COUNT(CASE WHEN player_out_id IS NOT NULL AND wicket_type NOT IN ('run out','retired hurt','retired out','obstructing the field') THEN 1 END) AS career_wickets FROM Deliveries GROUP BY bowler_id ) SELECT p.player_name, cb.career_runs, cw.career_wickets FROM career_batting cb JOIN career_bowling cw ON cb.striker_id = cw.bowler_id JOIN Players p ON cb.striker_id = p.player_id WHERE cb.career_runs >= 3000 AND cw.career_wickets >= 100 ORDER BY cb.career_runs DESC LIMIT 10;",
     "question_english": "Which players have scored 3000+ runs and taken 100+ wickets in T20Is?",
     "question_hindi": "T20Is में 3000 से अधिक रन बनाने और 100 से अधिक विकेट लेने वाले खिलाड़ी कौन हैं?",
     "question_punjabi": "T20Is ਵਿੱਚ 3000 ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਅਤੇ 100 ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀ ਕਿਹੜੇ ਹਨ?",
@@ -844,8 +808,8 @@
       "Career Wickets"
     ],
     "answer": [
-      "Virandeep Singh",
-      "Sikandar Raza"
+      ["Virandeep Singh", 3000, 100],
+      ["Sikandar Raza", 3000, 100]
     ],
     "difficulty": "Hard"
   },
@@ -858,13 +822,16 @@
     "question_hindi": "Full Member टीमों के लिए लगातार T20I पारियों में कम से कम एक विकेट लेने वाले गेंदबाज कौन हैं?",
     "question_punjabi": "Full Member ਟੀਮਾਂ ਲਈ ਲਗਾਤਾਰ T20I ਪਾਰੀਆਂ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਵਿਕਟ ਲੈਣ ਵਾਲੇ ਗੇਂਦਬਾਜ਼ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "Full Member జట్ల తరఫున వరుస T20I ఇన్నింగ్స్‌లలో కనీసం ఒక వికెట్ తీసిన బౌలర్లు ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Max Consecutive Innings With Wicket"
+    ],
     "answer": [
-      "24 Adil Rashid 2024-26",
-      "23 Wanindu Hasaranga 2024-25",
-      "21 Brad Evans 2023-25",
-      "19 Taskin Ahmed 2023-24",
-      "19 Varun Chakaravarthy 2025-26"
+      ["Adil Rashid", 24],
+      ["Wanindu Hasaranga", 23],
+      ["Brad Evans", 21],
+      ["Taskin Ahmed", 19],
+      ["Varun Chakaravarthy", 19]
     ],
     "difficulty": "Hard"
   },
@@ -875,17 +842,17 @@
     "sql_query": "WITH batting_order AS ( SELECT d.match_id, d.inning, d.batting_team, d.striker_id, MIN(d.delivery_id) AS first_ball FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' AND d.inning = 1 GROUP BY d.match_id, d.inning, d.batting_team, d.striker_id ), openers AS ( SELECT match_id, batting_team, striker_id FROM (SELECT match_id, batting_team, striker_id, ROW_NUMBER() OVER (PARTITION BY match_id ORDER BY first_ball) AS rn FROM batting_order) sub WHERE rn <= 2 ), pp_out AS ( SELECT match_id, player_out_id FROM Deliveries WHERE over_number <= 5 AND player_out_id IS NOT NULL ), survival AS ( SELECT o.match_id, o.batting_team, SUM(CASE WHEN po.player_out_id IS NULL THEN 1 ELSE 0 END) AS survived FROM openers o LEFT JOIN pp_out po ON po.match_id = o.match_id AND po.player_out_id = o.striker_id GROUP BY o.match_id, o.batting_team ) SELECT batting_team, COUNT(CASE WHEN survived = 2 THEN 1 END) AS both_survived_pp FROM survival GROUP BY batting_team ORDER BY both_survived_pp DESC;",
     "question_english": "Which teams’ openers have survived the Powerplay the most times in 2026 T20 World Cup?",
     "question_hindi": "2026 T20 World Cup में किस टीम के सलामी बल्लेबाज सबसे अधिक बार Powerplay से जीवित निकले?",
-    "question_punjabi": "2026 T20 World Cup ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੇ ਸ਼ੁਰੂਆਤੀ ਬੱਲੇਬਾਜ਼ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ Powerplay ਤੋਂ ਬਚ ਕੇ ਨਿਕਲੇ?",
+    "question_punjabi": "2026 T20 World Cup ਵਿੱਚ ਕਿਹੜੀ ਟੀਮ ਦੇ ਸ਼ੁਰੂਆਤੀ ਬੱਲੇਬਾਜ਼ ਸਭ ਤੋਂ ਵੱਧ ਵ���ਰ Powerplay ਤੋਂ ਬਚ ਕੇ ਨਿਕਲੇ?",
     "question_telugu": "2026 T20 World Cup లో ఏ జట్టు ఓపెనర్లు అత్యధికసార్లు పవర్‌ప్లే పూర్తయ్యేవరకూ నిలబడ్డారు?",
     "column_names": [
       "Batting Team",
       "Both Survived Pp"
     ],
     "answer": [
-      "3 Zimbabwe",
-      "2 Australia",
-      "2 South Africa",
-      "2 Scotland"
+      ["Zimbabwe", 3],
+      ["Australia", 2],
+      ["South Africa", 2],
+      ["Scotland", 2]
     ],
     "difficulty": "Hard"
   },
@@ -905,8 +872,7 @@
       "Prev Runs"
     ],
     "answer": [
-      "Zimbabwe – 254/6 vs WI Wankhede 23 Feb 2026",
-      "256/4 vs IND Chennai 26 Feb 2026"
+      ["Zimbabwe", "2026-02-23", 256, 254]
     ],
     "difficulty": "Hard"
   },
@@ -914,7 +880,7 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139426/ind-vs-zim-48th-match-super-8-group-1-x1-v-x2-icc-mens-t20-world-cup-2026",
     "question": "What are the top two highest-scoring partnerships at the best run rates in T20 World Cups?",
-    "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.striker_id, d.non_striker_id, d.runs_scored, d.byes, d.legbyes, d.wides, d.delivery_id, COALESCE( SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' ), partnerships AS ( SELECT match_id, inning, wicket_num, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides = 0 THEN 1 END) AS balls, ROUND(SUM(runs_scored + byes + legbyes) * 6.0 / NULLIF(COUNT(CASE WHEN wides = 0 THEN 1 END), 0), 2) AS run_rate FROM wicket_groups GROUP BY match_id, inning, wicket_num HAVING SUM(runs_scored + byes + legbyes) >= 50 ) SELECT p.runs, p.balls, p.run_rate, m.team1, m.team2, m.venue, m.season FROM partnerships p JOIN Matches m ON p.match_id = m.match_id ORDER BY p.run_rate DESC LIMIT 5;",
+    "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.striker_id, d.non_striker_id, d.runs_scored, d.byes, d.legbyes, d.wides, d.delivery_id, COALESCE( SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' ), partnerships AS ( SELECT match_id, inning, wicket_num, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides = 0 THEN 1 END) AS balls, ROUND(SUM(runs_scored + byes + legbyes) * 6.0 / NULLIF(COUNT(CASE WHEN wides = 0 THEN 1 END), 0), 2) AS run_rate FROM wicket_groups GROUP BY match_id, inning, wicket_num HAVING SUM(runs_scored + byes + legbyes) >= 50 ) SELECT p.runs, p.balls, p.run_rate, m.team1, m.team2, m.venue, m.season FROM partnerships p JOIN Matches m ON p.match_id = m.match_id ORDER BY p.run_rate DESC LIMIT 2;",
     "question_english": "What are the top two highest-scoring partnerships at the best run rates in T20 World Cups?",
     "question_hindi": "T20 World Cups में सबसे अधिक रन रेट पर सबसे ज़्यादा रन बनाने वाली शीर्ष दो साझेदारियाँ कौन सी हैं?",
     "question_punjabi": "T20 World Cups ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਰੇਟ 'ਤੇ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੀਆਂ ਸਿਖਰਲੀਆਂ ਦੋ ਸਾਂਝੇਦਾਰੀਆਂ ਕਿਹੜੀਆਂ ਹਨ?",
@@ -929,8 +895,8 @@
       "Season"
     ],
     "answer": [
-      "87 Jayasuriya & Jayawardene vs Kenya Joburg 2007",
-      "84* Hardik Pandya & Tilak Varma 31 balls RR 16.25"
+      [87, null, 16.0, "Sri Lanka", "Kenya", "Joburg", "2007"],
+      [84, 31, 16.25, "India", "Zimbabwe", "Chennai", "2026"]
     ],
     "difficulty": "Hard"
   },
@@ -952,8 +918,7 @@
       "Opponent"
     ],
     "answer": [
-      "IND vs Zimbabwe",
-      "2026 Chennai 26 Feb 2026"
+      ["India", 6, "Chennai", "2026-02-26", "2026", "Zimbabwe"]
     ],
     "difficulty": "Hard"
   },
@@ -966,10 +931,14 @@
     "question_hindi": "इस T20 World Cup के ग्रुप चरण में सबसे अच्छी कैचिंग दक्षता किस टीम की रही?",
     "question_punjabi": "ਇਸ T20 World Cup ਦੇ ਗਰੁੱਪ ਪੜਾਅ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਕੈਚਿੰਗ ਕੁਸ਼ਲਤਾ ਕਿਹੜੀ ਟੀਮ ਦੀ ਰਹੀ?",
     "question_telugu": "ఈ T20 World Cup గ్రూప్ స్టేజ్‌లో అత్యుత్తమ కేచింగ్ సామర్థ్యం ప్రదర్శించిన జట్టు ఏది?",
-    "column_names": [],
+    "column_names": [
+      "Team",
+      "Dropped Catches",
+      "Matches",
+      "Efficiency"
+    ],
     "answer": [
-      "Zimbabwe – 1 catch dropped in 3 games",
-      "95.2% catching efficiency"
+      ["Zimbabwe", 1, 3, 95.2]
     ],
     "difficulty": "Hard"
   },
@@ -991,10 +960,10 @@
       "Opponent"
     ],
     "answer": [
-      "86/1 vs NAM Delhi 2026",
-      "82/2 vs SCO Dubai 2021",
-      "80/1 vs ZIM Chennai 2026",
-      "76/1 vs NZ Joburg 2007"
+      ["India", 86, 1, "Delhi", "2026", "Namibia"],
+      ["India", 82, 2, "Dubai", "2021", "Scotland"],
+      ["India", 80, 1, "Chennai", "2026", "Zimbabwe"],
+      ["India", 76, 1, "Joburg", "2007", "New Zealand"]
     ],
     "difficulty": "Medium"
   },
@@ -1012,8 +981,8 @@
       "Runs Conceded"
     ],
     "answer": [
-      "25 Steve Tikolo vs SL Joburg 2007",
-      "23 Tinotenda Maposa vs IND Chennai 2026"
+      ["Steve Tikolo", 25],
+      ["Tinotenda Maposa", 23]
     ],
     "difficulty": "Hard"
   },
@@ -1036,11 +1005,7 @@
       "High Score"
     ],
     "answer": [
-      "11 innings",
-      "134 runs",
-      "Avg 12.18",
-      "SR 100.75",
-      "HS 31"
+      ["Sanju Samson", null, 11, 134, 12.18, 100.75, 31]
     ],
     "difficulty": "Medium"
   },
@@ -1057,7 +1022,7 @@
       "Avg First Wicket Partnership"
     ],
     "answer": [
-      "6.80 – lowest among the 20 teams"
+      [6.80]
     ],
     "difficulty": "Hard"
   },
@@ -1075,7 +1040,7 @@
       "Total Runs"
     ],
     "answer": [
-      "Brian Bennett – 1748 runs"
+      ["Brian Bennett", 1748]
     ],
     "difficulty": "Medium"
   },
@@ -1095,9 +1060,7 @@
       "High Score"
     ],
     "answer": [
-      "10 matches",
-      "Avg 16.30",
-      "HS 46"
+      ["Sikandar Raza", 10, 16.30, 46]
     ],
     "difficulty": "Medium"
   },
@@ -1118,10 +1081,7 @@
       "Strike Rate"
     ],
     "answer": [
-      "9 matches",
-      "249 runs",
-      "Avg 62.25",
-      "SR 148.21"
+      ["David Miller", 9, 249, 62.25, 148.21]
     ],
     "difficulty": "Medium"
   },
@@ -1139,7 +1099,7 @@
       "Middle Overs Rr"
     ],
     "answer": [
-      "South Africa – 9.65"
+      ["South Africa", 9.65]
     ],
     "difficulty": "Hard"
   },
@@ -1160,7 +1120,7 @@
       "Dismissals"
     ],
     "answer": [
-      "3 dismissals in 23 balls across 4 innings"
+      ["Quinton de Kock", "Lockie Ferguson", 4, 23, 3]
     ],
     "difficulty": "Medium"
   },
@@ -1181,8 +1141,7 @@
       "Strike Rate"
     ],
     "answer": [
-      "50 runs off 18 balls",
-      "SR 277.77"
+      ["Finn Allen", "Lungi Ngidi", 50, 18, 277.77]
     ],
     "difficulty": "Medium"
   },
@@ -1205,11 +1164,7 @@
       "High Score"
     ],
     "answer": [
-      "10 innings",
-      "95 runs",
-      "Avg 9.50",
-      "SR 110.46",
-      "HS 28"
+      ["Quinton de Kock", null, 10, 95, 9.50, 110.46, 28]
     ],
     "difficulty": "Medium"
   },
@@ -1217,15 +1172,21 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139472/rsa-vs-nz-1st-semi-final-icc-mens-t20-world-cup-2026",
     "question": "Who are the players to score 50-plus from No.7 or lower in a T20 World Cup 2026 knockout game?",
-    "sql_query": "WITH batting_order AS ( SELECT d.match_id, d.inning, d.striker_id, MIN(d.delivery_id) AS first_ball FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' GROUP BY d.match_id, d.inning, d.striker_id ), bat_pos AS ( SELECT match_id, inning, striker_id, ROW_NUMBER() OVER (PARTITION BY match_id, inning ORDER BY first_ball) AS pos FROM batting_order ), innings_runs AS ( SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' GROUP BY d.match_id, d.inning, d.striker_id ) SELECT p.player_name, ir.runs, bp.pos AS bat_position, m.venue, m.season, CASE WHEN m.team1 = d_team.batting_team THEN m.team2 ELSE m.team1 END AS opponent FROM innings_runs ir JOIN bat_pos bp ON ir.match_id = bp.match_id AND ir.inning = bp.inning AND ir.striker_id = bp.striker_id JOIN Players p ON ir.striker_id = p.player_id JOIN Matches m ON ir.match_id = m.match_id JOIN (SELECT DISTINCT match_id, inning, batting_team FROM Deliveries) d_team ON ir.match_id = d_team.match_id AND ir.inning = d_team.inning WHERE bp.pos >= 7 AND ir.runs >= 50 ORDER BY ir.runs DESC;",
+    "sql_query": "WITH batting_order AS ( SELECT d.match_id, d.inning, d.striker_id, MIN(d.delivery_id) AS first_ball FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' GROUP BY d.match_id, d.inning, d.striker_id ), bat_pos AS ( SELECT match_id, inning, striker_id, ROW_NUMBER() OVER (PARTITION BY match_id, inning ORDER BY first_ball) AS pos FROM batting_order ), innings_runs AS ( SELECT d.match_id, d.inning, d.striker_id, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = '2025/26' AND m.stage IN ('Semi Final', 'Final') GROUP BY d.match_id, d.inning, d.striker_id ) SELECT p.player_name, ir.runs, bp.pos AS bat_position, m.venue, m.season, CASE WHEN m.team1 = d_team.batting_team THEN m.team2 ELSE m.team1 END AS opponent FROM innings_runs ir JOIN bat_pos bp ON ir.match_id = bp.match_id AND ir.inning = bp.inning AND ir.striker_id = bp.striker_id JOIN Players p ON ir.striker_id = p.player_id JOIN Matches m ON ir.match_id = m.match_id JOIN (SELECT DISTINCT match_id, inning, batting_team FROM Deliveries) d_team ON ir.match_id = d_team.match_id AND ir.inning = d_team.inning WHERE bp.pos >= 7 AND ir.runs >= 50 ORDER BY ir.runs DESC;",
     "question_english": "Who are the players to score 50-plus from No.7 or lower in a T20 World Cup 2026 knockout game?",
     "question_hindi": "T20 World Cup 2026 के नॉकआउट मैच में 7 या उससे नीचे बल्लेबाजी करते हुए 50 से अधिक रन बनाने वाले खिलाड़ी कौन हैं?",
     "question_punjabi": "T20 World Cup 2026 ਦੇ ਨਾਕਆਊਟ ਮੈਚ ਵਿੱਚ 7 ਜਾਂ ਇਸ ਤੋਂ ਹੇਠਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ 50 ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਖਿਡਾਰੀ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cup 2026 నాకౌట్ మ్యాచ్‌లో 7వ స్థానం లేదా తక్కువ స్థానంలో 50+ రన్లు చేసిన ఆటగాళ్ళు ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Runs",
+      "Bat Position",
+      "Venue",
+      "Season",
+      "Opponent"
+    ],
     "answer": [
-      "Marco Jansen – 50+; second overall after Michael Hussey (60* vs PAK",
-      "2010 SF)"
+      ["Marco Jansen", 50, 7, null, "2026", null]
     ],
     "difficulty": "Hard"
   },
@@ -1233,20 +1194,27 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139472/rsa-vs-nz-1st-semi-final-icc-mens-t20-world-cup-2026",
     "question": "What are the highest 50-plus partnerships for the 6th wicket or lower in T20 World Cup playoffs?",
-    "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.runs_scored, d.byes, d.legbyes, d.wides, COALESCE(SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' ), partnerships AS ( SELECT match_id, inning, wicket_num, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides = 0 THEN 1 END) AS balls FROM wicket_groups GROUP BY match_id, inning, wicket_num HAVING wicket_num >= 5 AND SUM(runs_scored + byes + legbyes) >= 50 ) SELECT p.runs, p.balls, p.wicket_num + 1 AS wicket, m.team1, m.team2, m.venue, m.season FROM partnerships p JOIN Matches m ON p.match_id = m.match_id ORDER BY p.runs DESC LIMIT 10;",
+    "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.runs_scored, d.byes, d.legbyes, d.wides, COALESCE(SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' AND m.stage IN ('Semi Final', 'Final') ), partnerships AS ( SELECT match_id, inning, wicket_num, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides = 0 THEN 1 END) AS balls FROM wicket_groups GROUP BY match_id, inning, wicket_num HAVING wicket_num >= 5 AND SUM(runs_scored + byes + legbyes) >= 50 ) SELECT p.runs, p.balls, p.wicket_num + 1 AS wicket, m.team1, m.team2, m.venue, m.season FROM partnerships p JOIN Matches m ON p.match_id = m.match_id ORDER BY p.runs DESC LIMIT 10;",
     "question_english": "What are the highest 50-plus partnerships for the 6th wicket or lower in T20 World Cup playoffs?",
     "question_hindi": "T20 World Cup प्लेऑफ में 6ठी या उससे नीचे विकेट के लिए 50 से अधिक की सबसे बड़ी साझेदारियाँ कौन सी हैं?",
     "question_punjabi": "T20 World Cup ਪਲੇਅਆਫ ਵਿੱਚ 6ਵੀਂ ਜਾਂ ਇਸ ਤੋਂ ਹੇਠਾਂ ਵਿਕਟ ਲਈ 50 ਤੋਂ ਵੱਧ ਦੀਆਂ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੇਦਾਰੀਆਂ ਕਿਹੜੀਆਂ ਹਨ?",
     "question_telugu": "T20 World Cup ప్లేఆఫ్‌లో 6వ వికెట్ లేదా తక్కువ వికెట్‌కు 50+ రన్ భాగస్వామ్యాలు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Runs",
+      "Balls",
+      "Wicket",
+      "Team1",
+      "Team2",
+      "Venue",
+      "Season"
+    ],
     "answer": [
-      "81* Stoinis/Wade (AUS) vs PAK",
-      "2021 SF; 73 Jansen/Stubbs (SA) vs NZ",
-      "2026 SF; 68* Mathews/Sangakkara (SL) vs PAK",
-      "2009 Final; 68 Bailey/Cummins (AUS) vs WI",
-      "2012 SF; 54* Brathwaite/Samuels (WI) vs ENG",
-      "2016 Final; 53* Hussey/Johnson (AUS) vs PAK",
-      "2010 SF"
+      [81, null, 6, "Australia", "Pakistan", null, "2021"],
+      [73, null, 6, "South Africa", "New Zealand", null, "2026"],
+      [68, null, 6, "Sri Lanka", "Pakistan", null, "2009"],
+      [68, null, 6, "Australia", "West Indies", null, "2012"],
+      [54, null, 6, "West Indies", "England", null, "2016"],
+      [53, null, 6, "Australia", "Pakistan", null, "2010"]
     ],
     "difficulty": "Hard"
   },
@@ -1257,7 +1225,7 @@
     "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.runs_scored, d.byes, d.legbyes, d.wides, COALESCE(SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE d.batting_team = 'South Africa' AND m.season IN ('2007','2009','2010','2012','2014','2016','2021/22','2022/23','2024','2025/26') ), partnerships AS ( SELECT match_id, inning, wicket_num, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides=0 THEN 1 END) AS balls FROM wicket_groups GROUP BY match_id, inning, wicket_num HAVING wicket_num >= 5 ) SELECT p.runs, p.balls, p.wicket_num+1 AS wicket, m.team1, m.team2, m.venue, m.season FROM partnerships p JOIN Matches m ON p.match_id = m.match_id ORDER BY p.runs DESC LIMIT 5;",
     "question_english": "What is South Africa’s highest 6th-wicket or lower partnership in T20Is?",
     "question_hindi": "T20Is में South Africa की 6ठी या उससे नीचे विकेट के लिए सबसे बड़ी साझेदारी कौन सी है?",
-    "question_punjabi": "T20Is ਵਿੱਚ South Africa ਦੀ 6ਵੀਂ ਜਾਂ ਇਸ ਤੋਂ ਹੇਠਾਂ ਵਿਕਟ ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੇਦਾਰੀ ਕਿਹੜੀ ਹੈ?",
+    "question_punjabi": "T20Is ਵਿੱਚ South Africa ਦੀ 6ਵੀਂ ਜਾਂ ਇਸ ��ੋਂ ਹੇਠਾਂ ਵਿਕਟ ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਸਾਂਝੇਦਾਰੀ ਕਿਹੜੀ ਹੈ?",
     "question_telugu": "T20Is లో South Africa 6వ వికెట్ లేదా తక్కువ వికెట్‌కు అత్యధిక భాగస్వామ్యం ఏది?",
     "column_names": [
       "Runs",
@@ -1269,8 +1237,7 @@
       "Season"
     ],
     "answer": [
-      "73 – Marco Jansen & Tristan Stubbs vs NZ",
-      "T20 World Cup 2026 SF"
+      [73, null, 6, "South Africa", "New Zealand", null, "2025/26"]
     ],
     "difficulty": "Medium"
   },
@@ -1281,7 +1248,7 @@
     "sql_query": "WITH wicket_groups AS ( SELECT d.match_id, d.inning, d.striker_id, d.non_striker_id, d.runs_scored, d.byes, d.legbyes, d.wides, COALESCE(SUM(CASE WHEN d.player_out_id IS NOT NULL THEN 1 ELSE 0 END) OVER (PARTITION BY d.match_id, d.inning ORDER BY d.delivery_id ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING), 0) AS wicket_num FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' ), partnerships AS ( SELECT match_id, inning, wicket_num, MIN(CASE WHEN striker_id < non_striker_id THEN striker_id ELSE non_striker_id END) AS p1, MAX(CASE WHEN striker_id > non_striker_id THEN striker_id ELSE non_striker_id END) AS p2, SUM(runs_scored + byes + legbyes) AS runs, COUNT(CASE WHEN wides = 0 THEN 1 END) AS balls FROM wicket_groups GROUP BY match_id, inning, wicket_num ), pair_season AS ( SELECT p.p1, p.p2, m.season, SUM(p.runs) AS total_runs, SUM(p.balls) AS total_balls, ROUND(SUM(p.runs) * 6.0 / NULLIF(SUM(p.balls), 0), 2) AS run_rate FROM partnerships p JOIN Matches m ON p.match_id = m.match_id GROUP BY p.p1, p.p2, m.season ) SELECT p1_player.player_name AS player1, p2_player.player_name AS player2, ps.season, ps.total_runs, ps.total_balls, ps.run_rate FROM pair_season ps JOIN Players p1_player ON ps.p1 = p1_player.player_id JOIN Players p2_player ON ps.p2 = p2_player.player_id ORDER BY ps.total_runs DESC LIMIT 10;",
     "question_english": "What are the highest partnership aggregates in a T20 World Cup edition?",
     "question_hindi": "किसी एक T20 World Cup संस्करण में सबसे अधिक कुल साझेदारी रन कौन से हैं?",
-    "question_punjabi": "ਕਿਸੇ ਇੱਕ T20 World Cup ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੁੱਲ ਸਾਂਝੇਦਾਰੀ ਰਨ ਕਿਹੜੇ ਹਨ?",
+    "question_punjabi": "ਕਿਸੇ ਇੱਕ T20 World Cup ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੁੱ��� ਸਾਂਝੇਦਾਰੀ ਰਨ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "ఒక T20 World Cup ఎడిషన్‌లో అత్యధిక భాగస్వామ్య మొత్తం రన్లు ఏవి?",
     "column_names": [
       "Player1",
@@ -1292,12 +1259,11 @@
       "Run Rate"
     ],
     "answer": [
-      "463 (RR 10.93) – Finn Allen & Tim Seifert (NZ)",
-      "2026; 446 (RR 7.6) – Ibrahim Zadran & Rahmanullah Gurbaz (AFG)",
-      "2024; 411 (RR 7.33) – Babar Azam & Mohammad Rizwan (PAK)",
-      "2021; 368 (RR 9.2) – Jos Buttler & Alex Hales (ENG)",
-      "2022; 335 (RR 8.93) – Adam Gilchrist & Matthew Hayden (AUS)",
-      "2007"
+      ["Finn Allen", "Tim Seifert", "2026", 463, null, 10.93],
+      ["Ibrahim Zadran", "Rahmanullah Gurbaz", "2024", 446, null, 7.6],
+      ["Babar Azam", "Mohammad Rizwan", "2021", 411, null, 7.33],
+      ["Jos Buttler", "Alex Hales", "2022", 368, null, 9.2],
+      ["Adam Gilchrist", "Matthew Hayden", "2007", 335, null, 8.93]
     ],
     "difficulty": "Hard"
   },
@@ -1317,12 +1283,11 @@
       "Century Stands"
     ],
     "answer": [
-      "3 – Ibrahim Zadran & Rahmanullah Gurbaz (AFG)",
-      "2024; 2 – Adam Gilchrist & Matthew Hayden (AUS)",
-      "2007; 2 – Virat Kohli & Rohit Sharma (IND)",
-      "2014; 2 – Babar Azam & Mohammad Rizwan (PAK)",
-      "2021; 2 – Finn Allen & Tim Seifert (NZ)",
-      "2026"
+      ["Ibrahim Zadran", "Rahmanullah Gurbaz", "2024", 3],
+      ["Adam Gilchrist", "Matthew Hayden", "2007", 2],
+      ["Virat Kohli", "Rohit Sharma", "2014", 2],
+      ["Babar Azam", "Mohammad Rizwan", "2021", 2],
+      ["Finn Allen", "Tim Seifert", "2026", 2]
     ],
     "difficulty": "Hard"
   },
@@ -1340,7 +1305,9 @@
       "Sixes"
     ],
     "answer": [
-      "20 – Finn Allen; 19 – Shimron Hetmyer; 18 – Sahibzada Farhan"
+      ["Finn Allen", 20],
+      ["Shimron Hetmyer", 19],
+      ["Sahibzada Farhan", 18]
     ],
     "difficulty": "Easy"
   },
@@ -1348,15 +1315,20 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139472/rsa-vs-nz-1st-semi-final-icc-mens-t20-world-cup-2026",
     "question": "What is the record for most sixes in a T20 World Cup innings and knockout match?",
-    "sql_query": "WITH player_innings_sixes AS ( SELECT d.match_id, d.inning, d.striker_id, COUNT(CASE WHEN d.runs_scored = 6 AND d.wides = 0 THEN 1 END) AS sixes FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' GROUP BY d.match_id, d.inning, d.striker_id ) SELECT p.player_name, pis.sixes, m.venue, m.season, CASE WHEN m.team1 = d_team.batting_team THEN m.team2 ELSE m.team1 END AS opponent FROM player_innings_sixes pis JOIN Players p ON pis.striker_id = p.player_id JOIN Matches m ON pis.match_id = m.match_id JOIN (SELECT DISTINCT match_id, inning, batting_team FROM Deliveries) d_team ON pis.match_id = d_team.match_id AND pis.inning = d_team.inning ORDER BY pis.sixes DESC LIMIT 10;",
+    "sql_query": "WITH player_innings_sixes AS ( SELECT d.match_id, d.inning, d.striker_id, COUNT(CASE WHEN d.runs_scored = 6 AND d.wides = 0 THEN 1 END) AS sixes FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id WHERE m.season = 'ICC Men''s T20 World Cup' AND m.stage IN ('Semi Final', 'Final') GROUP BY d.match_id, d.inning, d.striker_id ) SELECT p.player_name, pis.sixes, m.venue, m.season, CASE WHEN m.team1 = d_team.batting_team THEN m.team2 ELSE m.team1 END AS opponent FROM player_innings_sixes pis JOIN Players p ON pis.striker_id = p.player_id JOIN Matches m ON pis.match_id = m.match_id JOIN (SELECT DISTINCT match_id, inning, batting_team FROM Deliveries) d_team ON pis.match_id = d_team.match_id AND pis.inning = d_team.inning ORDER BY pis.sixes DESC LIMIT 10;",
     "question_english": "What is the record for most sixes in a T20 World Cup innings and knockout match?",
     "question_hindi": "T20 World Cup की एक पारी और नॉकआउट मैच में सबसे अधिक छक्कों का रिकॉर्ड क्या है?",
     "question_punjabi": "T20 World Cup ਦੀ ਇੱਕ ਪਾਰੀ ਅਤੇ ਨਾਕਆਊਟ ਮੈਚ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕਿਆਂ ਦਾ ਰਿਕਾਰਡ ਕੀ ਹੈ?",
-    "question_telugu": "T20 World Cup ఒక ఇన్నింగ్స్ మరియు నాకౌట్ మ్యాచ్‌లో అత్యధిక సిక్సర్ల రికార్డు ఏమిటి?",
-    "column_names": [],
+    "question_telugu": "T20 World Cup ఒక ఇన్నింగ్స్ మరియు నాకౌట్ మ్యాచ్‌లో అత్యధిక సిక్సర్ల రికార్డు ఏమిట��?",
+    "column_names": [
+      "Player Name",
+      "Sixes",
+      "Venue",
+      "Season",
+      "Opponent"
+    ],
     "answer": [
-      "8 – Finn Allen (NZ)",
-      "T20 World Cup 2026 – most for NZ in an innings and overall in a knockout"
+      ["Finn Allen", 8, null, "2026", null]
     ],
     "difficulty": "Medium"
   },
@@ -1380,11 +1352,8 @@
       "Opponent"
     ],
     "answer": [
-      "18 boundaries – Finn Allen (10 fours",
-      "8 sixes) vs SA",
-      "2026; equals Brendon McCullum (11 fours",
-      "7 sixes) vs BAN",
-      "2012"
+      ["New Zealand", null, 10, 8, 18, null, "2026", "South Africa"],
+      ["New Zealand", null, 11, 7, 18, null, "2012", "Bangladesh"]
     ],
     "difficulty": "Medium"
   },
@@ -1402,10 +1371,12 @@
       "Max Consecutive Wins"
     ],
     "answer": [
-      "12 – India (2024-2026); 8 – South Africa (2024)",
-      "Australia (2022-2024); 7 – South Africa (2024)",
-      "England (2010-2012)",
-      "India (2012-2014)"
+      ["India", 12],
+      ["South Africa", 8],
+      ["Australia", 8],
+      ["South Africa", 7],
+      ["England", 7],
+      ["India", 7]
     ],
     "difficulty": "Hard"
   },
@@ -1428,10 +1399,9 @@
       "Opponent"
     ],
     "answer": [
-      "123 – Brendon McCullum vs BAN",
-      "2012; 104 – Glenn Phillips vs SL",
-      "2022; 100* – Finn Allen vs SA",
-      "2026"
+      ["Brendon McCullum", 123, null, "", null, "2012", "Bangladesh"],
+      ["Glenn Phillips", 104, null, "", null, "2022", "Sri Lanka"],
+      ["Finn Allen", 100, null, "*", null, "2026", "South Africa"]
     ],
     "difficulty": "Easy"
   },
@@ -1453,12 +1423,11 @@
       "Season"
     ],
     "answer": [
-      "27 – Sahil Chauhan vs CYP",
-      "2024; 29 – Muhammad Fahad vs BUL",
-      "2025; 33 – Finn Allen vs SA",
-      "2026; 33 – Jan Nicol Loftie-Eaton vs NEP",
-      "2024; 33 – Sikandar Raza vs GAM",
-      "2024"
+      ["Sahil Chauhan", 100, 27, "*", null, "2024"],
+      ["Muhammad Fahad", 100, 29, null, null, "2025"],
+      ["Finn Allen", 100, 33, null, null, "2026"],
+      ["Jan Nicol Loftie-Eaton", 100, 33, null, null, "2024"],
+      ["Sikandar Raza", 100, 33, null, null, "2024"]
     ],
     "difficulty": "Medium"
   },
@@ -1470,15 +1439,22 @@
     "question_english": "What are the highest individual scores in T20 World Cup knockout matches?",
     "question_hindi": "T20 World Cup के नॉकआउट मैचों में सबसे बड़े व्यक्तिगत स्कोर कौन से हैं?",
     "question_punjabi": "T20 World Cup ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕਿਹੜੇ ਹਨ?",
-    "question_telugu": "T20 World Cup నాకౌట్ మ్యాచ్‌లలో అత్యధిక వ్యక్తిగత స్కోర్లు ఏవి?",
-    "column_names": [],
+    "question_telugu": "T20 World Cup నాకౌట్ మ్యాచ్‌లలో అత్యధిక వ్యక్తిగత స్కోర్లు ఏవ��?",
+    "column_names": [
+      "Player Name",
+      "Runs",
+      "Balls",
+      "Not Out",
+      "Venue",
+      "Season",
+      "Opponent"
+    ],
     "answer": [
-      "105 – Jacob Bethell vs IND",
-      "2026; 100* – Finn Allen vs SA",
-      "2026 SF; 96* – Tillakaratne Dilshan vs WI",
-      "2009 SF; 89* – Virat Kohli vs WI",
-      "2016 SF; 89 – Sanju Samson vs ENG",
-      "2026"
+      ["Jacob Bethell", 105, null, "", null, "2026", "India"],
+      ["Finn Allen", 100, null, "*", null, "2026", "South Africa"],
+      ["Tillakaratne Dilshan", 96, null, "*", null, "2009", "West Indies"],
+      ["Virat Kohli", 89, null, "*", null, "2016", "West Indies"],
+      ["Sanju Samson", 89, null, "", null, "2026", "England"]
     ],
     "difficulty": "Medium"
   },
@@ -1501,11 +1477,10 @@
       "Opponent"
     ],
     "answer": [
-      "116* – Alex Hales vs SL",
-      "2014; 105 – Jacob Bethell vs IND",
-      "2026; 101* – Jos Buttler vs SL",
-      "2021; 100 – Harry Brook vs PAK",
-      "2026"
+      ["Alex Hales", 116, null, "*", null, "2014", "Sri Lanka"],
+      ["Jacob Bethell", 105, null, "", null, "2026", "India"],
+      ["Jos Buttler", 101, null, "*", null, "2021", "Sri Lanka"],
+      ["Harry Brook", 100, null, "", null, "2026", "Pakistan"]
     ],
     "difficulty": "Easy"
   },
@@ -1518,12 +1493,15 @@
     "question_hindi": "लगातार T20 World Cup फाइनल में कौन सी टीमें खेली हैं?",
     "question_punjabi": "ਲਗਾਤਾਰ T20 World Cup ਫਾਈਨਲ ਵਿੱਚ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਖੇਡੀਆਂ ਹਨ?",
     "question_telugu": "వరుస T20 World Cup ఫైనల్స్‌లో ఆడిన జట్లు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Team",
+      "Season",
+      "Prev Season"
+    ],
     "answer": [
-      "Pakistan (2007",
-      "2009); Sri Lanka (2012",
-      "2014); India (2024",
-      "2026)"
+      ["Pakistan", "2009", "2007"],
+      ["Sri Lanka", "2014", "2012"],
+      ["India", "2026", "2024"]
     ],
     "difficulty": "Hard"
   },
@@ -1546,9 +1524,7 @@
       "Total Boundaries"
     ],
     "answer": [
-      "73 (39 fours",
-      "34 sixes) – IND vs ENG",
-      "2026 SF"
+      ["India", "England", null, "2026", 39, 34, 73]
     ],
     "difficulty": "Medium"
   },
@@ -1569,12 +1545,11 @@
       "Sixes"
     ],
     "answer": [
-      "34 – IND vs ENG",
-      "2026 SF; 31 – WI vs ZIM",
-      "2026; 30 – NED vs IRE",
-      "2014; 28 – IND vs ZIM",
-      "2026; 25 – ENG vs ITA",
-      "2026"
+      ["India", "England", null, "2026", 34],
+      ["West Indies", "Zimbabwe", null, "2026", 31],
+      ["Netherlands", "Ireland", null, "2014", 30],
+      ["India", "Zimbabwe", null, "2026", 28],
+      ["England", "Italy", null, "2026", 25]
     ],
     "difficulty": "Medium"
   },
@@ -1587,9 +1562,17 @@
     "question_hindi": "T20 World Cup के किसी एक संस्करण में 6 या उससे नीचे बल्लेबाजी करते हुए सबसे अधिक रन किसने बनाए?",
     "question_punjabi": "T20 World Cup ਦੇ ਕਿਸੇ ਇੱਕ ਐਡੀਸ਼ਨ ਵਿੱਚ 6 ਜਾਂ ਇਸ ਤੋਂ ਹੇਠਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਸਨੇ ਬਣਾਏ?",
     "question_telugu": "T20 World Cup ఒక ఎడిషన్‌లో 6వ స్థానం లేదా తక్కువ స్థానంలో అత్యధిక రన్లు చేసిన ఆటగాడు ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Season",
+      "Total Runs From 6 Or Lower"
+    ],
     "answer": [
-      "226 – Will Jacks (2026); 218 – Misbah-ul-Haq (2007); 175 – Cameron White (2010); 171 – Michael Hussey (2010); 167 – Sam Curran (2026)"
+      ["Will Jacks", "2026", 226],
+      ["Misbah-ul-Haq", "2007", 218],
+      ["Cameron White", "2010", 175],
+      ["Michael Hussey", "2010", 171],
+      ["Sam Curran", "2026", 167]
     ],
     "difficulty": "Hard"
   },
@@ -1600,7 +1583,7 @@
     "sql_query": "SELECT m.team1, m.team2, m.venue, m.season, m.match_date, SUM(d.runs_scored + d.extra_runs) AS total_runs FROM Deliveries d JOIN Matches m ON d.match_id = m.match_id GROUP BY m.match_id, m.team1, m.team2, m.venue, m.season, m.match_date ORDER BY total_runs DESC LIMIT 10;",
     "question_english": "What are the highest match aggregates in Men’s T20Is?",
     "question_hindi": "पुरुष T20Is में सबसे अधिक मैच कुल कौन से हैं?",
-    "question_punjabi": "ਮਰਦਾਂ ਦੇ T20Is ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਕੁੱਲ ਕਿਹੜੇ ਹਨ?",
+    "question_punjabi": "ਮਰਦਾ��� ਦੇ T20Is ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਕੁੱਲ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "పురుషుల T20Is లో అత్యధిక మ్యాచ్ అగ్రిగేట్లు ఏవి?",
     "column_names": [
       "Team1",
@@ -1611,13 +1594,12 @@
       "Total Runs"
     ],
     "answer": [
-      "517 – SA vs WI",
-      "2023; 499 – IND vs ENG",
-      "2026; 496 – IND vs NZ",
-      "2026; 489 – IND vs WI",
-      "2016; 488 – NZ vs AUS",
-      "2018; 488 – BUL vs SER",
-      "2022"
+      ["South Africa", "West Indies", null, "2023", null, 517],
+      ["India", "England", null, "2026", null, 499],
+      ["India", "New Zealand", null, "2026", null, 496],
+      ["India", "West Indies", null, "2016", null, 489],
+      ["New Zealand", "Australia", null, "2018", null, 488],
+      ["Bulgaria", "Serbia", null, "2022", null, 488]
     ],
     "difficulty": "Medium"
   },
@@ -1641,12 +1623,11 @@
       "Season"
     ],
     "answer": [
-      "0/65 – Saurabh Netravalkar vs IND",
-      "2026; 0/64 – Sanath Jayasuriya vs PAK",
-      "2007; 1/64 – Varun Chakravarthy vs ENG",
-      "2026; 0/63 – Mashrafe Mortaza vs PAK",
-      "2014; 1/62 – Richard Ngarava vs IND",
-      "2026"
+      ["Saurabh Netravalkar", 0, 65, "0/65", "USA", "India", null, "2026"],
+      ["Sanath Jayasuriya", 0, 64, "0/64", "Sri Lanka", "Pakistan", null, "2007"],
+      ["Varun Chakravarthy", 1, 64, "1/64", "India", "England", null, "2026"],
+      ["Mashrafe Mortaza", 0, 63, "0/63", "Bangladesh", "Pakistan", null, "2014"],
+      ["Richard Ngarava", 1, 62, "1/62", "Zimbabwe", "India", null, "2026"]
     ],
     "difficulty": "Medium"
   },
@@ -1659,12 +1640,19 @@
     "question_hindi": "T20 World Cup नॉकआउट में टीम के 100 रन पूरे करने के सबसे तेज़ रिकॉर्ड कौन से हैं?",
     "question_punjabi": "T20 World Cup ਨਾਕਆਊਟ ਵਿੱਚ ਟੀਮ ਦੇ 100 ਰਨ ਪੂਰੇ ਕਰਨ ਦੇ ਸਭ ਤੋਂ ਤੇਜ਼ ਰਿਕਾਰਡ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cup నాకౌట్‌లలో జట్టు 100 రన్లు పూర్తి చేయడంలో అత్యంత వేగంగా సాధించిన రికార్డులు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Batting Team",
+      "Over When 100",
+      "Ball When 100",
+      "Team1",
+      "Team2",
+      "Venue",
+      "Season"
+    ],
     "answer": [
-      "7.5 overs – NZ vs SA",
-      "2026; 8.1 overs – ENG vs IND",
-      "2026; 8.3 overs – IND vs ENG",
-      "2026"
+      ["New Zealand", 7, 5, "New Zealand", "South Africa", null, "2026"],
+      ["England", 8, 1, "England", "India", null, "2026"],
+      ["India", 8, 3, "India", "England", null, "2026"]
     ],
     "difficulty": "Hard"
   },
@@ -1688,11 +1676,7 @@
       "Strike Rate"
     ],
     "answer": [
-      "10 innings",
-      "80 runs off 56 balls",
-      "Avg 13.33",
-      "SR 142.85",
-      "6 dismissals"
+      ["Jos Buttler", "Varun Chakravarthy", 10, 80, 56, 6, 13.33, 142.85]
     ],
     "difficulty": "Medium"
   },
@@ -1711,7 +1695,12 @@
       "Sixes"
     ],
     "answer": [
-      "16 – Sanju Samson (2026); 15 – Rohit Sharma (2024); 15 – Shivam Dube (2026); 14 – Ishan Kishan (2026); 14 – Hardik Pandya (2026); 12 – Yuvraj Singh (2007)"
+      ["Sanju Samson", "2026", 16],
+      ["Rohit Sharma", "2024", 15],
+      ["Shivam Dube", "2026", 15],
+      ["Ishan Kishan", "2026", 14],
+      ["Hardik Pandya", "2026", 14],
+      ["Yuvraj Singh", "2007", 12]
     ],
     "difficulty": "Medium"
   },
@@ -1731,12 +1720,11 @@
       "Balls Per Six"
     ],
     "answer": [
-      "India – 88 (2026",
-      "balls/six 10.8); West Indies – 76 (2026",
-      "10.71); South Africa – 72 (2026",
-      "12.15); West Indies – 62 (2024",
-      "12.64); India – 61 (2024",
-      "14.78)"
+      ["India", "2026", 88, 10.8],
+      ["West Indies", "2026", 76, 10.71],
+      ["South Africa", "2026", 72, 12.15],
+      ["West Indies", "2024", 62, 12.64],
+      ["India", "2024", 61, 14.78]
     ],
     "difficulty": "Medium"
   },
@@ -1754,7 +1742,12 @@
       "Appearances"
     ],
     "answer": [
-      "47 – Rohit Sharma; 43 – Shakib Al Hasan; 43 – Jos Buttler; 41 – David Warner; 38 – Adil Rashid; 37 – Mahmudullah"
+      ["Rohit Sharma", 47],
+      ["Shakib Al Hasan", 43],
+      ["Jos Buttler", 43],
+      ["David Warner", 41],
+      ["Adil Rashid", 38],
+      ["Mahmudullah", 37]
     ],
     "difficulty": "Easy"
   },
@@ -1772,7 +1765,14 @@
       "Appearances"
     ],
     "answer": [
-      "8 – Rohit Sharma; 7 – Kumar Sangakkara; 7 – Mahela Jayawardene; 7 – Tillakaratne Dilshan; 7 – Lasith Malinga; 7 – Angelo Mathews; 7 – Jos Buttler; 7 – Adil Rashid"
+      ["Rohit Sharma", 8],
+      ["Kumar Sangakkara", 7],
+      ["Mahela Jayawardene", 7],
+      ["Tillakaratne Dilshan", 7],
+      ["Lasith Malinga", 7],
+      ["Angelo Mathews", 7],
+      ["Jos Buttler", 7],
+      ["Adil Rashid", 7]
     ],
     "difficulty": "Medium"
   },
@@ -1786,13 +1786,14 @@
     "question_punjabi": "T20Is ਅਤੇ T20 World Cups ਵਿੱਚ India ਦਾ England ਦੇ ਖਿਲਾਫ਼ ਆਹਮਣੇ-ਸਾਹਮਣੇ ਦਾ ਰਿਕਾਰਡ ਕੀ ਹੈ?",
     "question_telugu": "T20Is మరియు T20 World Cups లో India vs England హెడ్-టు-హెడ్ రికార్డు ఏమిటి?",
     "column_names": [
-      "T20 World Cups",
-      "Total Match_Winner='India' Then 1 Else 0 End",
-      "Total Match_Winner='England' Then 1 Else 0 End",
-      "Count"
+      "Context",
+      "India Wins",
+      "England Wins",
+      "Total Matches"
     ],
     "answer": [
-      "Overall T20Is: 17–12 India; T20 World Cups: 3–2 India; in India: 10–6 India; last 10 meetings: 7–3 India"
+      ["Overall T20Is", 17, 12, 29],
+      ["T20 World Cups", 3, 2, 5]
     ],
     "difficulty": "Medium"
   },
@@ -1817,8 +1818,8 @@
       "Sixes"
     ],
     "answer": [
-      "Six of India’s top seven batters have scored at least one fifty; Tilak Varma has scored 20+ in all but one match with a highest of 44*; five different players have top-scored",
-      "while Hardik Pandya has been 2nd-highest scorer in 3 matches and Tilak Varma in 2 matches"
+      ["Tilak Varma", null, null, 44, null, null, null, null, null],
+      ["Hardik Pandya", null, null, null, null, null, null, null, null]
     ],
     "difficulty": "Medium"
   },
@@ -1837,8 +1838,8 @@
       "Potm Awards"
     ],
     "answer": [
-      "4 – Will Jacks (2026)",
-      "Shane Watson (2012)"
+      ["Will Jacks", "2026", 4],
+      ["Shane Watson", "2012", 4]
     ],
     "difficulty": "Medium"
   },
@@ -1851,14 +1852,20 @@
     "question_hindi": "T20 World Cups में Full Member टीमों के खिलाफ सबसे बड़े जीत के अंतर कौन से हैं?",
     "question_punjabi": "T20 World Cups ਵਿੱਚ Full Member ਟੀਮਾਂ ਦੇ ਖਿਲਾਫ਼ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤ ਦੇ ਫ਼ਰਕ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cups లో Full Member జట్లపై అత్యధిక విజయ వ్యత్యాసాలు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Match Winner",
+      "Loser",
+      "Result Type",
+      "Result Margin",
+      "Venue",
+      "Season"
+    ],
     "answer": [
-      "107 runs – WI vs ZIM",
-      "2026; 104 runs – SA vs BAN",
-      "2022; 104 runs – WI vs AFG",
-      "2024; 96 runs – IND vs NZ",
-      "2026 Final; 90 runs – IND vs ENG",
-      "2012"
+      ["West Indies", "Zimbabwe", "runs", 107, null, "2026"],
+      ["South Africa", "Bangladesh", "runs", 104, null, "2022"],
+      ["West Indies", "Afghanistan", "runs", 104, null, "2024"],
+      ["India", "New Zealand", "runs", 96, null, "2026"],
+      ["India", "England", "runs", 90, null, "2012"]
     ],
     "difficulty": "Medium"
   },
@@ -1871,13 +1878,18 @@
     "question_hindi": "T20 World Cup नॉकआउट में सबसे अधिक मैच कुल (दोनों टीमों का कुल) कौन से हैं?",
     "question_punjabi": "T20 World Cup ਨਾਕਆਊਟ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਕੁੱਲ (ਦੋਵੇਂ ਟੀਮਾਂ ਦਾ ਕੁੱਲ) ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cup నాకౌట్‌లలో అత్యధిక మ్యాచ్ అగ్రిగేట్లు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Team1",
+      "Team2",
+      "Venue",
+      "Season",
+      "Total Runs"
+    ],
     "answer": [
-      "499 – IND vs ENG",
-      "2026 SF; 414 – IND vs NZ",
-      "2026 Final; 388 – AUS vs PAK",
-      "2010 SF; 388 – IND vs WI",
-      "2016 SF"
+      ["India", "England", null, "2026", 499],
+      ["India", "New Zealand", null, "2026", 414],
+      ["Australia", "Pakistan", null, "2010", 388],
+      ["India", "West Indies", null, "2016", 388]
     ],
     "difficulty": "Medium"
   },
@@ -1890,12 +1902,15 @@
     "question_hindi": "एक से अधिक T20 World Cup फाइनल हारने वाली टीमें कौन सी हैं?",
     "question_punjabi": "ਇੱਕ ਤੋਂ ਵੱਧ T20 World Cup ਫਾਈਨਲ ਹਾਰਨ ਵਾਲੀਆਂ ਟੀਮਾਂ ਕਿਹੜੀਆਂ ਹਨ?",
     "question_telugu": "బహుళ T20 World Cup ఫైనల్స్ ఓడిపోయిన జట్లు ఏవి?",
-    "column_names": [],
+    "column_names": [
+      "Loser",
+      "Final Losses",
+      "Seasons"
+    ],
     "answer": [
-      "Pakistan (2007",
-      "2022); Sri Lanka (2009",
-      "2012); New Zealand (2021",
-      "2026)"
+      ["Pakistan", 2, "2007, 2022"],
+      ["Sri Lanka", 2, "2009, 2012"],
+      ["New Zealand", 2, "2021, 2026"]
     ],
     "difficulty": "Medium"
   },
@@ -1908,9 +1923,16 @@
     "question_hindi": "T20Is में सबसे अच्छी जीत प्रतिशत वाले कप्तान कौन हैं (Full Member टीमें, न्यूनतम 20 मैच)?",
     "question_punjabi": "T20Is ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਜਿੱਤ ਪ੍ਰਤੀਸ਼ਤ ਵਾਲੇ ਕਪਤਾਨ ਕਿਹੜੇ ਹਨ (Full Member ਟੀਮਾਂ, ਘੱਟੋ-ਘੱਟ 20 ਮੈਚ)?",
     "question_telugu": "T20Is లో అత్యధిక విజయ శాతం ఉన్న కెప్టెన్లు ఎవరు (Full Member జట్లు, కనిష్టం 20 మ్యాచ్‌లు)?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Win Percentage"
+    ],
     "answer": [
-      "Suryakumar Yadav (80.77%); Rohit Sharma (80.65%); Sarfaraz Ahmed (78.38%); Mitchell Marsh (69.23%); Graeme Smith (66.67%)"
+      ["Suryakumar Yadav", 80.77],
+      ["Rohit Sharma", 80.65],
+      ["Sarfaraz Ahmed", 78.38],
+      ["Mitchell Marsh", 69.23],
+      ["Graeme Smith", 66.67]
     ],
     "difficulty": "Hard"
   },
@@ -1930,9 +1952,7 @@
       "No Results"
     ],
     "answer": [
-      "33 matches",
-      "31 wins",
-      "2 losses"
+      [33, 31, 2, 0]
     ],
     "difficulty": "Hard"
   },
@@ -1952,10 +1972,7 @@
       "No Results"
     ],
     "answer": [
-      "27 matches",
-      "25 wins",
-      "1 loss",
-      "1 no result"
+      [27, 25, 1, 1]
     ],
     "difficulty": "Hard"
   },
@@ -1968,13 +1985,17 @@
     "question_hindi": "2016 से T20 World Cup नॉकआउट के रुझान क्या हैं?",
     "question_punjabi": "2016 ਤੋਂ T20 World Cup ਨਾਕਆਊਟ ਦੇ ਰੁਝਾਨ ਕੀ ਹਨ?",
     "question_telugu": "2016 నుండి T20 World Cup నాకౌట్ ట్రెండ్స్ ఏమిటి?",
-    "column_names": [],
+    "column_names": [
+      "Total Matches",
+      "Chasing Won",
+      "Batting First Won"
+    ],
     "answer": [
-      "15 matches; chasing team won 11; batting first won 4 (all 4 by India)"
+      [15, 11, 4]
     ],
     "difficulty": "Hard"
   },
-  {
+    {
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139478/ind-vs-eng-2nd-semi-final-icc-mens-t20-world-cup-2026",
     "question": "What are India’s T20 World Cup titles and milestones?",
@@ -1993,9 +2014,9 @@
       "Result Margin"
     ],
     "answer": [
-      "India – 3 titles (2007",
-      "2024",
-      "2026); first team to defend T20 WC title and win at home"
+      ["2007", "India", "Wanderers", null, "Pakistan", "runs", 5],
+      ["2024", "India", "Kensington Oval", null, "South Africa", "runs", 7],
+      ["2026", "India", "Chennai", null, "New Zealand", "runs", 96]
     ],
     "difficulty": "Hard"
   },
@@ -2019,7 +2040,10 @@
       "Opponent"
     ],
     "answer": [
-      "41 – SL vs KEN (2007); 37 – IND vs ENG (2026 SF); 37 – IND vs NZ (2026 Final); 36 – ENG vs IND (2026 SF)"
+      ["Sri Lanka", null, null, null, 41, null, "2007", "Kenya"],
+      ["India", null, null, null, 37, null, "2026", "England"],
+      ["India", null, null, null, 37, null, "2026", "New Zealand"],
+      ["England", null, null, null, 36, null, "2026", "India"]
     ],
     "difficulty": "Medium"
   },
@@ -2032,12 +2056,19 @@
     "question_hindi": "T20 World Cup फाइनल में सबसे बड़ा व्यक्तिगत स्कोर कौन सा है?",
     "question_punjabi": "T20 World Cup ਫਾਈਨਲ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕਿਹੜਾ ਹੈ?",
     "question_telugu": "T20 World Cup ఫైనల్‌లో అత్యధిక వ్యక్తిగత స్కోరు ఏది?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Runs",
+      "Balls",
+      "Not Out",
+      "Venue",
+      "Season",
+      "Opponent"
+    ],
     "answer": [
-      "89 – Sanju Samson (2026)",
-      "highest in a T20 WC final (ahead of 85* Marlon Samuels",
-      "2016 and 85 Kane Williamson",
-      "2021)"
+      ["Sanju Samson", 89, null, "", null, "2026", null],
+      ["Marlon Samuels", 85, null, "*", null, "2016", null],
+      ["Kane Williamson", 85, null, "", null, "2021", null]
     ],
     "difficulty": "Medium"
   },
@@ -2060,7 +2091,12 @@
       "Season"
     ],
     "answer": [
-      "19 – NED vs IRE (2014); 19 – WI vs ZIM (2026); 19 – IND vs ENG (2026 SF); 18 – IND vs NZ (2026 Final); 17 – IND vs ZIM (2026); 16 – AUS vs IND (2010)"
+      ["Netherlands", null, 19, "Netherlands", "Ireland", null, "2014"],
+      ["West Indies", null, 19, "West Indies", "Zimbabwe", null, "2026"],
+      ["India", null, 19, "India", "England", null, "2026"],
+      ["India", null, 18, "India", "New Zealand", null, "2026"],
+      ["India", null, 17, "India", "Zimbabwe", null, "2026"],
+      ["Australia", null, 16, "Australia", "India", null, "2010"]
     ],
     "difficulty": "Medium"
   },
@@ -2082,7 +2118,12 @@
       "Opponent"
     ],
     "answer": [
-      "260/6 – SL vs KEN (2007); 256/4 – IND vs ZIM (2026); 255/5 – IND vs NZ (2026 Final); 254/6 – WI vs ZIM (2026); 253/7 – IND vs ENG (2026 SF); 246/7 – ENG vs IND (2026 SF)"
+      ["Sri Lanka", 260, 6, null, "2007", "Kenya"],
+      ["India", 256, 4, null, "2026", "Zimbabwe"],
+      ["India", 255, 5, null, "2026", "New Zealand"],
+      ["West Indies", 254, 6, null, "2026", "Zimbabwe"],
+      ["India", 253, 7, null, "2026", "England"],
+      ["England", 246, 7, null, "2026", "India"]
     ],
     "difficulty": "Easy"
   },
@@ -2100,7 +2141,11 @@
       "Times 250 Plus"
     ],
     "answer": [
-      "7 – India; 5 – SRH; 3 – West Indies; 3 – Zimbabwe; 3 – Surrey"
+      ["India", 7],
+      ["SRH", 5],
+      ["West Indies", 3],
+      ["Zimbabwe", 3],
+      ["Surrey", 3]
     ],
     "difficulty": "Medium"
   },
@@ -2108,14 +2153,21 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139478/ind-vs-eng-2nd-semi-final-icc-mens-t20-world-cup-2026",
     "question": "Which players have scored 50+ in both the semifinal and final of a T20 World Cup edition?",
-    "sql_query": "WITH km AS ( SELECT m.match_id, m.season, RANK() OVER (PARTITION BY m.season ORDER BY  DESC) AS rnk FROM Matches m WHERE m.season IN ('2007','2009','2010','2012','2014','2016','2021/22','2022/23','2024','2025/26') AND m.team1 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') AND m.team2 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') ), final_scores AS ( SELECT d.striker_id, km.season, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN km ON d.match_id = km.match_id WHERE km.rnk = 1 GROUP BY d.match_id, d.inning, d.striker_id, km.season HAVING SUM(d.runs_scored) >= 50 ), semi_scores AS ( SELECT d.striker_id, km.season, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN km ON d.match_id = km.match_id WHERE km.rnk IN (2,3) GROUP BY d.match_id, d.inning, d.striker_id, km.season HAVING SUM(d.runs_scored) >= 50 ) SELECT p.player_name, ss.season, ss.runs AS semi_runs, fs.runs AS final_runs FROM semi_scores ss JOIN final_scores fs ON ss.striker_id = fs.striker_id AND ss.season = fs.season JOIN Players p ON ss.striker_id = p.player_id ORDER BY ss.season;",
+    "sql_query": "WITH km AS ( SELECT m.match_id, m.season, RANK() OVER (PARTITION BY m.season ORDER BY m.match_date DESC) AS rnk FROM Matches m WHERE m.season IN ('2007','2009','2010','2012','2014','2016','2021/22','2022/23','2024','2025/26') AND m.team1 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') AND m.team2 IN ('Afghanistan','Australia','Bangladesh','England','India','Ireland','New Zealand','Pakistan','South Africa','Sri Lanka','West Indies','Zimbabwe') ), final_scores AS ( SELECT d.striker_id, km.season, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN km ON d.match_id = km.match_id WHERE km.rnk = 1 GROUP BY d.match_id, d.inning, d.striker_id, km.season HAVING SUM(d.runs_scored) >= 50 ), semi_scores AS ( SELECT d.striker_id, km.season, SUM(d.runs_scored) AS runs FROM Deliveries d JOIN km ON d.match_id = km.match_id WHERE km.rnk IN (2,3) GROUP BY d.match_id, d.inning, d.striker_id, km.season HAVING SUM(d.runs_scored) >= 50 ) SELECT p.player_name, ss.season, ss.runs AS semi_runs, fs.runs AS final_runs FROM semi_scores ss JOIN final_scores fs ON ss.striker_id = fs.striker_id AND ss.season = fs.season JOIN Players p ON ss.striker_id = p.player_id ORDER BY ss.season;",
     "question_english": "Which players have scored 50+ in both the semifinal and final of a T20 World Cup edition?",
     "question_hindi": "T20 World Cup के किसी एक संस्करण में सेमीफाइनल और फाइनल दोनों में 50 से अधिक रन बनाने वाले खिलाड़ी कौन हैं?",
     "question_punjabi": "T20 World Cup ਦੇ ਕਿਸੇ ਇੱਕ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸੈਮੀਫਾਈਨਲ ਅਤੇ ਫਾਈਨਲ ਦੋਵਾਂ ਵਿੱਚ 50 ਤੋਂ ਵੱਧ ਰਨ ਬਣਾਉਣ ਵਾਲੇ ਖਿਡਾਰੀ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "T20 World Cup ఒక ఎడిషన్‌లో సెమీఫైనల్ మరియు ఫైనల్ రెండింటిలో 50+ రన్లు చేసిన ఆటగాళ్ళు ఎవరు?",
-    "column_names": [],
+    "column_names": [
+      "Player Name",
+      "Season",
+      "Semi Runs",
+      "Final Runs"
+    ],
     "answer": [
-      "Shahid Afridi (2009); Virat Kohli (2014); Sanju Samson (2026)"
+      ["Shahid Afridi", "2009", null, null],
+      ["Virat Kohli", "2014", null, null],
+      ["Sanju Samson", "2026", null, null]
     ],
     "difficulty": "Hard"
   },
@@ -2133,7 +2185,13 @@
       "Max Consecutive 50 Plus"
     ],
     "answer": [
-      "3 – Mahela Jayawardene (2010); 3 – Virat Kohli (2016–2021); 3 – Babar Azam (2021); 3 – KL Rahul (2021); 3 – Kusal Mendis (2026); 3 – Sahibzada Farhan (2026); 3 – Sanju Samson (2026)"
+      ["Mahela Jayawardene", 3],
+      ["Virat Kohli", 3],
+      ["Babar Azam", 3],
+      ["KL Rahul", 3],
+      ["Kusal Mendis", 3],
+      ["Sahibzada Farhan", 3],
+      ["Sanju Samson", 3]
     ],
     "difficulty": "Hard"
   },
@@ -2141,23 +2199,23 @@
     "db_id": "t20i.db",
     "context_url": "https://www.cricbuzz.com/live-cricket-scores/139478/ind-vs-eng-2nd-semi-final-icc-mens-t20-world-cup-2026",
     "question": "What are the recent ICC finals between India and New Zealand across formats?",
-    "sql_query": "SELECT m.match_date, m.season, m.venue, m.match_winner, m.result_type, m.result_margin FROM Matches m WHERE ((m.team1='India' AND m.team2='New Zealand') OR (m.team1='New Zealand' AND m.team2='India')) ORDER BY m.match_date DESC;",
+    "sql_query": "SELECT m.match_date, m.season, m.venue, m.match_winner, m.result_type, m.result_margin FROM Matches m WHERE ((m.team1='India' AND m.team2='New Zealand') OR (m.team1='New Zealand' AND m.team2='India')) ORDER BY m.match_date DESC LIMIT 3;",
     "question_english": "What are the recent ICC finals between India and New Zealand across formats?",
     "question_hindi": "सभी प्रारूपों में India और New Zealand के बीच हाल के ICC फाइनल कौन से हैं?",
     "question_punjabi": "ਸਾਰੇ ਫਾਰਮੈਟਾਂ ਵਿੱਚ India ਅਤੇ New Zealand ਵਿਚਕਾਰ ਹਾਲ ਦੇ ICC ਫਾਈਨਲ ਕਿਹੜੇ ਹਨ?",
     "question_telugu": "అన్ని ఫార్మాట్‌లలో India మరియు New Zealand మధ్య ఇటీవలి ICC ఫైనల్స్ ఏవి?",
     "column_names": [
       "Match Date",
-      "Event Name",
+      "Season",
       "Venue",
       "Match Winner",
       "Result Type",
       "Result Margin"
     ],
     "answer": [
-      "2021 World Test Championship",
-      "2025 Champions Trophy (ODI)",
-      "2026 T20 World Cup"
+      [null, "2021 World Test Championship", null, "New Zealand", null, null],
+      [null, "2025 Champions Trophy (ODI)", null, "India", null, null],
+      [null, "2026 T20 World Cup", null, "India", null, null]
     ],
     "difficulty": "Medium"
   },
@@ -2176,7 +2234,7 @@
       "Total Finals"
     ],
     "answer": [
-      "New Zealand lead 2–1 (wins in 2000 Champions Trophy and 2021 WTC; India won 2025 Champions Trophy)"
+      [1, 2, 3]
     ],
     "difficulty": "Medium"
   },
@@ -2197,9 +2255,7 @@
       "Matches Detail"
     ],
     "answer": [
-      "New Zealand lead 3–0 (2007 Johannesburg",
-      "2016 Nagpur",
-      "2021 Dubai)"
+      [0, 3, 0, 3, "2007 Johannesburg, 2016 Nagpur, 2021 Dubai"]
     ],
     "difficulty": "Easy"
   },
@@ -2212,9 +2268,11 @@
     "question_hindi": "India कितने T20 World Cup फाइनल में पहुंचा है?",
     "question_punjabi": "India ਕਿੰਨੇ T20 World Cup ਫਾਈਨਲ ਵਿੱਚ ਪਹੁੰਚਿਆ ਹੈ?",
     "question_telugu": "India ఎన్ని T20 World Cup ఫైనల్స్‌లో చేరింది?",
-    "column_names": [],
+    "column_names": [
+      "Finals Reached"
+    ],
     "answer": [
-      "4 finals (most by any team)"
+      [4]
     ],
     "difficulty": "Easy"
   },
@@ -2227,11 +2285,13 @@
     "question_hindi": "T20 World Cup फाइनल में चेजिंग बनाम बचाव का रिकॉर्ड क्या है?",
     "question_punjabi": "T20 World Cup ਫਾਈਨਲ ਵਿੱਚ ਚੇਜ਼ਿੰਗ ਬਨਾਮ ਬਚਾਅ ਦਾ ਰਿਕਾਰਡ ਕੀ ਹੈ?",
     "question_telugu": "T20 World Cup ఫైనల్స్‌లో చేజింగ్ vs డిఫెండింగ్ రికార్డు ఏమిటి?",
-    "column_names": [],
+    "column_names": [
+      "Chasing Wins",
+      "Defending Wins",
+      "Total Finals"
+    ],
     "answer": [
-      "Chasing side has won 6 of last 9 finals; India has 2 wins batting first (2007",
-      "2024)",
-      "both in last-over finishes"
+      [6, 3, 9]
     ],
     "difficulty": "Medium"
   }
