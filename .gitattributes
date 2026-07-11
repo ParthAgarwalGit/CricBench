@@ -1,0 +1,5 @@
+# Normalize line endings: store text with LF in the repository.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

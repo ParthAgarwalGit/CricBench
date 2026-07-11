@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use CricBench, please cite the following paper."
+title: "CricBench: A Multilingual Benchmark for Evaluating LLMs in Cricket Analytics"
+authors:
+  - family-names: Agarwal
+    given-names: Parth
+  - family-names: Shah
+    given-names: Dhruv
+  - family-names: Kommuri
+    given-names: Navya
+  - family-names: Singhal
+    given-names: Prisha
+  - family-names: Garg
+    given-names: Trizal
+  - family-names: Devraj
+    given-names: Vaibhav
+  - family-names: Challa
+    given-names: Jagat Sesh
+  - family-names: Sinha
+    given-names: Yash
+  - family-names: Mandal
+    given-names: Murari
+  - family-names: Kumar
+    given-names: Dhruv
+year: 2026
+preferred-citation:
+  type: conference-paper
+  title: "CricBench: A Multilingual Benchmark for Evaluating LLMs in Cricket Analytics"
+  collection-title: "Conference for AI Scientists (CAISc)"
+  year: 2026
+  authors:
+    - family-names: Agarwal
+      given-names: Parth
+    - family-names: Shah
+      given-names: Dhruv
+    - family-names: Kommuri
+      given-names: Navya
+    - family-names: Singhal
+      given-names: Prisha
+    - family-names: Garg
+      given-names: Trizal
+    - family-names: Devraj
+      given-names: Vaibhav
+    - family-names: Challa
+      given-names: Jagat Sesh
+    - family-names: Sinha
+      given-names: Yash
+    - family-names: Mandal
+      given-names: Murari
+    - family-names: Kumar
+      given-names: Dhruv
