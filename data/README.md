@@ -6,7 +6,7 @@ code-mixed Hindi/Punjabi/Telugu) paired with hand-authored, validated gold SQL.
 | File | Format | Base questions | `db_id` |
 |------|--------|:--------------:|---------|
 | `test.json` | Test cricket | 169 | `tests` |
-| `odi.json`  | ODI          | 64  | `wc_db` |
+| `odi.json`  | ODI          | 100  | `wc_db` |
 | `t20i.json` | T20 International | 200 | `t20i.db` |
 | `ipl.json`  | Indian Premier League | 200 | `ipl_db` |
 
