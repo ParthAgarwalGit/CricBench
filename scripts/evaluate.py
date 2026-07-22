@@ -16,11 +16,6 @@ By default the script executes the gold `query` field and checks it against the
 stored `answer` field (a self-consistency check on the benchmark). To score a
 model instead, pass --pred-key to point at a field holding the model's SQL
 (e.g. "generated_sql"); that SQL is executed and its result compared to the gold.
-
-Usage:
-  python scripts/evaluate.py --db path/to/international.db --queries data/test.json
-  python scripts/evaluate.py --db ipl.db --queries results/t20i_deepseek_r1.json \
-         --pred-key generated_sql
 """
 
 import argparse
@@ -31,7 +26,6 @@ from typing import Any, List, Optional, Tuple
 
 
 def _canon_value(v: Any) -> Any:
-    """Canonicalize a single cell value for tolerant comparison."""
     if v is None:
         return "__NULL__"
     if isinstance(v, float):
@@ -44,7 +38,6 @@ def _canon_value(v: Any) -> Any:
 
 
 def canon_rows(rows: Any, unordered: bool = True) -> Tuple:
-    """Canonicalize a set of result rows into a comparable tuple (multiset by default)."""
     if rows is None:
         return tuple()
     if not isinstance(rows, (list, tuple)):
