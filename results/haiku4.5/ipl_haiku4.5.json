@@ -1,0 +1,7252 @@
+[
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 0,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 0,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 0,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 0,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 2,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 2,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 2,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 2,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 3,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 3,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 3,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 3,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 4,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 4,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 4,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 4,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "english",
+    "base_question_id": 5,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 5,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 5,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 5,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 6,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 6,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 6,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 6,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 7,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 7,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "telugu",
+    "base_question_id": 7,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 7,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 8,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 8,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 8,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 8,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 9,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 9,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 9,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 9,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 10,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 10,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 10,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 10,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 11,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 11,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 11,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 11,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 12,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 12,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "telugu",
+    "base_question_id": 12,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 12,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 13,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 13,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 13,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 13,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 14,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 14,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 14,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 14,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 15,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 15,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 15,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 15,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 16,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 16,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 16,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 16,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 17,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 17,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 17,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 17,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 18,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 18,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 18,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 18,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 19,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 19,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 19,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 19,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 20,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 20,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 20,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 20,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 21,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 21,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 21,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 21,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 22,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 22,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 22,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 22,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 23,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 23,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 23,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 23,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 24,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 24,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 24,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 24,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 25,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 25,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 25,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 25,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 26,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 26,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 26,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 26,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 27,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 27,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 27,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 27,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 28,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 28,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 28,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 28,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 29,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 29,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 29,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 29,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 30,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 30,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 30,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 30,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 31,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 31,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 31,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 31,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 32,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 32,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 32,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 32,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 33,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 33,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 33,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 33,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 34,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 34,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 34,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 34,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 35,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 35,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 35,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 35,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 36,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 36,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 36,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 36,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 37,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 37,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 37,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 37,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 38,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 38,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 38,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 38,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 39,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 39,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 39,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 39,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 40,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 40,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 40,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 40,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 41,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 41,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 41,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 41,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 42,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 42,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 42,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 42,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 43,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 43,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 43,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 43,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 44,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 44,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 44,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 44,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 45,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 45,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 45,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 45,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 46,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 46,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 46,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 46,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 47,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 47,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 47,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 47,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 48,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 48,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 48,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 48,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 49,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 49,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 49,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "punjabi",
+    "base_question_id": 49,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 50,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 50,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "telugu",
+    "base_question_id": 50,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 50,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 51,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 51,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 51,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 51,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "english",
+    "base_question_id": 52,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 52,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "telugu",
+    "base_question_id": 52,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "punjabi",
+    "base_question_id": 52,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 53,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 53,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 53,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 53,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 54,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 54,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 54,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 54,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 55,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 55,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 55,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 55,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 56,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 56,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 56,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 56,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "english",
+    "base_question_id": 57,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 57,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 57,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 57,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "english",
+    "base_question_id": 58,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 58,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 58,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "punjabi",
+    "base_question_id": 58,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 59,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 59,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 59,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 59,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 60,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 60,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 60,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 60,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 61,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 61,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 61,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 61,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 62,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 62,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 62,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 62,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 63,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 63,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 63,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 63,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 64,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 64,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 64,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 64,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 65,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 65,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 65,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 65,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 66,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 66,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 66,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 66,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 67,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 67,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 67,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 67,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 68,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 68,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 68,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "punjabi",
+    "base_question_id": 68,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 69,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 69,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 69,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 69,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 70,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 70,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 70,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 70,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 71,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 71,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 71,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 71,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 72,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 72,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 72,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 72,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 73,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 73,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 73,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 73,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 74,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 74,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 74,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 74,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 75,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 75,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 75,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 75,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 76,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 76,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 76,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 76,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 77,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 77,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 77,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 77,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 78,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 78,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 78,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 78,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 79,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 79,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 79,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 79,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 80,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 80,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 80,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 80,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 81,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 81,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 81,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 81,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 82,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 82,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 82,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 82,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 83,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 83,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 83,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 83,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 84,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 84,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 84,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 84,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 85,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 85,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 85,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 85,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 86,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 86,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 86,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 86,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 87,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 87,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 87,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 87,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 88,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 88,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 88,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 88,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 89,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 89,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 89,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 89,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 90,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 90,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 90,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 90,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 91,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 91,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 91,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 91,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 92,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 92,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 92,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 92,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 93,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 93,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 93,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 93,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "english",
+    "base_question_id": 94,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 94,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "telugu",
+    "base_question_id": 94,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 94,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 95,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 95,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 95,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 95,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 96,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 96,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 96,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 96,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 97,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 97,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 97,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 97,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 98,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 98,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 98,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 98,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 99,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 99,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 99,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 99,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 100,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 100,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 100,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 100,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "english",
+    "base_question_id": 101,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 101,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "telugu",
+    "base_question_id": 101,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 101,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 102,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 102,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 102,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 102,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 103,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 103,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 103,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 103,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 104,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 104,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 104,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 104,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 105,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 105,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 105,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 105,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 106,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 106,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 106,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 106,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 107,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 107,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 107,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 107,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 108,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 108,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 108,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 108,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 109,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 109,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 109,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 109,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 110,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 110,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 110,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 110,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 111,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 111,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 111,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 111,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 112,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 112,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 112,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 112,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 113,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "hindi",
+    "base_question_id": 113,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 113,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 113,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 114,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 114,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 114,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 114,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 115,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 115,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 115,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 115,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 116,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 116,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 116,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 116,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 117,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 117,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 117,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 117,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 118,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 118,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 118,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 118,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 119,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 119,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 119,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 119,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 120,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 120,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 120,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 120,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "english",
+    "base_question_id": 121,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 121,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 121,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "punjabi",
+    "base_question_id": 121,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 106,
+    "variant_num": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 0,
+    "language": "punjabi",
+    "base_question_id": 107,
+    "variant_num": 2,
+    "dma_correct": 1
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 0,
+    "variant_num": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "hindi",
+    "base_question_id": 0,
+    "variant_num": 2,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 0,
+    "variant_num": 1,
+    "dma_correct": 0
+  },
+  {
+    "ex_correct": 1,
+    "language": "telugu",
+    "base_question_id": 0,
+    "variant_num": 2,
+    "dma_correct": 0
+  },
+  {
+    "base_question_id": 2,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544430.738027
+  },
+  {
+    "base_question_id": 2,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544432.1781461
+  },
+  {
+    "base_question_id": 2,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544433.6405113
+  },
+  {
+    "base_question_id": 2,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544435.08695
+  },
+  {
+    "base_question_id": 2,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544436.5858028
+  },
+  {
+    "base_question_id": 3,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544437.8684773
+  },
+  {
+    "base_question_id": 3,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544439.1778064
+  },
+  {
+    "base_question_id": 7,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544440.5683162
+  },
+  {
+    "base_question_id": 7,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544441.9470184
+  },
+  {
+    "base_question_id": 7,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544443.3226652
+  },
+  {
+    "base_question_id": 7,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544444.704624
+  },
+  {
+    "base_question_id": 11,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544445.9831111
+  },
+  {
+    "base_question_id": 11,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544447.2739515
+  },
+  {
+    "base_question_id": 14,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544448.60106
+  },
+  {
+    "base_question_id": 14,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544449.952434
+  },
+  {
+    "base_question_id": 14,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544453.0431206
+  },
+  {
+    "base_question_id": 15,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544454.3400636
+  },
+  {
+    "base_question_id": 15,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544455.6367686
+  },
+  {
+    "base_question_id": 15,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544456.9335146
+  },
+  {
+    "base_question_id": 15,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544458.217311
+  },
+  {
+    "base_question_id": 19,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544459.6971185
+  },
+  {
+    "base_question_id": 19,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544461.1914237
+  },
+  {
+    "base_question_id": 19,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544462.6807857
+  },
+  {
+    "base_question_id": 23,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544463.9874947
+  },
+  {
+    "base_question_id": 23,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544465.4904602
+  },
+  {
+    "base_question_id": 26,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544466.8296869
+  },
+  {
+    "base_question_id": 26,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544468.1507788
+  },
+  {
+    "base_question_id": 27,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544469.4477563
+  },
+  {
+    "base_question_id": 27,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544470.793128
+  },
+  {
+    "base_question_id": 34,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544472.1020668
+  },
+  {
+    "base_question_id": 34,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544473.380787
+  },
+  {
+    "base_question_id": 36,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544474.8288887
+  },
+  {
+    "base_question_id": 36,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544476.259163
+  },
+  {
+    "base_question_id": 36,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544477.7148654
+  },
+  {
+    "base_question_id": 39,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544479.016681
+  },
+  {
+    "base_question_id": 39,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544480.3264558
+  },
+  {
+    "base_question_id": 42,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544481.6203701
+  },
+  {
+    "base_question_id": 42,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544482.903482
+  },
+  {
+    "base_question_id": 42,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544484.2159224
+  },
+  {
+    "base_question_id": 42,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544485.537031
+  },
+  {
+    "base_question_id": 42,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544486.8037002
+  },
+  {
+    "base_question_id": 44,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544488.1083374
+  },
+  {
+    "base_question_id": 44,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544489.4518046
+  },
+  {
+    "base_question_id": 48,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544490.9548295
+  },
+  {
+    "base_question_id": 48,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544492.431103
+  },
+  {
+    "base_question_id": 50,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544493.960768
+  },
+  {
+    "base_question_id": 50,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544495.4149754
+  },
+  {
+    "base_question_id": 51,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544496.7904568
+  },
+  {
+    "base_question_id": 51,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544498.2163517
+  },
+  {
+    "base_question_id": 51,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544499.7179282
+  },
+  {
+    "base_question_id": 54,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544590.8410692
+  },
+  {
+    "base_question_id": 54,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544592.2132726
+  },
+  {
+    "base_question_id": 56,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544593.5076387
+  },
+  {
+    "base_question_id": 56,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544595.4044974
+  },
+  {
+    "base_question_id": 56,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544597.1730375
+  },
+  {
+    "base_question_id": 57,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544598.6619573
+  },
+  {
+    "base_question_id": 57,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544600.1720302
+  },
+  {
+    "base_question_id": 57,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544601.6049085
+  },
+  {
+    "base_question_id": 58,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544603.0756614
+  },
+  {
+    "base_question_id": 58,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544604.7219787
+  },
+  {
+    "base_question_id": 60,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544614.6671603
+  },
+  {
+    "base_question_id": 60,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544618.7214298
+  },
+  {
+    "base_question_id": 61,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544620.1761744
+  },
+  {
+    "base_question_id": 61,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544621.4485095
+  },
+  {
+    "base_question_id": 62,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544623.4437423
+  },
+  {
+    "base_question_id": 62,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544624.759058
+  },
+  {
+    "base_question_id": 66,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544626.0765727
+  },
+  {
+    "base_question_id": 66,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544627.4300346
+  },
+  {
+    "base_question_id": 66,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544629.272768
+  },
+  {
+    "base_question_id": 69,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544631.039312
+  },
+  {
+    "base_question_id": 69,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544632.8320603
+  },
+  {
+    "base_question_id": 70,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544634.2970035
+  },
+  {
+    "base_question_id": 70,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544635.7449455
+  },
+  {
+    "base_question_id": 71,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544637.0723379
+  },
+  {
+    "base_question_id": 71,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544638.4175406
+  },
+  {
+    "base_question_id": 71,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544639.7217436
+  },
+  {
+    "base_question_id": 72,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544641.0297818
+  },
+  {
+    "base_question_id": 72,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544642.3446476
+  },
+  {
+    "base_question_id": 74,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544643.9264967
+  },
+  {
+    "base_question_id": 74,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544645.520214
+  },
+  {
+    "base_question_id": 75,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544646.8532958
+  },
+  {
+    "base_question_id": 75,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544648.2170086
+  },
+  {
+    "base_question_id": 77,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544649.519969
+  },
+  {
+    "base_question_id": 77,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544650.844312
+  },
+  {
+    "base_question_id": 82,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544652.1899533
+  },
+  {
+    "base_question_id": 82,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544653.501171
+  },
+  {
+    "base_question_id": 84,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544654.8708515
+  },
+  {
+    "base_question_id": 84,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544656.2525187
+  },
+  {
+    "base_question_id": 85,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544657.906966
+  },
+  {
+    "base_question_id": 85,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544659.7813706
+  },
+  {
+    "base_question_id": 85,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544661.4155924
+  },
+  {
+    "base_question_id": 85,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544663.058183
+  },
+  {
+    "base_question_id": 85,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544664.724562
+  },
+  {
+    "base_question_id": 85,
+    "language": "telugu",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544666.3487275
+  },
+  {
+    "base_question_id": 87,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544667.6877575
+  },
+  {
+    "base_question_id": 87,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544669.0026355
+  },
+  {
+    "base_question_id": 87,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544670.305654
+  },
+  {
+    "base_question_id": 88,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544671.663115
+  },
+  {
+    "base_question_id": 88,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544673.0933917
+  },
+  {
+    "base_question_id": 92,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544674.4569414
+  },
+  {
+    "base_question_id": 92,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544675.8022797
+  },
+  {
+    "base_question_id": 93,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544677.1293962
+  },
+  {
+    "base_question_id": 93,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544678.4990811
+  },
+  {
+    "base_question_id": 93,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544679.801949
+  },
+  {
+    "base_question_id": 94,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544681.2440755
+  },
+  {
+    "base_question_id": 94,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544682.6980257
+  },
+  {
+    "base_question_id": 97,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544684.1351006
+  },
+  {
+    "base_question_id": 97,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544685.5828812
+  },
+  {
+    "base_question_id": 97,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544687.0256708
+  },
+  {
+    "base_question_id": 97,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544688.498134
+  },
+  {
+    "base_question_id": 97,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544689.9337842
+  },
+  {
+    "base_question_id": 98,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544691.3586009
+  },
+  {
+    "base_question_id": 98,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544692.8007534
+  },
+  {
+    "base_question_id": 101,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544694.1516292
+  },
+  {
+    "base_question_id": 101,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544695.4612114
+  },
+  {
+    "base_question_id": 102,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544696.7581632
+  },
+  {
+    "base_question_id": 102,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544698.0730941
+  },
+  {
+    "base_question_id": 102,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544699.3760817
+  },
+  {
+    "base_question_id": 102,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544700.6547081
+  },
+  {
+    "base_question_id": 103,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544702.0121891
+  },
+  {
+    "base_question_id": 103,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544703.3332841
+  },
+  {
+    "base_question_id": 103,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544704.6904123
+  },
+  {
+    "base_question_id": 104,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544706.0449667
+  },
+  {
+    "base_question_id": 104,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544707.490431
+  },
+  {
+    "base_question_id": 104,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544708.878264
+  },
+  {
+    "base_question_id": 104,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544710.26615
+  },
+  {
+    "base_question_id": 104,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544711.6408308
+  },
+  {
+    "base_question_id": 104,
+    "language": "telugu",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544713.029314
+  },
+  {
+    "base_question_id": 110,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544714.3868287
+  },
+  {
+    "base_question_id": 110,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544715.7504518
+  },
+  {
+    "base_question_id": 116,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544717.0955129
+  },
+  {
+    "base_question_id": 116,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544718.4410508
+  },
+  {
+    "base_question_id": 116,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544719.8165934
+  },
+  {
+    "base_question_id": 122,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544741.0814648
+  },
+  {
+    "base_question_id": 122,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544762.3581932
+  },
+  {
+    "base_question_id": 122,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544783.692343
+  },
+  {
+    "base_question_id": 122,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544805.027221
+  },
+  {
+    "base_question_id": 122,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544826.473189
+  },
+  {
+    "base_question_id": 123,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544828.1094031
+  },
+  {
+    "base_question_id": 123,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544829.7235253
+  },
+  {
+    "base_question_id": 123,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544831.373983
+  },
+  {
+    "base_question_id": 123,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544833.0763261
+  },
+  {
+    "base_question_id": 123,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544834.6845808
+  },
+  {
+    "base_question_id": 124,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544836.159177
+  },
+  {
+    "base_question_id": 124,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544837.6479535
+  },
+  {
+    "base_question_id": 124,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544839.1023896
+  },
+  {
+    "base_question_id": 124,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544840.6355774
+  },
+  {
+    "base_question_id": 125,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544842.3933427
+  },
+  {
+    "base_question_id": 125,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544844.1326044
+  },
+  {
+    "base_question_id": 125,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544845.8778853
+  },
+  {
+    "base_question_id": 125,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544847.623153
+  },
+  {
+    "base_question_id": 126,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544849.2230132
+  },
+  {
+    "base_question_id": 126,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544850.8107414
+  },
+  {
+    "base_question_id": 126,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544852.513625
+  },
+  {
+    "base_question_id": 126,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544854.1619446
+  },
+  {
+    "base_question_id": 126,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544855.8279927
+  },
+  {
+    "base_question_id": 127,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544857.3435822
+  },
+  {
+    "base_question_id": 127,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544858.8828378
+  },
+  {
+    "base_question_id": 127,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544860.5735364
+  },
+  {
+    "base_question_id": 127,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544862.1067817
+  },
+  {
+    "base_question_id": 128,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544863.6459625
+  },
+  {
+    "base_question_id": 128,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544865.2215521
+  },
+  {
+    "base_question_id": 128,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544866.7729926
+  },
+  {
+    "base_question_id": 128,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544868.26389
+  },
+  {
+    "base_question_id": 129,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544870.118187
+  },
+  {
+    "base_question_id": 129,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544872.008868
+  },
+  {
+    "base_question_id": 129,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544873.936041
+  },
+  {
+    "base_question_id": 129,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544875.8389032
+  },
+  {
+    "base_question_id": 129,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544877.6569135
+  },
+  {
+    "base_question_id": 130,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544879.2446213
+  },
+  {
+    "base_question_id": 130,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544880.8626785
+  },
+  {
+    "base_question_id": 130,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544882.6807222
+  },
+  {
+    "base_question_id": 130,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544884.4502313
+  },
+  {
+    "base_question_id": 131,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544886.1106663
+  },
+  {
+    "base_question_id": 131,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544887.8135705
+  },
+  {
+    "base_question_id": 131,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544889.4436288
+  },
+  {
+    "base_question_id": 131,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544891.0798988
+  },
+  {
+    "base_question_id": 132,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544892.6978853
+  },
+  {
+    "base_question_id": 132,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544894.2796276
+  },
+  {
+    "base_question_id": 132,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544895.9158602
+  },
+  {
+    "base_question_id": 132,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544897.58242
+  },
+  {
+    "base_question_id": 133,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544899.1398246
+  },
+  {
+    "base_question_id": 133,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544900.6972568
+  },
+  {
+    "base_question_id": 133,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544902.1880338
+  },
+  {
+    "base_question_id": 133,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544903.6303747
+  },
+  {
+    "base_question_id": 134,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544905.7694783
+  },
+  {
+    "base_question_id": 134,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544907.9939904
+  },
+  {
+    "base_question_id": 134,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544910.1449466
+  },
+  {
+    "base_question_id": 134,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544912.3871684
+  },
+  {
+    "base_question_id": 135,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544914.102126
+  },
+  {
+    "base_question_id": 135,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544915.8172095
+  },
+  {
+    "base_question_id": 135,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544917.5321286
+  },
+  {
+    "base_question_id": 135,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544919.2289674
+  },
+  {
+    "base_question_id": 136,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544920.8288686
+  },
+  {
+    "base_question_id": 136,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544922.4044282
+  },
+  {
+    "base_question_id": 136,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544923.9922237
+  },
+  {
+    "base_question_id": 136,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544925.4522414
+  },
+  {
+    "base_question_id": 137,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544926.9627626
+  },
+  {
+    "base_question_id": 137,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544928.4398656
+  },
+  {
+    "base_question_id": 137,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544929.930641
+  },
+  {
+    "base_question_id": 137,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544931.4638195
+  },
+  {
+    "base_question_id": 137,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544932.9424357
+  },
+  {
+    "base_question_id": 137,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544934.4272213
+  },
+  {
+    "base_question_id": 138,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544936.7979748
+  },
+  {
+    "base_question_id": 138,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544938.2112951
+  },
+  {
+    "base_question_id": 138,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544939.607829
+  },
+  {
+    "base_question_id": 138,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544941.0645022
+  },
+  {
+    "base_question_id": 138,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544942.3635757
+  },
+  {
+    "base_question_id": 139,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544943.981482
+  },
+  {
+    "base_question_id": 139,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544945.690561
+  },
+  {
+    "base_question_id": 139,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544947.3960154
+  },
+  {
+    "base_question_id": 139,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544948.9925952
+  },
+  {
+    "base_question_id": 140,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544950.4845917
+  },
+  {
+    "base_question_id": 140,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544951.855565
+  },
+  {
+    "base_question_id": 140,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544953.3088276
+  },
+  {
+    "base_question_id": 140,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544954.7328763
+  },
+  {
+    "base_question_id": 141,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544956.1597338
+  },
+  {
+    "base_question_id": 141,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544957.6733036
+  },
+  {
+    "base_question_id": 141,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544959.0566654
+  },
+  {
+    "base_question_id": 141,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544960.4206445
+  },
+  {
+    "base_question_id": 142,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544961.7824671
+  },
+  {
+    "base_question_id": 142,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544963.1253195
+  },
+  {
+    "base_question_id": 142,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544964.4353302
+  },
+  {
+    "base_question_id": 142,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544965.7598567
+  },
+  {
+    "base_question_id": 142,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544967.0613031
+  },
+  {
+    "base_question_id": 142,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544968.3472385
+  },
+  {
+    "base_question_id": 142,
+    "language": "telugu",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544969.6728613
+  },
+  {
+    "base_question_id": 142,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544970.97264
+  },
+  {
+    "base_question_id": 143,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544972.2553947
+  },
+  {
+    "base_question_id": 143,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544973.54756
+  },
+  {
+    "base_question_id": 143,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544974.8530486
+  },
+  {
+    "base_question_id": 143,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544976.147541
+  },
+  {
+    "base_question_id": 143,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544977.4316168
+  },
+  {
+    "base_question_id": 143,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544978.7260292
+  },
+  {
+    "base_question_id": 144,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544980.105757
+  },
+  {
+    "base_question_id": 144,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544981.465027
+  },
+  {
+    "base_question_id": 144,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544982.8306582
+  },
+  {
+    "base_question_id": 144,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544984.3482947
+  },
+  {
+    "base_question_id": 145,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544985.6580453
+  },
+  {
+    "base_question_id": 145,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544987.055617
+  },
+  {
+    "base_question_id": 145,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544988.4977796
+  },
+  {
+    "base_question_id": 145,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544989.963991
+  },
+  {
+    "base_question_id": 145,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544991.4151676
+  },
+  {
+    "base_question_id": 146,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544992.8507183
+  },
+  {
+    "base_question_id": 146,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544994.2442794
+  },
+  {
+    "base_question_id": 146,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544995.6531074
+  },
+  {
+    "base_question_id": 146,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544997.043028
+  },
+  {
+    "base_question_id": 147,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544998.483205
+  },
+  {
+    "base_question_id": 147,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784544999.8830948
+  },
+  {
+    "base_question_id": 147,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545001.2731256
+  },
+  {
+    "base_question_id": 147,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545002.6531653
+  },
+  {
+    "base_question_id": 148,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545004.0631628
+  },
+  {
+    "base_question_id": 148,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545005.443235
+  },
+  {
+    "base_question_id": 148,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545006.8234158
+  },
+  {
+    "base_question_id": 148,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545008.196445
+  },
+  {
+    "base_question_id": 149,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545009.9269118
+  },
+  {
+    "base_question_id": 149,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545011.6911628
+  },
+  {
+    "base_question_id": 149,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545013.4587147
+  },
+  {
+    "base_question_id": 149,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545015.2437215
+  },
+  {
+    "base_question_id": 150,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545016.8350103
+  },
+  {
+    "base_question_id": 150,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545018.4037845
+  },
+  {
+    "base_question_id": 150,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545019.9349694
+  },
+  {
+    "base_question_id": 150,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545021.4998085
+  },
+  {
+    "base_question_id": 150,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545023.0118008
+  },
+  {
+    "base_question_id": 151,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545024.2985036
+  },
+  {
+    "base_question_id": 151,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545025.638076
+  },
+  {
+    "base_question_id": 151,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545026.9231007
+  },
+  {
+    "base_question_id": 151,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545028.2006505
+  },
+  {
+    "base_question_id": 152,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545029.5441778
+  },
+  {
+    "base_question_id": 152,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545030.8486848
+  },
+  {
+    "base_question_id": 152,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545032.1088
+  },
+  {
+    "base_question_id": 152,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545033.3917902
+  },
+  {
+    "base_question_id": 153,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545034.8135238
+  },
+  {
+    "base_question_id": 153,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545036.2389805
+  },
+  {
+    "base_question_id": 153,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545037.6600811
+  },
+  {
+    "base_question_id": 153,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545039.0822828
+  },
+  {
+    "base_question_id": 153,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545040.445753
+  },
+  {
+    "base_question_id": 153,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545041.8084762
+  },
+  {
+    "base_question_id": 154,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545043.1803217
+  },
+  {
+    "base_question_id": 154,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545044.5665143
+  },
+  {
+    "base_question_id": 154,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545045.9575396
+  },
+  {
+    "base_question_id": 154,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545047.3492723
+  },
+  {
+    "base_question_id": 155,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545048.6149898
+  },
+  {
+    "base_question_id": 155,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545049.883104
+  },
+  {
+    "base_question_id": 155,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545051.156495
+  },
+  {
+    "base_question_id": 155,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545052.3939962
+  },
+  {
+    "base_question_id": 155,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545053.6195283
+  },
+  {
+    "base_question_id": 155,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545054.876255
+  },
+  {
+    "base_question_id": 156,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545056.0962374
+  },
+  {
+    "base_question_id": 156,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545057.340961
+  },
+  {
+    "base_question_id": 156,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545058.5895593
+  },
+  {
+    "base_question_id": 156,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545059.8145506
+  },
+  {
+    "base_question_id": 157,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545061.39862
+  },
+  {
+    "base_question_id": 157,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545063.0100849
+  },
+  {
+    "base_question_id": 157,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545064.6580362
+  },
+  {
+    "base_question_id": 157,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545066.2950234
+  },
+  {
+    "base_question_id": 157,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545067.8809564
+  },
+  {
+    "base_question_id": 158,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545069.1627357
+  },
+  {
+    "base_question_id": 158,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545070.429921
+  },
+  {
+    "base_question_id": 158,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545071.7219896
+  },
+  {
+    "base_question_id": 158,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545072.9872372
+  },
+  {
+    "base_question_id": 159,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545074.2254934
+  },
+  {
+    "base_question_id": 159,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545075.4273705
+  },
+  {
+    "base_question_id": 159,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545076.604535
+  },
+  {
+    "base_question_id": 159,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545077.8005538
+  },
+  {
+    "base_question_id": 160,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545079.0127535
+  },
+  {
+    "base_question_id": 160,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545080.2558086
+  },
+  {
+    "base_question_id": 160,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545081.4753733
+  },
+  {
+    "base_question_id": 160,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545082.705538
+  },
+  {
+    "base_question_id": 160,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545083.9589934
+  },
+  {
+    "base_question_id": 161,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545085.2157311
+  },
+  {
+    "base_question_id": 161,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545086.46553
+  },
+  {
+    "base_question_id": 161,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545087.7207446
+  },
+  {
+    "base_question_id": 161,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545088.9755836
+  },
+  {
+    "base_question_id": 162,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545090.325752
+  },
+  {
+    "base_question_id": 162,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545091.675675
+  },
+  {
+    "base_question_id": 162,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545093.0996544
+  },
+  {
+    "base_question_id": 162,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545094.5827925
+  },
+  {
+    "base_question_id": 163,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545095.9811072
+  },
+  {
+    "base_question_id": 163,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545097.51614
+  },
+  {
+    "base_question_id": 163,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545098.9666731
+  },
+  {
+    "base_question_id": 163,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545100.4381044
+  },
+  {
+    "base_question_id": 164,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545101.9201193
+  },
+  {
+    "base_question_id": 164,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545103.3249815
+  },
+  {
+    "base_question_id": 164,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545104.7086756
+  },
+  {
+    "base_question_id": 164,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545106.0825794
+  },
+  {
+    "base_question_id": 165,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545107.5513916
+  },
+  {
+    "base_question_id": 165,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545109.0519533
+  },
+  {
+    "base_question_id": 165,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545110.5658047
+  },
+  {
+    "base_question_id": 165,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545112.0970094
+  },
+  {
+    "base_question_id": 165,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545113.5809662
+  },
+  {
+    "base_question_id": 166,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545114.9786365
+  },
+  {
+    "base_question_id": 166,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545116.329711
+  },
+  {
+    "base_question_id": 166,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545117.6387887
+  },
+  {
+    "base_question_id": 166,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545119.0764027
+  },
+  {
+    "base_question_id": 167,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545120.4865215
+  },
+  {
+    "base_question_id": 167,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545121.7929552
+  },
+  {
+    "base_question_id": 167,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545123.4187987
+  },
+  {
+    "base_question_id": 167,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545124.8085604
+  },
+  {
+    "base_question_id": 168,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545126.1695786
+  },
+  {
+    "base_question_id": 168,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545127.6086006
+  },
+  {
+    "base_question_id": 168,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545129.018496
+  },
+  {
+    "base_question_id": 168,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545130.4386525
+  },
+  {
+    "base_question_id": 168,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545131.9636886
+  },
+  {
+    "base_question_id": 169,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545133.44857
+  },
+  {
+    "base_question_id": 169,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545134.8970666
+  },
+  {
+    "base_question_id": 169,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545136.3467271
+  },
+  {
+    "base_question_id": 169,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545137.8990254
+  },
+  {
+    "base_question_id": 169,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545139.2468388
+  },
+  {
+    "base_question_id": 170,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545140.597034
+  },
+  {
+    "base_question_id": 170,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545141.955778
+  },
+  {
+    "base_question_id": 170,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545143.3058712
+  },
+  {
+    "base_question_id": 170,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545144.6327763
+  },
+  {
+    "base_question_id": 170,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545145.9084446
+  },
+  {
+    "base_question_id": 170,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545147.149388
+  },
+  {
+    "base_question_id": 171,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545148.410926
+  },
+  {
+    "base_question_id": 171,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545149.7100773
+  },
+  {
+    "base_question_id": 171,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545151.0662541
+  },
+  {
+    "base_question_id": 171,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545152.395309
+  },
+  {
+    "base_question_id": 171,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545153.6615736
+  },
+  {
+    "base_question_id": 172,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545155.3345897
+  },
+  {
+    "base_question_id": 172,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545157.0026062
+  },
+  {
+    "base_question_id": 172,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545158.964903
+  },
+  {
+    "base_question_id": 172,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545160.882831
+  },
+  {
+    "base_question_id": 172,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545162.6208289
+  },
+  {
+    "base_question_id": 172,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545164.4918098
+  },
+  {
+    "base_question_id": 172,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545166.2763014
+  },
+  {
+    "base_question_id": 173,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545167.601863
+  },
+  {
+    "base_question_id": 173,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545168.8732796
+  },
+  {
+    "base_question_id": 173,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545170.2141557
+  },
+  {
+    "base_question_id": 173,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545171.610571
+  },
+  {
+    "base_question_id": 174,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545173.0581696
+  },
+  {
+    "base_question_id": 174,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545174.475581
+  },
+  {
+    "base_question_id": 174,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545175.843349
+  },
+  {
+    "base_question_id": 174,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545177.2762744
+  },
+  {
+    "base_question_id": 175,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545178.6362076
+  },
+  {
+    "base_question_id": 175,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545179.9973173
+  },
+  {
+    "base_question_id": 175,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545181.4382246
+  },
+  {
+    "base_question_id": 175,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545182.799051
+  },
+  {
+    "base_question_id": 176,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545186.9832127
+  },
+  {
+    "base_question_id": 176,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545191.191578
+  },
+  {
+    "base_question_id": 176,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545195.376051
+  },
+  {
+    "base_question_id": 176,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545199.6319585
+  },
+  {
+    "base_question_id": 176,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545203.6085694
+  },
+  {
+    "base_question_id": 177,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545204.980444
+  },
+  {
+    "base_question_id": 177,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545206.4339485
+  },
+  {
+    "base_question_id": 177,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545207.7378085
+  },
+  {
+    "base_question_id": 177,
+    "language": "hindi",
+    "variant_num": 3,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545209.169596
+  },
+  {
+    "base_question_id": 177,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545210.5599675
+  },
+  {
+    "base_question_id": 177,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545211.9475183
+  },
+  {
+    "base_question_id": 178,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545213.3168025
+  },
+  {
+    "base_question_id": 178,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545214.8496737
+  },
+  {
+    "base_question_id": 178,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545216.3936946
+  },
+  {
+    "base_question_id": 178,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545217.9495604
+  },
+  {
+    "base_question_id": 178,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545219.460878
+  },
+  {
+    "base_question_id": 179,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545220.9133368
+  },
+  {
+    "base_question_id": 179,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545222.2739162
+  },
+  {
+    "base_question_id": 179,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545223.640518
+  },
+  {
+    "base_question_id": 179,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545225.0675578
+  },
+  {
+    "base_question_id": 180,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545226.5827904
+  },
+  {
+    "base_question_id": 180,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545228.092993
+  },
+  {
+    "base_question_id": 180,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545229.5891166
+  },
+  {
+    "base_question_id": 180,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545231.2786636
+  },
+  {
+    "base_question_id": 181,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545232.5780315
+  },
+  {
+    "base_question_id": 181,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545233.9635928
+  },
+  {
+    "base_question_id": 181,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545235.3401954
+  },
+  {
+    "base_question_id": 181,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545236.8331192
+  },
+  {
+    "base_question_id": 182,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545238.3355267
+  },
+  {
+    "base_question_id": 182,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545239.6690853
+  },
+  {
+    "base_question_id": 182,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545241.0718665
+  },
+  {
+    "base_question_id": 182,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545242.43351
+  },
+  {
+    "base_question_id": 183,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545243.7918022
+  },
+  {
+    "base_question_id": 183,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545245.156134
+  },
+  {
+    "base_question_id": 183,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545246.4705484
+  },
+  {
+    "base_question_id": 183,
+    "language": "telugu",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545247.785265
+  },
+  {
+    "base_question_id": 183,
+    "language": "telugu",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545249.198394
+  },
+  {
+    "base_question_id": 183,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545250.465349
+  },
+  {
+    "base_question_id": 184,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545251.9832165
+  },
+  {
+    "base_question_id": 184,
+    "language": "hindi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545253.5539312
+  },
+  {
+    "base_question_id": 184,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545255.1879792
+  },
+  {
+    "base_question_id": 184,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545256.6808896
+  },
+  {
+    "base_question_id": 185,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545257.903343
+  },
+  {
+    "base_question_id": 185,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545259.1384745
+  },
+  {
+    "base_question_id": 185,
+    "language": "hindi",
+    "variant_num": 2,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545260.4036534
+  },
+  {
+    "base_question_id": 185,
+    "language": "telugu",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545261.7550085
+  },
+  {
+    "base_question_id": 185,
+    "language": "punjabi",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545263.0212743
+  },
+  {
+    "base_question_id": 186,
+    "language": "english",
+    "variant_num": null,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545264.4684713
+  },
+  {
+    "base_question_id": 186,
+    "language": "hindi",
+    "variant_num": 1,
+    "raw_response": "Not logged in \u00c2\u00b7 Please run /login",
+    "extracted_sql": "Not logged in \u00c2\u00b7 Please run /login",
+    "ex_correct": 0,
+    "dma_correct": 0,
+    "timestamp": 1784545265.784872
+  }
+]
