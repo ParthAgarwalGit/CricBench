@@ -1,5 +1,6 @@
 # results/
 
 **Raw model outputs**, kept for transparency and to
-illustrate the format the evaluation harness consumes. Each record contains the
-question, gold SQL/answer, and the model's `generated_sql` / `generated_answer`.
+illustrate the format the evaluation harness consumes. 
+
+The output formats may differ due to changes in evaluation modes (CLI interface/API keys).
