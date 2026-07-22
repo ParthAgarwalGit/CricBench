@@ -1,17 +1,10 @@
 PRAGMA foreign_keys=OFF;
 
--- Players: universal, unchanged
 CREATE TABLE IF NOT EXISTS Players (
     player_id   TEXT PRIMARY KEY,
     player_name TEXT NOT NULL
 );
 
--- Matches: adapted for Test cricket
---   * start_date / end_date replace single match_date
---   * series_name replaces stage (Tests belong to a named series)
---   * match_type_number tracks match number within a series
---   * gender and team_type added (international / male|female)
---   * result_type extended to cover 'runs', 'wickets', 'draw', 'tie', 'no result'
 CREATE TABLE IF NOT EXISTS Matches (
     match_id            INTEGER PRIMARY KEY,
     season              TEXT    NOT NULL,
@@ -38,7 +31,6 @@ CREATE TABLE IF NOT EXISTS Matches (
     FOREIGN KEY (player_of_match_id) REFERENCES Players (player_id)
 );
 
--- Deliveries: unchanged structurally; inning 1-4 covers all Test innings
 CREATE TABLE IF NOT EXISTS Deliveries (
     delivery_id     INTEGER PRIMARY KEY AUTOINCREMENT,
     match_id        INTEGER NOT NULL,
@@ -65,7 +57,6 @@ CREATE TABLE IF NOT EXISTS Deliveries (
     FOREIGN KEY (player_out_id)   REFERENCES Players   (player_id)
 );
 
--- Playing XI per match
 CREATE TABLE IF NOT EXISTS PlayerInMatch (
     match_id    INTEGER NOT NULL,
     player_id   TEXT    NOT NULL,
@@ -75,7 +66,6 @@ CREATE TABLE IF NOT EXISTS PlayerInMatch (
     FOREIGN KEY (player_id) REFERENCES Players (player_id)
 );
 
--- Fielder dismissals (caught, run-out, stumped, etc.)
 CREATE TABLE IF NOT EXISTS FielderDismissals (
     fielder_dismissal_id  INTEGER PRIMARY KEY AUTOINCREMENT,
     delivery_id           INTEGER NOT NULL,
