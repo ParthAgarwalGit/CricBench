@@ -8,21 +8,21 @@ CREATE TABLE IF NOT EXISTS Players (
 CREATE TABLE IF NOT EXISTS Matches (
     match_id            INTEGER PRIMARY KEY,
     season              TEXT    NOT NULL,
-    start_date          TEXT    NOT NULL,   -- first day of match
-    end_date            TEXT,               -- last day played
+    start_date          TEXT    NOT NULL,   
+    end_date            TEXT,               
     venue               TEXT    NOT NULL,
     city                TEXT,
-    series_name         TEXT,               -- e.g. "Border-Gavaskar Trophy"
-    match_type_number   INTEGER,            -- match number within the series
-    gender              TEXT,               -- 'male' | 'female'
-    team_type           TEXT,               -- 'international' | 'club'
+    series_name         TEXT,               
+    match_type_number   INTEGER,               -- match number within the series           
+    gender              TEXT,              
+    team_type           TEXT,               
     team1               TEXT    NOT NULL,
     team2               TEXT    NOT NULL,
     toss_winner         TEXT    NOT NULL,
     toss_decision       TEXT    NOT NULL,
-    match_winner        TEXT,               -- NULL for draws / no results
-    result_type         TEXT,               -- 'runs' | 'wickets' | 'draw' | 'tie' | 'no result'
-    result_margin       INTEGER,            -- NULL for draws / ties / no results
+    match_winner        TEXT,               
+    result_type         TEXT,               
+    result_margin       INTEGER,
     player_of_match_id  TEXT,
     umpire1             TEXT,
     umpire2             TEXT,
@@ -34,16 +34,16 @@ CREATE TABLE IF NOT EXISTS Matches (
 CREATE TABLE IF NOT EXISTS Deliveries (
     delivery_id     INTEGER PRIMARY KEY AUTOINCREMENT,
     match_id        INTEGER NOT NULL,
-    inning          INTEGER NOT NULL,   -- 1, 2, 3, or 4
+    inning          INTEGER NOT NULL, 
     over_number     INTEGER NOT NULL,
-    ball_number     INTEGER NOT NULL,   -- legal ball number (1-6)
+    ball_number     INTEGER NOT NULL,
     batting_team    TEXT    NOT NULL,
     bowling_team    TEXT    NOT NULL,
     striker_id      TEXT    NOT NULL,
     non_striker_id  TEXT    NOT NULL,
     bowler_id       TEXT    NOT NULL,
-    runs_scored     INTEGER NOT NULL,   -- runs off bat
-    extra_runs      INTEGER NOT NULL,   -- total extras this ball
+    runs_scored     INTEGER NOT NULL, 
+    extra_runs      INTEGER NOT NULL,
     wides           INTEGER DEFAULT 0,
     noballs         INTEGER DEFAULT 0,
     byes            INTEGER DEFAULT 0,
