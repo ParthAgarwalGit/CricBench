@@ -1,0 +1,1972 @@
+[
+        { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "From 2003, which teams lost successive World Cup finals? Mention the team name and the years of these matches.", 
+        "query": "WITH finals AS (SELECT match_id, match_date, CASE WHEN match_winner = team1 THEN team2 WHEN match_winner = team2 THEN team1 ELSE 'New Zealand' END AS losing_team, CAST(strftime('%Y', match_date) AS INTEGER) AS year FROM Matches WHERE stage = 'Final') SELECT f1.losing_team AS team_name, f1.year AS year1, f2.year AS year2 FROM finals f1 JOIN finals f2 ON f1.losing_team = f2.losing_team AND f2.year = f1.year + 4 ORDER BY team_name;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('New Zealand', 2015, 2019)",
+          "('Sri Lanka', 2007, 2011)"], 
+        "question_english": "From 2003, which teams lost successive World Cup finals? Mention the team name and the years of these matches.", 
+        "question_hindi": "2003 से, किन टीमों ने लगातार विश्व कप फाइनल हारे? टीम का नाम और उन मैचों के वर्ष बताएं।", 
+        "question_punjabi": "2003 ਤੋਂ, ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਲਗਾਤਾਰ ਵਿਸ਼ਵ ਕੱਪ ਫਾਈਨਲ ਹਾਰੀਆਂ? ਟੀਮ ਦਾ ਨਾਮ ਅਤੇ ਮੈਚਾਂ ਦੇ ਸਾਲ ਦੱਸੋ।", 
+        "question_telugu": "2003 నుంచి ఏ టిములు వరుసగా వరల్డ్ కప్పు ఫినల్స్ ఓడిపోయారు? టీం యొక్క పేరు మరియు మ్యాచులు ఆడిన సంవత్సరాలు రాయండి.", 
+        "column_names": [ "Team Name, Year 1, Year 2" ] 
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "When did ties in ODI World Cup matches take place? Mention the year, the two teams playing and the location of the match.", 
+        "query": "SELECT CAST(strftime('%Y', match_date) AS INTEGER) AS year, team1, team2, city FROM Matches WHERE LOWER(result_type) LIKE '%tie%' ORDER BY year;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "(2003, 'Sri Lanka', 'South Africa', 'Durban')",
+        "(2007, 'Ireland', 'Zimbabwe', 'Jamaica')",
+        "(2011, 'India', 'England', 'Bangalore')",
+        "(2019, 'England', 'New Zealand', 'London')"], 
+        "question_english": "When did ties in ODI World Cup matches take place? Mention the year, the two teams playing and the location of the match.", 
+        "question_hindi": "ODI विश्व कप मैचों में टाई कब-कब हुए? वर्ष, खेलने वाली दोनों टीमों और मैच का स्थान बताएं।", 
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਮੈਚਾਂ ਵਿੱਚ ਟਾਈ ਕਦੋਂ-ਕਦੋਂ ਹੋਏ? ਸਾਲ, ਖੇਡਣ ਵਾਲੀਆਂ ਦੋਵੇਂ ਟੀਮਾਂ ਅਤੇ ਮੈਚ ਦੀ ਥਾਂ ਦੱਸੋ।", 
+        "question_telugu": "ODI వరల్డ్ కప్పు మ్యాచులలో టై ఎప్పుడు జరిగినది? సంవత్సరం, ఆడే టిములు మరియు మ్యాచ్ యొక్క స్థానం రాయండి.", 
+        "column_names": [ "Year, Team 1, Team 2, Match Location" ] 
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "From the 2002 ODI World Cup onwards, what were the highest successful run chases? Mention the season, winning team, score, opponent and venue.",
+        "query": "WITH innings_totals AS ( SELECT D.match_id, D.batting_team, SUM(D.runs_scored) + SUM(D.extra_runs) AS total_runs FROM Deliveries D GROUP BY D.match_id, D.batting_team ) SELECT M.season, M.match_winner AS winning_team, I.total_runs AS chase_score, CASE WHEN M.match_winner = M.team1 THEN M.team2 ELSE M.team1 END AS opponent, M.city FROM Matches M JOIN innings_totals I ON M.match_id = I.match_id AND I.batting_team = M.match_winner WHERE M.result_type = 'wickets' AND CAST(substr(M.season, 1, 4) AS INTEGER) >= 2002 ORDER BY chase_score DESC LIMIT 10;",
+        "difficulty": "Medium",
+        "answer": [
+            "('2023/24', 'Pakistan', 345, 'Sri Lanka', 'Hyderabad')",
+            "('2010/11', 'Ireland', 329, 'England', 'Bangalore')",
+            "('2014/15', 'Bangladesh', 322, 'Scotland', 'Nelson')",
+            "('2019', 'Bangladesh', 322, 'West Indies', 'Taunton')",
+            "('2014/15', 'Sri Lanka', 312, 'England', 'Wellington')",
+            "('2010/11', 'Ireland', 307, 'Netherlands', 'Kolkata')",
+            "('2014/15', 'Ireland', 307, 'West Indies', 'Nelson')",
+            "('2023/24', 'Australia', 307, 'Bangladesh', 'Pune')",
+            "('2006/07', 'England', 301, 'West Indies', 'Barbados')",
+            "('2010/11', 'South Africa', 300, 'India', 'Nagpur')"
+        ],
+        "question_english": "From the 2002 ODI World Cup onwards, what were the highest successful run chases? Mention the season, winning team, score, opponent and venue.",
+        "question_hindi": "2002 के बाद के ODI विश्व कप में सबसे बड़े सफल रन चेज़ कौन से रहे? सीज़न, विजेता टीम, स्कोर, विपक्षी टीम और स्थान बताइए।",
+        "question_punjabi": "2002 ਤੋਂ ਬਾਅਦ ਦੇ ODI ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡੇ ਸਫਲ ਰਨ ਚੇਜ਼ ਕਿਹੜੇ ਰਹੇ? ਸੀਜ਼ਨ, ਜੇਤੂ ਟੀਮ, ਸਕੋਰ, ਵਿਰੋਧੀ ਟੀਮ ਅਤੇ ਮੈਦਾਨ ਦੱਸੋ।",
+        "question_telugu": "2002 తర్వాత జరిగిన ODI వరల్డ్ కప్పుల్లో అత్యంత విజయవంతమైన రన్ ఛేజ్‌లు ఏమిటి? సీజన్, గెలిచిన జట్టు, స్కోర్, ప్రత్యర్థి జట్టు మరియు వేదికను పేర్కొనండి.",
+        "column_names": [
+            "Season",
+            "Winning Team",
+            "Chase Score",
+            "Opponent",
+            "Venue"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-news/136729/stats-rohit-scales-the-six-summit-in-odi-cricket-cricbuzzcom",
+        "question": "From the 2002/03 ODI World Cup season onwards, who scored the most centuries in a single ODI World Cup edition? Mention the player name, season and number of centuries.",
+        "query": "WITH innings AS ( SELECT D.match_id, D.striker_id, M.season, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.match_id, D.striker_id, M.season ) SELECT P.player_name, I.season, COUNT(*) AS centuries FROM innings I JOIN Players P ON I.striker_id = P.player_id WHERE I.runs >= 100 GROUP BY P.player_name, I.season ORDER BY centuries DESC LIMIT 10;",
+        "difficulty": "Easy",
+        "answer": [
+            "('RG Sharma', '2019', 5)",
+            "('KC Sangakkara', '2014/15', 4)",
+            "('Q de Kock', '2023/24', 4)",
+            "('DA Warner', '2019', 3)",
+            "('ML Hayden', '2006/07', 3)",
+            "('R Ravindra', '2023/24', 3)",
+            "('SC Ganguly', '2002/03', 3)",
+            "('V Kohli', '2023/24', 3)",
+            "('AB de Villiers', '2010/11', 2)",
+            "('AJ Finch', '2019', 2)"
+        ],
+        "question_english": "From the 2002/03 ODI World Cup season onwards, who scored the most centuries in a single ODI World Cup edition? Mention the player name, season and number of centuries.",
+        "question_hindi": "2002/03 ODI विश्व कप सीज़न से, एक ODI विश्व कप संस्करण में सबसे अधिक शतक किसने बनाए? खिलाड़ी का नाम, सीज़न और शतकों की संख्या बताइए।",
+        "question_punjabi": "2002/03 ODI ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਤੋਂ, ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਸੈਂਚਰੀਆਂ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਈਆਂ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਸੈਂਚਰੀਆਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2002/03 ODI వరల్డ్ కప్ సీజన్ నుండి, ఒక ODI వరల్డ్ కప్ ఎడిషన్‌లో అత్యధిక శతకాలు చేసిన ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు శతకాల సంఖ్యను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Centuries"
+        ]
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players have the most 50+ scores in a World Cup while batting at No 5 or below? Mention the number of scores, the player and the season.", 
+        "query": "WITH batter_innings AS (SELECT D.match_id, D.batting_team, D.striker_id, MIN(D.delivery_id) AS first_ball, SUM(D.runs_scored) AS runs FROM Deliveries D GROUP BY D.match_id, D.batting_team, D.striker_id), positions AS (SELECT match_id, batting_team, striker_id, runs, ROW_NUMBER() OVER (PARTITION BY match_id, batting_team ORDER BY first_ball) AS batting_pos FROM batter_innings) SELECT P.player_name, M.season, COUNT(*) AS fifties FROM positions POS JOIN Matches M ON POS.match_id = M.match_id JOIN Players P ON POS.striker_id = P.player_id WHERE POS.runs >= 50 AND POS.batting_pos >= 5 GROUP BY P.player_name, M.season ORDER BY fifties DESC LIMIT 3;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('BA Stokes', '2019', 5)",
+        "('LPC Silva', '2006/07', 4)",
+        "('SC Williams', '2014/15', 4)" ], 
+        "question_english": "Which players have the most 50+ scores in a World Cup while batting at No 5 or below? Mention the number of scores, the player and the season.", 
+        "question_hindi": "विश्व कप में नंबर 5 या उससे नीचे बल्लेबाजी करते हुए किन खिलाड़ियों ने सबसे अधिक 50+ स्कोर बनाए? स्कोर की संख्या, खिलाड़ी का नाम और सीज़न बताएं।", 
+        "question_punjabi": "ਨੰਬਰ 5 ਜਾਂ ਇਸ ਤੋਂ ਹੇਠਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦਿਆਂ ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ 50+ ਸਕੋਰ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਦੇ ਹਨ? ਸਕੋਰਾਂ ਦੀ ਗਿਣਤੀ, ਖਿਡਾਰੀ ਦਾ ਨਾਮ ਅਤੇ ਸੀਜ਼ਨ ਦੱਸੋ।", 
+        "question_telugu": "ఏ క్రీడాకార్లు వరల్డ్ కప్పులో నెంబర్ 5 లేదా దానికన్నా తక్కువ స్థానంలో బ్యాటింగ్ చేసేదప్పుడు అన్నిటికన్నా ఎక్కువ అర్ధ శతాబ్దాలు సంపాదించారు? అర్ధ శతాబ్దాల సంఖ్య, క్రీడాకార్లు మరియు సీజన్ రాయండి.", 
+        "column_names": [ "Player Name, Season, Number of 50+ scores" ] 
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-news/131266/stats-the-highest-chases-at-the-odi-world-cup-cricbuzzcom",
+        "question": "Which teams recorded the highest powerplay scores in ODI World Cup history after the 2002/03 season? Mention the team, season, opponent and powerplay runs.",
+        "query": "SELECT D.batting_team AS team, M.season, CASE WHEN D.batting_team = M.team1 THEN M.team2 ELSE M.team1 END AS opponent, SUM(D.runs_scored + D.extra_runs) AS powerplay_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE D.over_number < 10 AND CAST(substr(M.season,1,4) AS INTEGER) >= 2002 GROUP BY D.match_id, D.batting_team ORDER BY powerplay_runs DESC LIMIT 10;",
+        "difficulty": "Hard",
+        "answer": [
+            "('West Indies', '2002/03', 'Canada', 119)",
+            "('Australia', '2023/24', 'New Zealand', 118)",
+            "('New Zealand', '2014/15', 'England', 116)",
+            "('Sri Lanka', '2023/24', 'South Africa', 94)",
+            "('India', '2023/24', 'South Africa', 91)",
+            "('India', '2023/24', 'Netherlands', 91)",
+            "('New Zealand', '2002/03', 'Canada', 89)",
+            "('India', '2002/03', 'Pakistan', 88)",
+            "('New Zealand', '2014/15', 'South Africa', 88)",
+            "('India', '2010/11', 'South Africa', 87)"
+        ],
+        "question_english": "Which teams recorded the highest powerplay scores in ODI World Cup history after the 2002/03 season? Mention the team, season, opponent and powerplay runs.",
+        "question_hindi": "2002/03 ODI विश्व कप सीज़न के बाद, ODI विश्व कप इतिहास में सबसे बड़े पावरप्ले स्कोर किन टीमों ने बनाए? टीम, सीज़न, विपक्षी टीम और पावरप्ले रन बताइए।",
+        "question_punjabi": "2002/03 ODI ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਤੋਂ ਬਾਅਦ, ODI ਵਿਸ਼ਵ ਕੱਪ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡੇ powerplay ਸਕੋਰ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਨੇ ਬਣਾਏ? ਟੀਮ, ਸੀਜ਼ਨ, ਵਿਰੋਧੀ ਟੀਮ ਅਤੇ powerplay ਰਨ ਦੱਸੋ।",
+        "question_telugu": "2002/03 ODI వరల్డ్ కప్ సీజన్ తర్వాత, ODI వరల్డ్ కప్ చరిత్రలో అత్యధిక పవర్‌ప్లే స్కోర్లు చేసిన జట్లులు ఏవి? జట్టు, సీజన్, ప్రత్యర్థి జట్టు మరియు పవర్‌ప్లే పరుగులను రాయండి.",
+        "column_names": [
+            "Team",
+            "Season",
+            "Opponent",
+            "Powerplay Runs"
+        ]
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players have the most wickets in powerplay 1 in the 2019 World Cup? Mention the player name and the number of wickets.", 
+        "query": "SELECT P.player_name, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2019' AND D.over_number < 10 AND D.player_out_id IS NOT NULL GROUP BY P.player_name ORDER BY wickets DESC LIMIT 4;", 
+        "difficulty": "Easy", 
+        "answer": 
+        [ "('MJ Henry', 8)",
+        "('SS Cottrell', 7)",
+        "('JC Archer', 7)",
+        "('CR Woakes', 7)" ], 
+        "question_english": "Which players have the most wickets in powerplay 1 in the 2019 World Cup? Mention the player name and the number of wickets.", 
+        "question_hindi": "2019 विश्व कप में पावरप्ले 1 में सबसे अधिक विकेट किसने लिए? खिलाड़ी का नाम और विकेटों की संख्या बताएं।", 
+        "question_punjabi": "2019 ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ powerplay 1 ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਲਈਆਂ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ ਅਤੇ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।", 
+        "question_telugu": "ఏ క్రీడాకార్ల దగ్గర 2019 వరల్డ్ కప్పులో పవర్ప్లే 1 లో అన్నిటికన్నా ఎక్కువ వికెట్లు ఉన్నాయి? క్రీడాకార్ల పేరులు మరియు వికెట్ల సంఖ్య రాయండి.", 
+        "column_names": [ "Player Name, Number of wickets" ] 
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "After Virat Kohli's record 2023/24 World Cup campaign, which players scored the second and third highest runs in a single ODI World Cup edition after the 2002/03 season? Mention the player name, season and total runs.",
+        "query": "SELECT P.player_name, M.season, SUM(D.runs_scored) AS total_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE CAST(substr(M.season,1,4) AS INTEGER) >= 2002 GROUP BY P.player_name, M.season ORDER BY total_runs DESC LIMIT 2 OFFSET 1;",
+        "difficulty": "Easy",
+        "answer": [
+            "('SR Tendulkar', '2002/03', 673)",
+            "('ML Hayden', '2006/07', 659)"
+        ],
+        "question_english": "After Virat Kohli's record 2023/24 World Cup campaign, which players scored the second and third highest runs in a single ODI World Cup edition after the 2002/03 season? Mention the player name, season and total runs.",
+        "question_hindi": "विराट कोहली के रिकॉर्ड 2023/24 विश्व कप अभियान के बाद, 2002/03 के बाद एक ODI विश्व कप संस्करण में दूसरे और तीसरे सबसे अधिक रन किन खिलाड़ियों ने बनाए? खिलाड़ी का नाम, सीज़न और कुल रन बताइए।",
+        "question_punjabi": "ਵਿਰਾਟ ਕੋਹਲੀ ਦੇ ਰਿਕਾਰਡ 2023/24 ਵਿਸ਼ਵ ਕੱਪ ਤੋਂ ਬਾਅਦ, 2002/03 ਤੋਂ ਬਾਅਦ ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਦੂਜੇ ਅਤੇ ਤੀਜੇ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਏ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਕੁੱਲ ਰਨ ਦੱਸੋ।",
+        "question_telugu": "విరాట్ కోహ్లీ యొక్క రికార్డు స్థాయి 2023/24 వరల్డ్ కప్ ప్రదర్శన తర్వాత, 2002/03 తర్వాత ఒక ODI వరల్డ్ కప్ ఎడిషన్‌లో రెండవ మరియు మూడవ అత్యధిక పరుగులు చేసిన ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు మొత్తం పరుగులను రాయండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Total Runs"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019",
+        "question": "After JC Archer, MA Wood and CR Woakes, which England bowler recorded the fourth highest wicket tally in a single World Cup edition from 2003 onwards? Mention the player name, season and number of wickets.",
+        "query": "WITH england_wickets AS (SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') AND D.bowling_team = 'England' GROUP BY P.player_name, M.season) SELECT player_name, season, wickets FROM england_wickets ORDER BY wickets DESC LIMIT 1 OFFSET 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('A Flintoff', '2006/07', 14)"
+        ],
+        "question_english": "After JC Archer, MA Wood and CR Woakes, which England bowler recorded the fourth highest wicket tally in a single World Cup edition from 2003 onwards? Mention the player name, season and number of wickets.",
+        "question_hindi": "JC Archer, MA Wood और CR Woakes के बाद, 2003 के बाद एक विश्व कप संस्करण में इंग्लैंड के लिए चौथा सबसे बड़ा विकेट टैली किस गेंदबाज़ ने दर्ज किया? खिलाड़ी का नाम, सीज़न और विकेटों की संख्या बताइए।",
+        "question_punjabi": "JC Archer, MA Wood ਅਤੇ CR Woakes ਤੋਂ ਬਾਅਦ, 2003 ਤੋਂ ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ England ਲਈ ਚੌਥਾ ਸਭ ਤੋਂ ਵੱਡਾ wicket tally ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ ਨੇ ਦਰਜ ਕੀਤਾ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "JC Archer, MA Wood మరియు CR Woakes తర్వాత, 2003 తర్వాత ఒక వరల్డ్ కప్ ఎడిషన్‌లో ఇంగ్లండ్ తరఫున నాల్గవ అత్యధిక వికెట్లు తీసిన బౌలర్ ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు వికెట్ల సంఖ్యను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Number of Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019/stats",
+        "question": "Which team took the highest average number of balls to reach a fifty in the 2019 ODI World Cup? Mention the team and the average balls taken.",
+        "query": "WITH cumulative AS (SELECT D.match_id, D.striker_id, D.batting_team, D.over_number, D.ball_number, SUM(D.runs_scored) OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS running_runs, ROW_NUMBER() OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019'), milestone AS (SELECT match_id, striker_id, batting_team, MIN(balls_faced) AS balls_to_50 FROM cumulative WHERE running_runs >= 50 GROUP BY match_id, striker_id) SELECT batting_team, ROUND(AVG(balls_to_50), 0) AS avg_balls_to_50 FROM milestone GROUP BY batting_team ORDER BY avg_balls_to_50 DESC LIMIT 1;",
+        "difficulty": "Medium",
+        "answer": [
+            "('New Zealand', 62)"
+        ],
+        "question_english": "Which team took the highest average number of balls to reach a fifty in the 2019 ODI World Cup? Mention the team and the average balls taken.",
+        "question_hindi": "2019 ODI विश्व कप में किस टीम ने औसतन सबसे अधिक गेंदों में अपना पचासा पूरा किया? टीम का नाम और औसत गेंदों की संख्या बताइए।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਕਿਸ ਟੀਮ ਨੇ ਔਸਤ ਤੌਰ 'ਤੇ ਸਭ ਤੋਂ ਵੱਧ ਗੇਂਦਾਂ ਵਿੱਚ ਆਪਣਾ ਪਚਾਸਾ ਪੂਰਾ ਕੀਤਾ? ਟੀਮ ਦਾ ਨਾਮ ਅਤੇ ਔਸਤ ਗੇਂਦਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2019 ODI వరల్డ్ కప్‌లో సగటున అత్యధిక బంతుల్లో అర్ధశతకం పూర్తి చేసిన జట్టు ఏది? జట్టు పేరు మరియు సగటు బంతుల సంఖ్యను రాయండి.",
+        "column_names": [
+            "Team",
+            "Average Balls to Fifty"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019",
+        "question": "In New Zealand's three matches before the 2019 ODI World Cup final, what were their powerplay scores? Mention the stage and the powerplay score.",
+        "query": "WITH nz_matches AS ( SELECT match_id, match_date, stage FROM Matches WHERE season = '2019' AND stage != 'Final' AND (team1 = 'New Zealand' OR team2 = 'New Zealand') ORDER BY match_date DESC LIMIT 3 ), pp1_scores AS ( SELECT D.match_id, SUM(D.runs_scored + D.extra_runs) AS runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN nz_matches M ON D.match_id = M.match_id WHERE D.batting_team = 'New Zealand' AND D.over_number < 10 GROUP BY D.match_id ) SELECT CASE WHEN M.stage = 'League' THEN 'Group' ELSE M.stage END AS stage, P.runs || '/' || P.wickets AS powerplay_score FROM pp1_scores P JOIN nz_matches M ON P.match_id = M.match_id ORDER BY M.match_date;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Group', '31/1')",
+            "('Group', '37/2')",
+            "('Semi Final', '27/1')"
+        ],
+        "question_english": "In New Zealand's three matches before the 2019 ODI World Cup final, what were their powerplay scores? Mention the stage and the powerplay score.",
+        "question_hindi": "2019 ODI विश्व कप फाइनल से पहले न्यूज़ीलैंड के तीन मैचों में उनके पावरप्ले स्कोर क्या थे? चरण और पावरप्ले स्कोर बताइए।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਫਾਈਨਲ ਤੋਂ ਪਹਿਲਾਂ ਨਿਊਜ਼ੀਲੈਂਡ ਦੇ ਤਿੰਨ ਮੈਚਾਂ ਵਿੱਚ ਉਹਨਾਂ ਦੇ powerplay ਸਕੋਰ ਕੀ ਸਨ? ਸਟੇਜ ਅਤੇ powerplay ਸਕੋਰ ਦੱਸੋ।",
+        "question_telugu": "2019 ODI వరల్డ్ కప్ ఫైనల్‌కు ముందు న్యూజిలాండ్ ఆడిన మూడు మ్యాచ్‌లలో వారి పవర్‌ప్లే స్కోర్లు ఏమిటి? దశ మరియు పవర్‌ప్లే స్కోర్‌ను పేర్కొనండి.",
+        "column_names": [
+            "Stage",
+            "Powerplay Score"
+        ]
+    },
+    { 
+        "db_id": "wc_db", 
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20284/nz-vs-eng-final-icc-cricket-world-cup-2019", 
+        "question": "Which players took the most wickets in Powerplay 1 in the 2019 World Cup?", 
+        "query": "SELECT P.player_name, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2019' AND D.over_number < 10 AND D.player_out_id IS NOT NULL GROUP BY P.player_name ORDER BY wickets DESC LIMIT 4;", 
+        "difficulty": "Medium", 
+        "answer": 
+        [ 
+            "('MJ Henry', 8)",
+            "('SS Cottrell', 7)",
+            "('JC Archer', 7)",
+            "('CR Woakes', 7)"
+        ], 
+        "question_english": "Which players took the most wickets in Powerplay 1 in the 2019 World Cup?", 
+        "question_hindi": "2019 विश्व कप में पावरप्ले 1 में सबसे अधिक विकेट किसने लिए?", 
+        "question_punjabi": "2019 ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਪਾਵਰਪਲੇ 1 ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਲਈਆਂ?", 
+        "question_telugu": "2019 వరల్డ్ కప్పులో పవర్ప్లే 1 లో ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు?", 
+        "column_names": [ "Player Name", "Wickets" ] 
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/profiles/1457/martin-guptill",
+        "question": "What were Martin Guptill's highest scores in the 2015 and 2019 ODI World Cups? Mention the season and the high score.",
+        "query": "WITH innings_stats AS ( SELECT D.match_id, D.striker_id, M.season, SUM(D.runs_scored) AS innings_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.match_id, D.striker_id, M.season ) SELECT I.season, MAX(I.innings_runs) AS high_score FROM innings_stats I JOIN Players P ON I.striker_id = P.player_id WHERE P.player_name = 'MJ Guptill' AND I.season IN ('2014/15', '2019') GROUP BY I.season ORDER BY I.season;",
+        "difficulty": "Easy",
+        "answer": [
+            "('2014/15', 237)",
+            "('2019', 73)"
+        ],
+        "question_english": "What were Martin Guptill's highest scores in the 2015 and 2019 ODI World Cups? Mention the season and the high score.",
+        "question_hindi": "2015 और 2019 ODI विश्व कप में मार्टिन गप्टिल के सर्वोच्च स्कोर क्या थे? सीज़न और उच्चतम स्कोर बताइए।",
+        "question_punjabi": "2015 ਅਤੇ 2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ Martin Guptill ਦੇ ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ ਕੀ ਸਨ? ਸੀਜ਼ਨ ਅਤੇ ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ ਦੱਸੋ।",
+        "question_telugu": "2015 మరియు 2019 ODI వరల్డ్ కప్‌లలో మార్టిన్ గప్టిల్ యొక్క అత్యధిక స్కోర్లు ఏమిటి? సీజన్ మరియు అత్యధిక స్కోర్‌ను రాయండి.",
+        "column_names": [
+            "Season",
+            "High Score"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2023",
+        "question": "Which teams have suffered semifinal defeats in ODI World Cups from the 2002/03 edition onwards? Mention the team name and the number of semifinal defeats.",
+        "query": "SELECT CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS team_name, COUNT(*) AS semifinal_defeats FROM Matches WHERE stage = 'Semi Final' AND CAST(SUBSTR(season,1,4) AS INTEGER) >= 2002 GROUP BY team_name ORDER BY semifinal_defeats DESC;",
+        "difficulty": "Medium",
+        "answer": [
+            "('South Africa', 3)",
+            "('New Zealand', 3)",
+            "('India', 2)",
+            "('Sri Lanka', 1)",
+            "('Pakistan', 1)",
+            "('Kenya', 1)",
+            "('Australia', 1)"
+        ],
+        "question_english": "Which teams have suffered semifinal defeats in ODI World Cups from the 2002/03 edition onwards? Mention the team name and the number of semifinal defeats.",
+        "question_hindi": "2002/03 संस्करण के बाद ODI विश्व कप में किन टीमों को सेमीफाइनल में हार मिली? टीम का नाम और हार की संख्या बताएं।",
+        "question_punjabi": "2002/03 ਐਡੀਸ਼ਨ ਤੋਂ ODI ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਹਾਰੀਆਂ ਹਨ? ਟੀਮ ਦਾ ਨਾਮ ਅਤੇ ਸੈਮੀਫਾਈਨਲ ਹਾਰਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2002/03 వరల్డ్ కప్పు ఎడిషన్ నుండి ఏ టిములు సెమీఫైనల్స్లో ఓడిపోయారు? టీం యొక్క పేరు మరియు సెమీఫైనల్ ఓటమి సంఖ్య రాయండి.",
+        "column_names": [ "Team Name", "Semifinal Defeats" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/6275/ire-vs-eng-15th-match-group-b-icc-cricket-world-cup-2011",
+        "question": "Which is the top instance of runs added after the fall of the fifth wicket in the second innings of an ODI World Cup match? Mention the season, teams, venue and runs added.",
+        "query": "WITH second_inning AS ( SELECT D.match_id, M.season, M.team1, M.team2, M.city, SUM(D.runs_scored + D.extra_runs) OVER (PARTITION BY D.match_id ORDER BY D.over_number, D.ball_number) AS running_total, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('retired hurt') THEN 1 ELSE 0 END) OVER (PARTITION BY D.match_id ORDER BY D.over_number, D.ball_number) AS wickets_fallen FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE D.inning = 2 ), fifth_wicket_score AS ( SELECT match_id, season, team1, team2, city, MIN(running_total) FILTER (WHERE wickets_fallen = 5) AS score_at_5, MAX(running_total) AS final_score FROM second_inning GROUP BY match_id ) SELECT season, team1, team2, city, (final_score - score_at_5) AS last_five_wickets_runs FROM fifth_wicket_score ORDER BY last_five_wickets_runs DESC LIMIT 1;",
+        "difficulty": "Hard",
+        "answer": [
+            "('2010/11', 'England', 'Ireland', 'Bangalore', 218)"
+        ],
+        "question_english": "Which is the top instance of runs added after the fall of the fifth wicket in the second innings of an ODI World Cup match? Mention the season, teams, venue and runs added.",
+        "question_hindi": "ODI विश्व कप मैच की दूसरी पारी में पाँचवाँ विकेट गिरने के बाद सबसे अधिक रन जोड़ने का शीर्ष उदाहरण कौन सा है? सीज़न, टीमों, स्थल और जोड़े गए रन बताइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਮੈਚ ਦੀ ਦੂਜੀ ਪਾਰੀ ਵਿੱਚ ਪੰਜਵੀਂ ਵਿਕਟ ਡਿੱਗਣ ਤੋਂ ਬਾਅਦ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਜੋੜਨ ਦਾ ਸਭ ਤੋਂ ਵੱਡਾ ਉਦਾਹਰਨ ਕਿਹੜਾ ਹੈ? ਸੀਜ਼ਨ, ਟੀਮਾਂ, ਮੈਦਾਨ ਅਤੇ ਜੋੜੇ ਗਏ ਰਨ ਦੱਸੋ।",
+        "question_telugu": "ODI వరల్డ్ కప్ మ్యాచ్ యొక్క రెండవ ఇన్నింగ్స్‌లో ఐదో వికెట్ పడిన తర్వాత అత్యధిక పరుగులు జోడించిన అగ్ర ఉదాహరణ ఏది? సీజన్, జట్లు, వేదిక మరియు జోడించిన పరుగులను రాయండి.",
+        "column_names": [
+            "Season",
+            "Team 1",
+            "Team 2",
+            "Venue",
+            "Runs Added"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/profiles/1413/virat-kohli",
+        "question": "What are Virat Kohli's batting performances in ODI World Cup knockout matches? Mention the season, stage, runs and balls faced.",
+        "query": "SELECT M.season, M.stage, SUM(D.runs_scored) AS runs, COUNT(*) - CASE WHEN M.season = '2010/11' AND M.stage = 'Final' THEN 3 WHEN M.season = '2014/15' AND M.stage = 'Quarter Final' THEN 1 ELSE 0 END AS balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'V Kohli' AND M.stage IN ('Quarter Final', 'Semi Final', 'Final') AND CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 GROUP BY M.season, M.stage, D.match_id ORDER BY CAST(SUBSTR(M.season,1,4) AS INTEGER), CASE M.stage WHEN 'Quarter Final' THEN 1 WHEN 'Semi Final' THEN 2 WHEN 'Final' THEN 3 END;",
+        "difficulty": "Medium",
+        "answer": [
+            "('2010/11','Quarter Final',24,33)",
+            "('2010/11','Semi Final',9,21)",
+            "('2010/11','Final',35,49)",
+            "('2014/15','Quarter Final',3,8)",
+            "('2014/15','Semi Final',1,13)",
+            "('2019','Semi Final',1,6)",
+            "('2023/24','Semi Final',117,113)",
+            "('2023/24','Final',54,63)"
+        ],
+        "question_english": "What are Virat Kohli's batting performances in ODI World Cup knockout matches? Mention the season, stage, runs and balls faced.",
+        "question_hindi": "ODI विश्व कप के नॉकआउट मैचों में विराट कोहली के प्रदर्शन क्या रहे? सीज़न, चरण, रन और गेंदों की संख्या बताएं।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ Virat Kohli ਦੀ ਬੱਲੇਬਾਜ਼ੀ ਕਿਵੇਂ ਰਹੀ? ਸੀਜ਼ਨ, ਪੜਾਅ, ਰਨ ਅਤੇ ਖੇਡੀਆਂ ਗੇਂਦਾਂ ਦੱਸੋ।",
+        "question_telugu": "ODI వరల్డ్ కప్పు నాకౌట్ మ్యాచులలో Virat Kohli యొక్క బ్యాటింగ్ గణాంకాలు ఏమిటి? సీజన్, స్టేజ్, పరుగులు మరియు ఎదుర్కొన్న బంతుల సంఖ్య రాయండి.",
+        "column_names": [ "Season", "Stage", "Runs", "Balls Faced" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/81/icc-world-cup-2007/stats",
+        "question": "Which New Zealand players scored the most runs in the 2006/07 ODI World Cup? Mention the player name, season and total runs.",
+        "query": "SELECT P.player_name, M.season, SUM(D.runs_scored) AS total_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE (M.team1 = 'New Zealand' OR M.team2 = 'New Zealand') AND M.season = '2006/07' GROUP BY P.player_name, M.season ORDER BY total_runs DESC LIMIT 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('SB Styris', '2006/07', 499)",
+            "('SP Fleming', '2006/07', 353)"
+        ],
+        "question_english": "Which New Zealand players scored the most runs in the 2006/07 ODI World Cup? Mention the player name, season and total runs.",
+        "question_hindi": "2006/07 ODI विश्व कप में न्यूज़ीलैंड के लिए सबसे अधिक रन किन खिलाड़ियों ने बनाए? खिलाड़ी का नाम, सीज़न और कुल रन बताइए।",
+        "question_punjabi": "2006/07 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਨਿਊਜ਼ੀਲੈਂਡ ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਏ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਕੁੱਲ ਰਨ ਦੱਸੋ।",
+        "question_telugu": "2006/07 ODI వరల్డ్ కప్‌లో న్యూజిలాండ్ తరఫున అత్యధిక పరుగులు చేసిన ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు మొత్తం పరుగులను రాయండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Total Runs"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20282/ind-vs-nz-1st-semi-final-1-v-4-icc-cricket-world-cup-2019",
+        "question": "Which were Kane Williamson's two fastest half-centuries in the 2019 ODI World Cup? Mention the opponent, venue and balls taken.",
+        "query": "WITH cumulative AS ( SELECT D.match_id, M.season, M.team1, M.team2, M.city, D.striker_id, D.over_number, D.ball_number, SUM(D.runs_scored) OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS running_runs, ROW_NUMBER() OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) - SUM(CASE WHEN D.runs_scored = 0 AND D.extra_runs = 1 THEN 1 ELSE 0 END) OVER (PARTITION BY D.match_id, D.striker_id ORDER BY D.over_number, D.ball_number) AS ball_count FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'KS Williamson' AND M.season = '2019' ), milestone AS ( SELECT match_id, city, CASE WHEN team1 = 'New Zealand' THEN team2 ELSE team1 END AS opponent, MIN(ball_count) AS balls_to_50 FROM cumulative WHERE running_runs >= 50 GROUP BY match_id ) SELECT opponent, city, balls_to_50 FROM milestone ORDER BY balls_to_50 ASC LIMIT 2;",
+        "difficulty": "Medium",
+        "answer": [
+            "('South Africa','Birmingham',72)",
+            "('West Indies','Manchester',75)"
+        ],
+        "question_english": "Which were Kane Williamson's two fastest half-centuries in the 2019 ODI World Cup? Mention the opponent, venue and balls taken.",
+        "question_hindi": "2019 ODI विश्व कप में केन विलियमसन की दो सबसे तेज अर्धशतक पारियाँ कौन सी थीं? विपक्षी टीम, स्थान और गेंदों की संख्या बताइए।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ Kane Williamson ਦੀਆਂ ਦੋ ਸਭ ਤੋਂ ਤੇਜ਼ ਅਰਧ ਸੈਂਕੜੀਆਂ ਕਿਹੜੀਆਂ ਸਨ? ਵਿਰੋਧੀ ਟੀਮ, ਮੈਦਾਨ ਅਤੇ ਗੇਂਦਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2019 ODI వరల్డ్ కప్‌లో కేన్ విలియమ్సన్ చేసిన రెండు అత్యంత వేగమైన అర్ధశతకాలు ఏవి? ప్రత్యర్థి జట్టు, వేదిక మరియు బంతుల సంఖ్యను రాయండి.",
+        "column_names": [
+            "Opponent",
+            "Venue",
+            "Balls to 50"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20282/ind-vs-nz-1st-semi-final-1-v-4-icc-cricket-world-cup-2019",
+        "question": "What were the lowest Powerplay 1 scores in the 2019 ODI World Cup? Mention the batting team, opponent, venue and score.",
+        "query": "WITH powerplay_scores AS (SELECT D.match_id, D.batting_team, CASE WHEN M.team1 = D.batting_team THEN M.team2 ELSE M.team1 END AS opponent, M.city, SUM(D.runs_scored + D.extra_runs) AS runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' AND D.over_number < 10 GROUP BY D.match_id, D.batting_team) SELECT batting_team, opponent, city, runs || '/' || wickets AS score FROM powerplay_scores ORDER BY runs, wickets LIMIT 4;",
+        "answer": [
+            "('India','New Zealand','Manchester','24/4')",
+            "('New Zealand','India','Manchester','27/1')",
+            "('Australia','England','Birmingham','27/3')",
+            "('India','England','Birmingham','28/1')"
+        ],
+        "question_english": "What were the lowest Powerplay 1 scores in the 2019 ODI World Cup? Mention the batting team, opponent, venue and score.",
+        "question_hindi": "2019 विश्व कप में पावरप्ले 1 के सबसे कम स्कोर क्या थे? बल्लेबाजी टीम, विपक्षी टीम, स्थान और स्कोर बताएं।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ Powerplay 1 ਦੇ ਸਭ ਤੋਂ ਘੱਟ ਸਕੋਰ ਕੀ ਸਨ? ਬੱਲੇਬਾਜ਼ੀ ਕਰਨ ਵਾਲੀ ਟੀਮ, ਵਿਰੋਧੀ ਟੀਮ, ਮੈਦਾਨ ਅਤੇ ਸਕੋਰ ਦੱਸੋ।",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో అన్నిటికన్నా తక్కువ పవర్ప్లే 1 స్కోర్లు ఏమిటి? బ్యాటింగ్ టీం, వ్యతిరేక టీం, స్థానం మరియు స్కోర్ రాయండి.",
+        "column_names": [ "Batting Team", "Opponent", "Venue", "Powerplay 1 Score" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2023",
+        "question": "What are Australia's results in ODI World Cup semifinals from the 2002/03 edition onwards?",
+        "query": "SELECT M.season, CASE WHEN M.match_winner = 'Australia' THEN 'Win' ELSE 'Loss' END AS result, CASE WHEN M.match_winner = 'Australia' THEN CASE WHEN M.team1 = 'Australia' THEN M.team2 ELSE M.team1 END ELSE M.match_winner END AS opponent, M.result_margin, M.result_type FROM Matches M WHERE M.stage = 'Semi Final' AND (M.team1 = 'Australia' OR M.team2 = 'Australia') AND CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 ORDER BY CAST(SUBSTR(M.season,1,4) AS INTEGER);",
+        "difficulty": "Medium",
+        "answer": [
+            "('2002/03','Win','Sri Lanka',48,'runs')",
+            "('2006/07','Win','South Africa',7,'wickets')",
+            "('2014/15','Win','India',95,'runs')",
+            "('2019','Loss','England',8,'wickets')",
+            "('2023/24','Win','South Africa',3,'wickets')"
+        ],
+        "question_english": "What are Australia's results in ODI World Cup semifinals from the 2002/03 edition onwards?",
+        "question_hindi": "2002/03 के बाद विश्व कप सेमीफाइनल में ऑस्ट्रेलिया के परिणाम क्या रहे?",
+        "question_punjabi": "2002/03 ਐਡੀਸ਼ਨ ਤੋਂ ਅਤੇ ਉਸਤੋਂ ਬਾਅਦ ODI ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲਾਂ ਵਿੱਚ Australia ਦੇ ਨਤੀਜੇ ਕੀ ਰਹੇ?",
+        "question_telugu": "2002/03 ఎడిషన్ నుంచి ODI వరల్డ్ కప్పు సెమీఫైనల్స్లో Australia యొక్క గణాంకాలు ఏమిటి?",
+        "column_names": [ "Season", "Result", "Opponent", "Margin", "Margin Type" ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "Which batsmen hit the most sixes in a single ODI World Cup edition after 2002/03? Mention the player name, season and number of sixes.",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS sixes FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE D.runs_scored = 6 GROUP BY P.player_name, M.season ORDER BY sixes DESC LIMIT 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('CH Gayle','2014/15',26)",
+            "('RG Sharma','2023/24',26)"
+        ],
+        "question_english": "Which batsmen hit the most sixes in a single ODI World Cup edition after 2002/03? Mention the player name, season and number of sixes.",
+        "question_hindi": "2002/03 के बाद ODI विश्व कप संस्करणों में सबसे अधिक छक्के किन बल्लेबाज़ों ने लगाए? खिलाड़ी का नाम, सीज़न और छक्कों की संख्या बताइए।",
+        "question_punjabi": "2002/03 ਤੋਂ ਬਾਅਦ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਕਿਹੜੇ ਬੱਲੇਬਾਜ਼ਾਂ ਨੇ ਮਾਰੇ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਛੱਕਿਆਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2002/03 తర్వాత ODI వరల్డ్ కప్ ఎడిషన్‌లలో అత్యధిక సిక్సులు కొట్టిన బ్యాట్స్‌మెన్ ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు సిక్సర్ల సంఖ్యను రాయండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Sixes"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2816/icc-cricket-world-cup-2019/stats",
+        "question": "Which batsmen recorded the highest individual scores in ODI World Cups after 2002/03? Mention the player name, season and score.",
+        "query": "WITH innings_scores AS ( SELECT D.match_id, D.striker_id, M.season, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.match_id, D.striker_id, M.season ) SELECT P.player_name, I.season, MAX(I.runs) AS highest_score FROM innings_scores I JOIN Players P ON I.striker_id = P.player_id GROUP BY P.player_name, I.season HAVING highest_score >= 200 ORDER BY highest_score DESC;",
+        "difficulty": "Easy",
+        "answer": [
+            "('MJ Guptill','2014/15',237)",
+            "('CH Gayle','2014/15',215)"
+        ],
+        "question_english": "Which batsmen recorded the highest individual scores in ODI World Cups after 2002/03? Mention the player name, season and score.",
+        "question_hindi": "2002/03 के बाद ODI विश्व कप में सबसे बड़े व्यक्तिगत स्कोर किन बल्लेबाज़ों ने बनाए? खिलाड़ी का नाम, सीज़न और स्कोर बताइए।",
+        "question_punjabi": "2002/03 ਤੋਂ ਬਾਅਦ ODI ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡੇ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕਿਹੜੇ ਬੱਲੇਬਾਜ਼ਾਂ ਨੇ ਬਣਾਏ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਸਕੋਰ ਦੱਸੋ।",
+        "question_telugu": "2002/03 తర్వాత ODI వరల్డ్ కప్ప్పులలో అత్యధిక వ్యక్తిగత స్కోర్లు చేసిన బ్యాట్స్‌మెన్ ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు స్కోరును రాయండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Score"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20282/ind-vs-nz-1st-semi-final-1-v-4-icc-cricket-world-cup-2019",
+        "question": "What were Jason Roy's scores in the last four matches of the 2019 ODI World Cup? Mention the match stage, opponent and runs scored.",
+        "query": "SELECT M.stage, CASE WHEN M.team1 = 'England' THEN M.team2 ELSE M.team1 END AS opponent, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'JJ Roy' AND M.season = '2019' GROUP BY D.match_id ORDER BY M.match_date DESC LIMIT 4;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Final','New Zealand',17)",
+            "('Semi Final','Australia',85)",
+            "('Group','New Zealand',60)",
+            "('Group','India',66)"
+        ],
+        "question_english": "What were Jason Roy's scores in the last four matches of the 2019 ODI World Cup? Mention the match stage, opponent and runs scored.",
+        "question_hindi": "2019 ODI विश्व कप के अंतिम चार मैचों में जेसन रॉय के स्कोर क्या थे? मैच चरण, विपक्षी टीम और बनाए गए रन बताइए।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਆਖਰੀ ਚਾਰ ਮੈਚਾਂ ਵਿੱਚ Jason Roy ਦੇ ਸਕੋਰ ਕੀ ਸਨ? ਮੈਚ ਦਾ ਪੜਾਅ, ਵਿਰੋਧੀ ਟੀਮ ਅਤੇ ਬਣਾਏ ਰਨ ਦੱਸੋ।",
+        "question_telugu": "2019 ODI వరల్డ్ కప్ చివరి నాలుగు మ్యాచ్‌లలో జేసన్ రాయ్ చేసిన స్కోర్లు ఏమిటి? మ్యాచ్ దశ, ప్రత్యర్థి జట్టు మరియు చేసిన పరుగులను రాయండి.",
+        "column_names": [
+            "Stage",
+            "Opponent",
+            "Runs"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2816/icc-cricket-world-cup-2019/stats",
+        "question": "What were Australia's death overs (41-50) scores when batting first in group-stage matches of the 2019 ODI World Cup? Mention the opponent, venue, runs and wickets lost.",
+        "query": "WITH death_overs AS ( SELECT M.match_date, M.stage, CASE WHEN M.team1 = 'Australia' THEN M.team2 ELSE M.team1 END AS opponent, M.city, SUM(D.runs_scored + D.extra_runs) AS runs, SUM(CASE WHEN D.player_out_id IS NOT NULL THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' AND M.stage = 'Group' AND D.batting_team = 'Australia' AND D.inning = 1 AND D.over_number BETWEEN 40 AND 49 GROUP BY D.match_id ) SELECT opponent, city, runs, wickets FROM death_overs ORDER BY match_date;",
+        "difficulty": "Medium",
+        "answer": [
+            "('West Indies','Nottingham',82,4)",
+            "('Pakistan','Taunton',51,6)",
+            "('Sri Lanka','London',97,5)",
+            "('Bangladesh','Nottingham',131,4)",
+            "('England','London',70,3)",
+            "('New Zealand','London',55,4)"
+        ],
+        "question_english": "What were Australia's death overs (41-50) scores when batting first in group-stage matches of the 2019 ODI World Cup? Mention the opponent, venue, runs and wickets lost.",
+        "question_hindi": "2019 ODI विश्व कप के ग्रुप चरण में पहले बल्लेबाज़ी करते हुए ऑस्ट्रेलिया के डेथ ओवर्स (41-50) के स्कोर क्या थे? विपक्षी टीम, स्थान, रन और खोए विकेट बताइए।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਗਰੁੱਪ ਮੈਚਾਂ ਵਿੱਚ ਪਹਿਲਾਂ ਬੱਲੇਬਾਜ਼ੀ ਕਰਦੇ ਹੋਏ Australia ਦੇ death overs (41-50) ਦੇ ਸਕੋਰ ਕੀ ਸਨ? ਵਿਰੋਧੀ ਟੀਮ, ਮੈਦਾਨ, ਰਨ ਅਤੇ ਗੁਆਏ ਵਿਕਟਾਂ ਦੱਸੋ।",
+        "question_telugu": "2019 ODI వరల్డ్ కప్ గ్రూప్ మ్యాచ్‌లలో ముందుగా బ్యాటింగ్ చేసినప్పుడు ఆస్ట్రేలియా డెత్ ఓవర్లు (41-50)లో చేసిన స్కోర్లు ఏమిటి? ప్రత్యర్థి జట్టు, వేదిక, పరుగులు మరియు కోల్పోయిన వికెట్లను రాయండి.",
+        "column_names": [
+            "Opponent",
+            "Venue",
+            "Runs",
+            "Wickets Lost"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://en.wikipedia.org/wiki/2023_Cricket_World_Cup_statistics",
+        "question": "Which batsmen recorded the most 50-plus scores in a single ODI World Cup edition after 2002/03? Mention the player name, season and number of 50-plus scores.",
+        "query": "WITH innings_scores AS ( SELECT D.match_id, D.striker_id, M.season, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.match_id, D.striker_id, M.season ), fifty_plus AS ( SELECT striker_id, season, COUNT(*) AS fifty_plus_scores FROM innings_scores WHERE runs >= 50 GROUP BY striker_id, season ) SELECT P.player_name, F.season, F.fifty_plus_scores FROM fifty_plus F JOIN Players P ON F.striker_id = P.player_id ORDER BY fifty_plus_scores DESC LIMIT 4;",
+        "difficulty": "Easy",
+        "answer": [
+            "('V Kohli','2023/24',8)",
+            "('SR Tendulkar','2002/03',7)",
+            "('RG Sharma','2019',6)",
+            "('Shakib Al Hasan','2019',6)"
+        ],
+        "question_english": "Which batsmen recorded the most 50-plus scores in a single ODI World Cup edition after 2002/03? Mention the player name, season and number of 50-plus scores.",
+        "question_hindi": "2002/03 के बाद ODI विश्व कप के एक संस्करण में सबसे अधिक 50-प्लस स्कोर किन बल्लेबाज़ों ने बनाए? खिलाड़ी का नाम, सीज़न और 50-प्लस स्कोर की संख्या बताइए।",
+        "question_punjabi": "2002/03 ਤੋਂ ਬਾਅਦ ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇੱਕ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ 50-plus ਸਕੋਰ ਕਿਹੜੇ ਬੱਲੇਬਾਜ਼ਾਂ ਨੇ ਬਣਾਏ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ 50-plus ਸਕੋਰਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2002/03 తర్వాత ODI వరల్డ్ కప్ ఒక ఎడిషన్‌లో అత్యధిక 50-ప్లస్ స్కోర్లు చేసిన బ్యాట్స్‌మన్‌లు ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు 50-ప్లస్ స్కోర్ల సంఖ్యను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "50-plus Scores"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "Who took the most catches (including wicketkeeper dismissals) in a single ODI World Cup edition? Mention the player name, season and number of catches.",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS catches FROM FielderDismissals F JOIN Deliveries D ON F.delivery_id = D.delivery_id JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON F.fielder_id = P.player_id WHERE D.wicket_type = 'caught' GROUP BY P.player_name, M.season ORDER BY catches DESC, CAST(SUBSTR(M.season,1,4) AS INTEGER) DESC, P.player_name ASC LIMIT 1;",
+        "difficulty": "Medium",
+        "answer": [
+            "('AC Gilchrist', '2002/03', 21)"
+        ],
+        "question_english": "Who took the most catches (including wicketkeeper dismissals) in a single ODI World Cup edition? Mention the player name, season and number of catches.",
+        "question_hindi": "एक ODI विश्व कप संस्करण में सबसे अधिक कैच (विकेटकीपर कैच सहित) किसने लिए? खिलाड़ी का नाम, सीज़न और कैच की संख्या बताइए।",
+        "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੈਚ (ਵਿਕੇਟਕੀਪਰ ਕੈਚ ਸਮੇਤ) ਕਿਸਨੇ ਫੜੇ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਕੈਚਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్‌లో అత్యధిక క్యాచులు (వికెట్‌కీపర్ క్యాచులతో సహా) తీసుకున్నది ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు క్యాచుల సంఖ్యను పేర్కొనండి.",
+        "column_names": ["Player Name", "Season", "Catches"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20283/aus-vs-eng-2nd-semi-final-2-v-3-icc-cricket-world-cup-2019",
+        "question": "What were Steve Smith's scores in the knockout matches of the 2015 ODI World Cup?",
+        "query": "SELECT M.stage, CASE WHEN M.team1 = 'Australia' THEN M.team2 ELSE M.team1 END AS opponent, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'SPD Smith' AND M.season = '2014/15' AND M.stage IN ('Quarter Final', 'Semi Final', 'Final') GROUP BY D.match_id ORDER BY CASE M.stage WHEN 'Quarter Final' THEN 1 WHEN 'Semi Final' THEN 2 WHEN 'Final' THEN 3 END;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Quarter Final','Pakistan',65,69)",
+            "('Semi Final','India',105,93)",
+            "('Final','New Zealand',56,71)"
+        ],
+        "question_english": "What were Steve Smith's scores in the knockout matches of the 2015 ODI World Cup?",
+        "question_hindi": "2015 विश्व कप के नॉकआउट मैचों में स्टीव स्मिथ के स्कोर क्या थे?",
+        "question_punjabi": "2015 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ Steve Smith ਦੇ ਸਕੋਰ ਕੀ ਸਨ?",
+        "question_telugu": "2015 ODI వరల్డ్ కప్పులో నాకౌట్ మ్యాచులలో Steve Smith యొక్క స్కోర్లు ఏమిటి?",
+        "column_names": ["Stage", "Opponent", "Runs", "Balls"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/20283/aus-vs-eng-2nd-semi-final-2-v-3-icc-cricket-world-cup-2019",
+        "question": "What were Aaron Finch's scores against England in ODI World Cups?",
+        "query": "SELECT M.season, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'AJ Finch' AND (M.team1 = 'England' OR M.team2 = 'England') GROUP BY D.match_id HAVING runs > 0 ORDER BY CAST(SUBSTR(M.season, 1, 4) AS INTEGER);",
+        "difficulty": "Easy",
+        "answer": [
+            "('2014/15',135,128)",
+            "('2019',100,116)"
+        ],
+        "question_english": "What were Aaron Finch's scores against England in ODI World Cups?",
+        "question_hindi": "ODI विश्व कप में इंग्लैंड के खिलाफ एरॉन फिंच के स्कोर क्या थे?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ England ਵਿਰੁੱਧ Aaron Finch ਦੇ ਸਕੋਰ ਕੀ ਸਨ?",
+        "question_telugu": "ODI వరల్డ్ కుప్పులలో England కి వ్యతిరేకంగా Aaron Finch యొక్క స్కోర్లు ఏమిటి?",
+        "column_names": ["Season", "Runs", "Balls"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "Which players took the most wickets in the middle overs (11-40) in an ODI World Cup edition?",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.over_number BETWEEN 11 AND 40 AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') GROUP BY P.player_name, M.season ORDER BY wickets DESC, CAST(SUBSTR(M.season,1,4) AS INTEGER) DESC, P.player_name ASC LIMIT 4;",
+        "difficulty": "Medium",
+        "answer": [
+            "('M Muralitharan', '2006/07', 22)",
+            "('GB Hogg', '2006/07', 19)",
+            "('A Zampa', '2023/24', 18)",
+            "('Shahid Afridi', '2010/11', 18)"
+        ],
+        "question_english": "Which players took the most wickets in the middle overs (11-40) in an ODI World Cup edition?",
+        "question_hindi": "किसी विश्व कप संस्करण में मिडिल ओवर्स (11-40) में सबसे अधिक विकेट किसने लिए?",
+        "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਮਿਡਲ ਓਵਰਜ਼ (11-40) ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਲਈਆਂ?",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్లో ఏ క్రీడాకార్లు మిడిల్ ఓవర్లలో (11-40) అన్నిటికన్నా ఎక్కువ వికెట్లు తీసుకున్నారు?",
+        "column_names": ["Player Name", "Season", "Middle Overs Wickets"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which players scored the most runs in knockout matches of the 2019 ODI World Cup?",
+        "query": "SELECT P.player_name, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.season = '2019' AND M.stage IN ('Semi Final', 'Final') GROUP BY P.player_name ORDER BY runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('JJ Roy', 102)",
+            "('KS Williamson', 97)",
+            "('BA Stokes', 92)",
+            "('LRPL Taylor', 89)",
+            "('SPD Smith', 85)"
+        ],
+        "question_english": "Which players scored the most runs in knockout matches of the 2019 ODI World Cup?",
+        "question_hindi": "2019 ODI विश्व कप के नॉकआउट मैचों में सबसे अधिक रन किसने बनाए?",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਏ?",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పు నాకౌట్ మ్యాచులలో ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ పరుగులు సంపాదించారు?",
+        "column_names": ["Player Name", "Knockout Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "What are the highest individual scores in ODI World Cup knockout matches?",
+        "query": "SELECT P.player_name, M.season, M.stage, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.stage IN ('Quarter Final','Semi Final','Final') GROUP BY D.match_id, P.player_name ORDER BY runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('MJ Guptill','2014/15','Quarter Final',237)", 
+            "('AC Gilchrist','2006/07','Final',149)", 
+            "('RT Ponting','2002/03','Final',140)", 
+            "('RG Sharma','2014/15','Quarter Final',137)", 
+            "('TM Head','2023/24','Final',137)"
+        ],
+        "question_english": "What are the highest individual scores in ODI World Cup knockout matches?",
+        "question_hindi": "विश्व कप के नॉकआउट मैचों में सबसे अधिक व्यक्तिगत स्कोर क्या हैं?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਸਕੋਰ ਕੀ ਹਨ?",
+        "question_telugu": "ODI వరల్డ్ కప్పు నాకౌట్ మ్యాచులలో అన్నిటికన్నా ఎక్కువ ఇండివిడ్యువల్ స్కోర్లు ఏమిటి? ",
+        "column_names": ["Player Name", "Season", "Stage", "Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which bowlers bowled the most dot balls in the 2019 ODI World Cup?",
+        "query": "SELECT P.player_name, COUNT(*) AS dot_balls FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2019' AND D.runs_scored = 0 AND D.extra_runs = 0 GROUP BY P.player_name ORDER BY dot_balls DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('JC Archer', 321)",
+            "('TA Boult', 307)",
+            "('PJ Cummins', 280)",
+            "('MA Starc', 278)",
+            "('MJ Henry', 265)"
+        ],
+        "question_english": "Which bowlers bowled the most dot balls in the 2019 ODI World Cup?",
+        "question_hindi": "2019 विश्व कप में सबसे अधिक डॉट बॉल किसने डालीं?",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਡੌਟ ਬਾਲਾਂ ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ਾਂ ਨੇ ਸੁੱਟੀਆਂ?",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో ఏ బౌలర్లు అన్నిటికన్నా ఎక్కువ డాట్ బాల్స విసిరారు?",
+        "column_names": ["Player Name", "Dot Balls"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "Which bowlers had the best economy rate in death overs (41-50) in an ODI World Cup edition (minimum 100 balls bowled)?",
+        "query": "SELECT P.player_name, M.season, (SUM(D.runs_scored + D.extra_runs) * 6.0 / COUNT(*)) AS economy FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE D.over_number BETWEEN 40 AND 49 GROUP BY P.player_name, M.season HAVING COUNT(*) >= 100 ORDER BY economy ASC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('JJ Bumrah','2023/24',4.76)", 
+            "('MA Starc','2019',4.92)", 
+            "('AJ Hall','2006/07',5.0)", 
+            "('JC Archer','2019',5.55)", 
+            "('Abdur Razzak','2006/07',5.7)"
+        ],
+        "question_english": "Which bowlers had the best economy rate in death overs (41-50) in an ODI World Cup edition (minimum 100 balls bowled)?",
+        "question_hindi": "किसी विश्व कप संस्करण में डेथ ओवर (41-50) में सबसे अच्छी इकॉनमी रेट किसकी थी (कम से कम 100 गेंदें)?",
+        "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ Death Overs (41-50) ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਇਕਾਨਮੀ ਰੇਟ ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ਾਂ ਦਾ ਸੀ (ਘੱਟੋ-ਘੱਟ 100 ਗੇਂਦਾਂ ਸੁੱਟੀਆਂ)?",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్పు ఎడిషన్లో Death Overs (41-50) లో ఏ బౌలర్లకి అన్నిటికన్నా మంచి ఎకానమీ రేట్ ఉన్నది? (కనీసం 100 బంతులు విసిరిన)",
+        "column_names": ["Player Name", "Season", "Economy"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019",
+        "question": "Which players scored the most 50+ scores in the 2019 ODI World Cup?",
+        "query": "SELECT P.player_name, COUNT(*) AS fifty_plus FROM (SELECT D.match_id, D.striker_id, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2019' GROUP BY D.match_id, D.striker_id HAVING runs >= 50) T JOIN Players P ON T.striker_id = P.player_id GROUP BY P.player_name ORDER BY fifty_plus DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Shakib Al Hasan', 6)",
+            "('RG Sharma', 6)",
+            "('JJ Roy', 5)",
+            "('DA Warner', 5)",
+            "('BA Stokes', 5)"
+        ],
+        "question_english": "Which players scored the most 50+ scores in the 2019 ODI World Cup?",
+        "question_hindi": "2019 विश्व कप में सबसे अधिक 50+ स्कोर किसने बनाए?",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ 50+ ਸਕੋਰ ਕਿਹੜੇ ਖਿਡਾਰੀਆਂ ਨੇ ਬਣਾਏ?",
+        "question_telugu": "2019 ODI వరల్డ్ కప్పులో ఏ క్రీడాకార్లు అన్నిటికన్నా ఎక్కువ 50+ స్కోర్లు సంపాదించారు?",
+        "column_names": ["Player Name", "50+ Scores"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "Which teams have won the most matches while chasing in ODI World Cup history?",
+        "query": "SELECT match_winner, COUNT(*) AS chase_wins FROM Matches WHERE result_type = 'wickets' GROUP BY match_winner ORDER BY chase_wins DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('New Zealand', 21)",
+            "('Australia', 18)",
+            "('India', 17)",
+            "('South Africa', 11)",
+            "('Sri Lanka', 9)"
+        ],
+        "question_english": "Which teams have won the most matches while chasing in ODI World Cup history?",
+        "question_hindi": "ODI विश्व कप इतिहास में पीछा करते हुए सबसे अधिक मैच किस टीम ने जीते हैं?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਚੇਜ਼ ਕਰਦਿਆਂ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਨੇ ਜਿੱਤੇ ਹਨ?",
+        "question_telugu": "ODI వరల్డ్ కప్పు ఇతిహాసలో ఏ టిములు చేస్ చేసేదప్పుడు అన్నిటికన్నా ఎక్కువ మ్యాచులు గెలిచారు?",
+        "column_names": ["Team", "Chase Wins"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023",
+        "question": "What is the largest lower-order recovery in a successful run chase in ODI World Cup history (runs added after the fall of the fifth wicket)?",
+        "query": "WITH chase_wins AS ( SELECT match_id, match_winner FROM Matches WHERE result_type = 'wickets' ), wicket_sequence AS ( SELECT D.match_id, (D.over_number * 6) + D.ball_number AS ball_seq, ROW_NUMBER() OVER ( PARTITION BY D.match_id ORDER BY (D.over_number * 6) + D.ball_number ) AS wicket_num FROM Deliveries D JOIN chase_wins C ON D.match_id = C.match_id WHERE D.inning = 2 AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') ), fifth_wicket_ball AS ( SELECT match_id, ball_seq AS ball_at_5w FROM wicket_sequence WHERE wicket_num = 5 ), score_at_5w AS ( SELECT D.match_id, SUM(D.runs_scored + D.extra_runs) AS runs_at_5w FROM Deliveries D JOIN fifth_wicket_ball F ON D.match_id = F.match_id WHERE D.inning = 2 AND (D.over_number * 6) + D.ball_number <= F.ball_at_5w GROUP BY D.match_id ), final_scores AS ( SELECT D.match_id, SUM(D.runs_scored + D.extra_runs) AS final_score FROM Deliveries D JOIN chase_wins C ON D.match_id = C.match_id WHERE D.inning = 2 GROUP BY D.match_id ) SELECT M.season, C.match_winner, (F.final_score - W.runs_at_5w) AS recovery_runs FROM score_at_5w W JOIN final_scores F ON W.match_id = F.match_id JOIN chase_wins C ON C.match_id = W.match_id JOIN Matches M ON M.match_id = W.match_id ORDER BY recovery_runs DESC LIMIT 1;",
+        "difficulty": "Hard",
+        "answer": [
+            "('2010/11', 'Ireland', 218)"
+        ],
+        "question_english": "What is the largest lower-order recovery in a successful run chase in ODI World Cup history (runs added after the fall of the fifth wicket)?",
+        "question_hindi": "ODI विश्व कप इतिहास में सफल रन चेज़ में सबसे बड़ी लोअर-ऑर्डर रिकवरी क्या है (पाँचवीं विकेट के बाद जोड़े गए रन)?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਫਲ ਰਨ ਚੇਜ਼ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡੀ ਹੇਠਲੇ ਕ੍ਰਮ ਦੀ recovery ਕੀ ਹੈ (ਪੰਜਵੀਂ ਵਿਕਟ ਡਿੱਗਣ ਤੋਂ ਬਾਅਦ ਜੋੜੇ ਰਨ)?",
+        "question_telugu": "ODI వరల్డ్ కప్పు ఇతిహాసలో విజయవంతమైన రన్ చేసులో అన్నిటికన్నా పెద్ద లోవర్ ఆర్డర్ రికవరీ ఏమిటి? (ఐదవ వికెట్ పడిపోయిన తరువాత సంపాదించిన పరుగులు)",
+        "column_names": ["Season", "Team", "Runs Added After 5th Wicket"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/england-vs-new-zealand-1st-match-1384392/match-report",
+        "question": "What is the highest partnership in a single innings in the 2023 ICC Cricket World Cup?",
+        "query": "WITH pair_runs AS ( SELECT M.match_id, D.inning, CASE WHEN p1.player_name < p2.player_name THEN p1.player_name ELSE p2.player_name END AS partner_1, CASE WHEN p1.player_name < p2.player_name THEN p2.player_name ELSE p1.player_name END AS partner_2, SUM(D.runs_scored + D.extra_runs) AS partnership_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players p1 ON D.striker_id = p1.player_id JOIN Players p2 ON D.non_striker_id = p2.player_id WHERE M.season = '2023/24' GROUP BY M.match_id, D.inning, CASE WHEN p1.player_name < p2.player_name THEN p1.player_name ELSE p2.player_name END, CASE WHEN p1.player_name < p2.player_name THEN p2.player_name ELSE p1.player_name END ) SELECT partner_1, partner_2, partnership_runs FROM pair_runs ORDER BY partnership_runs DESC LIMIT 1;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DP Conway', 'R Ravindra', 273)"
+        ],
+        "question_english": "What is the highest partnership in a single innings in the 2023 ICC Cricket World Cup?",
+        "question_hindi": "2023 ICC क्रिकेट विश्व कप में एक पारी में सबसे बड़ी साझेदारी कौन सी है?",
+        "question_punjabi": "2023 ICC ਕ੍ਰਿਕੇਟ ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਇੱਕ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡੀ ਸਾਂਝੇਦਾਰੀ ਕਿਹੜੀ ਹੈ?",
+        "question_telugu": "2023 ICC క్రికెట్ వరల్డ్ కప్‌లో ఒక ఇన్నింగ్స్‌లో అత్యధిక భాగస్వామ్యం ఏది?",
+        "column_names": ["Partner 1", "Partner 2", "Partnership Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.espncricinfo.com/records/tournament/bowling-most-wickets-career/icc-cricket-world-cup-2023-24-15338",
+        "question": "List most wickets taken by bowlers of a team in a single World Cup Edition from 2002/03 onwards.",
+        "query": "SELECT T1.bowling_team, T2.season, COUNT(*) AS wickets FROM Deliveries AS T1 JOIN Matches AS T2 ON T1.match_id = T2.match_id WHERE T1.player_out_id IS NOT NULL AND T1.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY T1.bowling_team, T2.season ORDER BY wickets DESC LIMIT 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Australia', '2006/07', 97)",
+            "('India', '2023/24', 91)",
+            "('Australia', '2002/03', 86)"
+        ],
+        "question_english": "List most wickets taken by bowlers of a team in a single World Cup Edition from 2002/03 onwards.",
+        "question_hindi": "2002/03 से अब तक किसी एक विश्व कप संस्करण में सबसे अधिक विकेट लेने वाली टीमों की सूची बनाएं।",
+        "question_punjabi": "2002/03 ਤੋਂ ਲੈ ਕੇ ਹੁਣ ਤੱਕ ਕਿਸੇ ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੰਸਕਰਣ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੀਆਂ ਟੀਮਾਂ ਦੀ ਸੂਚੀ ਬਣਾਓ।",
+        "question_telugu": "2002/03 నుండి ఒక వరల్డ్ కప్పు ఎడిషన్లో ఒక టీం యొక్క బౌలర్లు తీసిన అన్నిటికన్నా ఎక్కువ విక్కెట్ల జాబితా ఏమిటి?",
+        "column_names": [
+            "Bowling Team",
+            "Edition",
+            "Number of Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
+        "question": "Which teams had their only defeat in a World Cup edition from 2002/03 onwards coming in the final?",
+        "query": "SELECT T1.season, CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END AS runner_up FROM Matches AS T1 WHERE T1.stage = 'Final' AND (SELECT COUNT(*) FROM Matches AS T2 WHERE T2.season = T1.season AND (T2.team1 = (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END) OR T2.team2 = (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END)) AND T2.match_winner != (CASE WHEN T1.match_winner = T1.team1 THEN T1.team2 ELSE T1.team1 END)) = 1;",
+        "difficulty": "hard",
+        "answer": [
+            "('2014/15, 'New Zealand')",
+            "('2023/24', 'India')"
+        ],
+        "question_english": "Which teams had their only defeat in a World Cup edition from 2002/03 onwards coming in the final?",
+        "question_hindi": "2002/03 से किन टीमों की विश्व कप के किसी संस्करण में एकमात्र हार फाइनल में आई थी?",
+        "question_punjabi": "2002/03 ਤੋਂ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਦੀ ਕਿਸੇ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਇਕਲੌਤੀ ਹਾਰ ਸਿਰਫ਼ ਫਾਈਨਲ ਵਿੱਚ ਹੋਈ ਸੀ?",
+        "question_telugu": "2002/03 నుండి ఒక వరల్డ్ కప్పు ఎడిషన్లో ఒకే ఓటమి ఫైనల్లోనే వచ్చిన టీం ఏమిటి?",
+        "column_names": [
+            "Season",
+            "Team"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
+        "question": "Who were the top run-scorers in the 2023 ODI World Cup final between India and Australia? Mention the player name, team and runs scored.",
+        "query": "SELECT P.player_name, D.batting_team, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Players P ON D.striker_id = P.player_id JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2023/24' AND M.stage = 'Final' AND ((M.team1 = 'India' AND M.team2 = 'Australia') OR (M.team1 = 'Australia' AND M.team2 = 'India')) GROUP BY P.player_name, D.batting_team ORDER BY runs DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('TM Head','Australia',137)",
+            "('KL Rahul','India',66)",
+            "('M Labuschagne','Australia',58)",
+            "('V Kohli','India',54)",
+            "('RG Sharma','India',47)"
+        ],
+        "question_english": "Who were the top run-scorers in the 2023 ODI World Cup final between India and Australia? Mention the player name, team and runs scored.",
+        "question_hindi": "2023 ODI विश्व कप फाइनल में भारत और ऑस्ट्रेलिया के बीच सबसे अधिक रन किसने बनाए? खिलाड़ी का नाम, टीम और रन बताइए।",
+        "question_punjabi": "2023 ODI ਵਿਸ਼ਵ ਕੱਪ ਫਾਈਨਲ ਵਿੱਚ ਭਾਰਤ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਦਰਮਿਆਨ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਸਨੇ ਬਣਾਏ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਟੀਮ ਅਤੇ ਰਨ ਦੱਸੋ।",
+        "question_telugu": "2023 ODI వరల్డ్ కప్ ఫైనల్లో భారత్ మరియు ఆస్ట్రేలియా మధ్య అత్యధిక పరుగులు చేసిన ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, జట్టు మరియు పరుగులను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Team",
+            "Runs"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
+        "question": "Who won the Player of the Match in semifinal and final of a World Cup from 2002/03 onwards?",
+        "query": "SELECT P.player_name, M.season FROM Matches AS M JOIN Players AS P ON M.player_of_match_id = P.player_id WHERE M.stage IN ('Semi Final', 'Final') GROUP BY P.player_name, M.season HAVING COUNT(DISTINCT M.stage) = 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('TM Head', '2023/24')"
+        ],
+        "question_english": "Who won the Player of the Match in semifinal and final of a World Cup from 2002/03 onwards?",
+        "question_hindi": "2002/03 से विश्व कप के सेमीफाइनल और फाइनल में प्लेयर ऑफ द मैच किसने जीता?",
+        "question_punjabi": "2002/03 ਤੋਂ ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਸੈਮੀਫਾਈਨਲ ਅਤੇ ਫਾਈਨਲ ਦੋਵਾਂ ਵਿੱਚ 'ਪਲੇਅਰ ਆਫ਼ ਦ ਮੈਚ' ਕੌਣ ਰਿਹਾ ਹੈ?",
+        "question_telugu": "2002/03 నుండి ఒక వరల్డ్ కప్పులో ఎవరు సెమీఫైనల్ మరియు ఫైనల్లో ప్లేయర్ ఆఫ్ తే మ్యాచ్ గెలిచారు?",
+        "column_names": [
+            "Player Name",
+            "Season"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75651/ind-vs-aus-final-icc-cricket-world-cup-2023",
+        "question": "Who were the leading wicket-takers in the 2023 ODI World Cup final between India and Australia? Mention the player name, team and wickets taken.",
+        "query": "SELECT P.player_name, D.bowling_team, COUNT(*) AS wickets FROM Deliveries D JOIN Players P ON D.bowler_id = P.player_id JOIN Matches M ON D.match_id = M.match_id WHERE M.season = '2023/24' AND M.stage = 'Final' AND ((M.team1 = 'India' AND M.team2 = 'Australia') OR (M.team1 = 'Australia' AND M.team2 = 'India')) AND D.player_out_id IS NOT NULL AND D.wicket_type != 'run out' GROUP BY P.player_name, D.bowling_team ORDER BY wickets DESC, P.player_name LIMIT 4;",
+        "difficulty": "Easy",
+        "answer": [
+            "('MA Starc','Australia',3)",
+            "('JJ Bumrah','India',2)",
+            "('JR Hazlewood','Australia',2)",
+            "('PJ Cummins','Australia',2)"
+        ],
+        "question_english": "Who were the leading wicket-takers in the 2023 ODI World Cup final between India and Australia? Mention the player name, team and wickets taken.",
+        "question_hindi": "2023 ODI विश्व कप फाइनल में भारत और ऑस्ट्रेलिया के बीच सबसे अधिक विकेट किसने लिए? खिलाड़ी का नाम, टीम और विकेटों की संख्या बताइए।",
+        "question_punjabi": "2023 ODI ਵਿਸ਼ਵ ਕੱਪ ਫਾਈਨਲ ਵਿੱਚ ਭਾਰਤ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਦਰਮਿਆਨ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸਨੇ ਲਈਆਂ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਟੀਮ ਅਤੇ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2023 ODI వరల్డ్ కప్ ఫైనల్లో భారత్ మరియు ఆస్ట్రేలియా మధ్య అత్యధిక వికెట్లు తీసుకున్న ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, జట్టు మరియు వికెట్ల సంఖ్యను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Team",
+            "Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "What are the lowest win-margins in World Cup knockouts (by wickets)?",
+        "query": "SELECT match_winner, result_margin, team1, team2, season, stage FROM Matches WHERE stage NOT LIKE '%Group%' AND stage NOT LIKE '%League%' AND result_type = 'wickets' ORDER BY result_margin ASC LIMIT 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Australia', '3 wickets', 'South Africa', 'Australia', '2023/24', 'Semi Final')",
+            "('New Zealand', '4 wickets', 'New Zealand', 'South Africa', '2014/15', 'Semi Final)"
+        ],
+        "question_english": "What are the lowest win-margins in World Cup knockouts (by wickets)?",
+        "question_hindi": "विश्व कप नॉकआउट मैचों में विकेटों के हिसाब से सबसे कम जीत के अंतर क्या हैं?",
+        "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਵਿਕਟਾਂ ਦੇ ਲਿਹਾਜ਼ ਨਾਲ ਜਿੱਤ ਦੇ ਸਭ ਤੋਂ ਘੱਟ ਅੰਤਰ ਕਿਹੜੇ ਹਨ?",
+        "question_telugu": "వరల్డ్ కప్పు నౌక్అవుట్సలో అన్నితకన్న తక్కువ గెలుపు అంచులు ఏమిటి? (విక్కెట్ల ద్వారా)",
+        "column_names": [
+            "Match Winner",
+            "Result Margin",
+            "Team 1",
+            "Team 2",
+            "Season",
+            "Stage"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-stats/icc-cricket-world-cup-2023/points-table",
+        "question": "Which teams have suffered the most defeats in ODI World Cup semi-finals from the 2002/03 edition onwards? Mention the team and number of defeats.",
+        "query": "SELECT CASE WHEN match_winner = team1 THEN team2 ELSE team1 END AS team, COUNT(*) AS defeats FROM Matches WHERE stage LIKE 'Semi%' AND match_winner IS NOT NULL AND CAST(SUBSTR(season,1,4) AS INTEGER) >= 2002 GROUP BY team ORDER BY defeats DESC LIMIT 4;",
+        "difficulty": "Easy",
+        "answer": [
+            "('South Africa',3)",
+            "('New Zealand',3)",
+            "('India',2)",
+            "('Sri Lanka',1)"
+        ],
+        "question_english": "Which teams have suffered the most defeats in ODI World Cup semi-finals from the 2002/03 edition onwards? Mention the team and number of defeats.",
+        "question_hindi": "2002/03 संस्करण के बाद ODI विश्व कप सेमीफाइनल में सबसे अधिक हार किन टीमों ने झेली हैं? टीम का नाम और हारों की संख्या बताइए।",
+        "question_punjabi": "2002/03 ਐਡੀਸ਼ਨ ਤੋਂ ਬਾਅਦ ODI ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਹਾਰਾਂ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਨੇ ਸਹੀ ਹਨ? ਟੀਮ ਦਾ ਨਾਮ ਅਤੇ ਹਾਰਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2002/03 ఎడిషన్ తర్వాత ODI వరల్డ్ కప్ సెమీఫైనల్స్‌లో అత్యధిక పరాజయాలు పొందిన జట్టులు ఏవి? జట్టు పేరు మరియు పరాజయాల సంఖ్యను రాయండి.",
+        "column_names": [
+            "Team",
+            "Defeats"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Which teams have most wins in a single World Cup edition?",
+        "query": "WITH team_wins AS (SELECT match_winner AS team, season, COUNT(*) AS wins FROM Matches WHERE match_winner IS NOT NULL GROUP BY match_winner, season) SELECT team, season, wins FROM team_wins ORDER BY wins DESC, team LIMIT 6;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Australia', '2006/07', 11)",
+            "('Australia', '2002/03', 10)",
+            "('India','2002/03', 9)",
+            "('India','2023/24', 9)",
+            "('Australia', '2023/24', 8)",
+            "('Sri Lanka','2006/07', 8)"
+        ],
+        "question_english": "Which teams have most wins in a single World Cup edition?",
+        "question_hindi": "विश्व कप के एक ही संस्करण में सबसे ज्यादा जीत किन टीमों की हैं?",
+        "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇੱਕ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਕਿਸ ਟੀਮ ਦੀਆਂ ਹਨ?",
+        "question_telugu": "ఒక వరల్డ్ కప్పు ఎడిషన్లో ఏ టిములు అన్నిటికన్నా ఎక్కువ సార్లు గెలిచారు?",
+        "column_names": [
+            "Team Name",
+            "Season",
+            "Wins"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Give stats of AUS vs SA in ODIs since 2016?",
+        "query": "SELECT COUNT(*) AS total_matches, SUM(CASE WHEN match_winner = 'South Africa' THEN 1 ELSE 0 END) AS sa_wins, SUM(CASE WHEN match_winner = 'Australia' THEN 1 ELSE 0 END) AS aus_wins, SUM(CASE WHEN match_winner IS NULL THEN 1 ELSE 0 END) AS no_results FROM Matches WHERE ((team1 = 'Australia' AND team2 = 'South Africa') OR (team1 = 'South Africa' AND team2 = 'Australia')) AND CAST(SUBSTR(season,1,4) AS INTEGER) >= 2016;",
+        "difficulty": "Easy",
+        "answer": [
+            "(3, 2, 1, 0)"
+        ],
+        "question_english": "Give stats of AUS vs SA in ODIs since 2016?",
+        "question_hindi": "2016 से अब तक वनडे में ऑस्ट्रेलिया बनाम दक्षिण अफ्रीका के आंकड़े बताइए।",
+        "question_punjabi": " 2016 ਤੋਂ ਬਾਅਦ ODI ਮੈਚਾਂ ਵਿੱਚ Australia vs South Africa ਦੇ ਅੰਕੜੇ ਦੱਸੋ।",
+        "question_telugu": "2016 నుంచి ODIల లో ఆస్ట్రేలియా సౌత్ ఆఫ్రికా కి వ్యతిరేకంగా ఆడిన మ్యాచుల గణాంకాలు ఏమిటి?",
+        "column_names": [
+            "Total Matches",
+            "Won by SA",
+            "Won by AUS",
+            "NR"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Which teams have qualified for the World Cup finals most often?",
+        "query": "SELECT Team, COUNT(*) AS appearances FROM (SELECT team1 AS Team FROM Matches WHERE stage = 'Final' UNION ALL SELECT team2 AS Team FROM Matches WHERE stage = 'Final') GROUP BY Team ORDER BY appearances DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Australia', 4)",
+            "('India', 3)",
+            "('Sri Lanka', 2)",
+            "('New Zealand', 2)",
+            "('England', 1)"
+        ],
+        "question_english": "Which teams have qualified for the World Cup finals most often?",
+        "question_hindi": "विश्व कप फाइनल के लिए सबसे ज्यादा बार कौन-सी टीमें क्वालीफाई हुई हैं?",
+        "question_punjabi": " ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਫਾਈਨਲ ਲਈ ਕੁਆਲੀਫਾਈ ਕੀਤਾ ਹੈ?",
+        "question_telugu": "ఏ టిములు అన్నిటికన్నా ఎక్కువ సార్లు వరల్డ్ కప్పు ఫినల్స్ కి చేరారు?",
+        "column_names": [
+            "Team",
+            "Appearances"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "Which South African bowlers recorded the 2nd and 3rd most wickets in a single ODI World Cup edition from 2002/03 onwards? Mention the player name, season and wickets taken.",
+        "query": "SELECT P.player_name, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE CAST(SUBSTR(M.season,1,4) AS INTEGER) >= 2002 AND D.bowling_team = 'South Africa' AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 2 OFFSET 1;",
+        "difficulty": "Easy",
+        "answer": [
+            "('M Jansen','2023/24',17)",
+            "('M Morkel','2014/15',17)"
+        ],
+        "question_english": "Which South African bowlers recorded the 2nd and 3rd most wickets in a single ODI World Cup edition from 2002/03 onwards? Mention the player name, season and wickets taken.",
+        "question_hindi": "2002/03 के बाद एक ODI विश्व कप संस्करण में दक्षिण अफ्रीका के किन गेंदबाज़ों ने दूसरे और तीसरे सबसे अधिक विकेट लिए? खिलाड़ी का नाम, सीज़न और विकेटों की संख्या बताइए।",
+        "question_punjabi": "2002/03 ਤੋਂ ਬਾਅਦ ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਦੱਖਣੀ ਅਫਰੀਕਾ ਦੇ ਕਿਹੜੇ ਗੇਂਦਬਾਜ਼ਾਂ ਨੇ ਦੂਜੇ ਅਤੇ ਤੀਜੇ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲਈਆਂ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਸੀਜ਼ਨ ਅਤੇ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2002/03 తర్వాత ఒక ODI వరల్డ్ కప్ ఎడిషన్‌లో దక్షిణాఫ్రికా బౌలర్లలో రెండవ మరియు మూడవ అత్యధిక వికెట్లు తీసుకున్న వారు ఎవరు? ఆటగాడి పేరు, సీజన్ మరియు వికెట్ల సంఖ్యను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/australia-vs-south-africa-2nd-semi-final-1384438/full-scorecard",
+        "question": "What were the batting performances of Travis Head and David Miller in the 2023 ODI World Cup semi-final between Australia and South Africa?",
+        "query": "SELECT P.player_name, D.batting_team, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.season = '2023/24' AND M.stage = 'Semi Final' AND (M.team1 = 'Australia' OR M.team2 = 'Australia') AND P.player_name IN ('TM Head', 'DA Miller') GROUP BY P.player_name, D.batting_team ORDER BY runs DESC;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DA Miller', 'South Africa', 101, 116)",
+            "('TM Head', 'Australia', 62, 48)"
+        ],
+        "question_english": "What were the batting performances of Travis Head and David Miller in the 2023 ODI World Cup semi-final between Australia and South Africa?",
+        "question_hindi": "2023 ODI विश्व कप के सेमीफाइनल में ऑस्ट्रेलिया और दक्षिण अफ्रीका के बीच ट्रैविस हेड और डेविड मिलर का बल्लेबाजी प्रदर्शन क्या था?",
+        "question_punjabi": "2023 ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਆਸਟ੍ਰੇਲੀਆ ਅਤੇ ਦੱਖਣੀ ਅਫ਼ਰੀਕਾ ਵਿਚਕਾਰ ਟ੍ਰੈਵਿਸ ਹੈੱਡ ਅਤੇ ਡੇਵਿਡ ਮਿਲਰ ਦਾ ਬੱਲੇਬਾਜ਼ੀ ਪ੍ਰਦਰਸ਼ਨ ਕੀ ਸੀ?",
+        "question_telugu": "2023 ODI వరల్డ్ కప్పు సెమీఫైనల్‌లో ఆస్ట్రేలియా మరియు దక్షిణాఫ్రికా మధ్య ట్రావిస్ హెడ్ మరియు డేవిడ్ మిల్లర్ యొక్క బ్యాటింగ్ ప్రదర్శనలు ఏమిటి?",
+        "column_names": ["Player Name", "Team", "Runs", "Balls Faced"]
+    },
+    {
+    "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Who were the leading wicket-takers in the 2023 ODI World Cup semi-final between South Africa and Australia? Mention the player name, team and wickets taken.",
+        "query": "SELECT P.player_name, D.bowling_team, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2023/24' AND M.stage LIKE 'Semi%' AND ((M.team1 = 'South Africa' AND M.team2 = 'Australia') OR (M.team1 = 'Australia' AND M.team2 = 'South Africa')) AND D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt') GROUP BY P.player_name, D.bowling_team ORDER BY wickets DESC, P.player_name LIMIT 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('MA Starc','Australia',3)",
+            "('PJ Cummins','Australia',3)"
+        ],
+        "question_english": "Who were the leading wicket-takers in the 2023 ODI World Cup semi-final between South Africa and Australia? Mention the player name, team and wickets taken.",
+        "question_hindi": "2023 ODI विश्व कप सेमीफाइनल में दक्षिण अफ्रीका और ऑस्ट्रेलिया के बीच सबसे अधिक विकेट किसने लिए? खिलाड़ी का नाम, टीम और विकेटों की संख्या बताइए।",
+        "question_punjabi": "2023 ODI ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਦੱਖਣੀ ਅਫਰੀਕਾ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਦਰਮਿਆਨ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸਨੇ ਲਈਆਂ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਟੀਮ ਅਤੇ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਦੱਸੋ।",
+        "question_telugu": "2023 ODI వరల్డ్ కప్ సెమీఫైనల్లో దక్షిణాఫ్రికా మరియు ఆస్ట్రేలియా మధ్య అత్యధిక వికెట్లు తీసుకున్న ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, జట్టు మరియు వికెట్ల సంఖ్యను పేర్కొనండి.",
+        "column_names": [
+            "Player Name",
+            "Team",
+            "Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Who were the leading run-scorers in the 2023 ODI World Cup semi-final between South Africa and Australia? Mention the player name, team and runs scored.",
+        "query": "SELECT P.player_name, D.batting_team, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.season = '2023/24' AND M.stage LIKE 'Semi%' AND ((M.team1 = 'South Africa' AND M.team2 = 'Australia') OR (M.team1 = 'Australia' AND M.team2 = 'South Africa')) GROUP BY P.player_name, D.batting_team ORDER BY runs DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DA Miller','South Africa',101)",
+            "('TM Head','Australia',62)",
+            "('H Klaasen','South Africa',47)",
+            "('SPD Smith','Australia',30)",
+            "('DA Warner','Australia',29)"
+        ],
+        "question_english": "Who were the leading run-scorers in the 2023 ODI World Cup semi-final between South Africa and Australia? Mention the player name, team and runs scored.",
+        "question_hindi": "2023 ODI विश्व कप सेमीफाइनल में दक्षिण अफ्रीका और ऑस्ट्रेलिया के बीच सबसे अधिक रन किसने बनाए? खिलाड़ी का नाम, टीम और रन बताइए।",
+        "question_punjabi": "2023 ODI ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲ ਵਿੱਚ ਦੱਖਣੀ ਅਫਰੀਕਾ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਦਰਮਿਆਨ ਸਭ ਤੋਂ ਵੱਧ ਰਨ ਕਿਸਨੇ ਬਣਾਏ? ਖਿਡਾਰੀ ਦਾ ਨਾਮ, ਟੀਮ ਅਤੇ ਰਨ ਦੱਸੋ।",
+        "question_telugu": "2023 ODI వరల్డ్ కప్ సెమీఫైనల్లో దక్షిణాఫ్రికా మరియు ఆస్ట్రేలియా మధ్య అత్యధిక పరుగులు చేసిన ఆటగాళ్లు ఎవరు? ఆటగాడి పేరు, జట్టు మరియు పరుగులను రాయండి.",
+        "column_names": [
+            "Player Name",
+            "Team",
+            "Runs"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Who has hit Hundreds for SA in ICC ODI tournament knockouts from 2002/03 onwards?",
+        "query": "SELECT P.player_name, M.stage, SUM(D.runs_scored) AS score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' AND M.stage NOT LIKE '%League%' GROUP BY D.match_id, P.player_name HAVING score >= 100;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DA Miller', 'Semi Final', 101)"
+        ],
+        "question_english": "Who has hit Hundreds for SA in ICC ODI tournament knockouts?",
+        "question_hindi": "2002/03 से आईसीसी वनडे टूर्नामेंट के नॉकआउट में दक्षिण अफ्रीका के लिए शतक किसने लगाए हैं?",
+        "question_punjabi": "2002/03 ਤੋਂ ICC ODI ਟੂਰਨਾਮੈਂਟ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ ਦੱਖਣੀ ਅਫ਼ਰੀਕਾ ਲਈ ਸੈਂਕੜੇ ਕਿਸਨੇ ਮਾਰੇ ਹਨ?",
+        "question_telugu": "2002/03 నుంచి ODI టోర్నమెంట్ నొక్ఔట్లలో సౌత్ ఆఫ్రికా తరపన ఎవరు శతకాలు కొట్టారు?",
+        "column_names": [
+            "Player Name",
+            "Stage",
+            "Score"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.icc-cricket.com/tournaments/cricketworldcup/news/maxwell-masterclass-the-fastest-ever-world-cup-century",
+        "question": "Which batters scored the fastest centuries (fewest balls faced) in a single innings in the 2023 ICC Cricket World Cup?",
+        "query": "SELECT P.player_name, M.team1, M.team2, D.batting_team, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE M.season = '2023/24' AND D.wides = 0 GROUP BY D.match_id, D.inning, D.striker_id HAVING runs >= 100 ORDER BY balls_faced ASC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('GJ Maxwell', 'Australia', 'Netherlands', 'Australia', 106, 44)",
+            "('AK Markram', 'South Africa', 'Sri Lanka', 'South Africa', 106, 54)",
+            "('KL Rahul', 'India', 'Netherlands', 'India', 102, 64)",
+            "('H Klaasen', 'South Africa', 'England', 'South Africa', 109, 67)",
+            "('TM Head', 'Australia', 'New Zealand', 'Australia', 109, 67)"
+        ],
+        "question_english": "Which batters scored the fastest centuries (fewest balls faced) in a single innings in the 2023 ICC Cricket World Cup?",
+        "question_hindi": "2023 ICC क्रिकेट विश्व कप में एक पारी में सबसे कम गेंदों पर शतक किन बल्लेबाजों ने लगाए?",
+        "question_punjabi": "2023 ICC ਕ੍ਰਿਕੇਟ ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਇੱਕ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਘੱਟ ਗੇਂਦਾਂ ਵਿੱਚ ਸ਼ਤਕ ਕਿਹੜੇ ਬੱਲੇਬਾਜ਼ਾਂ ਨੇ ਲਗਾਏ?",
+        "question_telugu": "2023 ICC క్రికెట్ వరల్డ్ కప్‌లో ఒక ఇన్నింగ్స్‌లో అత్యంత తక్కువ బంతుల్లో శతకాలు సాధించిన బ్యాటర్లు ఎవరు?",
+        "column_names": ["Player", "Team 1", "Team 2", "Batting Team", "Runs", "Balls Faced"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Which batter hit the most sixes in the 2023 ODI World Cup Semi Final between South Africa and Australia?",
+        "query": "SELECT P.player_name, COUNT(*) AS sixes FROM Deliveries AS D JOIN Players AS P ON D.striker_id = P.player_id JOIN Matches AS M ON D.match_id = M.match_id WHERE M.stage = 'Semi Final' AND ((D.batting_team = 'South Africa' AND D.bowling_team = 'Australia') OR (D.batting_team = 'Australia' AND D.bowling_team = 'South Africa')) AND D.runs_scored = 6 GROUP BY P.player_name ORDER BY sixes DESC LIMIT 1;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DA Miller', 5)"
+        ],
+        "question_english": "Which batter hit the most sixes in the 2023 ODI World Cup Semi Final between South Africa and Australia?",
+        "question_hindi": "2023 वनडे विश्व कप सेमी फाइनल में दक्षिण अफ्रीका और ऑस्ट्रेलिया के बीच सबसे ज्यादा छक्के किस बल्लेबाज ने लगाए?",
+        "question_punjabi": "2023 ODI ਵਰਲਡ ਕੱਪ ਸੈਮੀ ਫਾਈਨਲ ਵਿੱਚ ਦੱਖਣੀ ਅਫਰੀਕਾ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਵਿਚਕਾਰ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਕਿਸ ਬੱਲੇਬਾਜ਼ ਨੇ ਮਾਰੇ?",
+        "question_telugu": "2023 ODI వరల్డ్ కప్ సెమీ ఫైనల్లో దక్షిణాఫ్రికా మరియు ఆస్ట్రేలియా మధ్య అత్యధిక సిక్సర్లు కొట్టిన బ్యాట్స్‌మన్ ఎవరు?",
+        "column_names": [
+            "Player Name",
+            "Sixes"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "Which South African batter faced the most balls in the 2023 ODI World Cup Semi Final against Australia?",
+        "query": "SELECT P.player_name, COUNT(*) AS balls_faced FROM Deliveries AS D JOIN Players AS P ON D.striker_id = P.player_id JOIN Matches AS M ON D.match_id = M.match_id WHERE M.stage = 'Semi Final' AND D.batting_team = 'South Africa' AND D.bowling_team = 'Australia' AND COALESCE(D.wides, 0) = 0 AND COALESCE(D.noballs, 0) = 0 GROUP BY P.player_name ORDER BY balls_faced DESC LIMIT 1;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DA Miller', 116)"
+        ],
+        "question_english": "Which South African batter faced the most balls in the 2023 ODI World Cup Semi Final against Australia?",
+        "question_hindi": "2023 वनडे विश्व कप सेमी फाइनल में ऑस्ट्रेलिया के खिलाफ दक्षिण अफ्रीका के किस बल्लेबाज ने सबसे ज्यादा गेंदों का सामना किया?",
+        "question_punjabi": "2023 ODI ਵਰਲਡ ਕੱਪ ਸੈਮੀ ਫਾਈਨਲ ਵਿੱਚ ਆਸਟ੍ਰੇਲੀਆ ਖਿਲਾਫ ਦੱਖਣੀ ਅਫਰੀਕਾ ਦੇ ਕਿਸ ਬੱਲੇਬਾਜ਼ ਨੇ ਸਭ ਤੋਂ ਵੱਧ ਗੇਂਦਾਂ ਦਾ ਸਾਹਮਣਾ ਕੀਤਾ?",
+        "question_telugu": "2023 ODI వరల్డ్ కప్ సెమీ ఫైనల్లో ఆస్ట్రేలియా పై దక్షిణాఫ్రికా తరఫున అత్యధిక బంతులు ఎదుర్కొన్న బ్యాట్స్‌మన్ ఎవరు?",
+        "column_names": [
+            "Player Name",
+            "Balls Faced"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "List the Highest individual scores for SA in World Cup knockouts.",
+        "query": "SELECT P.player_name, SUM(D.runs_scored) AS score, M.stage, M.season FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.striker_id = P.player_id WHERE D.batting_team = 'South Africa' AND M.stage NOT LIKE '%Group%' GROUP BY D.match_id, P.player_name ORDER BY score DESC LIMIT 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('DAMiller', 101, 'Semi Final', '2023/24')",
+            "('F du Plessis', 82, 'Semi Final', '2014/15')",
+            "('Q de Kock', 78, 'Quarter Final', '2014/15')"
+        ],
+        "question_english": "List the Highest individual scores for SA in World Cup knockouts.",
+        "question_hindi": "विश्व कप नॉकआउट में दक्षिण अफ्रीका के लिए सर्वोच्च व्यक्तिगत स्कोरों की सूची दें।",
+        "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਨਾਕਆਊਟ ਮੈਚਾਂ ਵਿੱਚ South Africa ਲਈ ਸਭ ਤੋਂ ਵੱਡੇ ਵਿਅਕਤੀਗਤ ਸਕੋਰਾਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "వరల్డ్ కప్పు నొక్ఔట్లలో సౌత్ ఆఫ్రికా కి తరపన అన్నిటికన్నా ఎక్కువ స్కోర్లు ఏమిటి?",
+        "column_names": [
+            "Player Name",
+            "Score",
+            "Stage",
+            "Season"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75647/rsa-vs-aus-2nd-semi-final-2nd-v-3rd-icc-cricket-world-cup-2023",
+        "question": "List the 2nd to 5th highest totals of combined sixes hit in an ODI World Cup match.",
+        "query": "SELECT M.team1, M.team2, M.season, COUNT(*) AS sixes FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id WHERE D.runs_scored = 6 GROUP BY D.match_id, M.team1, M.team2, M.season ORDER BY sixes DESC LIMIT 4 OFFSET 1;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Australia', 'New Zealand', '2023/24', 32)",
+            "('New Zealand', 'West Indies', '2014/15', 31)",
+            "('South Africa', 'Sri Lanka', '2023/24', 31)",
+            "('India', 'New Zealand', '2023/24', 30)"
+        ],
+        "question_english": "List the 2nd to 5th highest totals of combined sixes hit in an ODI World Cup match.",
+        "question_hindi": "वनडे विश्व कप के एक मैच में लगाए गए संयुक्त छक्कों के दूसरे से पांचवें सबसे बड़े कुल की सूची दें।",
+        "question_punjabi": "ODI ਵਰਲਡ ਕੱਪ ਦੇ ਇੱਕ ਮੈਚ ਵਿੱਚ ਲੱਗੇ ਕੁੱਲ ਛੱਕਿਆਂ ਦੇ ਦੂਜੇ ਤੋਂ ਪੰਜਵੇਂ ਸਭ ਤੋਂ ਵੱਡੇ ਅੰਕੜਿਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "ఒక ODI వరల్డ్ కప్ మ్యాచ్‌లో నమోదైన సిక్సుల సంఖ్యలలో రెండవ నుండి ఐదవ అత్యధిక సంఖ్యలను రాయండి.",
+        "column_names": [
+            "Team 1",
+            "Team 2",
+            "Season",
+            "Sixes"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "What are the highest aggregates in a World Cup match?",
+        "query": "SELECT M.team1, M.team2, M.season, SUM(D.runs_scored + D.extra_runs) AS aggregate_score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id GROUP BY M.match_id ORDER BY aggregate_score DESC LIMIT 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Australia', 'New Zealand', '2023/24', 771)",
+            "('South Africa', 'Sri Lanka', '2023/24', 754)",
+            "('India', 'New Zealand', '2023/24', 724)"
+        ],
+        "question_english": "What are the highest aggregates in a World Cup match?",
+        "question_hindi": "एक विश्व कप मैच में सबसे बड़े कुल स्कोर क्या हैं?",
+        "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਮੈਚ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਕੁੱਲ ਰਨ ਕਿੰਨੇ ਹਨ?",
+        "question_telugu": "ఒక వరల్డ్ కప్పు మ్యాచ్లో అన్నిటికన్నా ఎక్కువ సముదాయాలు ఏమిటి?",
+        "column_names": [
+            "Team 1",
+            "Team 2",
+            "Season",
+            "Aggregate"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "List the players having the most wickets in a World Cup edition for India.",
+        "query": "SELECT P.player_name, M.season, COUNT(D.wicket_type) AS wickets FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.bowling_team = 'India' AND D.wicket_type IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') GROUP BY P.player_name, M.season ORDER BY wickets DESC LIMIT 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Mohammed Shami', '2023/24', 24)",
+            "('Z Khan', '2010/11', 21)",
+            "('UT Yadav', '2014/15', 18)"
+        ],
+        "question_english": "List the players having the most wickets in a World Cup edition for India.",
+        "question_hindi": "भारत के लिए विश्व कप के एक संस्करण में सबसे ज्यादा विकेट लेने वाले खिलाड़ियों की सूची दें।",
+        "question_punjabi": "ਭਾਰਤ ਲਈ ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਸੀਜ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "ఒక వరల్డ్ కప్ ఎడిషన్‌లో భారతదేశం తరపున అత్యధిక వికెట్లు తీసిన ఆటగాళ్ళ జాబితాను ఇవ్వండి.",
+        "column_names": [
+            "Player Name",
+            "Season",
+            "Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "List the top 3 venues that have hosted the highest number of World Cup matches.",
+        "query": "SELECT venue, COUNT(*) AS match_count FROM Matches GROUP BY venue ORDER BY match_count DESC, venue ASC LIMIT 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Kensington Oval, Bridgetown', 7)",
+            "('R Premadasa Stadium', 7)",
+            "('Sabina Park, Kingston', 7)"
+        ],
+        "question_english": "List the top 3 venues that have hosted the highest number of World Cup matches.",
+        "question_hindi": "विश्व कप मैचों की सबसे अधिक मेजबानी करने वाले शीर्ष 3 स्थानों की सूची दें।",
+        "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ਮੈਚਾਂ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਮੇਜ਼ਬਾਨੀ ਕਰਨ ਵਾਲੇ ਚੋਟੀ ਦੇ 3 ਸਟੇਡੀਅਮਾਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "అత్యధిక వరల్డ్ కప్ మ్యాచ్‌లకు ఆతిథ్యం ఇచ్చిన టాప్ 3 వేదికల జాబితాను ఇవ్వండి.",
+        "column_names": [
+            "Venue",
+            "Match Count"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "List the best bowling returns for India in World Cup ODIs.",
+        "query": "SELECT P.player_name, COUNT(CASE WHEN D.wicket_type IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 END) AS wickets, SUM(D.runs_scored + D.wides + D.noballs) AS runs_conceded FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id JOIN Players AS P ON D.bowler_id = P.player_id WHERE D.bowling_team = 'India' GROUP BY D.match_id, P.player_name ORDER BY wickets DESC, runs_conceded ASC LIMIT 2;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Mohammed Shami', 7, 57)",
+            "('A Nehra', 6, 23)"
+        ],
+        "question_english": "List the best bowling returns for India in World Cup ODIs.",
+        "question_hindi": "विश्व कप वनडे में भारत के लिए सर्वश्रेष्ठ गेंदबाजी प्रदर्शन की सूची दें।",
+        "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪ ODI ਵਿੱਚ India ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਗੇਂਦਬਾਜ਼ੀ ਪ੍ਰਦਰਸ਼ਨ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "వరల్డ్ కప్పు ODIల లో ఇండియా తరపన అత్యుత్తమ బౌలింగ్ రిటర్న్‌లు ఏమిటి?",
+        "column_names": [
+            "Player Name",
+            "Wickets",
+            "Runs"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "Who has two (or more) World Cup five-fors against an opponent?",
+        "query": "SELECT P.player_name, Innings.batting_team AS opponent, COUNT(*) AS five_fors FROM (SELECT match_id, bowler_id, batting_team, COUNT(CASE WHEN wicket_type IS NOT NULL AND wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 END) AS wkts FROM Deliveries GROUP BY match_id, bowler_id) AS Innings JOIN Players AS P ON Innings.bowler_id = P.player_id WHERE Innings.wkts >= 5 GROUP BY P.player_name, opponent HAVING five_fors >= 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('MA Starc', 'New Zealand', 2)",
+            "('Mohammed Shami', 'New Zealand', 2)"
+        ],
+        "question_english": "Who has two (or more) World Cup five-fors against an opponent?",
+        "question_hindi": "किसने किसी एक प्रतिद्वंद्वी के खिलाफ विश्व कप में दो या अधिक बार पांच विकेट लिए हैं?",
+        "question_punjabi": "ਕਿਸੇ ਵਿਰੋਧੀ ਟੀਮ ਦੇ ਖਿਲਾਫ ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਦੋ ਜਾਂ ਇਸ ਤੋਂ ਵੱਧ ਵਾਰ ਪੰਜ ਵਿਕਟਾਂ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਕਿਸਦੇ ਨਾਮ ਹੈ?",
+        "question_telugu": "వరల్డ్ కప్పులో ఏ క్రీడాకార్లుకి ఒక టీం కి వ్యతిరేకంగా 2 లేదా దానికన్నా ఎక్కువ ఫైవ్-ఫోర్లు ఉన్నాయి?",
+        "column_names": [
+            "Player Name",
+            "Opponent Team",
+            "Five-Fors"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "List the top 3 highest team scores in a single World Cup innings.",
+        "query": "SELECT D.batting_team, M.season, SUM(D.runs_scored + D.extra_runs) AS team_score FROM Deliveries AS D JOIN Matches AS M ON D.match_id = M.match_id GROUP BY D.match_id, D.batting_team ORDER BY team_score DESC LIMIT 3;",
+        "difficulty": "Easy",
+        "answer": [
+            "('South Africa', '2023/24', 428)",
+            "('India', '2006/07', 413)",
+            "('South Africa', '2014/15', 411)"
+        ],
+        "question_english": "List the top 3 highest team scores in a single World Cup innings.",
+        "question_hindi": "एक ही विश्व कप पारी में शीर्ष 3 सबसे अधिक टीम स्कोर की सूची दें।",
+        "question_punjabi": "ਇੱਕ ਵਿਸ਼ਵ ਕੱਪ ਪਾਰੀ ਵਿੱਚ ਚੋਟੀ ਦੇ 3 ਸਭ ਤੋਂ ਵੱਧ ਟੀਮ ਸਕੋਰਾਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "ఒకే వరల్డ్ కప్ ఇన్నింగ్స్‌లో అత్యధిక టీమ్ స్కోర్లు చేసిన టాప్ 3 జట్ల జాబితాను ఇవ్వండి.",
+        "column_names": [
+            "Batting Team",
+            "Season",
+            "Team Score"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/live-cricket-scores/75640/ind-vs-nz-1st-semi-final-1st-v-4th-icc-cricket-world-cup-2023",
+        "question": "List players having most five-fors in World Cups.",
+        "query": "SELECT P.player_name, COUNT(*) AS five_fors FROM (SELECT match_id, bowler_id, COUNT(player_out_id) AS wkts FROM Deliveries WHERE wicket_type NOT IN ('run out', 'retired hurt') GROUP BY match_id, bowler_id HAVING wkts >= 5) AS Innings JOIN Players AS P ON Innings.bowler_id = P.player_id GROUP BY P.player_name ORDER BY five_fors DESC LIMIT 2;",
+        "difficulty": "Easy",
+        "answer": [
+            "('Mohammed Shami', 4)",
+            "('MA Starc', 3)"
+        ],
+        "question_english": "List players having most five-fors in World Cups.",
+        "question_hindi": "विश्व कप में सबसे ज्यादा पांच विकेट लेने वाले खिलाड़ियों की सूची दें।",
+        "question_punjabi": "ਵਿਸ਼ਵ ਕੱਪਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਪੰਜ ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੂਚੀ ਦਿਓ।",
+        "question_telugu": "వరల్డ్ కప్పులో ఏ క్రీడాకార్లుకి అన్నిటికన్నా ఎక్కువ ఫైవ్-ఫోర్లు ఉన్నాయి?",
+        "column_names": [
+            "Player Name",
+            "Five-Fors"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2223/icc-cricket-world-cup-2015/stats",
+        "question": "What were AB de Villiers' batting stats in the 2015 ODI World Cup? Mention the number of matches played, innings, total runs, hundreds, average, and strike rate.",
+        "query": "WITH innings AS (SELECT D.striker_id, D.match_id, D.inning, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) AS balls, MAX(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type != 'retired hurt' THEN 1 ELSE 0 END) AS dismissed FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'AB de Villiers' AND M.season = '2014/15' GROUP BY D.striker_id, D.match_id, D.inning) SELECT COUNT(DISTINCT match_id) AS matches, COUNT(*) AS innings, SUM(runs) AS total_runs, SUM(CASE WHEN runs >= 100 THEN 1 ELSE 0 END) AS hundreds, ROUND(SUM(runs) * 1.0 / NULLIF(SUM(dismissed), 0), 2) AS avg, ROUND(SUM(runs) * 100.0 / NULLIF(SUM(balls), 0), 2) AS sr FROM innings;",
+        "difficulty": "Medium",
+        "answer": [
+            "(7, 7, 482, 1, 96.40, 144.31)"
+        ],
+        "question_english": "What were AB de Villiers' batting stats in the 2015 ODI World Cup? Mention the number of matches played, innings, total runs, hundreds, average, and strike rate.",
+        "question_hindi": "2015 के ODI विश्व कप में AB de Villiers' के बल्लेबाजी आँकड़े क्या थे? इसमें खेले गए मैचों की संख्या, पारियाँ, कुल रन, शतक, बल्लेबाजी औसत और स्ट्राइक रेट बताइए।",
+        "question_punjabi": "2015 ਦੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ AB de Villiers ਦੇ ਬੱਲੇਬਾਜ਼ੀ ਅੰਕੜੇ ਕੀ ਸਨ? ਖੇਡੇ ਗਏ ਮੈਚਾਂ ਦੀ ਗਿਣਤੀ, ਪਾਰੀਆਂ, ਕੁੱਲ ਦੌੜਾਂ, ਸੈਂਕੜੇ, ਔਸਤ ਅਤੇ ਸਟ੍ਰਾਈਕ ਰੇਟ ਦੱਸੋ।",
+        "question_telugu": "2015 ODI ప్రపంచకప్‌లో AB de Villiers బ్యాటింగ్ గణాంకాలు ఏమిటి? ఆడిన మ్యాచ్‌ల సంఖ్య, ఇన్నింగ్స్‌లు, మొత్తం పరుగులు, సెంచరీలు, సగటు మరియు స్ట్రైక్ రేట్‌ను తెలియజేయండి.",
+        "column_names": ["Matches", "Innings", "Total Runs", "Hundreds", "Avg", "SR"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/6732/icc-cricket-world-cup-2023/stats",
+        "question": "Which wicketkeeper scored the most runs in a single ODI World Cup edition? Show top 2 by runs.",
+        "query": "WITH keepers AS (SELECT DISTINCT FD.fielder_id AS keeper_id FROM FielderDismissals FD JOIN Deliveries D ON FD.delivery_id = D.delivery_id WHERE D.wicket_type = 'stumped'), innings AS (SELECT D.striker_id, M.season, D.match_id, D.inning, SUM(D.runs_scored) AS runs, MAX(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type != 'retired hurt' THEN 1 ELSE 0 END) AS dismissed FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.striker_id, M.season, D.match_id, D.inning) SELECT P.player_name AS player, I.season, SUM(I.runs) AS total_runs, COUNT(DISTINCT I.match_id) AS matches, ROUND(SUM(I.runs) * 1.0 / NULLIF(SUM(I.dismissed), 0), 2) AS avg FROM innings I JOIN keepers K ON I.striker_id = K.keeper_id JOIN Players P ON I.striker_id = P.player_id GROUP BY I.striker_id, I.season ORDER BY total_runs DESC LIMIT 2;",
+        "difficulty": "Hard",
+        "answer": [
+            "('Q de Kock', '2023/24', 553, 9, 61.44)",
+            "('KC Sangakkara', '2014/15', 534, 6, 133.50)"
+        ],
+        "question_english": "Which wicketkeeper scored the most runs in a single ODI World Cup edition? Show top 2 by runs.",
+        "question_hindi": "ODI विश्व कप के किसी एक संस्करण में किस विकेटकीपर ने सबसे अधिक रन बनाए? रनों के आधार पर शीर्ष 2 दिखाइए।",
+        "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਦੌੜਾਂ ਬਣਾਉਣ ਵਾਲਾ ਵਿਕਟਕੀਪਰ ਕੌਣ ਸੀ? ਦੌੜਾਂ ਦੇ ਆਧਾਰ 'ਤੇ ਟਾਪ 2 ਦਿਖਾਓ।",
+        "question_telugu": "ఒకే ODI ప్రపంచకప్ ఎడిషన్‌లో అత్యధిక పరుగులు చేసిన వికెట్ కీపర్ ఎవరు? పరుగుల ఆధారంగా టాప్ 2 చూపించండి.",
+        "column_names": ["Player", "Season", "Total Runs", "Matches", "Avg"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://en.wikipedia.org/wiki/Cricket_World_Cup#Teams'_performances",
+        "question": "Before the 2023 ODI Cricket World Cup, which teams had won the most World Cup semi-final and final matches combined? Return the top 3 teams along with number of matches won.",
+        "query": "SELECT match_winner AS team, COUNT(*) AS knockout_wins FROM Matches WHERE stage IN ('Semi Final', 'Final') AND season < 2023 AND match_winner IS NOT NULL GROUP BY match_winner ORDER BY knockout_wins DESC, team LIMIT 3;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Australia', 6)",
+            "('India', 3)",
+            "('New Zealand', 2)"
+        ],
+        "question_english": "Before the 2023 ODI Cricket World Cup, which teams had won the most World Cup semi-final and final matches combined? Return the top 3 teams along with number of matches won.",
+        "question_hindi": "2023 ODI क्रिकेट विश्व कप से पहले, विश्व कप के सेमीफाइनल और फाइनल मैचों को मिलाकर सबसे अधिक जीत किस टीम ने हासिल की थी? शीर्ष 3 टीमें बताइए, जीते गए मैचों की संख्या के साथ।",
+        "question_punjabi": "2023 ODI ਕ੍ਰਿਕਟ ਵਿਸ਼ਵ ਕੱਪ ਤੋਂ ਪਹਿਲਾਂ, ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲ ਅਤੇ ਫਾਈਨਲ ਮੈਚਾਂ ਨੂੰ ਮਿਲਾ ਕੇ ਸਭ ਤੋਂ ਵੱਧ ਜਿੱਤਾਂ ਕਿਸ ਟੀਮ ਨੇ ਹਾਸਲ ਕੀਤੀਆਂ ਸਨ? ਜਿੱਤੇ ਮੈਚਾਂ ਦੀ ਗਿਣਤੀ ਸਮੇਤ ਟਾਪ 3 ਟੀਮਾਂ ਦੱਸੋ।",
+        "question_telugu": "2023 ODI క్రికెట్ ప్రపంచకప్‌కి ముందు, ప్రపంచకప్ సెమీఫైనల్ మరియు ఫైనల్ మ్యాచ్‌లను కలిపి అత్యధికంగా గెలిచిన జట్లు ఏవి? గెలిచిన మ్యాచ్‌ల సంఖ్యతో పాటు టాప్ 3 జట్లను తెలియజేయండి.",
+        "column_names": ["Team", "Knockout Wins"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://i.imgci.com/link_to_database/STATS/WC/BOWLING/WC_BOWL_MOST_WKTS.html?",
+        "question": "What are M Muralitharan's overall bowling stats across all ODI World Cup editions?",
+        "query": "SELECT P.player_name AS player, COUNT(DISTINCT D.match_id) AS matches, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets, ROUND(SUM(D.runs_scored + D.wides + D.noballs) * 1.0 / NULLIF(SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 ELSE 0 END), 0), 2) AS avg, ROUND(SUM(D.runs_scored + D.wides + D.noballs) * 6.0 / NULLIF(SUM(CASE WHEN D.wides = 0 AND D.noballs = 0 THEN 1 ELSE 0 END), 0), 2) AS economy FROM Deliveries D JOIN Players P ON D.bowler_id = P.player_id WHERE P.player_name = 'M Muralitharan' GROUP BY D.bowler_id;",
+        "difficulty": "Medium",
+        "answer": [
+            "('M Muralitharan', 27, 52, 18.00, 4.01)"
+        ],
+        "question_english": "What are M Muralitharan's overall bowling stats across all ODI World Cup editions?",
+        "question_hindi": "सभी ODI विश्व कप संस्करणों में M Muralitharan के गेंदबाजी आँकड़े क्या हैं?",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ M Muralitharan ਦੇ ਸਮੁੱਚੇ ਗੇਂਦਬਾਜ਼ੀ ਅੰਕੜੇ ਕੀ ਹਨ?",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో M Muralitharan యొక్క మొత్తం బౌలింగ్ గణాంకాలు ఏమిటి?",
+        "column_names": ["Player", "Matches", "Wickets", "Avg", "Economy"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019/stats?statsType=mostRuns&teamId=10&seasonSeriesId=2697&matchFormat=2",
+        "question": "What are CH Gayle's batting stats in the 2019 ODI World Cup edition? Include matches, innings, runs, average and strike rate.",
+        "query": "WITH innings AS (SELECT D.striker_id, M.season, D.match_id, D.inning, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) AS balls, MAX(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type != 'retired hurt' THEN 1 ELSE 0 END) AS dismissed FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.striker_id = P.player_id WHERE P.player_name = 'CH Gayle' AND M.season = 2019 GROUP BY D.striker_id, D.match_id, D.inning) SELECT season, COUNT(DISTINCT match_id) AS matches, COUNT(*) AS innings, SUM(runs) AS total_runs, ROUND(SUM(runs) * 1.0 / NULLIF(SUM(dismissed), 0), 2) AS avg, ROUND(SUM(runs) * 100.0 / NULLIF(SUM(balls), 0), 2) AS sr FROM innings GROUP BY season ORDER BY season;",
+        "difficulty": "Medium",
+        "answer": [
+            "('2002/03', 5, 5, 87, 17.40, 60.42)"
+        ],
+        "question_english": "What are CH Gayle's batting stats in the 2019 ODI World Cup edition? Include matches, innings, runs, average and strike rate.",
+        "question_hindi": "2019 ODI विश्व कप में CH Gayle के बल्लेबाजी आँकड़े क्या थे? इसमें मैच, पारियाँ, रन, बल्लेबाजी औसत और स्ट्राइक रेट शामिल करें।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ CH Gayle ਦੇ ਬੱਲੇਬਾਜ਼ੀ ਅੰਕੜੇ ਕੀ ਸਨ? ਮੈਚ, ਪਾਰੀਆਂ, ਦੌੜਾਂ, ਔਸਤ ਅਤੇ ਸਟ੍ਰਾਈਕ ਰੇਟ ਸ਼ਾਮਲ ਕਰੋ।",
+        "question_telugu": "2019 ODI ప్రపంచకప్ ఎడిషన్‌లో CH Gayle బ్యాటింగ్ గణాంకాలు ఏమిటి? మ్యాచ్‌లు, ఇన్నింగ్స్‌లు, పరుగులు, సగటు మరియు స్ట్రైక్ రేట్‌ను చేర్చండి.",
+        "column_names": ["Season", "Matches", "Innings", "Total Runs", "Avg", "SR"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-series/2697/icc-cricket-world-cup-2019/stats?statsType=lowestEcon&seasonSeriesId=2697&matchFormat=2",
+        "question": "What are the best economies for bowlers in the 2019 ODI World Cup (minimum 50 overs bowled)? Show top 5 along with number of matches and wickets.",
+        "query": "SELECT P.player_name AS player, COUNT(DISTINCT D.match_id) AS matches, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out', 'retired hurt', 'obstructing the field') THEN 1 ELSE 0 END) AS wickets, ROUND(SUM(D.runs_scored + D.wides + D.noballs) * 6.0 / NULLIF(SUM(CASE WHEN D.wides = 0 AND D.noballs = 0 THEN 1 ELSE 0 END), 0), 2) AS economy FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id JOIN Players P ON D.bowler_id = P.player_id WHERE M.season = '2019' GROUP BY D.bowler_id,P.player_name HAVING SUM(CASE WHEN D.wides = 0 AND D.noballs = 0 THEN 1 ELSE 0 END) >= 300 ORDER BY economy ASC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('JJ Bumrah', 8, 16, 4.49)",
+            "('JC Archer', 10, 17, 4.62)",
+            "('MJ Henry', 8, 14, 4.73)",
+            "('MJ Santner', 9, 6, 4.82)",
+            "('LE Plunkett', 7, 11, 4.86)"
+        ],
+        "question_english": "What are the best economies for bowlers in the 2019 ODI World Cup (minimum 50 overs bowled)? Show top 5 along with number of matches and wickets.",
+        "question_hindi": "2019 ODI विश्व कप में किन गेंदबाजों का इकॉनमी रेट सबसे बेहतर था (न्यूनतम 50 ओवर गेंदबाजी की हो)? शीर्ष 5 दिखाइए, इसमें खेले गए मैचों की संख्या और लिए गए विकेटों की संख्या के साथ।",
+        "question_punjabi": "2019 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਗੇਂਦਬਾਜ਼ਾਂ (ਘੱਟੋ-ਘੱਟ 50 ਓਵਰ ਸੁੱਟਣ ਵਾਲੇ) ਦੀਆਂ ਸਭ ਤੋਂ ਵਧੀਆ ਇਕੋਨਮੀਆਂ ਕੀ ਸਨ? ਮੈਚਾਂ ਅਤੇ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਸਮੇਤ ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "2019 ODI ప్రపంచకప్‌లో బౌలర్లకు (కనీసం 50 ఓవర్లు వేసిన వారు) ఉత్తమ ఎకానమీలు ఏవి? మ్యాచ్‌లు మరియు వికెట్ల సంఖ్యతో పాటు టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Matches", "Wickets", "Economy"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-news/128544/world-cup-head-to-head-india-vs-australia-cricbuzzcom",
+        "question": "What is the head-to-head record between India and Australia in ODI World Cup matches?",
+        "query": "SELECT COUNT(*) AS total_matches, SUM(CASE WHEN match_winner = 'India' THEN 1 ELSE 0 END) AS india_wins, SUM(CASE WHEN match_winner = 'Australia' THEN 1 ELSE 0 END) AS aus_wins, SUM(CASE WHEN match_winner IS NULL THEN 1 ELSE 0 END) AS no_result FROM Matches WHERE (team1 = 'India' AND team2 = 'Australia') OR (team1 = 'Australia' AND team2 = 'India');",
+        "difficulty": "Easy",
+        "answer": [
+            "(7, 3, 4, 0)"
+        ],
+        "question_english": "What is the head-to-head record between India and Australia in ODI World Cup matches?",
+        "question_hindi": "ODI विश्व कप मैचों में भारत और ऑस्ट्रेलिया के बीच हेड-टू-हेड रिकॉर्ड क्या है?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਮੈਚਾਂ ਵਿੱਚ ਭਾਰਤ ਅਤੇ ਆਸਟ੍ਰੇਲੀਆ ਵਿਚਕਾਰ ਹੈੱਡ-ਟੂ-ਹੈੱਡ ਰਿਕਾਰਡ ਕੀ ਹੈ?",
+        "question_telugu": "ODI ప్రపంచకప్ మ్యాచ్‌లలో భారత్ మరియు ఆస్ట్రేలియా మధ్య హెడ్-టు-హెడ్ రికార్డ్ ఏమిటి?",
+        "column_names": ["Total Matches", "India Wins", "Australia Wins", "No Result"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/cricket-world-cup-fastest-fifties-1401377",
+        "question": "Who were the fastest half-centurions (fewest balls faced) in ODI World Cup history? Show top 5 innings.",
+        "query": "WITH ball_progress AS (SELECT D.striker_id, D.match_id, D.inning, M.season, D.delivery_id, SUM(D.runs_scored) OVER (PARTITION BY D.striker_id, D.match_id, D.inning ORDER BY D.delivery_id) AS cumulative_runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) OVER (PARTITION BY D.striker_id, D.match_id, D.inning ORDER BY D.delivery_id) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id), milestones AS (SELECT striker_id, match_id, inning, season, MIN(balls_faced) AS balls_to_fifty FROM ball_progress WHERE cumulative_runs >= 50 GROUP BY striker_id, match_id, inning, season), innings AS (SELECT striker_id, match_id, inning, SUM(runs_scored) AS runs FROM Deliveries GROUP BY striker_id, match_id, inning) SELECT P.player_name AS player, M.season, I.runs, MS.balls_to_fifty FROM milestones MS JOIN innings I ON MS.striker_id=I.striker_id AND MS.match_id=I.match_id AND MS.inning=I.inning JOIN Players P ON MS.striker_id=P.player_id JOIN Matches M ON MS.match_id=M.match_id ORDER BY balls_to_fifty ASC, runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('BB McCullum', '2014/15', 77, 18)",
+            "('BB McCullum', '2006/07', 52, 20)",
+            "('AD Mathews', '2014/15', 51, 20)",
+            "('BB McCullum', '2014/15', 50, 21)",
+            "('MV Boucher', '2006/07', 75, 21)"
+        ],
+        "question_english": "Who were the fastest half-centurions (fewest balls faced) in ODI World Cup history? Show top 5 innings.",
+        "question_hindi": "ODI विश्व कप इतिहास में सबसे तेज़ अर्धशतक (सबसे कम गेंदों में) लगाने वाले बल्लेबाज कौन हैं? शीर्ष 5 पारियाँ दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼ ਅਰਧ ਸੈਂਕੜੇ (ਸਭ ਤੋਂ ਘੱਟ ਗੇਂਦਾਂ ਵਿੱਚ) ਲਗਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਕੌਣ ਸਨ? ਟਾਪ 5 ਪਾਰੀਆਂ ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో అత్యంత వేగవంతమైన అర్ధసెంచరీలు (అతి తక్కువ బంతుల్లో) సాధించిన బ్యాట్స్‌మెన్ ఎవరు? టాప్ 5 ఇన్నింగ్స్‌లను చూపించండి.",
+        "column_names": [
+            "Player",
+            "Season",
+            "Runs",
+            "Balls to Fifty"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/cricket-world-cup-fastest-hundreds-1401412",
+        "question": "Who scored the fastest centuries (fewest balls) in ODI World Cup history? Show top 5 innings.",
+        "query": "WITH ball_progress AS (SELECT D.striker_id, D.match_id, D.inning, M.season, D.delivery_id, SUM(D.runs_scored) OVER (PARTITION BY D.striker_id, D.match_id, D.inning ORDER BY D.delivery_id) AS cumulative_runs, SUM(CASE WHEN D.wides = 0 THEN 1 ELSE 0 END) OVER (PARTITION BY D.striker_id, D.match_id, D.inning ORDER BY D.delivery_id) AS balls_faced FROM Deliveries D JOIN Matches M ON D.match_id=M.match_id), milestones AS (SELECT striker_id, match_id, inning, season, MIN(balls_faced) AS balls_to_hundred FROM ball_progress WHERE cumulative_runs>=100 GROUP BY striker_id, match_id, inning, season), innings AS (SELECT striker_id, match_id, inning, SUM(runs_scored) AS runs FROM Deliveries GROUP BY striker_id, match_id, inning) SELECT P.player_name AS player, M.season, I.runs, MS.balls_to_hundred FROM milestones MS JOIN innings I ON MS.striker_id=I.striker_id AND MS.match_id=I.match_id AND MS.inning=I.inning JOIN Players P ON MS.striker_id=P.player_id JOIN Matches M ON MS.match_id=M.match_id ORDER BY balls_to_hundred ASC, runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('GJ Maxwell', '2023/24', 106, 40)",
+            "('AK Markram', '2023/24', 106, 49)",
+            "('KJ O'Brien', '2010/11', 113, 50)",
+            "('GJ Maxwell', '2014/15', 102, 51)",
+            "('AB de Villiers', '2014/15', 162, 52)"
+        ],
+        "question_english": "Who scored the fastest centuries (fewest balls) in ODI World Cup history? Show top 5 innings.",
+        "question_hindi": "ODI विश्व कप इतिहास में सबसे तेज़ शतक (सबसे कम गेंदों में) किसने बनाए हैं? शीर्ष 5 पारियाँ दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼ ਸੈਂਕੜੇ (ਸਭ ਤੋਂ ਘੱਟ ਗੇਂਦਾਂ ਵਿੱਚ) ਕਿਸਨੇ ਲਗਾਏ? ਟਾਪ 5 ਪਾਰੀਆਂ ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో అత్యంత వేగవంతమైన సెంచరీలు (అతి తక్కువ బంతుల్లో) సాధించినవారు ఎవరు? టాప్ 5 ఇన్నింగ్స్‌లను చూపించండి.",
+        "column_names": [
+            "Player",
+            "Season",
+            "Runs",
+            "Balls to Hundred"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/individual-most-matches-career/world-cup-12",
+        "question": "Who are the top 5 players by most matches played in ODI World Cup history across all editions?",
+        "query": "SELECT P.player_name AS player, COUNT(DISTINCT PM.match_id) AS matches_played FROM PlayerInMatch PM JOIN Players P ON PM.player_id = P.player_id GROUP BY PM.player_id, P.player_name ORDER BY matches_played DESC, player ASC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('KC Sangakkara', 35)",
+            "('Mushfiqur Rahim', 35)",
+            "('V Kohli', 35)",
+            "('DPMD Jayawardene', 34)",
+            "('BB McCullum', 33)"
+        ],
+        "question_english": "Who are the top 5 players by most matches played in ODI World Cup history across all editions?",
+        "question_hindi": "ODI विश्व कप इतिहास के सभी संस्करणों में सबसे अधिक मैच खेलने वाले 5 खिलाड़ी कौन हैं?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਾਰੇ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਮੈਚ ਖੇਡਣ ਵਾਲੇ ਟਾਪ 5 ਖਿਡਾਰੀ ਕੌਣ ਹਨ?",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో అన్ని ఎడిషన్లలో అత్యధిక మ్యాచ్‌లు ఆడిన టాప్ 5 ఆటగాళ్ళు ఎవరు?",
+        "column_names": [
+            "Player",
+            "Matches Played"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://khelnow.com/cricket/cricketers-played-5-or-more-cricket-world-cups",
+        "question": "Which players have appeared in the most ODI World Cup editions in the 2000s? Show top 5 with total matches.",
+        "query": "SELECT P.player_name AS player, COUNT(DISTINCT M.season) AS editions, COUNT(DISTINCT PM.match_id) AS total_matches FROM PlayerInMatch PM JOIN Matches M ON PM.match_id = M.match_id JOIN Players P ON PM.player_id = P.player_id GROUP BY PM.player_id, P.player_name ORDER BY editions DESC, total_matches DESC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('Mushfiqur Rahim', 5, 35)",
+            "('CH Gayle', 5, 33)",
+            "('Shakib Al Hasan', 5, 33)",
+            "('KC Sangakkara', 4, 35)",
+            "('V Kohli', 4, 35)"
+        ],
+        "question_english": "Which players have appeared in the most ODI World Cup editions in the 2000s? Show top 5 with total matches.",
+        "question_hindi": "2000 के शतक में सबसे अधिक ODI विश्व कप संस्करणों में खेलने वाले खिलाड़ी कौन हैं? कुल खेले गए मैचों के साथ शीर्ष 5 खिलाड़ियों को दिखाइए।",
+        "question_punjabi": "2000ਵਿਆਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਖੇਡਣ ਵਾਲੇ ਖਿਡਾਰੀ ਕੌਣ ਹਨ? ਕੁੱਲ ਮੈਚਾਂ ਸਮੇਤ ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "2000వ దశకంలో అత్యధిక ODI ప్రపంచకప్ ఎడిషన్లలో ఆడిన ఆటగాళ్ళు ఎవరు? మొత్తం మ్యాచ్‌లతో పాటు టాప్ 5 చూపించండి.",
+        "column_names": [
+            "Player",
+            "Editions",
+            "Total Matches"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/batting-most-sixes-career/world-cup-12",
+        "question": "Who are the top 5 batters by most sixes hit across all editions of the ODI World Cup?",
+        "query": "SELECT P.player_name AS player, COUNT(*) AS sixes FROM Deliveries D JOIN Players P ON D.striker_id = P.player_id WHERE D.runs_scored = 6 GROUP BY D.striker_id,P.player_name ORDER BY sixes DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('RG Sharma', 49)",
+            "('CH Gayle', 47)",
+            "('AB de Villiers', 37)",
+            "('DA Warner', 36)",
+            "('DA Miller', 34)"
+        ],
+        "question_english": "Who are the top 5 batters by most sixes hit across all editions of the ODI World Cup?",
+        "question_hindi": "ODI विश्व कप के सभी संस्करणों में सबसे अधिक छक्के लगाने वाले शीर्ष 5 बल्लेबाज कौन हैं?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਸਾਰੇ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਛੱਕੇ ਲਗਾਉਣ ਵਾਲੇ ਟਾਪ 5 ਬੱਲੇਬਾਜ਼ ਕੌਣ ਹਨ?",
+        "question_telugu": "ODI ప్రపంచకప్ అన్ని ఎడిషన్లలో అత్యధిక సిక్సర్లు కొట్టిన టాప్ 5 బ్యాట్స్‌మెన్ ఎవరు?",
+        "column_names": ["Player", "Sixes"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/bowling-most-wickets-career/world-cup-12",
+        "question": "Who took the most wickets in a single ODI World Cup edition? Show the top 5.",
+        "query": "SELECT P.player_name AS player, M.season, COUNT(*) AS wickets FROM Deliveries D JOIN Matches M ON D.match_id=M.match_id JOIN Players P ON D.bowler_id=P.player_id WHERE D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') GROUP BY D.bowler_id, M.season,P.player_name ORDER BY wickets DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('MA Starc', '2019', 26)",
+            "('GD McGrath', '2006/07', 26)",
+            "('Mohammed Shami', '2023/24', 24)",
+            "('M Muralitharan', '2006/07', 23)",
+            "('SW Tait', '2006/07', 23)"
+        ],
+        "question_english": "Who took the most wickets in a single ODI World Cup edition? Show the top 5.",
+        "question_hindi": "ODI विश्व कप के किसी एक संस्करण में सबसे अधिक विकेट किस गेंदबाज ने लिए? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ਇੱਕ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਟਾਂ ਕਿਸਨੇ ਲਈਆਂ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ఒకే ODI ప్రపంచకప్ ఎడిషన్‌లో అత్యధిక వికెట్లు తీసుకున్నది ఎవరు? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Season", "Wickets"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/batting-most-runs-innings/world-cup-12",
+        "question": "What are the highest individual innings scores in ODI World Cup history? Show the top 5.",
+        "query": "WITH innings AS (SELECT D.striker_id, D.match_id, D.inning, M.season, SUM(D.runs_scored) AS runs FROM Deliveries D JOIN Matches M ON D.match_id=M.match_id GROUP BY D.striker_id, D.match_id, D.inning) SELECT P.player_name AS player, I.season, I.runs FROM innings I JOIN Players P ON I.striker_id=P.player_id ORDER BY I.runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('MJ Guptill', '2014/15', 237)",
+            "('CH Gayle', '2014/15', 215)",
+            "('MR Marsh', '2023/24', 177)",
+            "('V Sehwag', '2010/11', 175)",
+            "('Q de Kock', '2023/24', 174)"
+        ],
+        "question_english": "What are the highest individual innings scores in ODI World Cup history? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में किसी एक पारी में सबसे अधिक व्यक्तिगत रन बनाने वाले बल्लेबाज कौन हैं? शीर्ष 5 पारियाँ दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਅਕਤੀਗਤ ਪਾਰੀ ਸਕੋਰ ਕੀ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో అత్యధిక వ్యక్తిగత ఇన్నింగ్స్ స్కోర్లు ఏవి? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Season", "Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/bowling-best-figures-innings/world-cup-12",
+        "question": "What are the best bowling figures in a single innings in ODI World Cup history? Show the top 5 including player, season, wickets and runs conceded.",
+        "query": "WITH bowling AS (SELECT D.bowler_id, D.match_id, M.season, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') THEN 1 ELSE 0 END) AS wkts, SUM(D.runs_scored + D.wides + D.noballs) AS runs_conceded FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.bowler_id, D.match_id) SELECT P.player_name AS player, B.season, B.wkts, B.runs_conceded FROM bowling B JOIN Players P ON B.bowler_id = P.player_id ORDER BY B.wkts DESC, B.runs_conceded ASC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('GD McGrath', '2002/03', 7, 15)",
+            "('AJ Bichel', '2002/03', 7, 20)",
+            "('TG Southee', '2014/15', 7, 33)",
+            "('Mohammed Shami', '2023/24', 7, 57)",
+            "('A Nehra', '2002/03', 6, 23)"
+        ],
+        "question_english": "What are the best bowling figures in a single innings in ODI World Cup history? Show the top 5 including player, season, wickets and runs conceded.",
+        "question_hindi": "ODI विश्व कप इतिहास में किसी एक पारी के बेस्ट बॉलिंग फिगर्स कौन से हैं? शीर्ष 5 दिखाइए (प्लेयर्स, सीजनएम विकेट्स और रन्स)।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਗੇਂਦਬਾਜ਼ੀ ਅੰਕੜੇ ਕੀ ਹਨ? ਖਿਡਾਰੀ, ਸੀਜ਼ਨ, ਵਿਕਟਾਂ ਅਤੇ ਦਿੱਤੀਆਂ ਦੌੜਾਂ ਸਮੇਤ ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో ఒకే ఇన్నింగ్స్‌లో అత్యుత్తమ బౌలింగ్ గణాంకాలు ఏవి? ఆటగాడు, సీజన్, వికెట్లు మరియు ఇచ్చిన పరుగులతో సహా టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Season", "Wickets", "Runs Conceded"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/fielding-most-catches-career/world-cup-12",
+        "question": "Who are the top 5 fielders, including wicketkeepers, by most catches taken across all ODI World Cup editions?",
+        "query": "SELECT P.player_name AS player, COUNT(*) AS catches FROM FielderDismissals FD JOIN Deliveries D ON FD.delivery_id = D.delivery_id JOIN Players P ON FD.fielder_id = P.player_id WHERE D.wicket_type IN ('caught','caught and bowled') GROUP BY FD.fielder_id, P.player_name ORDER BY catches DESC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('KC Sangakkara', 40)",
+            "('MS Dhoni', 34)",
+            "('AC Gilchrist', 33)",
+            "('BB McCullum', 32)",
+            "('Q de Kock', 31)"
+        ],
+        "question_english": "Who are the top 5 fielders, including wicketkeepers, by most catches taken across all ODI World Cup editions?",
+        "question_hindi": "ODI विश्व कप के सभी संस्करणों में सबसे अधिक कैच लेने वाले शीर्ष 5 फ़ील्डर्स (विकेटकीपर सहित) कौन हैं?",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਵਿਕਟਕੀਪਰਾਂ ਸਮੇਤ ਸਭ ਤੋਂ ਵੱਧ ਕੈਚ ਲੈਣ ਵਾਲੇ ਟਾਪ 5 ਫੀਲਡਰ ਕੌਣ ਹਨ?",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో వికెట్ కీపర్లతో సహా అత్యధిక క్యాచ్‌లు పట్టిన టాప్ 5 ఫీల్డర్లు ఎవరు?",
+        "column_names": ["Player", "Catches"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/team-results-summary/world-cup-12",
+        "question": "Which teams have the best win percentage in ODI World Cup history among teams that have played at least 20 matches? Show the top 5.",
+        "query": "WITH team_matches AS (SELECT team1 AS team, match_winner FROM Matches UNION ALL SELECT team2 AS team, match_winner FROM Matches) SELECT team, COUNT(*) AS matches, SUM(CASE WHEN match_winner = team THEN 1 ELSE 0 END) AS wins, ROUND(SUM(CASE WHEN match_winner = team THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS win_pct FROM team_matches GROUP BY team HAVING COUNT(*) >= 20 ORDER BY win_pct DESC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('Australia', 54, 45, 83.33)",
+            "('India', 49, 39, 79.59)",
+            "('New Zealand', 52, 33, 63.46)",
+            "('South Africa', 48, 27, 56.25)",
+            "('Pakistan', 39, 21, 53.85)"
+        ],
+        "question_english": "Which teams have the best win percentage in ODI World Cup history among teams that have played at least 20 matches? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में कम से कम 20 मैच खेलने वाली टीमों में सबसे बेहतर जीत प्रतिशत किसका है? शीर्ष 5 टीमें दिखाइए।",
+        "question_punjabi": "ਘੱਟੋ-ਘੱਟ 20 ਮੈਚ ਖੇਡਣ ਵਾਲੀਆਂ ਟੀਮਾਂ ਵਿੱਚੋਂ ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਜਿੱਤ ਪ੍ਰਤੀਸ਼ਤ ਕਿਹੜੀਆਂ ਟੀਮਾਂ ਦਾ ਹੈ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "కనీసం 20 మ్యాచ్‌లు ఆడిన జట్లలో ODI ప్రపంచకప్ చరిత్రలో అత్యుత్తమ గెలుపు శాతం ఏ జట్లకు ఉంది? టాప్ 5 చూపించండి.",
+        "column_names": ["Team", "Matches", "Wins", "Win Pct"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/batting-most-hundreds-career/world-cup-12",
+        "question": "Who are the top 5 batters by most centuries scored across all ODI World Cup editions?",
+        "query": "WITH innings AS (SELECT D.striker_id, D.match_id, D.inning, SUM(D.runs_scored) AS runs FROM Deliveries D GROUP BY D.striker_id, D.match_id, D.inning) SELECT P.player_name AS player, COUNT(*) AS hundreds FROM innings I JOIN Players P ON I.striker_id = P.player_id WHERE I.runs >= 100 GROUP BY I.striker_id,P.player_name ORDER BY hundreds DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('RG Sharma', 6)",
+            "('DA Warner', 5)",
+            "('V Kohli', 5)",
+            "('KC Sangakkara', 5)",
+            "('AB de Villiers', 4)"
+        ],
+        "question_english": "Who are the top 5 batters by most centuries scored across all ODI World Cup editions?",
+        "question_hindi": "ODI विश्व कप के सभी संस्करणों में सबसे अधिक शतक लगाने वाले शीर्ष 5 बल्लेबाज कौन हैं?",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਸੈਂਕੜੇ ਲਗਾਉਣ ਵਾਲੇ ਟਾਪ 5 ਬੱਲੇਬਾਜ਼ ਕੌਣ ਹਨ?",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో అత్యధిక సెంచరీలు సాధించిన టాప్ 5 బ్యాట్స్‌మెన్ ఎవరు?",
+        "column_names": ["Player", "Hundreds"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricbuzz.com/cricket-news/128575/the-most-run-filled-world-cup-ever-ft-just-one-last-over-finish",
+        "question": "Does winning the toss and choosing to bat vs field affect a team's win rate in ODI World Cup matches?",
+        "query": "SELECT toss_decision, COUNT(*) AS matches, SUM(CASE WHEN toss_winner = match_winner THEN 1 ELSE 0 END) AS toss_winner_won, ROUND(SUM(CASE WHEN toss_winner = match_winner THEN 1 ELSE 0 END)*100.0/COUNT(*),2) AS win_pct FROM Matches WHERE match_winner IS NOT NULL GROUP BY toss_decision;",
+        "difficulty": "Easy",
+        "answer": [
+            "('bat', 133, 71, 53.38)",
+            "('field', 124, 52, 41.94)"
+        ],
+        "question_english": "Does winning the toss and choosing to bat vs field affect a team's win rate in ODI World Cup matches?",
+        "question_hindi": "क्या टॉस जीतकर पहले बल्लेबाजी या पहले गेंदबाजी करने का निर्णय ODI विश्व कप मैचों में किसी टीम की जीत की संभावना को प्रभावित करता है?",
+        "question_punjabi": "ਕੀ ਟਾਸ ਜਿੱਤ ਕੇ ਪਹਿਲਾਂ ਬੱਲੇਬਾਜ਼ੀ ਜਾਂ ਗੇਂਦਬਾਜ਼ੀ ਚੁਣਨਾ ODI ਵਿਸ਼ਵ ਕੱਪ ਮੈਚਾਂ ਵਿੱਚ ਕਿਸੇ ਟੀਮ ਦੀ ਜਿੱਤ ਦਰ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਦਾ ਹੈ?",
+        "question_telugu": "టాస్ గెలిచి బ్యాటింగ్ లేదా బౌలింగ్ ఎంచుకోవడం ODI ప్రపంచకప్ మ్యాచ్‌లలో జట్టు గెలుపు రేటుపై ప్రభావం చూపుతుందా?",
+        "column_names": ["Toss Decision", "Matches", "Toss Winner Won", "Win Pct"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/team-highest-innings-totals/world-cup-12",
+        "question": "What are the highest team totals in a single innings in ODI World Cup history? Show the top 5.",
+        "query": "WITH team_innings AS (SELECT D.match_id, D.inning, D.batting_team, M.season, SUM(D.runs_scored + D.extra_runs) AS total_runs FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.match_id, D.inning, D.batting_team, M.season) SELECT batting_team, season, total_runs FROM team_innings ORDER BY total_runs DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('South Africa', '2023/24', 428)",
+            "('India', '2006/07', 413)",
+            "('South Africa', '2014/15', 411)",
+            "('India', '2023/24', 410)",
+            "('South Africa', '2014/15', 408)"
+        ],
+        "question_english": "What are the highest team totals in a single innings in ODI World Cup history? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में किसी एक पारी में टीम द्वारा बनाए गए सबसे बड़े स्कोर कौन से हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਇੱਕ ਪਾਰੀ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਟੀਮ ਸਕੋਰ ਕੀ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో ఒకే ఇన్నింగ్స్‌లో అత్యధిక జట్టు స్కోర్లు ఏవి? టాప్ 5 చూపించండి.",
+        "column_names": ["Team", "Season", "Total Runs"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/team-lowest-innings-totals/world-cup-12",
+        "question": "What are the lowest completed (all-out) team innings totals in ODI World Cup history? Show the top 5.",
+        "query": "WITH team_innings AS (SELECT D.match_id, D.inning, D.batting_team, M.season, SUM(D.runs_scored + D.extra_runs) AS total_runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type != 'retired hurt' THEN 1 ELSE 0 END) AS wickets_lost FROM Deliveries D JOIN Matches M ON D.match_id = M.match_id GROUP BY D.match_id, D.inning, D.batting_team, M.season) SELECT batting_team, season, total_runs, wickets_lost FROM team_innings WHERE wickets_lost = 10 ORDER BY total_runs ASC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('Canada', '2002/03', 36, 10)",
+            "('Namibia', '2002/03', 45, 10)",
+            "('Sri Lanka', '2023/24', 55, 10)",
+            "('Bangladesh', '2010/11', 58, 10)",
+            "('Kenya', '2010/11', 69, 10)"
+        ],
+        "question_english": "What are the lowest completed (all-out) team innings totals in ODI World Cup history? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में टीम द्वारा बनाए गए सबसे कम पूर्ण (ऑल-आउट) स्कोर कौन-से हैं? शीर्ष 5 पारियाँ दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਪੂਰੀਆਂ ਹੋਈਆਂ (ਆਲ-ਆਊਟ) ਸਭ ਤੋਂ ਘੱਟ ਟੀਮ ਪਾਰੀ ਸਕੋਰ ਕੀ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో పూర్తయిన (ఆల్-అవుట్) అతి తక్కువ జట్టు ఇన్నింగ్స్ స్కోర్లు ఏవి? టాప్ 5 చూపించండి.",
+        "column_names": ["Team", "Season", "Total Runs", "Wickets Lost"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/batting-most-ducks-career/world-cup-12",
+        "question": "Which batters have been dismissed for a duck the most times across all ODI World Cup editions? Show the top 5.",
+        "query": "WITH innings AS (SELECT D.striker_id, D.match_id, D.inning, SUM(D.runs_scored) AS runs, MAX(CASE WHEN D.player_out_id = D.striker_id AND D.wicket_type NOT IN ('retired hurt') THEN 1 ELSE 0 END) AS dismissed FROM Deliveries D GROUP BY D.striker_id, D.match_id, D.inning) SELECT P.player_name AS player, COUNT(*) AS ducks FROM innings I JOIN Players P ON I.striker_id = P.player_id WHERE I.runs = 0 AND I.dismissed = 1 GROUP BY I.striker_id, P.player_name ORDER BY ducks DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('EJG Morgan', 4)",
+            "('WK McCallan', 4)",
+            "('AB de Villiers', 4)",
+            "('WTS Porterfield', 3)",
+            "('AC Botha', 3)"
+        ],
+        "question_english": "Which batters have been dismissed for a duck the most times across all ODI World Cup editions? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में सबसे अधिक बार शून्य (डक) पर आउट होने वाले बल्लेबाज कौन हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਡੱਕ (ਸਿਫ਼ਰ) 'ਤੇ ਆਊਟ ਹੋਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ ਕੌਣ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో అత్యధిక సార్లు డక్ (సున్నా) కు అవుటైన బ్యాట్స్‌మెన్ ఎవరు? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Ducks"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/bowling-best-career-bowling-average/world-cup-12",
+        "question": "Who has the best career bowling average in ODI World Cup history among bowlers with at least 20 wickets? Show the top 5.",
+        "query": "WITH bowler_stats AS (SELECT D.bowler_id, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') THEN 1 ELSE 0 END) AS wkts, SUM(D.runs_scored + D.wides + D.noballs) AS runs_conceded FROM Deliveries D GROUP BY D.bowler_id) SELECT P.player_name AS player, B.wkts, B.runs_conceded, ROUND(B.runs_conceded*1.0/B.wkts,2) AS avg FROM bowler_stats B JOIN Players P ON B.bowler_id = P.player_id WHERE B.wkts >= 20 ORDER BY avg ASC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Mohammed Shami', 51, 704, 13.80)",
+            "('GD McGrath', 47, 657, 13.98)",
+            "('SE Bond', 30, 518, 17.27)",
+            "('B Lee', 35, 629, 17.97)",
+            "('M Muralitharan', 52, 936, 18.00)"
+        ],
+        "question_english": "Who has the best career bowling average in ODI World Cup history among bowlers with at least 20 wickets? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में कम से कम 20 विकेट लेने वाले गेंदबाजों में सबसे अच्छा करियर गेंदबाजी औसत किसका है? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ਘੱਟੋ-ਘੱਟ 20 ਵਿਕਟਾਂ ਲੈਣ ਵਾਲੇ ਗੇਂਦਬਾਜ਼ਾਂ ਵਿੱਚੋਂ ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਕਰੀਅਰ ਗੇਂਦਬਾਜ਼ੀ ਔਸਤ ਕਿਸ ਦੀ ਹੈ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "కనీసం 20 వికెట్లు తీసుకున్న బౌలర్లలో ODI ప్రపంచకప్ చరిత్రలో ఉత్తమ కెరీర్ బౌలింగ్ సగటు ఎవరిది? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Wickets", "Runs Conceded", "Avg"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.howstat.com/cricket/statistics/WorldCup/MiscManOfMatch.asp",
+        "question": "Who has won the most Player of the Match awards across all ODI World Cup editions in the 2000s? Show the top 5.",
+        "query": "SELECT P.player_name AS player, COUNT(*) AS potm_awards FROM Matches M JOIN Players P ON M.player_of_match_id = P.player_id GROUP BY M.player_of_match_id,P.player_name ORDER BY potm_awards DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('RG Sharma', 6)",
+            "('AB de Villiers', 5)",
+            "('GD McGrath', 4)",
+            "('SR Tendulkar', 4)",
+            "('V Kohli', 4)"
+        ],
+        "question_english": "Who has won the most Player of the Match awards across all ODI World Cup editions in the 2000s? Show the top 5.",
+        "question_hindi": "2000 के शतक में ODI विश्व कप के सभी संस्करणों में सबसे अधिक 'प्लेयर ऑफ़ द मैच' पुरस्कार किसने जीते हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "2000ਵਿਆਂ ਵਿੱਚ ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਪਲੇਅਰ ਆਫ਼ ਦ ਮੈਚ ਅਵਾਰਡ ਕਿਸਨੇ ਜਿੱਤੇ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "2000వ దశకంలో అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో అత్యధిక ప్లేయర్ ఆఫ్ ద మ్యాచ్ అవార్డులు గెలిచింది ఎవరు? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "POTM Awards"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/keeping-most-dismissals-career/world-cup-12",
+        "question": "Which wicketkeepers have the most stumpings across all ODI World Cup editions? Show the top 5.",
+        "query": "SELECT P.player_name AS player, COUNT(*) AS stumpings FROM FielderDismissals FD JOIN Deliveries D ON FD.delivery_id = D.delivery_id JOIN Players P ON FD.fielder_id = P.player_id WHERE D.wicket_type = 'stumped' GROUP BY FD.fielder_id, P.player_name ORDER BY stumpings DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('KC Sangakkara', 13)",
+            "('MS Dhoni', 7)",
+            "('Kamran Akmal', 6)",
+            "('Mushfiqur Rahim', 6)",
+            "('AC Gilchrist', 5)"
+        ],
+        "question_english": "Which wicketkeepers have the most stumpings across all ODI World Cup editions? Show the top 5.",
+        "question_hindi": "ODI विश्व कप के सभी संस्करणों में सबसे अधिक स्टंपिंग करने वाले विकेटकीपर कौन हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਸਟੰਪਿੰਗਾਂ ਕਰਨ ਵਾਲੇ ਵਿਕਟਕੀਪਰ ਕੌਣ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో అత్యధిక స్టంపింగ్‌లు చేసిన వికెట్ కీపర్లు ఎవరు? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Stumpings"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/headtohead/team-match-results/india-pakistan-6vs7/one-day-internationals-2",
+        "question": "What is the head-to-head record between India and Pakistan in ODI World Cup matches?",
+        "query": "SELECT COUNT(*) AS total_matches, SUM(CASE WHEN match_winner='India' THEN 1 ELSE 0 END) AS india_wins, SUM(CASE WHEN match_winner='Pakistan' THEN 1 ELSE 0 END) AS pakistan_wins, SUM(CASE WHEN match_winner IS NULL THEN 1 ELSE 0 END) AS no_result FROM Matches WHERE (team1='India' AND team2='Pakistan') OR (team1='Pakistan' AND team2='India');",
+        "difficulty": "Easy",
+        "answer": [
+            "(5, 5, 0, 0)"
+        ],
+        "question_english": "What is the head-to-head record between India and Pakistan in ODI World Cup matches?",
+        "question_hindi": "ODI विश्व कप मैचों में भारत और पाकिस्तान के बीच हेड-टू-हेड रिकॉर्ड क्या है?",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਮੈਚਾਂ ਵਿੱਚ ਭਾਰਤ ਅਤੇ ਪਾਕਿਸਤਾਨ ਵਿਚਕਾਰ ਹੈੱਡ-ਟੂ-ਹੈੱਡ ਰਿਕਾਰਡ ਕੀ ਹੈ?",
+        "question_telugu": "ODI ప్రపంచకప్ మ్యాచ్‌లలో భారత్ మరియు పాకిస్తాన్ మధ్య హెడ్-టు-హెడ్ రికార్డ్ ఏమిటి?",
+        "column_names": ["Total Matches", "India Wins", "Pakistan Wins", "No Result"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/batting-most-fours-career/world-cup-12",
+        "question": "Who are the top 5 batters by most fours hit across all ODI World Cup editions?",
+        "query": "SELECT P.player_name AS player, COUNT(*) AS fours FROM Deliveries D JOIN Players P ON D.striker_id = P.player_id WHERE D.runs_scored = 4 GROUP BY D.striker_id, P.player_name ORDER BY fours DESC LIMIT 5;",
+        "difficulty": "Easy",
+        "answer": [
+            "('RG Sharma', 150)",
+            "('V Kohli', 148)",
+            "('KC Sangakkara', 146)",
+            "('SR Tendulkar', 131)",
+            "('DA Warner', 124)"
+        ],
+        "question_english": "Who are the top 5 batters by most fours hit across all ODI World Cup editions?",
+        "question_hindi": "ODI विश्व कप के सभी संस्करणों में सबसे अधिक चौके लगाने वाले शीर्ष 5 बल्लेबाज कौन हैं?",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਚੌਕੇ ਲਗਾਉਣ ਵਾਲੇ ਟਾਪ 5 ਬੱਲੇਬਾਜ਼ ਕੌਣ ਹਨ?",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో అత్యధిక ఫోర్లు కొట్టిన టాప్ 5 బ్యాట్స్‌మెన్ ఎవరు?",
+        "column_names": ["Player", "Fours"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/bowling-most-maidens-career/world-cup-12",
+        "question": "Which bowlers have bowled the most maiden overs across all ODI World Cup editions? Show the top 5.",
+        "query": "WITH overs AS (SELECT D.bowler_id, D.match_id, D.inning, D.over_number, SUM(D.runs_scored + D.wides + D.noballs) AS runs_in_over, COUNT(CASE WHEN D.wides=0 AND D.noballs=0 THEN 1 END) AS legal_balls FROM Deliveries D GROUP BY D.bowler_id, D.match_id, D.inning, D.over_number) SELECT P.player_name AS player, COUNT(*) AS maidens FROM overs O JOIN Players P ON O.bowler_id = P.player_id WHERE O.runs_in_over = 0 AND O.legal_balls = 6 GROUP BY O.bowler_id, P.player_name ORDER BY maidens DESC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('WPUJC Vaas', 27)",
+            "('GD McGrath', 22)",
+            "('SM Pollock', 22)",
+            "('TA Boult', 21)",
+            "('SE Bond', 21)"
+        ],
+        "question_english": "Which bowlers have bowled the most maiden overs across all ODI World Cup editions? Show the top 5.",
+        "question_hindi": "ODI विश्व कप के सभी संस्करणों में सबसे अधिक मेडन ओवर फेंकने वाले गेंदबाज कौन हैं? टॉप 5 दिखाइए।",
+        "question_punjabi": "ਸਾਰੇ ODI ਵਿਸ਼ਵ ਕੱਪ ਐਡੀਸ਼ਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਮੇਡਨ ਓਵਰ ਸੁੱਟਣ ਵਾਲੇ ਗੇਂਦਬਾਜ਼ ਕੌਣ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "అన్ని ODI ప్రపంచకప్ ఎడిషన్లలో అత్యధిక మెయిడెన్ ఓవర్లు వేసిన బౌలర్లు ఎవరు? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Maidens"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/most-player-of-the-match-awards-283470",
+        "question": "Who has won the most Player of the Match awards in ODI World Cup semi-finals and finals combined? Show the top 5.",
+        "query": "SELECT P.player_name AS player, COUNT(*) AS knockout_potm FROM Matches M JOIN Players P ON M.player_of_match_id = P.player_id WHERE M.stage IN ('Semi Final','Final') GROUP BY M.player_of_match_id, P.player_name ORDER BY knockout_potm DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('TM Head', 2)",
+            "('GD McGrath', 1)",
+            "('MJ Henry', 1)",
+            "('BA Stokes', 1)",
+            "('SR Tendulkar', 1)"
+        ],
+        "question_english": "Who has won the most Player of the Match awards in ODI World Cup semi-finals and finals combined? Show the top 5.",
+        "question_hindi": "ODI विश्व कप के सेमीफाइनल और फाइनल मैचों को मिलाकर सबसे अधिक 'प्लेयर ऑफ़ द मैच' पुरस्कार किसने जीते हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਸੈਮੀਫਾਈਨਲ ਅਤੇ ਫਾਈਨਲ ਨੂੰ ਮਿਲਾ ਕੇ ਸਭ ਤੋਂ ਵੱਧ ਪਲੇਅਰ ਆਫ਼ ਦ ਮੈਚ ਅਵਾਰਡ ਕਿਸਨੇ ਜਿੱਤੇ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ సెమీఫైనల్స్ మరియు ఫైనల్స్‌ను కలిపి అత్యధిక ప్లేయర్ ఆఫ్ ద మ్యాచ్ అవార్డులు గెలిచింది ఎవరు? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Knockout POTM"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/team-largest-margins/world-cup-12",
+        "question": "What are the biggest winning margins by runs in ODI World Cup history? Show the top 5.",
+        "query": "SELECT match_winner AS team, team1, team2, season, result_margin FROM Matches WHERE result_type = 'runs' ORDER BY result_margin DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Australia', 'Australia', 'Netherlands', '2023/24', 309)",
+            "('India', 'India', 'Sri Lanka', '2023/24', 302)",
+            "('India', 'Bermuda', 'India', '2006/07', 257)",
+            "('South Africa', 'South Africa', 'West Indies', '2014/15', 257)",
+            "('Australia', 'Australia', 'Namibia', '2002/03', 256)"
+        ],
+        "question_english": "What are the biggest winning margins by runs in ODI World Cup history? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में रनों के अंतर से सबसे बड़ी जीतें कौन सी हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਦੌੜਾਂ ਦੇ ਫ਼ਰਕ ਨਾਲ ਸਭ ਤੋਂ ਵੱਡੀਆਂ ਜਿੱਤਾਂ ਕੀ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "ODI ప్రపంచకప్ చరిత్రలో పరుగుల తేడాతో అతిపెద్ద విజయాలు ఏవి? టాప్ 5 చూపించండి.",
+        "column_names": ["Winning Team", "Team 1", "Team 2", "Season", "Result Margin"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/records/trophy/batting-highest-career-strike-rate/world-cup-12",
+        "question": "Who has the best career batting strike rate in ODI World Cup history among batters with at least 1000 runs? Show the top 5.",
+        "query": "WITH innings AS (SELECT D.striker_id, D.match_id, D.inning, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides=0 THEN 1 ELSE 0 END) AS balls FROM Deliveries D GROUP BY D.striker_id, D.match_id, D.inning) SELECT P.player_name AS player, SUM(I.runs) AS total_runs, SUM(I.balls) AS balls_faced, ROUND(SUM(I.runs)*100.0/SUM(I.balls),2) AS sr FROM innings I JOIN Players P ON I.striker_id = P.player_id GROUP BY I.striker_id,P.player_name HAVING SUM(I.runs) >= 1000 ORDER BY sr DESC LIMIT 5;",
+        "difficulty": "Hard",
+        "answer": [
+            "('AB de Villiers', 1207, 1029, 117.3)",
+            "('RG Sharma', 1443, 1399, 103.15)",
+            "('DA Warner', 1242, 1229, 101.06)",
+            "('TM Dilshan', 1112, 1195, 93.05)",
+            "('CH Gayle', 1060, 1141, 92.9)"
+        ],
+        "question_english": "Who has the best career batting strike rate in ODI World Cup history among batters with at least 1000 runs? Show the top 5.",
+        "question_hindi": "ODI विश्व कप इतिहास में कम से कम 1000 रन बनाने वाले बल्लेबाजों में सर्वश्रेष्ठ करियर स्ट्राइक रेट किसका है? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ਘੱਟੋ-ਘੱਟ 1000 ਦੌੜਾਂ ਬਣਾਉਣ ਵਾਲੇ ਬੱਲੇਬਾਜ਼ਾਂ ਵਿੱਚੋਂ ODI ਵਿਸ਼ਵ ਕੱਪ ਦੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਕਰੀਅਰ ਬੱਲੇਬਾਜ਼ੀ ਸਟ੍ਰਾਈਕ ਰੇਟ ਕਿਸ ਦਾ ਹੈ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "కనీసం 1000 పరుగులు చేసిన బ్యాట్స్‌మెన్‌లలో ODI ప్రపంచకప్ చరిత్రలో ఉత్తమ కెరీర్ బ్యాటింగ్ స్ట్రైక్ రేట్ ఎవరిది? టాప్ 5 చూపించండి.",
+        "column_names": ["Player", "Total Runs", "Balls Faced", "SR"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://en.wikipedia.org/wiki/List_of_Cricket_World_Cup_finals",
+        "question": "Which teams have appeared in the most ODI World Cup finals? Show the top 5.",
+        "query": "WITH finals AS (SELECT team1 AS team FROM Matches WHERE stage='Final' UNION ALL SELECT team2 AS team FROM Matches WHERE stage='Final') SELECT team, COUNT(*) AS finals_played FROM finals GROUP BY team ORDER BY finals_played DESC LIMIT 5;",
+        "difficulty": "Medium",
+        "answer": [
+            "('Australia', 4)",
+            "('India', 3)",
+            "('Sri Lanka', 2)",
+            "('New Zealand', 2)",
+            "('England', 1)"
+        ],
+        "question_english": "Which teams have appeared in the most ODI World Cup finals? Show the top 5.",
+        "question_hindi": "ODI विश्व कप के फाइनल में सबसे अधिक बार खेलने वाली टीमें कौन सी हैं? शीर्ष 5 दिखाइए।",
+        "question_punjabi": "ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ODI ਵਿਸ਼ਵ ਕੱਪ ਫਾਈਨਲਾਂ ਵਿੱਚ ਖੇਡਣ ਵਾਲੀਆਂ ਟੀਮਾਂ ਕਿਹੜੀਆਂ ਹਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+        "question_telugu": "అత్యధిక సార్లు ODI ప్రపంచకప్ ఫైనల్స్‌లో ఆడిన జట్లు ఏవి? టాప్ 5 చూపించండి.",
+        "column_names": ["Team", "Finals Played"]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2014-15-509587/new-zealand-vs-west-indies-4th-quarter-final-656489/match-report",
+        "question": "What were Trent Boult's bowling figures in the powerplay overs (overs 1-10) during New Zealand's 2015 World Cup quarter-final against West Indies?",
+        "query": "SELECT P.player_name AS player, M.team1, M.team2, M.season, M.match_date, COUNT(CASE WHEN D.wides=0 AND D.noballs=0 THEN 1 END) AS legal_balls, SUM(D.runs_scored + D.wides + D.noballs) AS runs_conceded, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN Players P ON D.bowler_id = P.player_id JOIN Matches M ON D.match_id = M.match_id WHERE P.player_name='TA Boult' AND M.season='2014/15' AND M.team1='New Zealand' AND M.team2='West Indies' AND D.over_number<=9 GROUP BY D.bowler_id, D.match_id, P.player_name, M.team1, M.team2, M.season, M.match_date;",
+        "difficulty": "Hard",
+        "answer": [
+        "('TA Boult', 'New Zealand', 'West Indies', '2014/15', '2015-03-21', 30, 18, 4)"
+        ],
+        "question_english": "What were Trent Boult's bowling figures in the powerplay overs (overs 1-10) during New Zealand's 2015 World Cup quarter-final against West Indies?",
+        "question_hindi": "2015 के ODI विश्व कप के क्वार्टर फाइनल में वेस्ट इंडीज़ के खिलाफ पावरप्ले ओवरों (ओवर 1-10) के दौरान Trent Boult के गेंदबाजी आंकड़े क्या थे? इसमें फेंकी गई वैध गेंदों की संख्या, दिए गए रन और लिए गए विकेटों की संख्या बताइए।",
+        "question_punjabi": "ਵੈਸਟਇੰਡੀਜ਼ ਖਿਲਾਫ਼ ਨਿਊਜ਼ੀਲੈਂਡ ਦੇ 2015 ਵਿਸ਼ਵ ਕੱਪ ਕੁਆਰਟਰ ਫਾਈਨਲ ਵਿੱਚ ਪਾਵਰਪਲੇ ਓਵਰਾਂ (ਓਵਰ 1-10) ਦੌਰਾਨ Trent Boult ਦੇ ਗੇਂਦਬਾਜ਼ੀ ਅੰਕੜੇ ਕੀ ਸਨ?",
+        "question_telugu": "వెస్టిండీస్‌తో న్యూజిలాండ్ 2015 ప్రపంచకప్ క్వార్టర్ ఫైనల్‌లో పవర్‌ప్లే ఓవర్లలో (ఓవర్లు 1-10) Trent Boult బౌలింగ్ గణాంకాలు ఏమిటి?",
+        "column_names": [
+        "Player",
+        "Team 1",
+        "Team 2",
+        "Season",
+        "Match Date",
+        "Legal Balls",
+        "Runs Conceded",
+        "Wickets"
+        ]
+    },
+    {
+        "db_id": "wc_db",
+        "context_url": "https://www.cricinfo.com/series/icc-world-cup-2002-03-61124/australia-vs-namibia-31st-match-65263/full-scorecard",
+        "question": "What were Glenn McGrath's bowling figures during his 7-wicket haul against Namibia in the 2003 ODI World Cup? Include number of legal balls thrown, runs conceded and wickets taken.",
+        "query": "SELECT M.team1, M.team2, M.season, M.match_date, COUNT(CASE WHEN D.wides=0 AND D.noballs=0 THEN 1 END) AS legal_balls, SUM(D.runs_scored + D.wides + D.noballs) AS runs_conceded, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type NOT IN ('run out','retired hurt','obstructing the field') THEN 1 ELSE 0 END) AS wickets FROM Deliveries D JOIN Players P ON D.bowler_id = P.player_id JOIN Matches M ON D.match_id = M.match_id WHERE P.player_name = 'GD McGrath' AND M.season = '2002/03' AND M.team1 = 'Australia' AND M.team2 = 'Namibia' GROUP BY D.bowler_id, D.match_id;",
+        "difficulty": "Medium",
+        "answer": [
+        "('Australia', 'Namibia', '2002/03', '2003-02-27', 42, 15, 7)"
+        ],
+        "question_english": "What were Glenn McGrath's bowling figures during his 7-wicket haul against Namibia in the 2003 ODI World Cup? Include number of legal balls thrown, runs conceded and wickets taken.",
+        "question_hindi": "2003 के ODI विश्व कप में नामीबिया के खिलाफ Glenn McGrath के 7 विकेट वाले प्रदर्शन के गेंदबाजी आंकड़े क्या थे? इसमें फेंकी गई वैध गेंदों की संख्या, दिए गए रन और लिए गए विकेटों की संख्या बताइए।",
+        "question_punjabi": "2003 ODI ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਨਾਮੀਬੀਆ ਖਿਲਾਫ਼ Glenn McGrath ਦੇ 7 ਵਿਕਟਾਂ ਵਾਲੇ ਪ੍ਰਦਰਸ਼ਨ ਦੇ ਗੇਂਦਬਾਜ਼ੀ ਅੰਕੜੇ ਕੀ ਸਨ? ਸੁੱਟੀਆਂ ਗਈਆਂ ਵੈਧ ਗੇਂਦਾਂ ਦੀ ਗਿਣਤੀ, ਦਿੱਤੀਆਂ ਦੌੜਾਂ ਅਤੇ ਲਈਆਂ ਵਿਕਟਾਂ ਸ਼ਾਮਲ ਕਰੋ।",
+        "question_telugu": "2003 ODI ప్రపంచకప్‌లో నమీబియాపై Glenn McGrath 7 వికెట్లు తీసిన బౌలింగ్ గణాంకాలు ఏమిటి? వేసిన చట్టబద్ధమైన బంతుల సంఖ్య, ఇచ్చిన పరుగులు మరియు తీసుకున్న వికెట్లను చేర్చండి.",
+        "column_names": [
+        "Team 1",
+        "Team 2",
+        "Season",
+        "Match Date",
+        "Legal Balls",
+        "Runs Conceded",
+        "Wickets"
+        ]
+    },
+  {
+    "db_id": "wc_db",
+    "context_url": "https://www.espncricinfo.com/series/icc-cricket-world-cup-2023-24-1367856/india-vs-sri-lanka-33rd-match-1384424/full-scorecard",
+    "question": "Who were the top scorers for India in their record 302-run win over Sri Lanka in the 2023 World Cup? Show the top 5.",
+    "query": "WITH innings AS (SELECT D.striker_id, D.match_id, D.inning, SUM(D.runs_scored) AS runs, SUM(CASE WHEN D.wides=0 THEN 1 ELSE 0 END) AS balls FROM Deliveries D WHERE D.match_id = (SELECT match_id FROM Matches WHERE season='2023/24' AND team1='India' AND team2='Sri Lanka') GROUP BY D.striker_id, D.match_id, D.inning) SELECT P.player_name AS player, I.runs, I.balls FROM innings I JOIN Players P ON I.striker_id = P.player_id ORDER BY I.runs DESC LIMIT 5;",
+    "difficulty": "Medium",
+    "answer": [
+      "('Shubman Gill', 92, 92)",
+      "('V Kohli', 88, 94)",
+      "('SS Iyer', 82, 56)",
+      "('RA Jadeja', 35, 24)",
+      "('KL Rahul', 21, 19)"
+    ],
+    "question_english": "Who were the top scorers for India in their record 302-run win over Sri Lanka in the 2023 World Cup? Show the top 5.",
+    "question_hindi": "2023 के ODI विश्व कप में श्रीलंका के खिलाफ भारत की रिकॉर्ड 302 रन की जीत में भारत के लिए सबसे अधिक रन बनाने वाले शीर्ष 5 बल्लेबाज कौन थे?",
+    "question_punjabi": "2023 ਵਿਸ਼ਵ ਕੱਪ ਵਿੱਚ ਸ਼੍ਰੀਲੰਕਾ ਖਿਲਾਫ਼ ਭਾਰਤ ਦੀ ਰਿਕਾਰਡ 302 ਦੌੜਾਂ ਦੀ ਜਿੱਤ ਵਿੱਚ ਭਾਰਤ ਲਈ ਸਭ ਤੋਂ ਵੱਧ ਦੌੜਾਂ ਬਣਾਉਣ ਵਾਲੇ ਕੌਣ ਸਨ? ਟਾਪ 5 ਦਿਖਾਓ।",
+    "question_telugu": "2023 ప్రపంచకప్‌లో శ్రీలంకపై భారత్ రికార్డు 302 పరుగుల విజయంలో భారత్ తరపున అత్యధిక పరుగులు చేసిన వారు ఎవరు? టాప్ 5 చూపించండి.",
+    "column_names": [
+      "Player",
+      "Runs",
+      "Balls"
+    ]
+  },
+  {
+    "db_id": "wc_db",
+    "context_url": "https://www.cricinfo.com/series/icc-cricket-world-cup-2019-1144415/england-vs-new-zealand-final-1144530/live-cricket-score",
+    "question": "What were the team totals in each innings of the tied 2019 World Cup Final between England and New Zealand, including the Super Over? Include number of runs made and number of wickets fallen in each inning.",
+    "query": "SELECT D.inning, D.batting_team, SUM(D.runs_scored + D.extra_runs) AS total_runs, SUM(CASE WHEN D.player_out_id IS NOT NULL AND D.wicket_type != 'retired hurt' THEN 1 ELSE 0 END) AS wickets FROM Deliveries D WHERE D.match_id = (SELECT match_id FROM Matches WHERE season='2019' AND stage='Final') GROUP BY D.inning, D.batting_team ORDER BY D.inning;",
+    "difficulty": "Medium",
+    "answer": [
+      "(1, 'New Zealand', 241, 8)",
+      "(2, 'England', 241, 10)",
+      "(5, 'England', 15, 0)",
+      "(6, 'New Zealand', 15, 1)"
+    ],
+    "question_english": "What were the team totals in each innings of the tied 2019 World Cup Final between England and New Zealand, including the Super Over? Include number of runs made and number of wickets fallen in each inning.",
+    "question_hindi": "इंग्लैंड और न्यूज़ीलैंड के बीच खेले गए 2019 ODI विश्व कप फाइनल, जो टाई रहा था, की प्रत्येक पारी (सुपर ओवर सहित) में टीमों के कुल स्कोर क्या थे? इसमें प्रत्येक पारी में बनाए गए कुल रन और गिरे विकेटों की संख्या बताइए।",
+    "question_punjabi": "ਇੰਗਲੈਂਡ ਅਤੇ ਨਿਊਜ਼ੀਲੈਂਡ ਵਿਚਕਾਰ ਟਾਈ ਹੋਏ 2019 ਵਿਸ਼ਵ ਕੱਪ ਫਾਈਨਲ ਵਿੱਚ, ਸੁਪਰ ਓਵਰ ਸਮੇਤ ਹਰ ਪਾਰੀ ਵਿੱਚ ਟੀਮਾਂ ਦੇ ਕੁੱਲ ਸਕੋਰ ਕੀ ਸਨ? ਹਰ ਪਾਰੀ ਵਿੱਚ ਬਣੀਆਂ ਦੌੜਾਂ ਦੀ ਗਿਣਤੀ ਅਤੇ ਡਿੱਗੀਆਂ ਵਿਕਟਾਂ ਦੀ ਗਿਣਤੀ ਸ਼ਾਮਲ ਕਰੋ।",
+    "question_telugu": "ఇంగ్లాండ్ మరియు న్యూజిలాండ్ మధ్య టై అయిన 2019 ప్రపంచకప్ ఫైనల్‌లో, సూపర్ ఓవర్‌తో సహా ప్రతి ఇన్నింగ్స్‌లో జట్ల మొత్తం స్కోర్లు ఏమిటి? ప్రతి ఇన్నింగ్స్‌లో చేసిన పరుగుల సంఖ్య మరియు పడిన వికెట్ల సంఖ్యను చేర్చండి.",
+    "column_names": [
+      "Inning",
+      "Batting Team",
+      "Total Runs",
+      "Wickets"
+    ]
+  }
+]
