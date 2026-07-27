@@ -1,5 +1,5 @@
 """
-Report generation per section 3.8.
+Report generation.
 Bootstrap CIs (95%, 10k resamples, seed 42), gap analysis, CSV + LaTeX output.
 """
 
@@ -9,7 +9,7 @@ import logging
 from typing import List, Dict, Any
 from pathlib import Path
 
-# Import canonical bootstrap utilities (section 3.8, rule 1)
+# Import canonical bootstrap utilities
 from bootstrap_ci import (
     bootstrap_metric,
     bootstrap_gap,
@@ -29,7 +29,6 @@ def generate_report(
     """
     Generate full report: per-model CIs, gap CI, CSV + LaTeX tables.
 
-    Per section 3.8:
     - 95% clustered bootstrap CIs (10k resamples, seed 42)
     - CricBench clustered by base_question_id
     - BIRD by question_id (singletons, but still pass key explicitly)
