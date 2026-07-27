@@ -1,6 +1,5 @@
 """
-Scoring per section 3.7.
-Imports dma_eval; never reimplements.
+Scoring.
 Metrics: EX (execution correctness) and DMA (result set match).
 """
 
@@ -18,8 +17,6 @@ def score_instance(
     gold_rows: List[Tuple],
 ) -> dict:
     """
-    Score one instance per section 3.7.
-
     Metrics:
     - EX = predicted SQL executes without error/timeout (returns a result set)
     - DMA = dma_match(gold_rows, pred_rows)
