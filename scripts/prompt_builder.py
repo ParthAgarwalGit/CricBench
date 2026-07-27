@@ -1,6 +1,5 @@
 """
-Prompt construction per section 3.3 of the harness spec.
-Schema is derived live from the target database via sqlite_master, never pasted.
+Prompt construction.
 """
 
 import sqlite3
@@ -43,7 +42,7 @@ def build_prompts(
     dk_prompt_path: str = None,
 ) -> Tuple[str, str]:
     """
-    Build (system_prompt, user_prompt) tuple per section 3.3.
+    Build (system_prompt, user_prompt) tuple.
 
     Args:
         question: The natural language question
@@ -59,12 +58,10 @@ def build_prompts(
     """
     schema_ddl = get_schema_ddl(db_path)
 
-    # User message (identical across conditions per 3.3)
+    # User message
     user_prompt = f"Question: {question}\nOutput ONLY raw SQL."
 
     # Domain-knowledge condition: system prompt = external knowledge + schema.
-    # Use str.replace (not str.format) so literal braces in worked SQL/examples
-    # inside the template are left untouched; only "{schema_ddl}" is substituted.
     if dk_prompt_path:
         with open(dk_prompt_path, "r", encoding="utf-8") as fh:
             template = fh.read()
