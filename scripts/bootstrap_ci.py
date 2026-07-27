@@ -1,26 +1,5 @@
-"""
-Clustered bootstrap CI utilities for the CricBench + BIRD re-run.
-
-Implements exactly the four functions the harness spec (section 3.8/4)
-requires: load_results, bootstrap_metric, bootstrap_gap, format_pct.
-Clustered, vectorized, numpy-only — no pandas, no scipy.
-
-Usage in this project:
-    - CricBench: bootstrap_metric(records, cluster_key="base_question_id")
-    - BIRD:      bootstrap_metric(records, cluster_key="question_id")
-      (BIRD clusters are singletons — one instance per question_id — so
-      this is equivalent to a plain item-level bootstrap, but pass the
-      key explicitly rather than None so a future duplicate question_id
-      would still be caught/handled correctly.)
-    - Gap:       bootstrap_gap(bird_records, cricbench_records,
-                                cluster_key_a="question_id",
-                                cluster_key_b="base_question_id")
-"""
-
 import json
-
 import numpy as np
-
 
 def load_results(path):
     """
@@ -111,10 +90,9 @@ def bootstrap_gap(records_a, records_b, metric_key="dma_correct",
                    n_resamples=10000, seed=42, alpha=0.05):
     """
     95% CI on gap = mean(metric_key over records_a) - mean(metric_key over
-    records_b), e.g. BIRD DMA - CricBench DMA for one model. The two
-    benchmarks are resampled independently (separate cluster sets, both
-    draws come from the same seeded generator so the whole call is
-    reproducible) and the gap is computed per resample.
+    records_b). The two benchmarks are resampled independently (separate 
+    cluster sets, both draws come from the same seeded generator so the whole
+    call is reproducible) and the gap is computed per resample.
 
     Returns:
         {"point_estimate", "ci_low", "ci_high", "excludes_zero",
