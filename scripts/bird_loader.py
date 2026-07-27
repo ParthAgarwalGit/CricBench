@@ -1,8 +1,3 @@
-"""
-BIRD data loader per section 3.4.
-Stratified random subset (N=400, seed=42, stratified by db_id).
-"""
-
 import json
 import logging
 from typing import List, Dict, Any, Set
