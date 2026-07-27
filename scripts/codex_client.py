@@ -1,11 +1,3 @@
-"""
-OpenAI GPT-5.4-mini client via the Responses API.
-
-This mirrors the Claude subprocess client pattern: a small auth probe, a
-single-turn text completion call, retries with exponential backoff, and a
-distinct limit signal for rate-limit / quota conditions.
-"""
-
 import json
 import logging
 import os
@@ -18,19 +10,15 @@ logger = logging.getLogger(__name__)
 
 
 class SessionLimitError(Exception):
-    """Raised when the OpenAI API hits a rate-limit or quota condition."""
-
+    
 
 class _AuthError(Exception):
-    """Raised when the API key is missing or rejected."""
-
+    
 
 class _RetryableError(Exception):
-    """Raised for transient transport or service errors."""
 
 
 def get_openai_auth_env():
-    """Return the environment for the OpenAI request."""
     return os.environ.copy()
 
 
@@ -188,7 +176,6 @@ def check_cli_auth(
     model_slug: str = "gpt-5.4-mini",
     timeout_sec: float = 30.0,
 ) -> Optional[str]:
-    """Probe the API once to confirm auth and model access."""
     try:
         response = _request_responses(
             prompt="ok",
@@ -221,7 +208,6 @@ def call_codex(
     max_retries: int = 3,
     backoff_factor: float = 2.0,
 ) -> Optional[str]:
-    """Call GPT-5.4-mini via the OpenAI Responses API."""
     for attempt in range(max_retries):
         try:
             logger.debug(f"Call attempt {attempt + 1}/{max_retries}")
