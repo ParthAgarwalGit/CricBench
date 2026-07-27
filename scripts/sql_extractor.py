@@ -1,6 +1,5 @@
 """
-SQL extraction from model response per section 3.5.
-Exact spec: handle code fences, otherwise return raw response.
+SQL extraction from model response.
 """
 
 import re
@@ -8,11 +7,7 @@ import re
 
 def clean_sql(response: str) -> str:
     """
-    Extract SQL from model response per section 3.5.
-
-    Algorithm:
-    1. If a ```sql or ``` fenced block exists -> return its contents, stripped.
-    2. Else -> return the raw response, stripped.
+    Extract SQL from model response.
 
     Args:
         response: Raw model text output
