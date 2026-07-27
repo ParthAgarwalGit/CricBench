@@ -1,5 +1,5 @@
 """
-CricBench data loader per section 3.4.
+CricBench data loader.
 Handles 4-language variants, clustering by base_question_id.
 """
 
@@ -14,7 +14,6 @@ def load_cricbench(gold_path: str, db_path: str) -> List[Dict[str, Any]]:
     """
     Load CricBench gold queries and expand to language variants.
 
-    Per section 3.4:
     - Each base question has 4 language fields (english, hindi, telugu, punjabi)
     - Expand to one instance per language (even if multiple variants exist per language)
     - cluster_id = base_question_id (list index in gold file)
