@@ -5,24 +5,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](#license)
 
-CricBench is the first Text-to-SQL benchmark designed specifically for **cricket
-analytics**. It evaluates the *intrinsic* SQL-generation ability of large language
-models on specialized cricket data across four formats and four languages, using
-strict **schema-only prompting** (only the database schema, no formulas or
-few-shot examples).
+CricBench is the first Text-to-SQL benchmark designed specifically for **cricket analytics**. It evaluates the *intrinsic* SQL-generation ability of large language
+models on specialized cricket data across four formats and four languages, under two prompting conditions: strict **schema-only** prompting (only the database
+schema, no formulas or few-shot examples) and **schema+domain-knowledge (DK)** prompting (the same schema plus a compact block of cricket-specific facts).
 
 - **669** expert-authored base questions → **2,798** evaluation instances
 - **4 formats:** Test, ODI, T20I (international) and IPL (franchise)
 - **4 languages:** English, and code-mixed **Hindi, Punjabi, Telugu** in their
-  native Devanagari, Gurmukhi, and Telugu scripts
-- Every gold query is hand-authored, cross-checked against
-  [ESPNcricinfo](https://www.espncricinfo.com) / [Cricbuzz](https://www.cricbuzz.com),
-  and signed off by a competitive-cricket domain expert
+  native Devanagari, Gurmukhi, and Dravidian scripts
+- Every gold query is hand-authored, cross-checked against [ESPNcricinfo](https://www.espncricinfo.com) / [Cricbuzz](https://www.cricbuzz.com), and signed off by a competitive-cricket domain expert
 
-> **Key finding.** No single model dominates across formats, and even the best
-> models show a stark gap between syntactic validity (>98% execution) and semantic
-> correctness (best full-set Data Match Accuracy 23.8%; best stratified-subset
-> 33.0%) — evidence of a large domain-reasoning gap.
+> **Key finding.** No single model dominates across formats, and even the best models show a stark gap between syntactic validity (frontier models exceed 98%
+> execution) and semantic correctness (best single-format Data Match Accuracy 33.0%, and even the best schema+domain-knowledge configuration reaches only
+> 30.7%) — evidence of a large domain-reasoning gap that a compact domain-knowledge prompt only partially closes.
 
 ---
 
@@ -40,29 +35,39 @@ CricBench/
 │   ├── schema_tests.sql # Tests schema
 │   ├── schema_t20i.sql  # T20I schema
 │   └── ipl.sql          #  IPL schema
-├── scripts/             # Ingestion, evaluation, and utilities
-│   ├── ingest.py        #  build a SQLite DB from Cricsheet ball-by-ball data
-│   ├── evaluate.py      #  compute Execution Accuracy (EX) and Data Match Accuracy (DMA)
-│   ├── verify.py        #  dataset self-verification
-│   ├── convert_dataset.py
-│   └── sync_deepseek_results.py
-├── results/
+├── evaluation_prompts/  # Schema+domain-knowledge (DK) system prompts, per format
+├── scripts/                   # Model clients, evaluation harness, and utilities
+│   ├── config.yaml            #  dataset/DB paths, model, timeout, and bootstrap settings
+│   ├── run_eval.py            #  main orchestrator: loads instances, calls the model, scores, checkpoints
+│   ├── run_dk_local.sh        #  drives a full DK evaluation (all 4 formats) against a local model server
+│   ├── prompt_builder.py      #  builds schema-only / schema+DK system prompts (schema extracted live from the DB)
+│   ├── cric_loader.py         #  loads CricBench gold queries, expands to language variants
+│   ├── bird_loader.py         #  loads the BIRD dev set for the same-model BIRD comparison
+│   ├── sql_extractor.py       #  cleans raw model output down to executable SQL
+│   ├── db_exec.py             #  executes SQL against the SQLite DB with a timeout
+│   ├── dma_eval.py            #  DMA canonicalization and result-set matching
+│   ├── scorer.py              #  scoring wrapper around dma_eval.py
+│   ├── bootstrap_ci.py        #  cluster-bootstrap 95% confidence intervals
+│   ├── classify_sql_features.py #  recomputes the gold-SQL feature statistics (paper Table 2)
+│   ├── count_genuine.py       #  counts genuine (non-stub) completions in a checkpoint file
+│   ├── report.py              #  builds result summaries/reports
+│   ├── claude_client.py       #  Claude API client
+│   ├── codex_client.py        #  Codex/GPT API client
+│   ├── local_client.py        #  client for local OpenAI-compatible servers (Ollama, vLLM, ...)
+├── results/              # Per-model, per-format evaluation files (schema-only and DK)
 ├── CITATION.cff
 └── LICENSE
 ```
 
 ## Dataset
 
-Complexity is characterized by an **objective, reproducible** measure — the number
-of joins in the gold SQL — rather than subjective difficulty labels.
-
-| Format | Base Q | 0 joins | 1 join | 2 joins | ≥3 joins | Instances |
-|:------:|:------:|:-------:|:------:|:-------:|:--------:|:---------:|
-| Test   | 169    | 52      | 26     | 57      | 34       | 676       |
-| ODI    | 100    | 10      | 17     | 31      | 6        | 256       |
-| T20I   | 200    | 117     | 41     | 15      | 27       | 799       |
-| IPL    | 200    | 28      | 79     | 73      | 20       | 922       |
-| **Total** | **669** | 207 | 163 | 176 | 87 | **2,798** |
+| Format | Base Q | Instances |
+|:------:|:------:|:---------:|
+| Test   | 169    | 676       |
+| ODI    | 100    | 400       |
+| T20I   | 200    | 800       |
+| IPL    | 200    | 922       |
+| **Total** | **669** | **2,798** |
 
 Accounting: 669 base × 4 languages = 2,676 variants, **+122** additional IPL
 code-mixed Hindi/Telugu variants = 2,798.
@@ -79,39 +84,24 @@ Each record in a `data/*.json` file contains:
 | `query` | Gold SQL |
 | `answer` | Gold result rows |
 | `column_names` | Output column labels |
-| `difficulty` | Legacy label (Easy/Medium/Hard); superseded by join count — retained for reference |
+| `difficulty` | Legacy label (Easy/Medium/Hard); not used in evaluation, retained for reference |
 
-> IPL (and some Test/ODI items) include extra code-mixed variants named
-> `question_hindi_1`, `question_hindi_2`, `question_telugu_1`, `question_telugu_2`,
+> IPL (and some Test/ODI items) include extra code-mixed variants named `question_hindi_1`, `question_hindi_2`, `question_telugu_1`, `question_telugu_2`,
 > reflecting alternative code-mixing patterns.
 
 ## Databases
 
-The databases are built from publicly available ball-by-ball data from
-[Cricsheet](https://cricsheet.org). Create a SQLite database from the schema and
-Cricsheet JSON with:
-
-```bash
-python scripts/ingest.py   # see the script header for source/output paths
-```
+The databases are built from publicly available ball-by-ball data from [Cricsheet](https://cricsheet.org).
 
 ## Evaluation
 
-`scripts/evaluate.py` reports **Execution Accuracy (EX)** and **Data Match
-Accuracy (DMA)**. DMA compares returned values (not SQL strings) using a tolerant
-canonicalization: multiset (order-insensitive) row comparison, float rounding to
-two decimals, and NULL/column-name normalization.
-
-# Score a model's predictions (SQL stored under, e.g., "generated_sql"):
-python scripts/evaluate.py --db ipl.db --queries model_outputs.json --pred-key generated_sql
-```
+`scripts/evaluate.py` reports **Execution Accuracy (EX)** and **Data Match Accuracy (DMA)**. DMA compares returned values (not SQL strings) using a tolerant
+canonicalization: multiset (order-insensitive) row comparison, float rounding to two decimals, and NULL/column-name normalization.
 
 ## Data sources
 
-Ball-by-ball data: [Cricsheet](https://cricsheet.org). Ground-truth answers were
-cross-referenced against [ESPNcricinfo](https://www.espncricinfo.com) and
-[Cricbuzz](https://www.cricbuzz.com). All data is publicly available sports
-statistics; no personally identifiable information is included.
+Ball-by-ball data: [Cricsheet](https://cricsheet.org). Ground-truth answers were cross-referenced against [ESPNcricinfo](https://www.espncricinfo.com) and
+[Cricbuzz](https://www.cricbuzz.com). All data is publicly available sports statistics; no personally identifiable information is included.
 
 ## Citation
 
@@ -120,9 +110,7 @@ If you use CricBench, please cite:
 ```bibtex
 @inproceedings{cricbench2026,
   title     = {CricBench: A Multilingual Benchmark for Evaluating LLMs in Cricket Analytics},
-  author    = {Agarwal, Parth and Shah, Dhruv and Kommuri, Navya and Singhal, Prisha and
-               Garg, Trizal and Devraj, Vaibhav and Challa, Jagat Sesh and Sinha, Yash and
-               Mandal, Murari and Kumar, Dhruv},
+  author    = {Agarwal, Parth and Shah, Dhruv and Kommuri, Navya and Singhal, Prisha and Garg, Trizal and Devraj, Vaibhav and Challa, Jagat Sesh and Sinha, Yash                  and Mandal, Murari and Kumar, Dhruv},
   booktitle = {Conference for AI Scientists (CAISc)},
   year      = {2026}
 }
@@ -132,6 +120,5 @@ If you use CricBench, please cite:
 
 ## License
 
-Code is released under the [MIT License](LICENSE). The dataset is released for
-research use under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/);
+Code is released under the [MIT License](LICENSE). The dataset is released for research use under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/);
 please cite the paper above when using it.
