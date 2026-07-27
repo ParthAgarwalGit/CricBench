@@ -16,40 +16,16 @@ logger = logging.getLogger(__name__)
 
 
 class SessionLimitError(Exception):
-    """Raised when the Claude subscription session/usage limit is hit.
-
-    This is an infrastructure condition, not a model answer. The caller should
-    pause until the limit resets and retry the SAME call — it must never be
-    scored as a wrong answer.
-    """
-
 
 def get_claude_auth_env():
-    """Return the environment for the `claude` subprocess.
-
-    Precedence (all left to the CLI to consume):
-      1. A real ANTHROPIC_API_KEY the caller set in the environment (sk-ant-api...).
-      2. CLAUDE_CODE_OAUTH_TOKEN if set (headless OAuth token from `claude setup-token`).
-      3. Otherwise the CLI's own stored login (native OAuth in ~/.claude).
-
-    We deliberately do NOT copy the OAuth accessToken from
-    ~/.claude/.credentials.json into ANTHROPIC_API_KEY: that value is an OAuth
-    token (sk-ant-oat...), not an API key, so the CLI rejects it as
-    "Invalid API key" and it masks an otherwise-valid login. Just pass the
-    environment through and let the CLI authenticate the way it normally does.
-    """
     return os.environ.copy()
-
 
 def check_cli_auth(
     model_slug: str = "claude-haiku-4-5",
     timeout_sec: float = 30.0,
 ) -> Optional[str]:
-    """Probe `claude -p` once to confirm the CLI can reach the model.
-
-    Returns None if the CLI is usable, or a short human-readable error string
-    (e.g. "Not logged in ...") if it is not. Costs nothing when unauthenticated
-    (the CLI short-circuits before any model call).
+    """
+    Probe `claude -p` once to confirm the CLI can reach the model.
     """
     try:
         result = subprocess.run(
@@ -81,7 +57,6 @@ def call_claude(
     max_retries: int = 3,
     backoff_factor: float = 2.0,
 ) -> Optional[str]:
-    """Call Claude Haiku 4.5 via `claude -p` subprocess."""
     disallowed_tools = (
         "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,"
         "NotebookEdit,Task,TodoWrite"
@@ -123,11 +98,7 @@ def call_claude(
 
             try:
                 envelope = json.loads(result.stdout)
-
-                # The CLI returns a JSON envelope even on failure, placing a
-                # human-readable message in "result" while setting is_error=true.
-                # Treat is_error as a failure (previously "Not logged in ..." was
-                # handed back as if it were a valid SQL response and scored).
+                
                 if envelope.get("is_error"):
                     err = str(envelope.get("error") or envelope.get("result")
                               or "unknown error").strip()
