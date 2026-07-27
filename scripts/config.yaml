@@ -1,45 +1,37 @@
-# CricBench + BIRD Evaluation Harness Configuration (Claude Haiku 4.5)
-# Per section 2, 3.1, and 5 of claude_code_instructions.md
-
 model:
   slug: "claude-haiku-4-5"
-  temperature: 1  # Target (CLI does not expose flag — see deviation note in 3.1/3.2)
+  temperature: 1
 
 paths:
-  cric_db: "./ipl.db"                    # CricBench database
-  cric_gold: "./queries.json"            # CricBench gold queries + answers
-  bird_dev: "./bird/dev.json"            # BIRD dev.json
-  bird_databases: "./bird/dev_databases" # BIRD database folder
-  outputs: "./outputs"                   # Output directory
-  dk_prompt_cric: "../../IPL/dk_prompt_ipl.sql"  # Domain-knowledge prompt for CricBench (schema injected into {schema_ddl})
+  cric_db: "./ipl.db"                    
+  cric_gold: "./queries.json"            
+  bird_dev: "./bird/dev.json"      
+  bird_databases: "./bird/dev_databases"
+  outputs: "./outputs"
+  dk_prompt_cric: "../../IPL/dk_prompt_ipl.sql"
 
-  # ODI (One Day International)
   odi_db: "../../wc.db"
   odi_gold: "../../ODI/odi_queries_combined.json"
   dk_prompt_odi: "../../ODI/dk_prompt_odi.sql"
 
-  # T20I (Twenty20 International)
   t20i_db: "../../t20_I.db"
   t20i_gold: "../../T20/t20I_dataset_cricbench.json"
   dk_prompt_t20i: "../../T20/dk_prompt_t20i.sql"
 
-  # Test cricket
   test_db: "../../tests.db"
   test_gold: "../../Test/gold_dataset_test_final_corrected_updated.json"
   dk_prompt_test: "../../Test/dk_prompt_test.sql"
 
-# BIRD evaluation (section 3.4)
 bird:
   subset_size: 400        # N=400 per spec
   seed: 42                # Stratified by db_id, seed 42
   stratify_by: "db_id"    # Stratification column
 
-# Timeouts (section 2, 3.6)
 timeouts:
-  claude_subprocess_sec: 120     # Per call timeout (raised from 60: slow calls were timing out)
-  sql_execution_sec: 20          # SQLite interrupt timeout (section 3.6)
+  claude_subprocess_sec: 120     # Per call timeout
+  sql_execution_sec: 20          # SQLite interrupt timeout
 
-# CricBench languages (section 3.4, 4)
+# CricBench languages
 # Each base question gets evaluated in 4 languages
 cric_languages:
   - english
@@ -47,12 +39,12 @@ cric_languages:
   - telugu
   - punjabi
 
-# Retry logic (section 3.2)
+# Retry logic
 retry:
   max_attempts: 3
   backoff_factor: 2.0  # exponential backoff
 
-# Bootstrap CI (section 3.8)
+# Bootstrap CI
 bootstrap:
   n_resamples: 10000
   seed: 42
