@@ -1,19 +1,6 @@
 """
 Local open-source model client, for any OpenAI-compatible chat-completions
-server running on your own machine (Ollama, vLLM, LM Studio, llama.cpp
-server, text-generation-webui, etc).
-
-Mirrors the claude_client.py / codex_client.py interface exactly:
-call_local(prompt, system_prompt, model_slug, timeout_sec, max_retries,
-backoff_factor) -> Optional[str], plus check_cli_auth() and a
-SessionLimitError for rate/overload conditions.
-
-Configure via environment variables (defaults target Ollama):
-  LOCAL_MODEL_BASE_URL   e.g. http://localhost:11434/v1   (default)
-                          e.g. http://localhost:8000/v1    (vLLM default)
-                          e.g. http://localhost:1234/v1    (LM Studio default)
-  LOCAL_MODEL_API_KEY    optional; most local servers ignore this, some
-                          (LM Studio) want any non-empty string ("lm-studio")
+server.
 """
 
 import json
@@ -28,11 +15,9 @@ logger = logging.getLogger(__name__)
 
 
 class SessionLimitError(Exception):
-    """Raised when the local server reports overload/rate-limit (429)."""
 
 
 class _RetryableError(Exception):
-    """Raised for transient transport or service errors."""
 
 
 def _base_url() -> str:
@@ -105,7 +90,6 @@ def check_cli_auth(
     model_slug: str = "local-model",
     timeout_sec: float = 30.0,
 ) -> Optional[str]:
-    """Probe the local server once to confirm it's reachable and serving model_slug."""
     try:
         response = _request_chat_completion(
             prompt="ok", system_prompt="Reply with ok.",
@@ -134,7 +118,6 @@ def call_local(
     max_retries: int = 3,
     backoff_factor: float = 2.0,
 ) -> Optional[str]:
-    """Call a local OpenAI-compatible chat-completions server."""
     for attempt in range(max_retries):
         try:
             logger.debug(f"Call attempt {attempt + 1}/{max_retries}")
