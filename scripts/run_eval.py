@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 """
-Main evaluation orchestrator per section 6 (workflow).
+Main evaluation orchestrator.
 - --dry-run: stub claude_client calls, no real subprocess
 - --resume: skip completed items via JSONL checkpoint
 - Runs both CricBench and BIRD, logs every detail
-
-Usage:
-  python run_eval.py --benchmark {bird,cricbench} --dry-run --resume
 """
 
 import argparse
@@ -61,15 +58,6 @@ def load_config(config_path: str = "config.yaml") -> dict:
 
 def _seconds_until_reset(message: str, default: float = 300.0,
                          buffer: float = 30.0) -> float:
-    """Parse a 'resets 4:50am' style hint into seconds to sleep before retrying.
-
-    A freshly-raised session-limit error names a reset that is minutes away, so
-    we trust the parse only when it yields a near-future wait (<= 2h). Anything
-    else (no match, or a time that reads as past/ambiguous and rolls to tomorrow)
-    falls back to `default` — we simply poll every few minutes until the window
-    reopens (a limit-rejected probe costs nothing). Local tz is assumed to match
-    the reset zone (both Asia/Calcutta here).
-    """
     m = re.search(r"reset[s]?\s+(\d{1,2})(?::(\d{2}))?\s*([ap]m)", message, re.I)
     if not m:
         retry = re.search(r"retry_after=(\d+(?:\.\d+)?)s", message, re.I)
@@ -97,9 +85,6 @@ def _seconds_until_reset(message: str, default: float = 300.0,
     if target <= now:
         target += datetime.timedelta(days=1)
     secs = (target - now).total_seconds() + buffer
-    # Trust a parsed reset up to 6h out (session windows can be ~5h). Anything
-    # longer means the time read as past and rolled to tomorrow (~22h), i.e. a
-    # stale/ambiguous hint -> poll instead of stalling for a day.
     if secs <= 0 or secs > 6 * 3600:
         return default
     return max(60.0, secs)
@@ -230,8 +215,6 @@ def evaluate_benchmark(
     outputs_dir = Path(config["paths"]["outputs"])
     outputs_dir.mkdir(parents=True, exist_ok=True)
 
-    # Domain-knowledge condition writes to separate *_dk output files so the
-    # schema-only baseline records are never overwritten.
     suffix = "_dk" if domain_knowledge else ""
     dk_prompt_path = None
     if domain_knowledge:
@@ -370,11 +353,7 @@ def evaluate_benchmark(
             gold_rows = get_gold_rows(db_path, instance["gold_sql"])
             if gold_rows is None:
                 gold_rows = []  # Treat failure as empty result
-
-            # Call model. A session-limit hit pauses until reset and retries the
-            # SAME instance (never scored). Any other failure returns None and is
-            # left UN-recorded, so a later --resume retries it instead of baking a
-            # mis-scored dma=0 into the results.
+              
             if dry_run:
                 raw_response = "SELECT 1"
                 logger.debug("[DRY-RUN] Stubbed response")
