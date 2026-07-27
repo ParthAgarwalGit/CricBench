@@ -1,5 +1,5 @@
 """
-SQLite query execution with timeout per section 3.6.
+SQLite query execution with timeout.
 Read-only connection. Per-query execution timeout: 20 s via interrupt watchdog.
 """
 
@@ -16,7 +16,6 @@ def execute_sql(
     """
     Execute SQL query against SQLite database with timeout.
 
-    Per section 3.6:
     - Read-only connection
     - Timeout: interrupt via watchdog thread
     - Any error or timeout -> return None (execution failure)
