@@ -65,12 +65,22 @@ CricBench/
 |:------:|:------:|:---------:|
 | Test   | 169    | 676       |
 | ODI    | 100    | 400       |
-| T20I   | 200    | 800       |
+| T20I † | 200    | 800       |
 | IPL    | 200    | 922       |
 | **Total** | **669** | **2,798** |
 
 Accounting: 669 base × 4 languages = 2,676 variants, **+122** additional IPL
 code-mixed Hindi/Telugu variants = 2,798.
+
+> **† T20I evaluation set.** Model results in `results/` are reported on a **revised
+> set of 161 T20I base questions** (of the original 200). The other 39 were excluded
+> in review as having no reliable gold answer — e.g. questions needing team-captain
+> or dropped-catch information the schema does not contain — or gold SQL exceeding the
+> 600 s execution cap. **All models are evaluated on these 161, except GPT-5.4-mini
+> (157):** 4 questions hit the 600 s gold-SQL execution timeout during its run and are
+> held out for error analysis rather than scored as incorrect. Per-model filtered
+> records and EX/DMA summaries are under each `results/<model>/` folder
+> (`*t20i_filtered*`). The raw `data/t20i.json` retains all 200 questions.
 
 ### JSON format
 

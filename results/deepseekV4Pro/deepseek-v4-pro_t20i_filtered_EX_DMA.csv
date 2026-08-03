@@ -1,0 +1,9 @@
+model,format,language,condition,n,EX_pct,DMA_pct,DMA_ci_lo,DMA_ci_hi
+DeepSeek V4 Pro,t20i,english,schema_only,153,84.31,9.8,5.2,14.4
+DeepSeek V4 Pro,t20i,hindi,schema_only,152,83.55,6.58,2.6,10.5
+DeepSeek V4 Pro,t20i,punjabi,schema_only,153,86.93,9.8,5.2,15.0
+DeepSeek V4 Pro,t20i,telugu,schema_only,150,84.67,10.0,5.3,14.7
+DeepSeek V4 Pro,t20i,english,schema_dk,153,83.01,13.07,7.8,19.0
+DeepSeek V4 Pro,t20i,hindi,schema_dk,153,83.01,11.11,6.5,16.3
+DeepSeek V4 Pro,t20i,punjabi,schema_dk,153,86.93,11.11,6.5,16.3
+DeepSeek V4 Pro,t20i,telugu,schema_dk,152,84.21,10.53,5.9,15.8
