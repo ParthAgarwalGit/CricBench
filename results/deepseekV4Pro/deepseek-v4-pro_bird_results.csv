@@ -1,0 +1,2 @@
+Model,Benchmark,Condition,Metric,Point Estimate,CI Low,CI High,N Items,N Clusters,N Resamples,Seed,Alpha
+deepseek-v4-pro,bird,schema_only,dma_correct,0.3600,0.3125,0.4075,400,400,10000,42,0.05

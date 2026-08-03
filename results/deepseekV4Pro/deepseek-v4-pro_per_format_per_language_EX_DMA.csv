@@ -1,0 +1,25 @@
+model,format,language,condition,n,EX_pct,EX_nonempty_pct,empty_pct,DMA_pct,DMA_ci_lo,DMA_ci_hi
+DeepSeek V4 Pro,ipl,english,schema_only,200,86.0,39.0,10.0,4.0,1.5,7.0
+DeepSeek V4 Pro,ipl,hindi,schema_only,302,87.42,39.4,10.6,4.64,2.3,7.3
+DeepSeek V4 Pro,ipl,punjabi,schema_only,200,86.0,38.0,14.0,6.5,3.5,10.0
+DeepSeek V4 Pro,ipl,telugu,schema_only,220,87.27,42.73,15.45,1.36,0.0,3.2
+DeepSeek V4 Pro,ipl,english,schema_dk,200,84.0,46.0,1.0,15.0,10.0,20.0
+DeepSeek V4 Pro,ipl,hindi,schema_dk,302,86.75,49.01,1.99,7.62,4.3,11.1
+DeepSeek V4 Pro,ipl,punjabi,schema_dk,200,82.5,43.0,2.0,8.0,4.5,12.0
+DeepSeek V4 Pro,ipl,telugu,schema_dk,220,88.64,52.27,3.64,7.73,4.4,11.5
+DeepSeek V4 Pro,odi,english,schema_only,100,92.0,38.0,21.0,4.0,1.0,8.0
+DeepSeek V4 Pro,odi,hindi,schema_only,100,89.0,27.0,26.0,2.0,0.0,5.0
+DeepSeek V4 Pro,odi,punjabi,schema_only,100,91.0,36.0,26.0,2.0,0.0,5.0
+DeepSeek V4 Pro,odi,telugu,schema_only,100,87.0,27.0,25.0,2.0,0.0,5.0
+DeepSeek V4 Pro,odi,english,schema_dk,100,95.0,40.0,20.0,6.0,2.0,11.0
+DeepSeek V4 Pro,odi,hindi,schema_dk,100,85.0,32.0,20.0,8.0,3.0,14.0
+DeepSeek V4 Pro,odi,punjabi,schema_dk,100,92.0,38.0,21.0,6.0,2.0,11.0
+DeepSeek V4 Pro,odi,telugu,schema_dk,100,94.0,35.0,24.0,4.0,1.0,8.0
+DeepSeek V4 Pro,test,english,schema_only,169,90.53,60.36,11.83,6.51,3.0,10.7
+DeepSeek V4 Pro,test,hindi,schema_only,169,90.53,56.8,14.2,4.73,1.8,8.3
+DeepSeek V4 Pro,test,punjabi,schema_only,169,91.12,56.21,14.79,11.83,7.1,17.2
+DeepSeek V4 Pro,test,telugu,schema_only,169,89.35,62.72,11.83,7.69,4.1,11.8
+DeepSeek V4 Pro,test,english,schema_dk,169,92.9,67.46,8.28,14.2,8.9,19.5
+DeepSeek V4 Pro,test,hindi,schema_dk,169,91.72,64.5,7.1,14.2,8.9,19.5
+DeepSeek V4 Pro,test,punjabi,schema_dk,169,92.9,64.5,5.33,15.98,10.7,21.9
+DeepSeek V4 Pro,test,telugu,schema_dk,168,95.24,69.64,10.71,12.5,7.7,17.9

@@ -1,0 +1,9 @@
+model,format,language,condition,n,EX_pct,DMA_pct,DMA_ci_lo,DMA_ci_hi
+DeepSeek V4 Flash,t20i,english,schema_only,157,89.81,1.27,0.0,3.2
+DeepSeek V4 Flash,t20i,hindi,schema_only,155,91.61,1.29,0.0,3.2
+DeepSeek V4 Flash,t20i,punjabi,schema_only,155,92.26,1.94,0.0,4.5
+DeepSeek V4 Flash,t20i,telugu,schema_only,154,93.51,0.65,0.0,1.9
+DeepSeek V4 Flash,t20i,english,schema_dk,152,86.18,3.29,0.7,6.6
+DeepSeek V4 Flash,t20i,hindi,schema_dk,153,90.2,3.27,0.7,6.5
+DeepSeek V4 Flash,t20i,punjabi,schema_dk,152,90.13,3.29,0.7,6.6
+DeepSeek V4 Flash,t20i,telugu,schema_dk,149,89.26,3.36,0.7,6.7
