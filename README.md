@@ -9,7 +9,7 @@ CricBench is the first Text-to-SQL benchmark designed specifically for **cricket
 models on specialized cricket data across four formats and four languages, under two prompting conditions: strict **schema-only** prompting (only the database
 schema, no formulas or few-shot examples) and **schema+domain-knowledge (DK)** prompting (the same schema plus a compact block of cricket-specific facts).
 
-- **669** expert-authored base questions → **2,798** evaluation instances
+- **630** expert-authored base questions → **2,642** evaluation instances
 - **4 formats:** Test, ODI, T20I (international) and IPL (franchise)
 - **4 languages:** English, and code-mixed **Hindi, Punjabi, Telugu** in their
   native Devanagari, Gurmukhi, and Dravidian scripts
@@ -65,12 +65,12 @@ CricBench/
 |:------:|:------:|:---------:|
 | Test   | 169    | 676       |
 | ODI    | 100    | 400       |
-| T20I † | 200    | 800       |
+| T20I † | 161    | 644       |
 | IPL    | 200    | 922       |
-| **Total** | **669** | **2,798** |
+| **Total** | **630** | **2,642** |
 
-Accounting: 669 base × 4 languages = 2,676 variants, **+122** additional IPL
-code-mixed Hindi/Telugu variants = 2,798.
+Accounting: 630 base × 4 languages = 2,520 variants, **+122** additional IPL
+code-mixed Hindi/Telugu variants = 2,642.
 
 > **† T20I evaluation set.** Model results in `results/` are reported on a **revised
 > set of 161 T20I base questions** (of the original 200). The other 39 were excluded
